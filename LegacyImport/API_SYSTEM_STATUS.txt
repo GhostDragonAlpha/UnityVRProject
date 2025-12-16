@@ -1,0 +1,219 @@
+================================================================================
+                    SPACETIME HTTP API SYSTEM STATUS
+================================================================================
+
+CURRENT STATE: RESOLVED - Single Active API System Established
+
+================================================================================
+                              ACTIVE API SYSTEM
+================================================================================
+
+Name:           HttpApiServer
+Port:           8080 (PRIMARY)
+Status:         PRODUCTION - ACTIVE
+Technology:     godottpd library (HTTP server)
+Location:       scripts/http_api/http_api_server.gd
+Autoload:       ENABLED in project.godot (line 21)
+
+Features:
+  - RESTful API with scene management
+  - JWT token authentication
+  - Rate limiting (100 requests/min)
+  - Role-based access control (RBAC)
+  - Audit logging
+  - Batch operations
+  - WebSocket telemetry (port 8081)
+  - Service discovery (port 8087)
+
+Example Usage:
+  $ TOKEN=$(grep "API TOKEN:" godot.log | sed 's/.*API TOKEN: //')
+  $ curl -H "Authorization: Bearer $TOKEN" http://localhost:8080/status
+
+================================================================================
+                              DEPRECATED API SYSTEM
+================================================================================
+
+Name:           GodotBridge (Legacy)
+Port:           8080 (DISABLED)
+Status:         DEPRECATED - DO NOT USE
+Technology:     DAP (Debug Adapter Protocol) / LSP (Language Server Protocol)
+Location:       addons/godot_debug_connection/godot_bridge.gd
+Autoload:       DISABLED in project.godot (line 23 - commented out)
+Plugin:         Enabled for reference code only (line 40 in project.godot)
+
+Why Deprecated:
+  - Complex DAP/LSP protocols not needed for REST API
+  - Weak security (no built-in rate limiting, RBAC)
+  - Performance overhead (no binary protocol/compression)
+  - Maintenance burden (dual system causes confusion)
+
+Retained For:
+  - Security pattern reference implementations
+  - Telemetry server component reuse
+  - Historical debugging context
+
+Ports Associated (DISABLED):
+  - 8080: HTTP REST (legacy)
+  - 6006: DAP (Debug Adapter Protocol)
+  - 6005: LSP (Language Server Protocol)
+
+Migration: Update port 8080 → 8080, add JWT authentication
+
+================================================================================
+                            SUPPORTING SERVICES
+================================================================================
+
+Python Server
+  Port:         8090
+  Status:       Active
+  Purpose:      Process management, scene loading verification, health monitoring
+  Use:          Recommended for AI agents (abstracts Godot process complexity)
+  Example:      curl http://localhost:8090/health
+
+Telemetry Server
+  Port:         8081 (WebSocket)
+  Status:       Active
+  Purpose:      Real-time performance and event data streaming
+  Use:          Monitoring, profiling, debug insights
+
+Service Discovery
+  Port:         8087 (UDP)
+  Status:       Active
+  Purpose:      Network service discovery and announcement
+  Use:          Automatic service detection in networked environments
+
+================================================================================
+                            CONFIGURATION STATUS
+================================================================================
+
+project.godot [autoload] Section:
+  ✓ ResonanceEngine="*res://scripts/core/engine.gd"
+  ✓ HttpApiServer="*res://scripts/http_api/http_api_server.gd" (ACTIVE)
+  ✓ SceneLoadMonitor="*res://scripts/http_api/scene_load_monitor.gd"
+  ✓ SettingsManager="*res://scripts/core/settings_manager.gd"
+  ✗ GodotBridge (commented out - DISABLED)
+  ✗ TelemetryServer (commented out - DISABLED)
+
+project.godot [editor_plugins] Section:
+  ✓ godot_debug_connection plugin ENABLED (reference code only)
+  ✓ godottpd plugin ENABLED (powers HttpApiServer)
+  ✓ gdUnit4 plugin ENABLED (testing framework)
+
+================================================================================
+                            QUICK MIGRATION GUIDE
+================================================================================
+
+FOR EXISTING CODE USING PORT 8080:
+
+1. Update all API endpoints:
+   OLD: http://localhost:8080/...
+   NEW: http://localhost:8080/...
+
+2. Add JWT authentication:
+   OLD: curl http://localhost:8080/status
+   NEW: curl -H "Authorization: Bearer $TOKEN" http://localhost:8080/status
+
+3. Get JWT token from Godot startup logs:
+   "[HttpApiServer] API TOKEN: <token_here>"
+
+4. Test with curl before code integration
+
+5. Handle authentication errors (401) and rate limiting (429)
+
+6. See API_MIGRATION_GUIDE.md for comprehensive examples
+
+================================================================================
+                            DOCUMENTATION REFERENCE
+================================================================================
+
+UPDATED FILES:
+  - CLAUDE.md                              (Architecture & ports updated)
+  - scripts/http_api/http_api_server.gd    (Active API header comment added)
+  - addons/godot_debug_connection/godot_bridge.gd (Deprecation notice added)
+
+NEW DOCUMENTATION:
+  - API_MIGRATION_GUIDE.md                 (Comprehensive migration guide)
+  - API_QUICK_REFERENCE.md                 (Developer quick reference)
+  - DUAL_API_SYSTEM_RESOLUTION.md          (This resolution documentation)
+  - API_SYSTEM_STATUS.txt                  (This status file)
+
+================================================================================
+                              TROUBLESHOOTING
+================================================================================
+
+Q: curl http://localhost:8080/status returns "Connection refused"
+A: Expected - GodotBridge is disabled. Use port 8080 instead.
+   curl -H "Authorization: Bearer $TOKEN" http://localhost:8080/status
+
+Q: curl http://localhost:8080/status returns 401 Unauthorized
+A: JWT token is missing or invalid. Include -H "Authorization: Bearer $TOKEN"
+
+Q: Port 8080 returns "Connection refused"
+A: Godot may not be running or not in GUI mode. Start with:
+   godot --path "C:/godot" --editor
+
+Q: Can't find JWT token
+A: Check Godot editor console/output for "[HttpApiServer] API TOKEN: ..."
+
+Q: Getting 429 Too Many Requests
+A: Rate limited (100 requests/minute default). Wait and retry with backoff.
+
+================================================================================
+                              ACTION ITEMS
+================================================================================
+
+FOR DEVELOPERS:
+  [ ] Update bookmarks/documentation to use port 8080
+  [ ] Review API_QUICK_REFERENCE.md for common commands
+  [ ] Update any scripts using port 8080 to port 8080
+  [ ] Add JWT authentication to API requests
+  [ ] Test migration with API_MIGRATION_GUIDE.md examples
+
+FOR PROJECT LEADS:
+  [ ] Announce API migration to team
+  [ ] Share API_QUICK_REFERENCE.md and API_MIGRATION_GUIDE.md
+  [ ] Plan deprecation of any remaining 8080 references
+  [ ] Update CI/CD pipelines to use new endpoint
+
+FOR DOCUMENTATION:
+  [ ] Link to API_QUICK_REFERENCE.md from main README
+  [ ] Add API migration section to onboarding docs
+  [ ] Archive old GodotBridge documentation (reference only)
+  [ ] Link DUAL_API_SYSTEM_RESOLUTION.md from architecture docs
+
+================================================================================
+                              SUMMARY TABLE
+================================================================================
+
+Aspect                  | Old System (8080)  | New System (8080)
+                        | DEPRECATED         | ACTIVE
+------------------------+--------------------+--------------------
+Protocol                | DAP/LSP + HTTP     | REST HTTP
+Port                    | 8080               | 8080
+Authentication          | Weak token         | JWT token
+Rate Limiting           | No                 | Yes (100/min)
+RBAC Support            | No                 | Yes
+Audit Logging           | No                 | Yes
+Performance             | Standard           | Binary + GZIP
+Maintenance             | High burden        | Low burden
+Status                  | DISABLED           | PRODUCTION
+New Development?        | NO                 | YES
+
+================================================================================
+                              FINAL STATUS
+================================================================================
+
+Resolution Date:    2025-12-03
+Status:             RESOLVED
+Dual System:        Eliminated through clear deprecation
+Active System:      HttpApiServer (port 8080) - SINGLE AUTHORITATIVE API
+Legacy System:      GodotBridge (port 8080) - DISABLED but retained for reference
+Documentation:      Comprehensive (4 new docs, 3 updated files)
+Migration Path:     Clear and well-documented
+Developer Impact:   Minor - mostly configuration changes
+Risk Level:         LOW - GodotBridge was already disabled
+
+NEXT STEPS: Developers should refer to API_QUICK_REFERENCE.md for daily work
+            and API_MIGRATION_GUIDE.md for comprehensive details.
+
+================================================================================

@@ -1,0 +1,179 @@
+================================================================================
+SPACETIME SYSTEM HEALTH CHECK - QUICK REFERENCE
+================================================================================
+
+Location: C:/godot/system_health_check.py
+
+QUICK COMMANDS
+--------------
+
+# Basic health check (requires Godot running)
+python system_health_check.py
+
+# Offline check (no Godot required)
+python system_health_check.py --skip-http
+
+# Generate reports
+python system_health_check.py --json-report health.json --html-report health.html
+
+# CI/CD mode (no colors, JSON output)
+python system_health_check.py --skip-http --no-color --json-report ci_health.json
+
+
+CHECKS PERFORMED (12 total)
+----------------------------
+
+[1] PORT CONFIGURATION
+  ✓ Port 8080 listening (HTTP API active)
+  ✓ No port 8082 references (legacy migration complete)
+  ✓ Port 8081 WebSocket configured
+
+[2] HTTP API (Port 8080) - requires Godot running
+  ✓ GET /status endpoint responding
+  ✓ GET /scene endpoint accessible
+  ✓ GET /scenes endpoint accessible
+
+[3] AUTOLOAD CONFIGURATION
+  ✓ All 5 autoloads defined in project.godot
+  ✓ All autoload script files exist
+  ✓ No circular dependencies
+
+[4] FILE INTEGRITY
+  ✓ 8 critical files exist
+  ✓ GDScript basic syntax valid
+  ✓ Main scene configured and exists
+
+[5] LEGACY SYSTEM MIGRATION
+  ✓ GodotBridge disabled (port 8082 → 8080)
+  ✓ Port 8080 is primary
+
+
+EXPECTED AUTOLOADS (5)
+----------------------
+ResonanceEngine           → scripts/core/engine.gd
+HttpApiServer             → scripts/http_api/http_api_server.gd
+SceneLoadMonitor          → scripts/http_api/scene_load_monitor.gd
+SettingsManager           → scripts/core/settings_manager.gd
+VoxelPerformanceMonitor   → scripts/core/voxel_performance_monitor.gd
+
+
+CRITICAL FILES (8)
+------------------
+project.godot
+vr_main.tscn
+minimal_test.tscn
+scripts/core/engine.gd
+scripts/http_api/http_api_server.gd
+scripts/http_api/scene_load_monitor.gd
+CLAUDE.md
+README.md
+
+
+OUTPUT INDICATORS
+-----------------
+[OK]   - Check passed
+[FAIL] - Check failed (requires attention)
+[WARN] - Check warning (review recommended)
+[SKIP] - Check skipped (e.g., --skip-http flag)
+
+
+EXIT CODES
+----------
+0 - All checks passed
+1 - One or more checks failed
+
+
+COMMON ISSUES
+-------------
+
+Issue: Port 8080 not listening
+Fix:   python godot_editor_server.py --port 8090
+       (or launch Godot with HTTP API enabled)
+
+Issue: Port 8082 legacy references
+Fix:   Review files in warning details, update to port 8080
+       (references in .bak files and docs are acceptable)
+
+Issue: Autoload missing
+Fix:   Check project.godot [autoload] section
+       Ensure autoload definitions are not commented out
+
+Issue: Script file not found
+Fix:   Verify file exists at specified path
+       Check for typos or moved files
+
+
+REPORT FORMATS
+--------------
+
+JSON Report:
+  - Machine-readable
+  - CI/CD integration friendly
+  - Includes all check details with timestamps
+  - Structure: {timestamp, total_checks, passed, failed, warnings, skipped, checks[]}
+
+HTML Report:
+  - Human-readable dashboard
+  - Color-coded summary statistics
+  - Expandable check details
+  - Professional styling
+  - View in any modern browser
+
+
+OPTIONS
+-------
+--json-report PATH      Generate JSON report
+--html-report PATH      Generate HTML report
+--timeout SECONDS       HTTP request timeout (default: 10)
+--no-color              Disable colored output (for CI/CD)
+--verbose               Show detailed check information
+--skip-http             Skip HTTP API tests (offline mode)
+--project-root PATH     Custom project root directory
+--help                  Show full help message
+
+
+EXAMPLES
+--------
+
+# Pre-commit check
+python system_health_check.py --skip-http
+
+# Full check with Godot running
+python system_health_check.py
+
+# CI/CD pipeline
+python system_health_check.py --skip-http --no-color --json-report health.json
+if [ $? -eq 0 ]; then echo "PASSED"; else echo "FAILED"; fi
+
+# Detailed debugging
+python system_health_check.py --skip-http --verbose --html-report debug.html
+
+
+INTEGRATION
+-----------
+
+GitHub Actions:
+  - Add to .github/workflows/test.yml
+  - Use --skip-http for offline validation
+  - Upload JSON report as artifact
+
+Jenkins:
+  - Add to Jenkinsfile
+  - Archive health.json for historical tracking
+  - Fail build on exit code 1
+
+Pre-commit Hook:
+  - Add to .git/hooks/pre-commit
+  - Run --skip-http for fast validation
+  - Block commit on failures
+
+
+DOCUMENTATION
+-------------
+Full documentation: HEALTH_CHECK_README.md
+Project overview:   CLAUDE.md
+API reference:      docs/current/api/HTTP_API_USAGE_GUIDE.md
+
+
+VERSION: 1.0.0 (2025-12-04)
+================================================================================

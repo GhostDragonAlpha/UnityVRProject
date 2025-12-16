@@ -1,0 +1,60 @@
+RESOURCE GATHERING ENDPOINTS - VERIFICATION CHECKLIST
+=====================================================
+
+File: C:/godot/addons/godot_debug_connection/godot_bridge.gd
+
+ROUTING (Line ~262):
+✓ Added: elif path.begins_with("/resources/"):
+✓ Calls: _handle_resources_endpoint(client, method, path, body)
+
+MAIN HANDLER (Line ~661):
+✓ Function: _handle_resources_endpoint()
+✓ Parameters: client, method, path, body
+✓ GET support for inventory: Yes
+✓ JSON parsing for POST: Yes
+✓ Command routing: Yes (match statement)
+
+SUB-HANDLERS:
+✓ _handle_resources_mine() - Line ~689
+  - Validates: position, tool_type
+  - Returns: resources_gathered based on tool_type
+  
+✓ _handle_resources_harvest() - Line ~733
+  - Validates: position, harvest_radius
+  - Returns: resources_gathered based on radius
+  
+✓ _handle_resources_inventory() - Line ~777
+  - No parameters required
+  - Returns: mock inventory dictionary
+  
+✓ _handle_resources_deposit() - Line ~804
+  - Validates: storage_id, resources
+  - Returns: success boolean
+
+ERROR HANDLING:
+✓ Missing parameter validation: All handlers
+✓ Type checking: All handlers
+✓ Array size validation: position parameters
+✓ Proper HTTP status codes: 200, 400, 404
+✓ Descriptive error messages: All handlers
+
+DOCUMENTATION:
+✓ API documentation: RESOURCE_ENDPOINTS.md
+✓ Implementation summary: RESOURCE_ENDPOINTS_SUMMARY.md
+✓ Test script: test_resource_endpoints.py
+
+CODE QUALITY:
+✓ Follows existing patterns
+✓ Proper GDScript typing
+✓ Consistent indentation
+✓ Documentation comments
+✓ Mock data for testing
+
+INTEGRATION STATUS: COMPLETE ✓
+
+To test, run:
+1. Start Godot: godot --path "C:/godot" --dap-port 6006 --lsp-port 6005
+2. Run tests: python test_resource_endpoints.py
+3. Or use curl commands from RESOURCE_ENDPOINTS.md
+
+=====================================================

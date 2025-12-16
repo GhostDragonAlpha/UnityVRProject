@@ -1,0 +1,130 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.3
+
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+Verifying debug adapter syntax fixes...
+Checking: res://addons/godot_debug_connection/dap_adapter.gd
+SCRIPT ERROR: Parse Error: Expected variable name after "var".
+   at: GDScript::reload (res://addons/godot_debug_connection/dap_adapter.gd:460)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://verify_debug_fixes.gd:18)
+ERROR: Failed to load script "res://addons/godot_debug_connection/dap_adapter.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://verify_debug_fixes.gd:18)
+SUCCESS: res://addons/godot_debug_connection/dap_adapter.gd loaded successfully
+Checking: res://addons/godot_debug_connection/lsp_adapter.gd
+SCRIPT ERROR: Parse Error: Expected variable name after "var".
+   at: GDScript::reload (res://addons/godot_debug_connection/lsp_adapter.gd:636)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://verify_debug_fixes.gd:18)
+ERROR: Failed to load script "res://addons/godot_debug_connection/lsp_adapter.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://verify_debug_fixes.gd:18)
+SUCCESS: res://addons/godot_debug_connection/lsp_adapter.gd loaded successfully
+Checking: res://addons/godot_debug_connection/connection_manager.gd
+SUCCESS: res://addons/godot_debug_connection/connection_manager.gd loaded successfully
+Checking: res://addons/godot_debug_connection/godot_bridge.gd
+SUCCESS: res://addons/godot_debug_connection/godot_bridge.gd loaded successfully
+Checking: res://addons/godot_debug_connection/telemetry_server.gd
+SUCCESS: res://addons/godot_debug_connection/telemetry_server.gd loaded successfully
+Checking: res://tests/unit/test_physics_engine.gd
+SCRIPT ERROR: Parse Error: Unexpected "Indent" in class body.
+   at: GDScript::reload (res://tests/unit/test_physics_engine.gd:12)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://verify_debug_fixes.gd:18)
+ERROR: Failed to load script "res://tests/unit/test_physics_engine.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://verify_debug_fixes.gd:18)
+SUCCESS: res://tests/unit/test_physics_engine.gd loaded successfully
+
+✅ All debug adapter and physics test files compile successfully!
+SCRIPT ERROR: Parse Error: Unexpected ":" in class body.
+   at: GDScript::reload (res://scripts/core/engine.gd:91)
+ERROR: Failed to load script "res://scripts/core/engine.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+ERROR: Failed to instantiate an autoload, script 'res://scripts/core/engine.gd' does not inherit from 'Node'.
+   at: start (main/main.cpp:4335)
+SCRIPT ERROR: Parse Error: Unexpected identifier "audio_settings" in class body.
+   at: GDScript::reload (res://scripts/core/settings_manager.gd:116)
+ERROR: Failed to load script "res://scripts/core/settings_manager.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+ERROR: Failed to instantiate an autoload, script 'res://scripts/core/settings_manager.gd' does not inherit from 'Node'.
+   at: start (main/main.cpp:4335)
+ERROR: Failed to instantiate an autoload, script 'res://addons/godot_debug_connection/dap_adapter.gd' does not inherit from 'Node'.
+   at: start (main/main.cpp:4335)
+ERROR: Failed to instantiate an autoload, script 'res://addons/godot_debug_connection/lsp_adapter.gd' does not inherit from 'Node'.
+   at: start (main/main.cpp:4335)
+SCRIPT ERROR: Parse Error: Expected opening "(" after function name.
+   at: GDScript::reload (res://scripts/http_api/http_api_server.gd:45)
+ERROR: Failed to load script "res://scripts/http_api/http_api_server.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+ERROR: Failed to instantiate an autoload, script 'res://scripts/http_api/http_api_server.gd' does not inherit from 'Node'.
+   at: start (main/main.cpp:4335)
+[VR UI Initializer] Waiting for VRMain scene...
+[LauncherAutoload] Feature launcher autoload ready. Press F12 to open.
+[LODManager] Initializing...
+[LODManager] Warning: ScaleTransitionManager not found
+[LODManager] Created StreamingQueueLOD
+SCRIPT ERROR: Parse Error: Class "StreamingConfig" hides a global script class.
+   at: GDScript::reload (res://scripts/resources/streaming_config.gd:1)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:190)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+ERROR: Failed to load script "res://scripts/resources/streaming_config.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:190)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+ERROR: Invalid color code: #.
+   at: html (core/math/color.cpp:361)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:190)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+ERROR: Invalid color code: #.
+   at: html (core/math/color.cpp:361)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:190)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+ERROR: res://resources/streaming_config.tres:31 - Parse Error: Expected ':'.
+   at: _printerr (scene/resources/resource_format_text.cpp:40)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:190)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+ERROR: Failed loading resource: res://resources/streaming_config.tres.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:190)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+WARNING: [LODManager] Could not load streaming config, using defaults
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _load_config (res://scripts/core/lod_manager.gd:202)
+       [1] _ready (res://scripts/core/lod_manager.gd:114)
+[LODManager] Initialization complete
+[GodotBridge] Failed to listen on port 8080 (Error: 22), trying next...
+[GodotBridge] Successfully bound to port 8083
+[GodotBridge] HTTP Server listening on port 8083
+[ConnectionManager] Initialized with circuit breaker pattern
+SCRIPT ERROR: Invalid call. Nonexistent function 'listen' in base 'WebSocketPeer'.
+   at: _ready (res://addons/godot_debug_connection/telemetry_server.gd:51)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://addons/godot_debug_connection/telemetry_server.gd:51)
+[InventoryManager] Initialized with max capacity: 20
+[ParkedShipController] Initialized
+[LODManager] Quality degraded to 0.90
+SCRIPT ERROR: Invalid call. Nonexistent function 'stop' in base 'WebSocketPeer'.
+   at: stop_server (res://addons/godot_debug_connection/telemetry_server.gd:324)
+   GDScript backtrace (most recent call first):
+       [0] stop_server (res://addons/godot_debug_connection/telemetry_server.gd:324)
+       [1] _exit_tree (res://addons/godot_debug_connection/telemetry_server.gd:328)
+[LODManager] Shutting down...
+[LODManager] Shutdown complete
+ERROR: 9 RID allocations of type 'N9OpenXRAPI18InteractionProfileE' were leaked at exit.
+ERROR: 23 RID allocations of type 'N9OpenXRAPI6ActionE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N9OpenXRAPI9ActionSetE' were leaked at exit.
+ERROR: 18 RID allocations of type 'N9OpenXRAPI7TrackerE' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)

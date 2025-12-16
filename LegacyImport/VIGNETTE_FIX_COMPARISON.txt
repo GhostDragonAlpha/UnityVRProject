@@ -1,0 +1,124 @@
+================================================================================
+VIGNETTE POSITIONING FIX - CODE COMPARISON
+================================================================================
+
+FILE: C:/godot/scripts/core/vr_comfort_system.gd
+FUNCTION: _setup_vignetting() -> void (lines 155-208)
+
+================================================================================
+BEFORE (BROKEN):
+================================================================================
+
+Line 191-215:
+	# Add to VR camera's HUD if available
+	if vr_manager and vr_manager.xr_camera:
+		# Look for HUD parent or create one
+		var hud_parent = vr_manager.xr_camera.get_node_or_null("HUD")
+		if hud_parent == null:
+			# Try to find CanvasLayer
+			for child in vr_manager.xr_camera.get_children():
+				if child is CanvasLayer:
+					hud_parent = child
+					break
+
+		if hud_parent:
+			hud_parent.add_child(vignette_rect)
+		else:
+			# Create a CanvasLayer for the HUD
+			var canvas_layer = CanvasLayer.new()
+			canvas_layer.name = "ComfortHUD"
+			canvas_layer.layer = 100  # High layer to ensure it's on top
+			vr_manager.xr_camera.add_child(canvas_layer)
+			canvas_layer.add_child(vignette_rect)
+	else:
+		# Fallback: add to scene root
+		add_child(vignette_rect)
+
+	print("VRComfortSystem: Vignetting effect set up successfully")
+
+PROBLEMS WITH THIS APPROACH:
+1. Attaches CanvasLayer to XRCamera3D (3D node)
+2. CanvasLayer inherits 3D transforms from camera
+3. Vignette rotates with camera instead of staying fixed
+4. Conditional logic that may fail to initialize properly
+5. Doesn't use proper 2D rendering pipeline for UI overlays
+
+================================================================================
+AFTER (FIXED):
+================================================================================
+
+Line 191-208:
+	# Attach vignette to scene root as CanvasLayer for proper 2D rendering in viewport
+	# CanvasLayer MUST be child of scene root, not 3D nodes, to render correctly in VR
+	# This ensures the vignette stays fixed in the camera viewport regardless of 3D transforms
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.name = "VignetteCanvasLayer"
+	canvas_layer.layer = 100  # High layer to ensure it's on top of all game content
+
+	# Get the scene root - proper parent for CanvasLayer to enable 2D rendering pipeline
+	var scene_root = get_tree().root
+	scene_root.add_child(canvas_layer)
+	canvas_layer.add_child(vignette_rect)
+
+	# Ensure proper scene ownership for serialization
+	canvas_layer.owner = scene_root
+	vignette_rect.owner = canvas_layer
+
+	print("VRComfortSystem: Vignetting effect set up successfully")
+	print("VRComfortSystem: Vignette attached to scene root CanvasLayer - stays fixed to camera viewport")
+
+BENEFITS OF THIS APPROACH:
+1. Attaches CanvasLayer to scene root (proper parent)
+2. Uses viewport-space rendering for 2D overlays
+3. Vignette stays fixed on camera viewport
+4. No conditionals - always works correctly
+5. Follows Godot's 2D UI rendering best practices
+6. VR-compatible: overlay doesn't rotate with head
+7. Simpler, more maintainable code
+
+================================================================================
+KEY ARCHITECTURAL INSIGHTS:
+================================================================================
+
+Godot Node Hierarchy for VR UI:
+```
+SceneRoot (viewport space rendering)
+├── 3D World (XROrigin3D, Spacecraft, etc.)
+│   └── XRCamera3D (head tracking)
+├── CanvasLayer (2D overlays) <-- CORRECT PLACE
+│   └── ColorRect (vignette)
+└── Other 2D UI
+```
+
+Why CanvasLayer Must Be At Scene Root:
+- CanvasLayer is a special node that renders 2D content in viewport space
+- It bypasses the 3D transform hierarchy
+- Parenting it to 3D nodes breaks the rendering pipeline
+- In VR, this is critical: UI must be viewport-relative, not world-relative
+
+VR vs Desktop Rendering:
+- Desktop: Single camera, simpler UI layout
+- VR: Two cameras (stereo), UI must appear on both eyes identically
+- CanvasLayer at scene root automatically handles both eye views
+- CanvasLayer as 3D child: Only visible to one eye or distorted
+
+================================================================================
+TESTING VERIFICATION:
+================================================================================
+
+After applying this fix, the vignette will:
+✓ Appear centered on the viewport at all times
+✓ NOT rotate when the player's head rotates
+✓ Render above all 3D game content
+✓ Work correctly in both stereo (VR) and mono (desktop) modes
+✓ Smoothly fade in/out based on acceleration
+✓ Maintain proper visual hierarchy
+
+You can verify this works by:
+1. Starting the game with comfort mode enabled
+2. Accelerating the spacecraft past 5 m/s²
+3. Looking around in VR - vignette stays centered
+4. Rotating head - vignette does NOT rotate
+5. Disabling vignetting from settings - overlay disappears
+
+================================================================================

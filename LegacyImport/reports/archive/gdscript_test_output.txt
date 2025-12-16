@@ -1,0 +1,48 @@
+Exception in thread Thread-9 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Program Files\Python311\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 11570: character maps to <undefined>
+SpaceTime VR Test Runner
+Project: C:\Ignotus
+Filter: None
+Timeout: 120s
+Parallel: False
+
+Discovered 6 GDScript test(s)
+
+Running 6 test(s)...
+
+[INFO] Running GDScript test: test_audio_systems
+[INFO] Running GDScript test: test_planetary_terrain_manager
+[INFO] Running GDScript test: test_spacecraft_cockpit_controls
+[INFO] Running GDScript test: test_voxel_performance_monitor
+[INFO] Running GDScript test: test_voxel_terrain
+[INFO] Running GDScript test: test_vr_controller_basic
+
+======================================================================
+TEST RESULTS SUMMARY
+======================================================================
+
+GDScript Tests: 4/6 passed
+  PASS test_audio_systems (1.48s)
+  PASS test_planetary_terrain_manager (1.47s)
+  PASS test_spacecraft_cockpit_controls (1.47s)
+  FAIL test_voxel_performance_monitor (2.58s)
+    Error: Exit code: 100
+  FAIL test_voxel_terrain (7.76s)
+    Error: unsupported operand type(s) for +: 'NoneType' and 'str'
+  PASS test_vr_controller_basic (1.47s)
+
+Overall: 4/6 tests passed
+Duration: 16.23s
+
+2 test(s) failed

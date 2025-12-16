@@ -1,0 +1,288 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.3
+
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+[2025-12-03T20:51:03] [INFO] ResonanceEngine initializing...
+[2025-12-03T20:51:03] [INFO] Target FPS set to 90
+[2025-12-03T20:51:03] [INFO] Subsystem registered: TimeManager
+[2025-12-03T20:51:03] [INFO] TimeManager initialized
+[2025-12-03T20:51:03] [INFO] Subsystem initialized: TimeManager
+[2025-12-03T20:51:03] [INFO] Subsystem registered: Relativity
+[2025-12-03T20:51:03] [INFO] RelativityManager initialized
+[2025-12-03T20:51:03] [INFO] Subsystem initialized: RelativityManager
+[2025-12-03T20:51:03] [INFO] Subsystem registered: FloatingOrigin
+[2025-12-03T20:51:03] [INFO] FloatingOriginSystem created - awaiting player node assignment
+[2025-12-03T20:51:03] [INFO] Subsystem initialized: FloatingOrigin
+[2025-12-03T20:51:03] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-03T20:51:03] [INFO] PhysicsEngine initialized
+[2025-12-03T20:51:03] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-03T20:51:03] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-03T20:51:03] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-03T20:51:03] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+WARNING: [2025-12-03T20:51:03] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:845)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:146)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:103)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:202)
+       [6] _init_subsystem (res://scripts/core/engine.gd:120)
+       [7] _initialize_engine (res://scripts/core/engine.gd:89)
+       [8] _ready (res://scripts/core/engine.gd:67)
+WARNING: [2025-12-03T20:51:03] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed, enabling desktop fallback
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:845)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:110)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:202)
+       [5] _init_subsystem (res://scripts/core/engine.gd:120)
+       [6] _initialize_engine (res://scripts/core/engine.gd:89)
+       [7] _ready (res://scripts/core/engine.gd:67)
+[2025-12-03T20:51:03] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-03T20:51:03] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-03T20:51:03] [INFO] Subsystem registered: VRManager
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+ERROR: Parent node is busy setting up children, `add_child()` failed. Consider using `add_child.call_deferred(child)` instead.
+   at: add_child (scene/main/node.cpp:1689)
+   GDScript backtrace (most recent call first):
+       [0] _setup_vignetting (res://scripts/core/vr_comfort_system.gd:209)
+       [1] initialize (res://scripts/core/vr_comfort_system.gd:75)
+       [2] _init_vr_comfort_system (res://scripts/core/engine.gd:229)
+       [3] _init_subsystem (res://scripts/core/engine.gd:120)
+       [4] _initialize_engine (res://scripts/core/engine.gd:90)
+       [5] _ready (res://scripts/core/engine.gd:67)
+ERROR: Invalid owner. Owner must be an ancestor in the tree.
+   at: set_owner (scene/main/node.cpp:2228)
+   GDScript backtrace (most recent call first):
+       [0] _setup_vignetting (res://scripts/core/vr_comfort_system.gd:213)
+       [1] initialize (res://scripts/core/vr_comfort_system.gd:75)
+       [2] _init_vr_comfort_system (res://scripts/core/engine.gd:229)
+       [3] _init_subsystem (res://scripts/core/engine.gd:120)
+       [4] _initialize_engine (res://scripts/core/engine.gd:90)
+       [5] _ready (res://scripts/core/engine.gd:67)
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Vignette attached to scene root CanvasLayer - stays fixed to camera viewport
+VRComfortSystem: Initialized successfully
+[2025-12-03T20:51:04] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-03T20:51:04] [INFO] VRComfortSystem initialized
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-03T20:51:04] [INFO] [HapticManager] Initializing Haptic Manager...
+WARNING: [2025-12-03T20:51:04] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:536)
+       [3] initialize (res://scripts/core/haptic_manager.gd:90)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:257)
+       [5] _init_subsystem (res://scripts/core/engine.gd:120)
+       [6] _initialize_engine (res://scripts/core/engine.gd:91)
+       [7] _ready (res://scripts/core/engine.gd:67)
+WARNING: [2025-12-03T20:51:04] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:263)
+       [3] _init_subsystem (res://scripts/core/engine.gd:120)
+       [4] _initialize_engine (res://scripts/core/engine.gd:91)
+       [5] _ready (res://scripts/core/engine.gd:67)
+WARNING: [2025-12-03T20:51:04] [WARN] Unknown subsystem name: HapticManager
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] register_subsystem (res://scripts/core/engine.gd:626)
+       [3] _init_haptic_manager (res://scripts/core/engine.gd:266)
+       [4] _init_subsystem (res://scripts/core/engine.gd:120)
+       [5] _initialize_engine (res://scripts/core/engine.gd:91)
+       [6] _ready (res://scripts/core/engine.gd:67)
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: HapticManager
+RenderingSystem: Environment configured with PBR settings
+RenderingSystem: Sun light configured with shadow settings
+RenderingSystem: Global illumination disabled (VR-optimized)
+RenderingSystem: Initialized successfully
+[2025-12-03T20:51:04] [INFO] Subsystem registered: Renderer
+[2025-12-03T20:51:04] [INFO] RenderingSystem initialized
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+WARNING: [2025-12-03T20:51:04] [WARN] Unknown subsystem name: PerformanceOptimizer
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] register_subsystem (res://scripts/core/engine.gd:626)
+       [3] _init_performance_optimizer (res://scripts/core/engine.gd:318)
+       [4] _init_subsystem (res://scripts/core/engine.gd:120)
+       [5] _initialize_engine (res://scripts/core/engine.gd:95)
+       [6] _ready (res://scripts/core/engine.gd:67)
+[2025-12-03T20:51:04] [INFO] PerformanceOptimizer initialized
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: PerformanceOptimizer
+WARNING: [2025-12-03T20:51:04] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:700)
+       [1] log_warning (res://scripts/core/engine.gd:678)
+       [2] _init_subsystem (res://scripts/core/engine.gd:124)
+       [3] _initialize_engine (res://scripts/core/engine.gd:98)
+       [4] _ready (res://scripts/core/engine.gd:67)
+[2025-12-03T20:51:04] [INFO] Subsystem registered: FractalZoom
+[2025-12-03T20:51:04] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: FractalZoom
+[2025-12-03T20:51:04] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-03T20:51:04] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-03T20:51:04] [INFO] Subsystem registered: SettingsManager
+[2025-12-03T20:51:04] [INFO] SettingsManager initialized
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: SettingsManager
+[2025-12-03T20:51:04] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-03T20:51:04] [INFO] Subsystem registered: SaveSystem
+[2025-12-03T20:51:04] [INFO] SaveSystem initialized
+[2025-12-03T20:51:04] [INFO] Subsystem initialized: SaveSystem
+[2025-12-03T20:51:04] [INFO] ResonanceEngine initialization complete
+[HttpApiServer] Detecting environment...
+[HttpApiServer]   Environment from build type: development (DEBUG)
+[HttpApiServer] Initializing SECURE HTTP API server on port 8080
+[HttpApiServer] Build Type: DEBUG
+[HttpApiServer] Environment: development
+[HttpApiServer] Audit logging temporarily disabled due to class loading issues
+[Security] Loaded whitelist config for environment: development
+[Security]   Exact scenes: 5
+[Security]   Directories: 4
+[Security]   Wildcards: 1
+[Security]   Blacklist patterns: 3
+[Security]   Blacklist exact: 1
+[HttpApiServer] Whitelist configuration loaded for 'development' environment
+[Security] JWT secret generated
+[Security] JWT token generated (expires in 3600s)
+[Security] Include in requests: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQ4MjAyNjQsImlhdCI6MTc2NDgxNjY2NCwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.Vr7pmI0unu_5J_W3k0mAgqt8BntFIs7AbzrIDlp6FRo
+[Security] Configuration:
+[Security]   Authentication Method: JWT
+[Security]   Token Manager: DISABLED (legacy mode)
+[Security]   Authentication: ENABLED
+[Security]   Scene Whitelist: ENABLED
+[Security]   Size Limits: ENABLED
+[Security]   Bind Address: 127.0.0.1
+[Security]   Rate Limiting: ENABLED
+[Security]   Max Request Size: 1048576 bytes
+[Security]   Whitelisted Scenes: 5
+[Security]   Default Rate Limit: 100 req/min
+[Security]     - res://vr_main.tscn
+[Security]     - res://node_3d.tscn
+[Security]     - res://scenes/celestial/solar_system.tscn
+[Security]     - res://scenes/celestial/day_night_test.tscn
+[Security]     - res://scenes/creature_test.tscn
+[HttpApiServer] Registered /scene/history router
+[HttpApiServer] Registered /scene/reload router
+[HttpApiServer] Registered /scene router
+[HttpApiServer] Registered /scenes router
+[SERVER] 2025-12-03 20:51:05 >> Could not bind to port 8080, already in use
+[SERVER] 2025-12-03 20:51:05 >> Server stopped.
+[HttpApiServer] SECURE HTTP API server started on 127.0.0.1:8080
+[HttpApiServer] Available endpoints:
+[HttpApiServer]   POST /scene - Load a scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scene - Get current scene (AUTH REQUIRED)
+[HttpApiServer]   PUT  /scene - Validate a scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scenes - List available scenes (AUTH REQUIRED)
+[HttpApiServer]   POST /scene/reload - Reload current scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scene/history - Get scene load history (AUTH REQUIRED)
+[HttpApiServer] 
+[Security] Legacy API token generated: 735fdea0299a75e1ad1eb5ed64fee9f088d212cda8278b543e059e4ab76c0f46
+[Security] Include in requests: Authorization: Bearer 735fdea0299a75e1ad1eb5ed64fee9f088d212cda8278b543e059e4ab76c0f46
+[HttpApiServer] API TOKEN: 735fdea0299a75e1ad1eb5ed64fee9f088d212cda8278b543e059e4ab76c0f46
+[HttpApiServer] Use: curl -H 'Authorization: Bearer 735fdea0299a75e1ad1eb5ed64fee9f088d212cda8278b543e059e4ab76c0f46' ...
+[SceneLoadMonitor] Initialized and monitoring scene changes
+[INFO] [SettingsManager] Settings loaded successfully.
+VoxelPerformanceMonitor: Initialized (90 FPS target, 11.11 ms budget)
+[VR Controller] LeftController initialized
+[VR Controller] RightController initialized
+[VRMain] Scene loaded successfully
+[VRMain] OpenXR not available - running in desktop mode
+WARNING: VoxelPerformanceMonitor: Physics frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:401)
+       [1] _check_physics_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:358)
+       [2] _physics_process (res://scripts/core/voxel_performance_monitor.gd:146)
+SolarSystemInitializer: Loaded ephemeris data with 24 bodies
+SolarSystemInitializer: Initialized with 24 bodies
+[VRMain] Player initialized for voxel terrain testing
+[VRMain] Spawn position: (0.0, 0.9, 0.0)
+[VRMain] Capsule bottom at y=0.0 (ground), player eyes at y=0.9
+WARNING: VoxelPerformanceMonitor: Render frame time 100.00 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:401)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:348)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:126)
+[HttpApiServer] Stopping HTTP server...
+[SERVER] 2025-12-03 20:51:05 >> Server stopped.
+[2025-12-03T20:51:05] [INFO] [HapticManager] HapticManager exiting tree, cleaning up...
+[2025-12-03T20:51:05] [INFO] [HapticManager] HapticManager cleanup complete
+[2025-12-03T20:51:05] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-03T20:51:05] [INFO] [VRManager] VRManager resource cleanup complete
+VoxelPerformanceMonitor: Debug UI disabled
+VoxelPerformanceMonitor: Shutdown complete
+[2025-12-03T20:51:05] [INFO] ResonanceEngine shutting down...
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _log_info (res://scripts/core/save_system.gd:853)
+       [1] shutdown (res://scripts/core/save_system.gd:868)
+       [2] _shutdown_subsystem (res://scripts/core/engine.gd:572)
+       [3] shutdown (res://scripts/core/engine.gd:541)
+       [4] _notification (res://scripts/core/engine.gd:584)
+SaveSystem: SaveSystem shutdown
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: SaveSystem
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: SettingsManager
+CaptureEventSystem shutdown
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: Renderer
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: VRComfortSystem
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:861)
+       [1] _log_info (res://scripts/core/vr_manager.gd:835)
+       [2] shutdown (res://scripts/core/vr_manager.gd:685)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:572)
+       [4] shutdown (res://scripts/core/engine.gd:548)
+       [5] _notification (res://scripts/core/engine.gd:584)
+[INFO] [VRManager] VRManager shutting down...
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:861)
+       [1] _log_info (res://scripts/core/vr_manager.gd:835)
+       [2] shutdown (res://scripts/core/vr_manager.gd:703)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:572)
+       [4] shutdown (res://scripts/core/engine.gd:548)
+       [5] _notification (res://scripts/core/engine.gd:584)
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: VRManager
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: FloatingOrigin
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-03T20:51:05] [INFO] Subsystem shutdown: TimeManager
+[2025-12-03T20:51:05] [INFO] ResonanceEngine shutdown complete
+ERROR: 9 RID allocations of type 'N9OpenXRAPI18InteractionProfileE' were leaked at exit.
+ERROR: 23 RID allocations of type 'N9OpenXRAPI6ActionE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N9OpenXRAPI9ActionSetE' were leaked at exit.
+ERROR: 18 RID allocations of type 'N9OpenXRAPI7TrackerE' were leaked at exit.
+WARNING: 1 RID of type "Canvas" was leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2676)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)
+ERROR: 5 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:795)

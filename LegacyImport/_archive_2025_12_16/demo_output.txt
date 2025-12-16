@@ -1,0 +1,232 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.4
+OpenXR: XrGraphicsRequirementsVulkan2KHR:
+ - minApiVersionSupported:  1.0.0
+ - maxApiVersionSupported:  1.2.0
+Vulkan 1.4.325 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4090
+
+
+=== STARTING AI AGENT DEMO ===
+
+DesktopCommander: Initializing secure command execution system
+DesktopCommander: Security policies loaded
+DesktopCommander: Sandbox environment configured at: /tmp/spacetime_sandbox
+DesktopCommander: Audit logging enabled
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[FloatingOriginSystem] Initialized
+[FloatingOriginSystem] Shift threshold: 10000.0 km
+[GravityManager] Initialized
+[GravityManager] Gravitational constant: 10.00
+[VertexScalingSystem] Initialized
+[VertexScalingSystem] Influence formula: radius / (distance * distance)
+[VertexScalingSystem] Min distance: 0.10 m
+[VertexScalingSystem] Max influence: 1000000.0
+[VertexScalingSystem] Gravity scale: 10.00
+[2025-12-13T18:04:55] [INFO] ResonanceEngine initializing...
+[2025-12-13T18:04:55] [INFO] Launch arguments: ["-s", "scripts/demos/agent_demo.gd"]
+[2025-12-13T18:04:55] [INFO] Target FPS set to 90
+[2025-12-13T18:04:55] [INFO] Subsystem registered: TimeManager
+[2025-12-13T18:04:55] [INFO] TimeManager initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: TimeManager
+[2025-12-13T18:04:55] [INFO] Subsystem registered: Relativity
+[2025-12-13T18:04:55] [INFO] RelativityManager initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: RelativityManager
+[2025-12-13T18:04:55] [INFO] Subsystem registered: FloatingOrigin
+[2025-12-13T18:04:55] [INFO] FloatingOriginSystem created - awaiting player node assignment
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: FloatingOrigin
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[2025-12-13T18:04:55] [INFO] Subsystem registered: AstronomicalCoords
+[2025-12-13T18:04:55] [INFO] AstronomicalCoordinateSystem initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: AstronomicalCoords
+[2025-12-13T18:04:55] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-13T18:04:55] [INFO] PhysicsEngine initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-13T18:04:55] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-13T18:04:55] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-13T18:04:55] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+[2025-12-13T18:04:55] [INFO] [VRManager] OpenXR interface initialized successfully
+[2025-12-13T18:04:55] [INFO] [VRManager] Created XROrigin3D node
+[2025-12-13T18:04:55] [INFO] [VRManager] Created XRCamera3D node
+[2025-12-13T18:04:55] [INFO] [VRManager] Created left XRController3D node
+[2025-12-13T18:04:55] [INFO] [VRManager] Created right XRController3D node
+[2025-12-13T18:04:55] [INFO] [VRManager] VR mode initialized successfully
+[2025-12-13T18:04:55] [INFO] Subsystem registered: VRManager
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Initialized successfully
+[2025-12-13T18:04:55] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-13T18:04:55] [INFO] VRComfortSystem initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-13T18:04:55] [INFO] [HapticManager] Initializing Haptic Manager...
+[2025-12-13T18:04:55] [INFO] [HapticManager] Haptic Manager initialized successfully
+[2025-12-13T18:04:55] [INFO] [HapticManager] Left controller: found
+[2025-12-13T18:04:55] [INFO] [HapticManager] Right controller: found
+[2025-12-13T18:04:55] [INFO] Subsystem registered: HapticManager
+[2025-12-13T18:04:55] [INFO] HapticManager initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: HapticManager
+[2025-12-13T18:04:55] [INFO] Subsystem registered: Renderer
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-13T18:04:55] [INFO] Subsystem registered: PerformanceOptimizer
+[2025-12-13T18:04:55] [INFO] PerformanceOptimizer initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: PerformanceOptimizer
+[2025-12-13T18:04:55] [INFO] Subsystem registered: FractalZoom
+[2025-12-13T18:04:55] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: FractalZoom
+[2025-12-13T18:04:55] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-13T18:04:55] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-13T18:04:55] [INFO] Subsystem registered: SettingsManager
+[2025-12-13T18:04:55] [INFO] SettingsManager initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: SettingsManager
+[2025-12-13T18:04:55] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-13T18:04:55] [INFO] Subsystem registered: SaveSystem
+[2025-12-13T18:04:55] [INFO] SaveSystem initialized
+[2025-12-13T18:04:55] [INFO] Subsystem initialized: SaveSystem
+[2025-12-13T18:04:55] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[HttpApiServer] Detecting environment...
+[HttpApiServer]   Environment from build type: development (DEBUG)
+[HttpApiServer] Initializing SECURE HTTP API server on port 8080
+[HttpApiServer] Build Type: DEBUG
+[HttpApiServer] Environment: development
+[SimpleAuditLogger] Audit logging initialized - writing to: user://http_api_audit.log
+[Security] Loaded whitelist config for environment: development
+[Security]   Exact scenes: 6
+[Security]   Directories: 5
+[Security]   Wildcards: 1
+[Security]   Blacklist patterns: 3
+[Security]   Blacklist exact: 1
+[HttpApiServer] Whitelist configuration loaded for 'development' environment
+[Security] JWT secret generated
+[Security] JWT token generated (expires in 315360000s)
+[Security] Include in requests: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwODEwMzA2OTUsImlhdCI6MTc2NTY3MDY5NSwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.NwqGzTn_9_wOQR7BUJhGrVmBGpK5-PaRQhHe6oCXAL0
+[Security] Configuration:
+[Security]   Authentication Method: JWT
+[Security]   Token Manager: DISABLED (legacy mode)
+[Security]   Authentication: ENABLED
+[Security]   Scene Whitelist: ENABLED
+[Security]   Size Limits: ENABLED
+[Security]   Bind Address: 127.0.0.1
+[Security]   Rate Limiting: ENABLED
+[Security]   Max Request Size: 1048576 bytes
+[Security]   Whitelisted Scenes: 6
+[Security]   Default Rate Limit: 100 req/min
+[Security]     - res://vr_main.tscn
+[Security]     - res://node_3d.tscn
+[Security]     - res://scenes/celestial/solar_system.tscn
+[Security]     - res://scenes/celestial/day_night_test.tscn
+[Security]     - res://scenes/creature_test.tscn
+[Security]     - res://scenes/training/rl_planetary_navigation.tscn
+[HttpApiServer] Registered /scene/history router
+[HttpApiServer] Registered /status router
+[HttpApiServer] Registered /scene/reload router
+[HttpApiServer] Registered /scene router
+[HttpApiServer] Registered /scenes router
+[HttpApiServer] Registered /scene/dump router
+[HttpApiServer] Registered /debug/screenshot router
+[HttpApiServer] Registered /performance router
+[HttpApiServer] Registered /webhooks/:id router
+[HttpApiServer] Registered /webhooks router
+[HttpApiServer] Registered /jobs/:id router
+[HttpApiServer] Registered /jobs router
+[HttpApiServer] Registered /rl/observation router
+[HttpApiServer] Registered /rl/action router
+[HttpApiServer] Registered /rl/reset router
+[HttpApiServer] Registered /rl/mode router
+[HttpApiServer] Registered /rl/status router
+[HttpApiServer] Registered /rl/reward router
+[HttpApiServer] Registered /space/spawn router
+[HttpApiServer] Registered /space/objects/:id router (PUT/DELETE)
+[HttpApiServer] Registered /space/objects router (GET)
+[HttpApiServer] Registered /docker/deploy router
+[HttpApiServer] Registered /docker/scale router
+[HttpApiServer] Registered /docker/health router
+[HttpApiServer] Registered /docker/metrics router
+[HttpApiServer] Registered /mcp/status router
+[HttpApiServer] Registered /editor/reload router
+[SERVER] 2025-12-13 18:04:55 >> HTTP Server listening on http://127.0.0.1:8080
+[JobQueue] Initialized job queue system
+[WebhookManager] Initialized webhook system
+[RLObservationManager] Initialized
+[RLTrainingController] Initialized
+[SceneLoadMonitor] Initialized and monitoring scene changes
+[PowerSystem] Initialized
+[2025-12-13T18:04:55] [INFO] Subsystem registered: PowerSystem
+[BuildingManager] System initialized
+VoxelPerformanceMonitor: Initialized (90 FPS target, 11.11 ms budget)
+[CelestialBodyLOD] Initialized
+[2025-12-13T18:04:55] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+DockerAIManager: Initializing Docker AI management system
+DockerAIManager: Security policies loaded
+DockerAIManager: Configuration loaded
+DockerAIManager: Port allocation initialized (8083-8099)
+AuditLogger: Initialized with log file: ./logs/security_audit.log
+DockerAIManager: Security system initialized
+DockerAIManager: Connected to HTTP API Server
+DockerAIManager: Health monitoring, telemetry export, auto-scaling, and rolling updates started
+MCPProtocolBridge: Initializing MCP protocol bridge
+MCPProtocolBridge: JWT secret loaded from file
+MCPProtocolBridge: Configuration loaded from config/mcp_config.json
+MCPProtocolBridge: Server started on port 8082
+MCPProtocolBridge: Connected to HTTP API Server
+DesktopCommander: Initializing secure command execution system
+DesktopCommander: Security policies loaded
+DesktopCommander: Sandbox environment configured at: /tmp/spacetime_sandbox
+DesktopCommander: Audit logging enabled
+[TelemetryServer] Initializing telemetry server on port 8081
+[TelemetryServer] WebSocket server listening on port 8081
+[DashboardIntegration] Initializing dashboard integration
+[DashboardIntegration] Dashboard server started on http://127.0.0.1:8085
+[DashboardIntegration] Dashboard available at http://127.0.0.1:8085
+[DebugLogCapture] Connected to ResonanceEngine logging system
+[DebugLogCapture] [DEBUG] DebugLogCapture: Debug log capture system initialized
+[DebugLogCapture] [INFO] DebugLogCapture: Log capture system ready
+[DebugLogCapture] [WARNING] DebugLogCapture: Test warning message
+[DebugLogCapture] [ERROR] DebugLogCapture: Test error message
+[DebugApiServer] Components initialized
+[DebugApiServer] HttpApiServer found but get_server() method not available (attempt 1/5)
+[DebugApiServer] Waiting 1.0 seconds before retry...
+[DebugApiServer] WebSocket server running on port 8101
+[DebugApiServer] Servers started
+[DebugApiServer] Debug API server initialized on ports 8100 (HTTP) and 8101 (WebSocket)
+[HttpApiServer] Successfully started HTTP server on port 8080
+[HttpApiServer] SECURE HTTP API server started on 127.0.0.1:8080
+[HttpApiServer] Available endpoints:
+[HttpApiServer]   POST /scene - Load a scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scene - Get current scene (AUTH REQUIRED)
+[HttpApiServer]   PUT  /scene - Validate a scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scenes - List available scenes (AUTH REQUIRED)
+[HttpApiServer]   POST /scene/reload - Reload current scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scene/history - Get scene load history (AUTH REQUIRED)
+[HttpApiServer]   POST /space/spawn - Spawn space object (AUTH REQUIRED)
+[HttpApiServer]   GET  /space/objects - List all space objects (AUTH REQUIRED)
+[HttpApiServer]   GET  /space/objects/:id - Get object details (AUTH REQUIRED)
+[HttpApiServer]   PUT  /space/objects/:id - Update object (AUTH REQUIRED)
+[HttpApiServer]   DELETE /space/objects/:id - Delete object (AUTH REQUIRED)
+[HttpApiServer]   POST /docker/deploy - Deploy AI model container (AUTH REQUIRED)
+[HttpApiServer]   POST /docker/scale - Scale AI model containers (AUTH REQUIRED)
+[HttpApiServer]   GET  /docker/health - Get container health status (AUTH REQUIRED)
+[HttpApiServer]   GET  /docker/metrics - Get container metrics (AUTH REQUIRED)
+[HttpApiServer]   GET  /mcp/status - Get MCP protocol status (AUTH REQUIRED)
+[HttpApiServer]   POST /mcp/status - Send MCP message (AUTH REQUIRED)
+[HttpApiServer] 
+[HttpApiServer] API TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwODEwMzA2OTUsImlhdCI6MTc2NTY3MDY5NSwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.NwqGzTn_9_wOQR7BUJhGrVmBGpK5-PaRQhHe6oCXAL0
+[HttpApiServer] Use: curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwODEwMzA2OTUsImlhdCI6MTc2NTY3MDY5NSwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.NwqGzTn_9_wOQR7BUJhGrVmBGpK5-PaRQhHe6oCXAL0' ...
+[HttpApiServer] Token saved to jwt_token.txt
+[DebugApiServer] HttpApiServer found but get_server() method not available (attempt 2/5)
+[DebugApiServer] Waiting 1.0 seconds before retry...
+[DebugApiServer] HttpApiServer found but get_server() method not available (attempt 3/5)
+[DebugApiServer] Waiting 1.0 seconds before retry...
+[DebugApiServer] HttpApiServer found but get_server() method not available (attempt 4/5)
+[DebugApiServer] Waiting 1.0 seconds before retry...
+[DebugApiServer] HttpApiServer found but get_server() method not available (attempt 5/5)
+[DebugApiServer] ERROR: Failed to connect to HttpApiServer after 5 attempts
+[DebugApiServer] Debug API HTTP server will be disabled

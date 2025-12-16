@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package Core.Network;
+
+message Vector3Msg {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message TransformMsg {
+  string name = 1;
+  Vector3Msg position = 2;
+  Vector3Msg rotation = 3; // Euler angles
+  Vector3Msg scale = 4;
+}
+
+// Command Request (Python -> Unity)
+message CommandMsg {
+  string action = 1;
+  string target = 2;
+  string payload_json = 3; // Fallback for complex data
+  Vector3Msg vector_payload = 4;
+}
+
+// State Reply (Unity -> Python)
+message GameStateMsg {
+  float timestamp = 1;
+  repeated TransformMsg entities = 2;
+  string status = 3;
+}

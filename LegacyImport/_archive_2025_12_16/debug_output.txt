@@ -1,0 +1,50 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.4
+
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+Attempting to load VRPlayerController...
+Load successful.
+Cannot instantiate.
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[GravityManager] Initialized
+[GravityManager] Gravitational constant: 10.00
+[VertexScalingSystem] Initialized
+[VertexScalingSystem] Influence formula: radius / (distance * distance)
+[VertexScalingSystem] Min distance: 0.10 m
+[VertexScalingSystem] Max influence: 1000000.0
+[VertexScalingSystem] Gravity scale: 10.00
+[2025-12-15T23:23:38] [INFO] ResonanceEngine initializing...
+[2025-12-15T23:23:38] [INFO] Launch arguments: ["-s", "c:\\Ignotus\\scripts\\tools\\debug_player_compile.gd"]
+[2025-12-15T23:23:38] [INFO] Target FPS set to 90
+[2025-12-15T23:23:38] [INFO] Subsystem registered: TimeManager
+[2025-12-15T23:23:38] [INFO] TimeManager initialized
+[2025-12-15T23:23:38] [INFO] Subsystem initialized: TimeManager
+[2025-12-15T23:23:38] [INFO] Subsystem registered: Relativity
+[2025-12-15T23:23:38] [INFO] RelativityManager initialized
+[2025-12-15T23:23:38] [INFO] Subsystem initialized: RelativityManager
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[2025-12-15T23:23:38] [INFO] Subsystem registered: AstronomicalCoords
+[2025-12-15T23:23:38] [INFO] AstronomicalCoordinateSystem initialized
+[2025-12-15T23:23:38] [INFO] Subsystem initialized: AstronomicalCoords
+[2025-12-15T23:23:38] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-15T23:23:38] [INFO] PhysicsEngine initialized
+[2025-12-15T23:23:38] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-15T23:23:38] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-15T23:23:38] [INFO] [VRManager] Initializing VR Manager...
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+[INFO] [SettingsManager] Settings loaded successfully.
+[RLObservationManager] Initialized
+[RLTrainingController] Initialized
+[PowerSystem] Initialized
+[2025-12-15T23:23:38] [INFO] Subsystem registered: PowerSystem
+[BuildingManager] System initialized
+[CelestialBodyLOD] Initialized
+[2025-12-15T23:23:38] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-15T23:23:38] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-15T23:23:38] [INFO] [VRManager] VRManager resource cleanup complete
+[2025-12-15T23:23:38] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-15T23:23:38] [INFO] [VRManager] VRManager resource cleanup complete

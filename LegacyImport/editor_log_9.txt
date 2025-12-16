@@ -1,0 +1,30 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+Vulkan 1.4.312 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4090
+
+=== GODOT BRIDGE INITIALIZATION ===
+GodotBridge _ready() called
+Creating ConnectionManager...
+ConnectionManager created and added as child
+Starting HTTP server with fallback...
+=== HTTP SERVER STARTUP ===
+TCPServer created
+Ports to try: [8080, 8083, 8084, 8085]
+Attempting to bind to port 8080...
+✓ SUCCESS: GodotBridge HTTP server started on http://127.0.0.1:8080
+Available endpoints:
+  POST /connect - Connect to GDA services
+  POST /disconnect - Disconnect from GDA services
+  GET  /status - Get connection status
+  POST /debug/* - Debug adapter commands
+  POST /lsp/* - Language server requests
+  POST /edit/* - File editing operations
+  POST /execute/* - Code execution operations
+=== HTTP SERVER STARTUP COMPLETE ===
+=== GODOT BRIDGE INITIALIZATION COMPLETE ===
+Godot Debug Connection plugin entering tree...
+============================================================
+MANDATORY DEBUG INITIALIZATION
+============================================================
+Initializing Godot Debug Connection system...
+Connecting to debug services...
+Initiating connections to GDA services...

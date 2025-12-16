@@ -1,0 +1,128 @@
+================================================================================
+VOXEL TERRAIN TEST SUITE - QUICK START GUIDE
+================================================================================
+
+LOCATION: C:/godot/tests/unit/test_voxel_terrain.gd
+
+--------------------------------------------------------------------------------
+QUICK RUN COMMANDS
+--------------------------------------------------------------------------------
+
+Windows:
+    C:\godot\run_voxel_tests.bat
+
+Linux/Mac:
+    ./run_voxel_tests.sh
+
+Godot Editor:
+    1. Open GdUnit4 panel (bottom of editor)
+    2. Navigate to tests/unit/test_voxel_terrain.gd
+    3. Click "Run All Tests"
+
+Command Line (Manual):
+    godot --path C:/godot -s addons/gdUnit4/bin/GdUnitCmdTool.gd \
+      --test-suite tests/unit/test_voxel_terrain.gd
+
+Python Validation:
+    python tests/unit/validate_voxel_tests.py
+
+--------------------------------------------------------------------------------
+TESTS INCLUDED (5 total)
+--------------------------------------------------------------------------------
+
+1. test_voxel_terrain_instantiation()
+   - VoxelTerrain class exists and can be instantiated
+   - Verifies godot_voxel GDExtension is loaded
+
+2. test_voxel_generator_setup()
+   - VoxelGeneratorFlat can be created
+   - Generator can be assigned to terrain via stream
+
+3. test_collision_generation()
+   - Collision system can be enabled
+   - Terrain generates collision shapes
+
+4. test_terrain_loading()
+   - Chunks load within view distance
+   - Viewer position affects chunk generation
+
+5. test_player_spawns_on_surface()
+   - Player spawns at correct height on terrain
+   - Multiple spawn positions validated
+
+--------------------------------------------------------------------------------
+REQUIREMENTS
+--------------------------------------------------------------------------------
+
+1. GdUnit4 plugin installed (addons/gdUnit4/)
+2. godot_voxel GDExtension enabled (addons/zylann.voxel/)
+3. voxel_test_terrain.tscn scene exists
+
+--------------------------------------------------------------------------------
+DOCUMENTATION
+--------------------------------------------------------------------------------
+
+Detailed Guide:    tests/unit/README_VOXEL_TESTS.md
+Implementation:    VOXEL_TESTS_IMPLEMENTATION_SUMMARY.md
+Test Suite:        tests/unit/test_voxel_terrain.gd (342 lines, 21 assertions)
+
+--------------------------------------------------------------------------------
+VALIDATION
+--------------------------------------------------------------------------------
+
+Before running tests, validate structure:
+    python tests/unit/validate_voxel_tests.py
+
+Expected output:
+    ✓ File exists
+    ✓ Extends GdUnitTestSuite
+    ✓ Test functions
+    ✓ Constants
+    ✓ Lifecycle hooks
+    ✓ Documentation
+    ✓ Assertions (>20)
+
+    Passed: 7/7
+
+--------------------------------------------------------------------------------
+TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+"VoxelTerrain class not found"
+    → Enable godot_voxel plugin in Project Settings > Plugins
+
+"Test timeout"
+    → Increase CHUNK_LOAD_TIMEOUT in test_voxel_terrain.gd
+
+"GdUnit4 not found"
+    → Install: cd addons && git clone https://github.com/MikeSchulze/gdUnit4.git
+
+Tests hang
+    → Run in console mode instead of headless
+    → Check GPU drivers are up to date
+
+--------------------------------------------------------------------------------
+EXPECTED RUNTIME
+--------------------------------------------------------------------------------
+
+Total test execution time: ~15-20 seconds
+- Test 1: ~1 second
+- Test 2: ~2 seconds
+- Test 3: ~3 seconds (includes 1s wait for chunks)
+- Test 4: ~7 seconds (includes 5s wait for chunks)
+- Test 5: ~3 seconds
+
+--------------------------------------------------------------------------------
+SUCCESS CRITERIA
+--------------------------------------------------------------------------------
+
+All 5 tests pass
+No errors in Godot console
+No memory leaks reported
+All assertions (21+) succeed
+
+================================================================================
+CREATED: 2025-12-03
+FRAMEWORK: GdUnit4
+STATUS: Ready to run
+================================================================================

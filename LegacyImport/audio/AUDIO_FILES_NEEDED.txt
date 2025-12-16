@@ -1,0 +1,234 @@
+=== MOON LANDING AUDIO FILES NEEDED ===
+
+This file documents all audio files needed for the moon landing experience.
+The audio system is fully implemented and ready to use these files.
+
+Format: OGG Vorbis (.ogg)
+Sample Rate: 44.1 kHz or 48 kHz
+Bit Depth: 16-bit
+Channels: Mono for 3D positional, Stereo for UI
+
+DIRECTORY STRUCTURE:
+audio/
+├── sfx/
+│   ├── spacecraft/     [Spacecraft sounds]
+│   ├── landing/        [Landing impact and dust]
+│   ├── walking/        [Moon walking sounds]
+│   └── ui/             [User interface feedback]
+
+========================================
+SPACECRAFT SOUNDS (4 files)
+========================================
+
+📁 audio/sfx/spacecraft/
+
+1. engine_thrust_loop.ogg
+   Type: Seamless loop
+   Description: Low rumbling rocket engine sound
+   Duration: 2-3 seconds
+   Volume: Medium
+   Sound Design: Deep bass rumble, steady tone, like a rocket engine at idle/thrust
+   Loop: YES - must be seamless
+
+2. rcs_thruster_burst.ogg
+   Type: One-shot
+   Description: Short hissing burst for reaction control thrusters
+   Duration: 0.3-0.5 seconds
+   Volume: Medium-high
+   Sound Design: Sharp hiss, metallic, like compressed gas release
+   Loop: NO
+
+3. cockpit_ambience_loop.ogg
+   Type: Seamless loop
+   Description: Quiet electronic hum of cockpit systems
+   Duration: 3-5 seconds
+   Volume: Very quiet
+   Sound Design: Gentle electronic hum, fan noise, computer systems
+   Loop: YES - must be seamless
+
+4. landing_gear_deploy.ogg
+   Type: One-shot
+   Description: Mechanical deployment sound (future feature)
+   Duration: 1-2 seconds
+   Volume: Medium
+   Sound Design: Mechanical clunks, hydraulics, locks engaging
+   Loop: NO
+
+========================================
+LANDING SOUNDS (4 files)
+========================================
+
+📁 audio/sfx/landing/
+
+5. landing_impact_soft.ogg
+   Type: One-shot
+   Description: Gentle touchdown on moon surface
+   Duration: 0.5-1 second
+   Volume: Quiet
+   Sound Design: Soft thud, minimal dust disturbance, muffled
+   Loop: NO
+
+6. landing_impact_medium.ogg
+   Type: One-shot
+   Description: Normal landing impact
+   Duration: 0.7-1.2 seconds
+   Volume: Medium
+   Sound Design: Solid thud, some dust noise, controlled landing
+   Loop: NO
+
+7. landing_impact_hard.ogg
+   Type: One-shot
+   Description: Hard landing impact
+   Duration: 1-1.5 seconds
+   Volume: Loud
+   Sound Design: Heavy thud, crunch, lots of dust, rough landing
+   Loop: NO
+
+8. dust_settling.ogg
+   Type: One-shot
+   Description: Moon dust settling after landing
+   Duration: 2-3 seconds
+   Volume: Quiet-medium
+   Sound Design: Gentle swooshing, particles falling, no wind
+   Loop: NO
+
+========================================
+MOON WALKING SOUNDS (8 files)
+========================================
+
+📁 audio/sfx/walking/
+
+9. footstep_moon_01.ogg
+   Type: One-shot
+   Description: Muffled boot step on moon surface (variant 1)
+   Duration: 0.3-0.5 seconds
+   Volume: Quiet
+   Sound Design: Crunchy but muffled, like boots on gravel in vacuum
+   Loop: NO
+
+10. footstep_moon_02.ogg
+    Type: One-shot
+    Description: Muffled boot step on moon surface (variant 2)
+    Duration: 0.3-0.5 seconds
+    Volume: Quiet
+    Sound Design: Similar to 01 but slightly different pitch/tone
+    Loop: NO
+
+11. footstep_moon_03.ogg
+    Type: One-shot
+    Description: Muffled boot step on moon surface (variant 3)
+    Duration: 0.3-0.5 seconds
+    Volume: Quiet
+    Sound Design: Similar to 01/02 but variation for realism
+    Loop: NO
+
+12. jetpack_thrust_loop.ogg
+    Type: Seamless loop
+    Description: Continuous jetpack thrust sound
+    Duration: 1-2 seconds
+    Volume: Medium
+    Sound Design: Whooshing rocket sound, powerful but not overwhelming
+    Loop: YES - must be seamless
+
+13. jetpack_ignition.ogg
+    Type: One-shot
+    Description: Jetpack starting up
+    Duration: 0.5-0.8 seconds
+    Volume: Medium-high
+    Sound Design: Ignition whoosh, building up quickly
+    Loop: NO
+
+14. jetpack_shutdown.ogg
+    Type: One-shot
+    Description: Jetpack winding down
+    Duration: 0.8-1.2 seconds
+    Volume: Medium
+    Sound Design: Thrust fading out, engine shutting off
+    Loop: NO
+
+15. landing_thud.ogg
+    Type: One-shot
+    Description: Landing after a jump
+    Duration: 0.4-0.7 seconds
+    Volume: Medium
+    Sound Design: Heavy thump, boots hitting ground, suit weight
+    Loop: NO
+
+16. breathing_loop.ogg
+    Type: Seamless loop
+    Description: Quiet breathing inside helmet
+    Duration: 3-5 seconds (one breath cycle)
+    Volume: Very quiet
+    Sound Design: Rhythmic breathing, slightly muffled by helmet
+    Loop: YES - must be seamless
+
+========================================
+UI SOUNDS (4 files)
+========================================
+
+📁 audio/sfx/ui/
+
+17. objective_complete.ogg
+    Type: One-shot
+    Description: Positive feedback for completing objectives
+    Duration: 0.5-1 second
+    Volume: Medium
+    Sound Design: Pleasant chime or beep, uplifting tone
+    Loop: NO
+
+18. warning_beep.ogg
+    Type: One-shot
+    Description: Warning for unsafe conditions
+    Duration: 0.3-0.5 seconds
+    Volume: Medium-high
+    Sound Design: Urgent beep, attention-grabbing but not annoying
+    Loop: NO
+
+19. notification.ogg
+    Type: One-shot
+    Description: Gentle notification sound
+    Duration: 0.3-0.5 seconds
+    Volume: Quiet-medium
+    Sound Design: Soft beep or tone, non-intrusive
+    Loop: NO
+
+20. success_chime.ogg
+    Type: One-shot
+    Description: Success sound for landing achievement
+    Duration: 1-2 seconds
+    Volume: Medium
+    Sound Design: Triumphant chime or musical phrase, celebratory
+    Loop: NO
+
+========================================
+TOTAL: 20 audio files needed
+========================================
+
+SOUND DESIGN NOTES:
+- Moon has no atmosphere - sounds should be muffled/dampened
+- No reverb or echo (vacuum of space)
+- Footsteps should sound distinct from Earth footsteps
+- All sounds conducted through solid surfaces only
+- Space suit and helmet add muffling to external sounds
+- Internal sounds (breathing, cockpit) are clearer
+- Spacecraft sounds are mechanical, not organic
+
+LOOP CONFIGURATION (in Godot):
+After adding .ogg files, configure in Godot Editor:
+1. Select audio file in FileSystem
+2. In Import tab, check "Loop" for these files:
+   - engine_thrust_loop.ogg
+   - cockpit_ambience_loop.ogg
+   - jetpack_thrust_loop.ogg
+   - breathing_loop.ogg
+3. Click "Reimport"
+
+PLACEHOLDER AUDIO:
+If you don't have audio files yet, the system will:
+- Not crash (graceful degradation)
+- Print warnings in console about missing files
+- Continue gameplay without audio
+- Allow audio to be added later without code changes
+
+Once audio files are added to the correct paths, the system will
+automatically detect and use them.

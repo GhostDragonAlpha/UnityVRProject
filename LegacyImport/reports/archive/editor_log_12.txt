@@ -1,0 +1,2876 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+Vulkan 1.4.312 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4090
+
+=== GODOT BRIDGE INITIALIZATION ===
+GodotBridge _ready() called
+Creating ConnectionManager...
+ConnectionManager created and added as child
+Starting HTTP server with fallback...
+=== HTTP SERVER STARTUP ===
+TCPServer created
+Ports to try: [8080, 8083, 8084, 8085]
+Attempting to bind to port 8080...
+✓ SUCCESS: GodotBridge HTTP server started on http://127.0.0.1:8080
+Available endpoints:
+  POST /connect - Connect to GDA services
+  POST /disconnect - Disconnect from GDA services
+  GET  /status - Get connection status
+  POST /debug/* - Debug adapter commands
+  POST /lsp/* - Language server requests
+  POST /edit/* - File editing operations
+  POST /execute/* - Code execution operations
+=== HTTP SERVER STARTUP COMPLETE ===
+=== GODOT BRIDGE INITIALIZATION COMPLETE ===
+Godot Debug Connection plugin entering tree...
+============================================================
+MANDATORY DEBUG INITIALIZATION
+============================================================
+Initializing Godot Debug Connection system...
+Connecting to debug services...
+Initiating connections to GDA services...
+Attempting to connect to debug adapter on port 6006
+Successfully connected to debug adapter on port 6006
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"DISCONNECTED","timestamp":6.25}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 1, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 1.0, "seq": 1.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 1.0 Pending: [1]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 2.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+Attempting to connect to language server on port 6005
+DEBUG: Poll status: 2
+Successfully connected to language server on port 6005
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+✓ Debug adapter connected successfully
+Initiating connections to GDA services...
+✓ Mandatory debug enforcement is working
+Debug system initialization complete
+============================================================
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 2, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 2.0, "seq": 3.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 2.0 Pending: [1, 2]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 4.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":11.255}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 3, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 3.0, "seq": 5.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 3.0 Pending: [1, 2, 3]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 6.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 4, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 4.0, "seq": 7.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 4.0 Pending: [1, 2, 3, 4]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 8.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":16.258}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":21.261}
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":26.274}
+Attempting to connect to debug adapter on port 6006
+Successfully connected to debug adapter on port 6006
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 5, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 5.0, "seq": 1.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 5.0 Pending: [5]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 2.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 6, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 6.0, "seq": 3.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 6.0 Pending: [5, 6]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 4.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":31.273}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 7, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 7.0, "seq": 5.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 7.0 Pending: [5, 6, 7]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 6.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":36.274}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 8, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 8.0, "seq": 7.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 8.0 Pending: [5, 6, 7, 8]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 8.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":41.373}
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":46.373}
+Attempting to connect to debug adapter on port 6006
+Successfully connected to debug adapter on port 6006
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 9, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 427
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 532
+DEBUG: Buffer size: 532 Header end: 19
+DEBUG: Content-Length: 441
+DEBUG: Message end: 464 Buffer size: 532
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 9.0, "seq": 1.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 9.0 Pending: [9]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 2.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":51.375}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 10, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 10.0, "seq": 3.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 10.0 Pending: [9, 10]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 4.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":56.474}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 11, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 11.0, "seq": 5.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 11.0 Pending: [9, 10, 11]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 6.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 12, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 12.0, "seq": 7.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 12.0 Pending: [9, 10, 11, 12]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 8.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":61.474}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":66.573}
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":71.574}
+Attempting to connect to debug adapter on port 6006
+Successfully connected to debug adapter on port 6006
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 13, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 13.0, "seq": 1.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 13.0 Pending: [13]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 2.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 14, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 14.0, "seq": 3.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 14.0 Pending: [13, 14]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 4.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":76.575}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 15, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 15.0, "seq": 5.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 15.0 Pending: [13, 14, 15]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 6.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":81.673}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 16, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 16.0, "seq": 7.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 16.0 Pending: [13, 14, 15, 16]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 8.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":86.674}
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":91.774}
+Attempting to connect to debug adapter on port 6006
+Successfully connected to debug adapter on port 6006
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 17, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 17.0, "seq": 1.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 17.0 Pending: [17]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 2.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":96.774}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 18, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 18.0, "seq": 3.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 18.0 Pending: [17, 18]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 4.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":101.774}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 19, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 19.0, "seq": 5.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 19.0 Pending: [17, 18, 19]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 6.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 20, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 20.0, "seq": 7.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 20.0 Pending: [17, 18, 19, 20]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 8.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":106.773}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":111.875}
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":116.874}
+Attempting to connect to debug adapter on port 6006
+Successfully connected to debug adapter on port 6006
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 21, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 21.0, "seq": 1.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 21.0 Pending: [21]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 2.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 22, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 22.0, "seq": 3.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 22.0 Pending: [21, 22]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 4.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":121.873}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 23, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 23.0, "seq": 5.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 23.0 Pending: [21, 22, 23]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 6.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"INITIALIZING","is_ready":false,"lsp_state":"CONNECTED","timestamp":126.874}
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Sending DAP message (hardcoded): {"seq": 24, "type": "request", "command": "initialize", "arguments": {"clientID": "vscode", "clientName": "Visual Studio Code", "adapterID": "Godot", "pathFormat": "path", "linesStartAt1": true, "columnsStartAt1": true, "supportsVariableType": true, "supportsVariablePaging": false, "supportsRunInTerminalRequest": false, "supportsMemoryReferences": false, "supportsProgressReporting": false, "supportsInvalidatedEvent": false}}
+DEBUG: Header: Content-Length: 428
+DEBUG: put_data returned OK
+DEBUG: Poll status: 2
+DEBUG: Available bytes: 533
+DEBUG: Buffer size: 533 Header end: 19
+DEBUG: Content-Length: 442
+DEBUG: Message end: 465 Buffer size: 533
+DEBUG: Handling message: { "body": { "supportSuspendDebuggee": true, "supportTerminateDebuggee": true, "supportedChecksumAlgorithms": ["MD5", "SHA256"], "supportsBreakpointLocationsRequest": true, "supportsConfigurationDoneRequest": true, "supportsEvaluateForHovers": true, "supportsRestartRequest": true, "supportsSetVariable": true, "supportsTerminateRequest": true, "supportsValueFormattingOptions": true }, "command": "initialize", "request_seq": 24.0, "seq": 7.0, "success": true, "type": "response" }
+DEBUG: Handling response for seq: 24.0 Pending: [21, 22, 23, 24]
+DEBUG: Buffer size: 68 Header end: 18
+DEBUG: Content-Length: 46
+DEBUG: Message end: 68 Buffer size: 68
+DEBUG: Handling message: { "event": "initialized", "seq": 8.0, "type": "event" }
+DEBUG: Buffer size: 0 Header end: -1
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG: Poll status: 2
+DEBUG_ENFORCEMENT: {"action":"health_check_enforcement","dap_state":"DISCONNECTED","is_ready":false,"lsp_state":"CONNECTED","timestamp":131.973}

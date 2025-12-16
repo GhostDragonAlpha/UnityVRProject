@@ -1,0 +1,269 @@
+[gd_scene load_steps=20 format=3 uid="uid://cockpit_model_001"]
+
+[ext_resource type="Script" path="res://scripts/ui/cockpit_model.gd" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dashboard"]
+albedo_color = Color(0.15, 0.15, 0.18, 1)
+metallic = 0.85
+roughness = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glass"]
+transparency = 1
+albedo_color = Color(0.3, 0.5, 0.6, 0.15)
+metallic = 0.9
+roughness = 0.05
+refraction_enabled = true
+refraction_scale = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seat"]
+albedo_color = Color(0.2, 0.2, 0.22, 1)
+metallic = 0.3
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_controls"]
+albedo_color = Color(0.25, 0.25, 0.28, 1)
+metallic = 0.7
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_display"]
+albedo_color = Color(0.05, 0.05, 0.1, 1)
+metallic = 0.1
+roughness = 0.9
+emission_enabled = true
+emission = Color(0.2, 0.4, 0.8, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frame"]
+albedo_color = Color(0.3, 0.3, 0.32, 1)
+metallic = 0.8
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_button_red"]
+albedo_color = Color(0.8, 0.1, 0.1, 1)
+metallic = 0.6
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.5, 0.0, 0.0, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_button_green"]
+albedo_color = Color(0.1, 0.8, 0.2, 1)
+metallic = 0.6
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.0, 0.5, 0.1, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_button_blue"]
+albedo_color = Color(0.1, 0.4, 0.9, 1)
+metallic = 0.6
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.0, 0.2, 0.6, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_dashboard"]
+size = Vector3(2.5, 0.08, 1.2)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_button"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 0.025
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lever"]
+radius = 0.02
+height = 0.18
+
+[sub_resource type="TorusMesh" id="TorusMesh_dial"]
+inner_radius = 0.035
+outer_radius = 0.055
+rings = 32
+ring_segments = 16
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_throttle"]
+size = Vector3(0.08, 0.2, 0.08)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_power_button"]
+size = Vector3(0.1, 0.05, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nav_switch"]
+size = Vector3(0.1, 0.05, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_time_dial"]
+size = Vector3(0.15, 0.05, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_signal_button"]
+size = Vector3(0.1, 0.05, 0.1)
+[node name="CockpitModel" type="Node3D"]
+script = ExtResource("1")
+
+[node name="Dashboard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, -0.6)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_dashboard")
+
+[node name="DashboardFrame" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, -0.6)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_frame")
+
+[node name="LeftPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.8, 0.9, -0.4)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_dashboard")
+
+[node name="RightPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0.8, 0.9, -0.4)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_dashboard")
+
+[node name="CenterConsole" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.5, 0.2)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_controls")
+
+[node name="Seat" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0.3)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_seat")
+
+[node name="Displays" type="Node3D" parent="."]
+
+[node name="MainDisplay" type="MeshInstance3D" parent="Displays"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1.05, -0.55)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_display")
+
+[node name="LeftDisplay" type="MeshInstance3D" parent="Displays"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0.4, 0, -0.4, 0.8, -0.5, 1.0, -0.5)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_display")
+
+[node name="RightDisplay" type="MeshInstance3D" parent="Displays"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0.4, 0, -0.4, 0.8, 0.5, 1.0, -0.5)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_display")
+
+[node name="Controls" type="Node3D" parent="."]
+
+[node name="ThrottleLever" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.92, -0.45)
+mesh = SubResource("CapsuleMesh_lever")
+surface_material_override/0 = SubResource("StandardMaterial3D_controls")
+
+[node name="PowerButton" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, -0.45)
+mesh = SubResource("CylinderMesh_button")
+surface_material_override/0 = SubResource("StandardMaterial3D_button_green")
+
+[node name="NavModeSwitch" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.92, -0.45)
+mesh = SubResource("CylinderMesh_button")
+surface_material_override/0 = SubResource("StandardMaterial3D_button_blue")
+
+[node name="TimeAccelDial" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.88, -0.5)
+mesh = SubResource("TorusMesh_dial")
+surface_material_override/0 = SubResource("StandardMaterial3D_controls")
+
+[node name="SignalBoostButton" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.88, -0.5)
+mesh = SubResource("CylinderMesh_button")
+surface_material_override/0 = SubResource("StandardMaterial3D_button_red")
+
+[node name="EmergencyButton" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.95, -0.35)
+mesh = SubResource("CylinderMesh_button")
+surface_material_override/0 = SubResource("StandardMaterial3D_button_red")
+
+[node name="LandingGearButton" type="MeshInstance3D" parent="Controls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.95, -0.35)
+mesh = SubResource("CylinderMesh_button")
+surface_material_override/0 = SubResource("StandardMaterial3D_button_blue")
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DisplayLight_Main" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, -0.5)
+light_color = Color(0.3, 0.6, 1, 1)
+light_energy = 0.5
+omni_range = 0.3
+
+[node name="DisplayLight_Left" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.0, -0.45)
+light_color = Color(0.3, 0.6, 1, 1)
+light_energy = 0.4
+omni_range = 0.25
+
+[node name="DisplayLight_Right" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.0, -0.45)
+light_color = Color(0.3, 0.6, 1, 1)
+light_energy = 0.4
+omni_range = 0.25
+
+[node name="AmbientLight" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+light_color = Color(0.8, 0.85, 0.9, 1)
+light_energy = 0.3
+omni_range = 2.0
+
+[node name="ControlLight_Throttle" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.35, 1.0, -0.45)
+light_color = Color(0.9, 0.9, 1, 1)
+light_energy = 0.3
+spot_range = 0.5
+spot_angle = 30.0
+
+[node name="ControlLight_Center" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.0, -0.45)
+light_color = Color(0.9, 0.9, 1, 1)
+light_energy = 0.3
+spot_range = 0.5
+spot_angle = 30.0
+
+[node name="Canopy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 1.3, -0.2)
+mesh = SubResource("BoxMesh_dashboard")
+surface_material_override/0 = SubResource("StandardMaterial3D_glass")
+
+[node name="InteractionAreas" type="Node3D" parent="."]
+
+[node name="ThrottleArea" type="Area3D" parent="InteractionAreas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.92, -0.45)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionAreas/ThrottleArea"]
+shape = SubResource("BoxShape3D_throttle")
+
+[node name="PowerButtonArea" type="Area3D" parent="InteractionAreas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, -0.45)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionAreas/PowerButtonArea"]
+shape = SubResource("BoxShape3D_power_button")
+
+[node name="NavModeSwitchArea" type="Area3D" parent="InteractionAreas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.92, -0.45)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionAreas/NavModeSwitchArea"]
+shape = SubResource("BoxShape3D_nav_switch")
+
+[node name="TimeAccelDialArea" type="Area3D" parent="InteractionAreas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.88, -0.5)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionAreas/TimeAccelDialArea"]
+shape = SubResource("BoxShape3D_time_dial")
+
+[node name="SignalBoostButtonArea" type="Area3D" parent="InteractionAreas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.88, -0.5)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionAreas/SignalBoostButtonArea"]
+shape = SubResource("BoxShape3D_signal_button")

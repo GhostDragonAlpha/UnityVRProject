@@ -1,0 +1,48 @@
+CLAUDE.md Update Note
+=====================
+
+The following section in CLAUDE.md should be updated to reference the new test infrastructure tools:
+
+Section: ### Testing (around line 38)
+
+Current text references:
+- python test_runtime_features.py
+- python test_voxel_scene.py
+- python test_terrain_working.py
+
+These should be updated to reference:
+- python tests/test_runner.py (automated test suite runner)
+- python tests/health_monitor.py (real-time health monitoring)
+- python tests/feature_validator.py (feature validation)
+- python tests/test_bug_fixes_runtime.py (existing runtime tests)
+
+Suggested addition after "Run GDScript unit tests" section:
+
+**Run automated test suite:**
+```bash
+# Run all tests (GDScript + Python)
+python tests/test_runner.py
+
+# Run with parallel execution
+python tests/test_runner.py --parallel
+
+# Filter tests by name
+python tests/test_runner.py --filter voxel
+```
+
+**Run health checks:**
+```bash
+# Continuous monitoring
+python tests/health_monitor.py
+
+# Single check
+python tests/health_monitor.py --once
+```
+
+**Validate features:**
+```bash
+python tests/feature_validator.py
+python tests/feature_validator.py --json report.json
+```
+
+See TEST_INFRASTRUCTURE_CREATED.md for complete documentation.

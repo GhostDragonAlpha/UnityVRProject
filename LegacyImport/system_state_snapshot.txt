@@ -1,0 +1,24 @@
+PERSISTENT GODOT SYSTEM - SNAPSHOT
+===================================
+Timestamp: $(date '+%Y-%m-%d %H:%M:%S')
+
+CRITICAL PROCESS (MAIN):
+  PID: 63604
+  Name: Godot_v4.5.1-stable_win64
+  Port: 8080 (HTTP API)
+  Status: LISTENING & OPERATIONAL
+
+PYTHON MANAGEMENT:
+  PID: 17368, 45784
+  Port: 8090
+  Status: OPERATIONAL
+
+VERIFICATION COMMANDS:
+  tasklist | grep "Godot_v4.5.1-stable_win64"
+  netstat -ano | grep ":8080" | grep LISTENING
+  curl http://127.0.0.1:8090/health
+
+JWT TOKEN:
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQ4MjYwMDcsImlhdCI6MTc2NDgyMjQwNywidHlwZSI6ImFwaV9hY2Nlc3MifQ=.uiJR_qH7HHiVp3SZSHck15VwzhRHqz7w9QvsRAKbpfk
+
+SYSTEM: PERSISTENT & READY

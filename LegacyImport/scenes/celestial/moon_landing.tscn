@@ -1,0 +1,245 @@
+[gd_scene load_steps=19 format=3 uid="uid://moon_landing_scene"]
+
+[ext_resource type="Script" path="res://scripts/celestial/celestial_body.gd" id="1_celestial"]
+[ext_resource type="Script" path="res://scripts/player/spacecraft.gd" id="2_spacecraft"]
+[ext_resource type="Script" path="res://scripts/player/pilot_controller.gd" id="3_pilot"]
+[ext_resource type="Script" path="res://scripts/player/transition_system.gd" id="4_transition"]
+[ext_resource type="Script" path="res://scripts/gameplay/landing_detector.gd" id="5_landing"]
+[ext_resource type="Script" path="res://scripts/ui/moon_hud.gd" id="6_hud"]
+[ext_resource type="Script" path="res://scripts/gameplay/moon_landing_initializer.gd" id="7_init"]
+[ext_resource type="Script" path="res://scripts/gameplay/moon_landing_vr_controller.gd" id="8_vr"]
+[ext_resource type="Script" path="res://scripts/vfx/moon_landing_polish.gd" id="9_polish"]
+[ext_resource type="Script" path="res://scripts/audio/moon_audio_manager.gd" id="10_audio"]
+[ext_resource type="Script" path="res://scripts/vfx/lighting_installer.gd" id="11_lighting"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_moon"]
+radius = 500.0
+height = 1000.0
+radial_segments = 64
+rings = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_moon"]
+albedo_color = Color(0.6, 0.6, 0.6, 1)
+roughness = 0.9
+metallic = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_earth"]
+radius = 50.0
+height = 100.0
+radial_segments = 32
+rings = 16
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_earth"]
+albedo_color = Color(0.2, 0.4, 0.8, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_moon"]
+radius = 500.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_spacecraft"]
+size = Vector3(3.0, 2.0, 5.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_spacecraft"]
+size = Vector3(3.0, 2.0, 5.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hand"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hand"]
+albedo_color = Color(0.9, 0.9, 0.95, 1)
+metallic = 0.2
+roughness = 0.6
+
+[node name="MoonLanding" type="Node3D"]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="XROrigin3D/XRCamera3D"]
+
+[node name="LeftController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 1.5, -0.3)
+tracker = &"left_hand"
+pose = &"aim"
+
+[node name="LeftHand" type="MeshInstance3D" parent="XROrigin3D/LeftController"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.15, 0, 0, -0.05)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("StandardMaterial3D_hand")
+layers = 2
+
+[node name="RightController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.5, -0.3)
+tracker = &"right_hand"
+pose = &"aim"
+
+[node name="RightHand" type="MeshInstance3D" parent="XROrigin3D/RightController"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.15, 0, 0, -0.05)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("StandardMaterial3D_hand")
+layers = 2
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 1000, 0)
+light_color = Color(1, 0.95, 0.9, 1)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+
+[node name="Camera3D" type="Camera3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3000, 5000)
+current = false
+fov = 75.0
+far = 1000000.0
+
+[node name="Moon" type="Node3D" parent="."]
+script = ExtResource("1_celestial")
+body_name = "Moon"
+body_type = 1
+mass = 7.342e+22
+radius = 500.0
+rotation_period = 2360591.5
+albedo_color = Color(0.6, 0.6, 0.6, 1)
+is_emissive = false
+
+[node name="MoonMesh" type="MeshInstance3D" parent="Moon"]
+mesh = SubResource("SphereMesh_moon")
+surface_material_override/0 = SubResource("StandardMaterial3D_moon")
+
+[node name="MoonStaticBody" type="StaticBody3D" parent="Moon"]
+
+[node name="MoonCollision" type="CollisionShape3D" parent="Moon/MoonStaticBody"]
+shape = SubResource("SphereShape3D_moon")
+
+[node name="Earth" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10000, -300000)
+script = ExtResource("1_celestial")
+body_name = "Earth"
+body_type = 1
+mass = 5.972e+24
+radius = 6371.0
+rotation_period = 86400.0
+albedo_color = Color(0.2, 0.4, 0.8, 1)
+is_emissive = false
+
+[node name="EarthMesh" type="MeshInstance3D" parent="Earth"]
+mesh = SubResource("SphereMesh_earth")
+surface_material_override/0 = SubResource("StandardMaterial3D_earth")
+
+[node name="Spacecraft" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5000, 0)
+mass = 10000.0
+gravity_scale = 0.0
+angular_damp = 0.5
+script = ExtResource("2_spacecraft")
+base_thrust_power = 50000.0
+base_rotation_power = 50.0
+
+[node name="SpacecraftMesh" type="MeshInstance3D" parent="Spacecraft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_spacecraft")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spacecraft"]
+shape = SubResource("BoxShape3D_spacecraft")
+
+[node name="PilotController" type="Node" parent="Spacecraft"]
+script = ExtResource("3_pilot")
+
+[node name="TransitionSystem" type="Node" parent="Spacecraft"]
+script = ExtResource("4_transition")
+
+[node name="LandingDetector" type="Node3D" parent="Spacecraft"]
+script = ExtResource("5_landing")
+landing_altitude_threshold = 10.0
+landing_velocity_threshold = 5.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MoonHUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_hud")
+
+[node name="StatusLabel" type="Label" parent="UI/MoonHUD"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 24
+text = "Status: IN FLIGHT"
+
+[node name="AltitudeLabel" type="Label" parent="UI/MoonHUD"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 300.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 20
+text = "Altitude: High"
+
+[node name="VelocityLabel" type="Label" parent="UI/MoonHUD"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 90.0
+offset_right = 300.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 20
+text = "Speed: 0.0 m/s"
+
+[node name="ObjectivesLabel" type="Label" parent="UI/MoonHUD"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 400.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 18
+text = "OBJECTIVES:
+[ ] Land on the Moon
+[ ] Exit Spacecraft
+[ ] Jump 10 times
+[ ] Explore 100m"
+
+[node name="LandingPrompt" type="Label" parent="UI/MoonHUD"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Press [SPACE] to Exit Spacecraft"
+horizontal_alignment = 1
+visible = false
+
+[node name="SceneInitializer" type="Node" parent="."]
+script = ExtResource("7_init")
+
+[node name="VRController" type="Node" parent="."]
+script = ExtResource("8_vr")
+
+[node name="VisualPolish" type="Node" parent="."]
+script = ExtResource("9_polish")
+
+[node name="MoonAudioManager" type="Node" parent="."]
+script = ExtResource("10_audio")
+
+[node name="LightingInstaller" type="Node" parent="."]
+script = ExtResource("11_lighting")
+
+[connection signal="landing_detected" from="Spacecraft/LandingDetector" to="UI/MoonHUD" method="_on_landing_detected"]
+[connection signal="walking_mode_requested" from="Spacecraft/LandingDetector" to="UI/MoonHUD" method="_on_walking_mode_started"]

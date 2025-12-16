@@ -1,0 +1,8 @@
+[94m[INFO][0m [1mBug Fix Runtime Verification Test Suite[0m
+[94m[INFO][0m Server URL: http://127.0.0.1:8080
+[94m[INFO][0m Timeout: 120s
+
+[94m[INFO][0m Checking Python server health...
+[91m[ERROR][0m Failed to connect to Python server: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001922A05AAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[91m[ERROR][0m Please start the server with: python godot_editor_server.py --port 8090 --auto-load-scene
+[91m[ERROR][0m Cannot proceed: Python server is not healthy

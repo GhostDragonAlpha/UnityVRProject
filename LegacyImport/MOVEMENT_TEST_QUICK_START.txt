@@ -1,0 +1,360 @@
+================================================================================
+MOVEMENT TEST SUITE - QUICK START GUIDE
+================================================================================
+
+FILE: C:/godot/movement_test_suite.py
+SIZE: ~920 lines of Python code
+TESTS: 10 comprehensive movement tests
+TIMEOUT: 20 seconds (auto-terminating)
+
+================================================================================
+QUICK START (3 STEPS)
+================================================================================
+
+1. START GODOT WITH DEBUG SERVICES
+   Windows:  ./restart_godot_with_debug.bat
+   Manual:   godot --path "C:/godot" --dap-port 6006 --lsp-port 6005
+
+2. VERIFY CONNECTION
+   curl http://127.0.0.1:8080/status
+   (Should see: "overall_ready": true)
+
+3. RUN TESTS
+   python movement_test_suite.py
+
+================================================================================
+TEST COVERAGE
+================================================================================
+
+1. Position Baseline
+   - Gets initial player position for reference
+   - Validates position retrieval API works
+
+2. Walk Forward (W key)
+   - Tests forward movement (WASD input)
+   - Measures position delta in Z-axis
+   - Expects movement > 0.05m
+
+3. Walk Backward (S key)
+   - Tests backward movement
+   - Validates opposite direction movement
+   - Expects movement > 0.05m
+
+4. Walk Left (A key)
+   - Tests leftward strafing
+   - Measures X-axis movement
+   - Expects movement > 0.05m
+
+5. Walk Right (D key)
+   - Tests rightward strafing
+   - Validates correct direction
+   - Expects movement > 0.05m
+
+6. Sprint Movement (Shift + W)
+   - Compares walk vs sprint speed
+   - Validates sprint is 1.5x faster than walk
+   - Measures speed differential
+
+7. Jump (Space key)
+   - Tests vertical jump mechanics
+   - Measures peak height during jump
+   - Expects Y delta > 0.1m
+
+8. Collision Detection
+   - Samples position over 5 intervals
+   - Validates low Y-variance when stationary
+   - Ensures player doesn't clip through ground
+   - Expects Y-variance < 0.2m
+
+9. Movement Speed Validation
+   - Calculates actual movement speed (m/s)
+   - Validates reasonable range: 1-5 m/s
+   - Typical walk: ~2 m/s
+   - Typical sprint: ~4 m/s
+
+10. Input Responsiveness
+    - Measures latency of input response
+    - Tests all four directions (W,A,S,D)
+    - Calculates average and max latency
+    - Expects < 0.5s average latency
+
+================================================================================
+OUTPUT FORMAT
+================================================================================
+
+[OK]      = Test passed all criteria
+[WARNING] = Test passed but with suboptimal metrics
+[ERROR]   = Test failed critical validation
+
+Each test outputs:
+- Test name and duration
+- Status with icon
+- Result message
+- Position delta (if applicable)
+- Velocity measurements (if applicable)
+
+Final summary shows:
+- Pass/Warning/Error counts
+- Total execution time
+- Overall success status
+
+Exit code:
+- 0 = All tests passed (success)
+- 1 = One or more tests failed (error)
+
+================================================================================
+KEY CLASSES & COMPONENTS
+================================================================================
+
+TestStatus (Enum)
+- OK, WARNING, ERROR status indicators
+
+Vector3 (Dataclass)
+- Position/velocity representation
+- distance_to(other) method
+- length() for magnitude
+- Subtraction for delta calculation
+
+TestResult (Dataclass)
+- Stores individual test results
+- format_output() for console display
+- Includes: name, status, message, duration, delta, velocity
+
+MovementTestSuite (Main Class)
+- __init__(host, port, timeout) - Initialize with API connection details
+- run_all_tests() - Execute all 10 tests sequentially
+- get_player_position() - Query current player position
+- send_input(key) - Simulate keyboard input
+- print_results() - Display formatted results
+
+================================================================================
+MEASUREMENT UNITS
+================================================================================
+
+Distances:     meters (m)
+Speed:         meters per second (m/s)
+Duration:      seconds (s)
+Variance:      meters (m)
+Latency:       seconds (s)
+
+Vector representation: V3(x, y, z)
+- X-axis: left/right (positive = right)
+- Y-axis: up/down (positive = up)
+- Z-axis: forward/backward (positive = forward)
+
+================================================================================
+API ENDPOINTS USED
+================================================================================
+
+GET /status
+- Check connection status
+- Verify "overall_ready": true
+
+POST /debug/evaluate
+- Query player position via expression evaluation
+- Send Input.is_action_pressed() simulation
+- Get scene state information
+
+Fallback methods for position retrieval when debug adapter unavailable.
+
+================================================================================
+NETWORK REQUIREMENTS
+================================================================================
+
+- HTTP API: http://127.0.0.1:8080
+- Ports 8083-8085 (fallback ports if 8080 in use)
+- Connection timeout: 5 seconds per request
+- Session timeout: 20 seconds (auto-terminate)
+
+================================================================================
+DEPENDENCIES
+================================================================================
+
+Python 3.8+
+- requests (HTTP library)
+
+Installing dependencies:
+  pip install requests
+
+Or from project requirements:
+  pip install -r requirements.txt
+
+================================================================================
+ERROR TROUBLESHOOTING
+================================================================================
+
+"Cannot connect to Godot API"
+- Godot not running with --dap-port 6006 --lsp-port 6005
+- API not listening on 127.0.0.1:8080
+- Firewall blocking port 8080
+- Wait 5-10 seconds after launching Godot
+
+"Position not changing / zero movement detected"
+- Player not spawned in valid scene
+- Walking controller not activated
+- Input system not processing keyboard events
+- Physics engine not running at proper timestep
+- Check player's is_active flag
+
+"High Y-variance in collision detection"
+- Possible ground clipping
+- Physics jitter
+- Character falling slightly between frames
+- Raycast not detecting ground properly
+
+"Slow input responsiveness"
+- Network latency between test and Godot API
+- Godot physics not running at 90 FPS
+- Input processing delayed
+- Check CPU load on system
+
+================================================================================
+EXAMPLE USAGE IN SCRIPTS
+================================================================================
+
+# Basic usage
+python movement_test_suite.py
+
+# In CI/CD pipeline
+python movement_test_suite.py
+if [ $? -eq 0 ]; then
+    echo "Movement tests passed"
+else
+    echo "Movement tests failed"
+    exit 1
+fi
+
+# Custom configuration (edit file)
+suite = MovementTestSuite(
+    host="127.0.0.1",
+    port=8080,
+    timeout=30.0  # Increase timeout if needed
+)
+exit_code = suite.run_all_tests()
+
+================================================================================
+PERFORMANCE METRICS
+================================================================================
+
+Typical execution times:
+- Connection check: 1-2 seconds
+- Individual test: 1-3 seconds
+- Full suite (10 tests): 15-20 seconds
+
+Bottlenecks:
+- Network latency to Godot API
+- Physics simulation frame rate (90 FPS VR rate)
+- Position polling intervals
+
+Expected results:
+- Walk speed: 1.5-2.5 m/s
+- Sprint speed: 3.5-5.0 m/s
+- Jump height: 0.3-0.5 m
+- Input latency: 0.1-0.3 seconds
+
+================================================================================
+FILE STRUCTURE
+================================================================================
+
+movement_test_suite.py
+├── TestStatus Enum
+├── Vector3 Dataclass (position/velocity)
+├── TestResult Dataclass (test outcome)
+├── MovementTestSuite Class
+│   ├── Connection Management
+│   ├── Position Retrieval
+│   ├── Input Simulation
+│   ├── Test Execution (10 methods)
+│   └── Result Formatting
+├── main() function
+└── __main__ entry point
+
+Total: 921 lines
+Code: ~750 lines
+Comments: ~100 lines
+Blank: ~70 lines
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+
+All tests passing (10/10 [OK]):
+- Movement detected in all 4 directions
+- Sprint faster than walk
+- Jump creates vertical movement
+- Collision detection stable
+- Input responsiveness adequate
+- Movement speeds in normal ranges
+- Exit code: 0
+
+Some tests with warnings (6+/10 [OK]):
+- Still functional but suboptimal metrics
+- May indicate:
+  - Physics running slower than expected
+  - Input latency higher than ideal
+  - Movement slightly less responsive
+- Exit code: 0 (passes as long as no errors)
+
+Tests failing with errors (< 6/10):
+- Critical functionality broken
+- Player may not be spawned
+- Walking controller not active
+- API connection issues
+- Exit code: 1 (fails)
+
+================================================================================
+EXTENSIONS & CUSTOMIZATION
+================================================================================
+
+You can extend this suite by adding more tests:
+
+def test_custom_feature(self) -> None:
+    """Test description"""
+    test_name = "Feature Name"
+    start = time.time()
+    try:
+        # Test logic here
+        duration = time.time() - start
+        result = TestResult(
+            name=test_name,
+            status=TestStatus.OK,
+            message="Success message",
+            duration=duration
+        )
+        self.results.append(result)
+    except Exception as e:
+        # Handle error
+        pass
+
+Then call it from run_all_tests():
+    if not self.is_timeout():
+        self.test_custom_feature()
+
+================================================================================
+RELATED DOCUMENTATION
+================================================================================
+
+CLAUDE.md
+- Project overview and architecture
+- Full development workflow
+- Common issues and solutions
+
+DEVELOPMENT_WORKFLOW.md
+- Player experience-driven development
+- Movement system architecture
+- Integration testing procedures
+
+MOVEMENT_TEST_README.md
+- Detailed test documentation
+- Troubleshooting guide
+- CI/CD integration examples
+
+telemetry_client.py
+- Real-time monitoring during tests
+- Performance metrics
+- System state visualization
+
+================================================================================
+LAST UPDATED: 2025-12-01
+VERSION: 1.0
+================================================================================

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://inventory_panel_scene"]
+
+[ext_resource type="Script" path="res://scripts/ui/inventory_3d_ui.gd" id="1_inventory_ui"]
+
+[node name="Inventory3DUI" type="Node3D"]
+script = ExtResource("1_inventory_ui")
+grid_size = Vector2i(10, 5)
+slot_size = 0.1
+slot_spacing = 0.01
+distance_from_player = 1.0
+panel_color = Color(0.1, 0.1, 0.15, 0.9)
+enabled = false

@@ -1,0 +1,43 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+ERROR: Failed to create an autoload, script 'res://scripts/http_api/cache_manager.gd' does not inherit from 'Node'.
+   at: _create_autoload (editor/settings/editor_autoload_settings.cpp:413)
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[38;2;218;165;32mIt was recognized that GdUnit4 is running in a test environment, therefore the GdUnit4 plugin will not be executed![0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+WARNING: UID duplicate detected between res://reports/report_2/css/icon.png and res://reports/report_1/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+WARNING: UID duplicate detected between res://reports/report_3/css/icon.png and res://reports/report_2/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+WARNING: UID duplicate detected between res://reports/report_4/css/icon.png and res://reports/report_3/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+WARNING: UID duplicate detected between res://reports/report_5/css/icon.png and res://reports/report_4/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+WARNING: UID duplicate detected between res://reports/report_6/css/icon.png and res://reports/report_5/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+WARNING: UID duplicate detected between res://reports/report_7/css/icon.png and res://reports/report_6/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+WARNING: UID duplicate detected between res://reports/report_8/css/icon.png and res://reports/report_7/css/icon.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1377)
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (3 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  25% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  50% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+ERROR: Cannot export project with preset "Windows Desktop" due to configuration errors:
+No export template found at the expected path:
+C:/Users/allen/AppData/Roaming/Godot/export_templates/4.5.1.stable/windows_debug_x86_64.exe
+No export template found at the expected path:
+C:/Users/allen/AppData/Roaming/Godot/export_templates/4.5.1.stable/windows_release_x86_64.exe
+
+   at: _fs_changed (editor/editor_node.cpp:1259)
+ERROR: Project export for preset "Windows Desktop" failed.
+   at: _fs_changed (editor/editor_node.cpp:1275)

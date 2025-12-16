@@ -65,3 +65,11 @@ sysinfo.txt
 
 # File created by VS 2022
 *.pubxml
+
+# Python
+__pycache__/
+*.pyc
+
+# AI
+.agent/
+.gemini/

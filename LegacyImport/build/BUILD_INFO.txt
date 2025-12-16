@@ -1,0 +1,12 @@
+Build Metadata 
+============== 
+Timestamp: 20251204_015957 
+Date: Thu 12/04/2025  2:00:04.15 
+Godot Version: 4.5.1-stable 
+Project: SpaceTime VR 
+Platform: Windows Desktop (x86_64) 
+Export Type: Release 
+SHA256 hash of C:\godot\build\SpaceTime.exe:
+afc7505c6dcbaab3de95e0fcdf32b200589ecc745b2919d09e88da59246ff29a
+CertUtil: -hashfile command completed successfully.
+ 

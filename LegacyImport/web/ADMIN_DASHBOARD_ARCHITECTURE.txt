@@ -1,0 +1,406 @@
+# Admin Dashboard Architecture Diagram
+
+## System Overview
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                         ADMIN DASHBOARD SYSTEM                          │
+└────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────┐              ┌─────────────────────────────────┐
+│   Web Browser       │              │   Godot Server (Port 8080)      │
+│  (Admin Dashboard)  │              │   HTTP API Server               │
+│                     │              │                                 │
+│  ┌───────────────┐  │   HTTP       │  ┌───────────────────────────┐ │
+│  │ Vue.js 3 App  │◄─┼──────────────┼─►│  Admin Router             │ │
+│  │               │  │   REST API   │  │  - /admin/metrics         │ │
+│  │ - Overview    │  │              │  │  - /admin/health          │ │
+│  │ - Monitoring  │  │              │  │  - /admin/logs            │ │
+│  │ - Security    │  │              │  │  - /admin/config          │ │
+│  │ - Scenes      │  │              │  │  - /admin/security/*      │ │
+│  │ - Webhooks    │  │              │  │  - /admin/scenes/*        │ │
+│  │ - Jobs        │  │              │  │  - 15+ endpoints          │ │
+│  │ - Config      │  │              │  └───────────────────────────┘ │
+│  │ - Logs        │  │              │                                 │
+│  └───────┬───────┘  │              │  ┌───────────────────────────┐ │
+│          │          │              │  │  Security Config          │ │
+│          │          │  WebSocket   │  │  - Token Generation       │ │
+│          │          │  (Port 8083) │  │  - Scene Whitelist        │ │
+│          │          ◄──────────────┼──┤  - Rate Limiting          │ │
+│          │          │   Real-time  │  │  - Auth Validation        │ │
+│          │          │              │  └───────────────────────────┘ │
+│  ┌───────▼───────┐  │              │                                 │
+│  │  Chart.js     │  │              │  ┌───────────────────────────┐ │
+│  │  - Req Rate   │  │              │  │  Admin WebSocket          │ │
+│  │  - Latency    │  │              │  │  - Metrics Broadcasting   │ │
+│  └───────────────┘  │              │  │  - Alert Streaming        │ │
+│                     │              │  │  - Event Notifications    │ │
+└─────────────────────┘              │  │  - Multi-client Support   │ │
+                                     │  └───────────────────────────┘ │
+                                     │                                 │
+                                     │  ┌───────────────────────────┐ │
+                                     │  │  Scene Routers            │ │
+                                     │  │  - Scene Load             │ │
+                                     │  │  - Scene Reload           │ │
+                                     │  │  - Scene History          │ │
+                                     │  │  - Scenes List            │ │
+                                     │  └───────────────────────────┘ │
+                                     └─────────────────────────────────┘
+```
+
+## Data Flow
+
+### 1. Admin Authentication Flow
+
+```
+┌─────────┐      1. Request with      ┌─────────────┐
+│ Browser │─────X-Admin-Token────────►│ Admin Router│
+└─────────┘                           └──────┬──────┘
+     ▲                                       │
+     │                                       │ 2. Validate Token
+     │                                       │
+     │                                       ▼
+     │                                ┌──────────────┐
+     │                                │ Security     │
+     │    3. Return Data or 401       │ Validation   │
+     └────────────────────────────────┤              │
+                                      └──────────────┘
+```
+
+### 2. Metrics Collection Flow
+
+```
+┌──────────────┐     Track Request     ┌────────────────┐
+│ Scene Router │──────────────────────►│ Admin Router   │
+└──────────────┘                       │ - Request Count│
+                                       │ - Response Time│
+                                       │ - Success Rate │
+┌──────────────┐     Track Scene Load  └────────┬───────┘
+│ Scene Loader │──────────────────────►         │
+└──────────────┘                                 │
+                                                 │
+┌──────────────┐     Add Audit Entry             │
+│ Config API   │──────────────────────►         │
+└──────────────┘                                 │
+                                                 │
+                                                 ▼
+                                        ┌────────────────┐
+                                        │ Metrics Store  │
+                                        │ (In-Memory)    │
+                                        └────────────────┘
+```
+
+### 3. Real-time Update Flow
+
+```
+┌─────────────┐     Every 5 sec      ┌────────────────────┐
+│ Admin       │     Collect Metrics  │ Admin WebSocket    │
+│ Router      │─────────────────────►│ - Broadcast Metrics│
+└─────────────┘                      └─────────┬──────────┘
+                                               │
+                                               │ WebSocket
+                                               │ Message
+                                               │
+                                               ▼
+                        ┌──────────────────────────────────┐
+                        │ Connected Clients (up to 10)     │
+                        │                                  │
+                        │  ┌─────────┐  ┌─────────┐      │
+                        │  │Browser 1│  │Browser 2│  ... │
+                        │  └─────────┘  └─────────┘      │
+                        └──────────────────────────────────┘
+```
+
+## File Structure
+
+```
+C:/godot/
+│
+├── scripts/http_api/
+│   ├── admin_router.gd              ← Admin endpoints (750 LOC)
+│   ├── admin_websocket.gd           ← WebSocket server (250 LOC)
+│   ├── http_api_server.gd           ← Main server (register routers)
+│   ├── security_config.gd           ← Security settings
+│   ├── scene_router.gd              ← Scene endpoints
+│   └── ... other routers
+│
+├── web/
+│   ├── admin_dashboard.html         ← Dashboard UI (1,900 LOC)
+│   ├── ADMIN_DASHBOARD.md           ← User guide (15 pages)
+│   ├── ADMIN_DASHBOARD_INTEGRATION.md  ← Integration guide (8 pages)
+│   └── ADMIN_DASHBOARD_ARCHITECTURE.txt ← This file
+│
+├── tests/http_api/
+│   ├── test_admin_dashboard.py      ← Test suite (650 LOC, 20+ tests)
+│   └── ... other tests
+│
+└── ADMIN_DASHBOARD_DELIVERY.md      ← Delivery summary (8 pages)
+```
+
+## Component Interaction Matrix
+
+```
+┌──────────────┬────────┬──────────┬─────────┬──────────┬──────────┐
+│ Component    │ Admin  │ Admin    │ Security│ Scene    │ Browser  │
+│              │ Router │WebSocket │ Config  │ Router   │ Client   │
+├──────────────┼────────┼──────────┼─────────┼──────────┼──────────┤
+│ Admin Router │   -    │  Sends   │  Uses   │ Tracks   │  Serves  │
+│              │        │  Metrics │  Token  │ Requests │  Data    │
+├──────────────┼────────┼──────────┼─────────┼──────────┼──────────┤
+│ Admin        │ Gets   │    -     │   -     │    -     │Broadcasts│
+│ WebSocket    │Metrics │          │         │          │ Updates  │
+├──────────────┼────────┼──────────┼─────────┼──────────┼──────────┤
+│ Security     │Provides│   -      │    -    │  Shared  │    -     │
+│ Config       │ Token  │          │         │   API    │          │
+├──────────────┼────────┼──────────┼─────────┼──────────┼──────────┤
+│ Scene Router │Reports │   -      │  Uses   │    -     │    -     │
+│              │Metrics │          │  Token  │          │          │
+├──────────────┼────────┼──────────┼─────────┼──────────┼──────────┤
+│ Browser      │Requests│Subscribes│   -     │    -     │    -     │
+│ Client       │  Data  │  Updates │         │          │          │
+└──────────────┴────────┴──────────┴─────────┴──────────┴──────────┘
+```
+
+## API Endpoint Map
+
+```
+/admin/
+│
+├── /metrics                  → GET  → System metrics with percentiles
+├── /health                   → GET  → Health check with component status
+├── /logs                     → GET  → System logs (filterable)
+├── /config                   → GET/POST → Configuration management
+├── /cache/clear              → POST → Clear caches
+├── /restart                  → POST → Server restart (placeholder)
+│
+├── /security/
+│   ├── /events               → GET  → Security event log
+│   ├── /tokens               → GET  → Active token list
+│   └── /revoke               → POST → Token revocation
+│
+├── /scenes/
+│   ├── /whitelist            → GET/POST → Whitelist management
+│   └── /stats                → GET  → Scene load statistics
+│
+├── /webhooks                 → GET/POST → Webhook management
+├── /jobs                     → GET  → Job queue status
+├── /connections              → GET  → Active connections
+└── /audit                    → GET  → Audit log
+```
+
+## Dashboard Section Layout
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│  SIDEBAR (280px)                    MAIN CONTENT (flex: 1)         │
+│                                                                     │
+│  ┌──────────────┐                   ┌──────────────────────────┐  │
+│  │ Logo         │                   │ Page Header              │  │
+│  │ SpaceTime    │                   │ - Title                  │  │
+│  │ Admin        │                   │ - Subtitle               │  │
+│  └──────────────┘                   │ - Action Buttons         │  │
+│                                     └──────────────────────────┘  │
+│  ┌──────────────┐                                                 │
+│  │ Navigation   │                   ┌──────────────────────────┐  │
+│  │ • Overview   │                   │ Content Area             │  │
+│  │ • Monitoring │                   │                          │  │
+│  │ • Security   │                   │ - Cards Grid             │  │
+│  │ • Scenes     │                   │ - Tables                 │  │
+│  │ • Webhooks   │                   │ - Charts                 │  │
+│  │ • Jobs       │                   │ - Forms                  │  │
+│  │ • Config     │                   │                          │  │
+│  │ • Logs       │                   │                          │  │
+│  └──────────────┘                   │                          │  │
+│                                     │                          │  │
+│  ┌──────────────┐                   │                          │  │
+│  │ Theme Toggle │                   │                          │  │
+│  │ Connection   │                   │                          │  │
+│  │ Status       │                   │                          │  │
+│  └──────────────┘                   └──────────────────────────┘  │
+│                                                                     │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+## Security Model
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                      SECURITY LAYERS                          │
+└──────────────────────────────────────────────────────────────┘
+
+Layer 1: Network Security
+┌────────────────────────────────────────────┐
+│ Bind to localhost (127.0.0.1) only        │
+│ No external access without reverse proxy   │
+└────────────────────────────────────────────┘
+                    ↓
+Layer 2: Token Authentication
+┌────────────────────────────────────────────┐
+│ Admin Token Required (X-Admin-Token)      │
+│ Separate from API Token                   │
+│ 32-byte hex encoded                       │
+└────────────────────────────────────────────┘
+                    ↓
+Layer 3: Authorization
+┌────────────────────────────────────────────┐
+│ Admin-only endpoints                       │
+│ No API token can access admin functions   │
+└────────────────────────────────────────────┘
+                    ↓
+Layer 4: Audit Logging
+┌────────────────────────────────────────────┐
+│ All admin actions logged                  │
+│ Failed auth attempts tracked              │
+│ Security events recorded                  │
+└────────────────────────────────────────────┘
+```
+
+## Performance Characteristics
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    PERFORMANCE PROFILE                   │
+└─────────────────────────────────────────────────────────┘
+
+Response Times:
+/admin/metrics     ████████████ 50ms
+/admin/health      ████████ 30ms
+/admin/logs        ████████████████████ 100ms
+/admin/config      ██████████ 40ms
+WebSocket Latency  ████ 20ms
+
+Memory Usage:
+Metrics Store      ████ ~2MB
+Admin Router       ██ ~1MB
+WebSocket Server   ████ ~2MB
+Total              ██████████ ~5MB
+
+CPU Usage:
+Metrics Collection ██ <1%
+WebSocket Handling ██ <1%
+Request Processing ████ <2%
+Total              ████████ <3%
+```
+
+## Scalability Limits
+
+```
+┌──────────────────────────────┬──────────┬─────────────────┐
+│ Resource                     │ Current  │ Recommendation  │
+├──────────────────────────────┼──────────┼─────────────────┤
+│ WebSocket Connections        │    10    │ Use Redis Pub/  │
+│                              │          │ Sub for more    │
+├──────────────────────────────┼──────────┼─────────────────┤
+│ Audit Log Entries            │  1,000   │ Database backend│
+├──────────────────────────────┼──────────┼─────────────────┤
+│ System Log Entries           │   500    │ Log rotation    │
+├──────────────────────────────┼──────────┼─────────────────┤
+│ Response Time Samples        │  1,000   │ Aggregation     │
+├──────────────────────────────┼──────────┼─────────────────┤
+│ Request Rate Buckets         │    60    │ Time series DB  │
+└──────────────────────────────┴──────────┴─────────────────┘
+```
+
+## Integration Points
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                    INTEGRATION POINTS                       │
+└────────────────────────────────────────────────────────────┘
+
+1. HTTP API Server
+   Location: scripts/http_api/http_api_server.gd
+   Action: Register admin router
+   Code: server.register_router(admin_router)
+
+2. Scene Router
+   Location: scripts/http_api/scene_router.gd
+   Action: Track requests
+   Code: AdminRouter.track_request(success, response_time)
+
+3. Scene Loader
+   Location: Wherever scenes are loaded
+   Action: Track scene loads
+   Code: AdminRouter.track_scene_load(path, time, success)
+
+4. Configuration Changes
+   Location: Any config change code
+   Action: Add audit log
+   Code: AdminRouter.add_audit_log(action, user, details)
+
+5. Security Events
+   Location: Authentication code
+   Action: Log security events
+   Code: AdminRouter._log_security_event(event, request)
+```
+
+## Testing Strategy
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                     TESTING PYRAMID                       │
+└──────────────────────────────────────────────────────────┘
+
+                    ┌──────────┐
+                    │  Manual  │ Dashboard UI Testing
+                    │  Testing │ (Visual verification)
+                    └──────────┘
+                   ┌────────────────┐
+                   │  Integration   │ API Endpoint Testing
+                   │     Tests      │ (pytest - 20+ tests)
+                   └────────────────┘
+               ┌──────────────────────────┐
+               │      Unit Tests          │ Component Testing
+               │  (Future enhancement)    │ (GDScript tests)
+               └──────────────────────────┘
+```
+
+## Deployment Topology
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                  DEPLOYMENT OPTIONS                         │
+└────────────────────────────────────────────────────────────┘
+
+Option 1: Local Development
+┌──────────────┐
+│ Godot Server │ :8080 (HTTP API)
+│ localhost    │ :8083 (WebSocket)
+└──────────────┘
+       ↓
+┌──────────────┐
+│ Web Browser  │ file:// or localhost:8000
+└──────────────┘
+
+Option 2: Production with Reverse Proxy
+┌──────────────┐
+│ Internet     │
+└──────┬───────┘
+       ↓
+┌──────────────┐
+│ Nginx/Caddy  │ :443 (HTTPS)
+│ Reverse Proxy│ WebSocket Upgrade
+└──────┬───────┘
+       ↓
+┌──────────────┐
+│ Godot Server │ :8080 (HTTP API)
+│ localhost    │ :8083 (WebSocket)
+└──────────────┘
+
+Option 3: Docker Container
+┌────────────────────────────────┐
+│  Docker Container              │
+│  ┌──────────────┐              │
+│  │ Godot Server │ :8080, :8083 │
+│  └──────────────┘              │
+│  ┌──────────────┐              │
+│  │ Static Files │ :80          │
+│  └──────────────┘              │
+└────────────────────────────────┘
+```
+
+---
+
+**Document Version:** 1.0
+**Last Updated:** December 2, 2025
+**Project:** SpaceTime Admin Dashboard

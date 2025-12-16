@@ -1,0 +1,17 @@
+# SpaceTime Health Dashboard Dependencies
+# Install with: pip install -r requirements-dashboard.txt
+
+# Terminal UI framework
+rich>=13.0.0
+
+# WebSocket client for telemetry
+websockets>=11.0.0
+
+# HTTP client for API polling
+requests>=2.31.0
+
+# System resource monitoring
+psutil>=5.9.0
+
+# Async HTTP client (optional, for advanced features)
+aiohttp>=3.8.0

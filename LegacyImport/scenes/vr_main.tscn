@@ -1,0 +1,142 @@
+[gd_scene load_steps=11 format=3 uid="uid://cubn5o0l1qgr"]
+
+[ext_resource type="Script" uid="uid://d2tbb5yxmnhsf" path="res://vr_main.gd" id="1_vr_main"]
+[ext_resource type="Script" uid="uid://dgvsqmji1jemm" path="res://scripts/vr_controller_basic.gd" id="2_vr_controller"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_hand"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hand"]
+albedo_color = Color(0.8, 0.8, 0.9, 1)
+metallic = 0.3
+roughness = 0.7
+
+[sub_resource type="Environment" id="Environment_pbr"]
+background_mode = 1
+background_color = Color(0.1, 0.1, 0.15, 1)
+ambient_light_source = 1
+ambient_light_color = Color(0.3, 0.3, 0.35, 1)
+ambient_light_energy = 0.8
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ground"]
+albedo_color = Color(0.3, 0.3, 0.35, 1)
+roughness = 0.8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_grabbable"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_grabbable"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grabbable"]
+albedo_color = Color(1, 0.5, 0.2, 1)
+roughness = 0.6
+
+[node name="VRMain" type="Node3D"]
+script = ExtResource("1_vr_main")
+physics_movement_enabled = false
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="PlayerCollision" type="CharacterBody3D" parent="XROrigin3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/PlayerCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9023267, 0)
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+near = 0.1
+far = 100000.0
+
+[node name="FallbackCamera" type="Camera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+current = true
+near = 0.1
+far = 100000.0
+
+[node name="LeftController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+pose = &"aim"
+script = ExtResource("2_vr_controller")
+
+[node name="LeftHand" type="MeshInstance3D" parent="XROrigin3D/LeftController"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.3, 0, 0, -0.05)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("StandardMaterial3D_hand")
+
+[node name="RightController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+pose = &"aim"
+script = ExtResource("2_vr_controller")
+
+[node name="RightHand" type="MeshInstance3D" parent="XROrigin3D/RightController"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.3, 0, 0, -0.05)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("StandardMaterial3D_hand")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pbr")
+
+[node name="SunLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
+light_color = Color(1, 0.98, 0.95, 1)
+light_angular_distance = 0.5
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 1.0
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 10000.0
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_ground")
+use_collision = true
+size = Vector3(20, 1, 20)
+
+[node name="TestCube" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)
+use_collision = true
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="GrabbableCube1" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -2)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrabbableCube1"]
+shape = SubResource("BoxShape3D_grabbable")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GrabbableCube1"]
+mesh = SubResource("BoxMesh_grabbable")
+surface_material_override/0 = SubResource("StandardMaterial3D_grabbable")
+
+[node name="GrabbableCube2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -2)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrabbableCube2"]
+shape = SubResource("BoxShape3D_grabbable")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GrabbableCube2"]
+mesh = SubResource("BoxMesh_grabbable")
+surface_material_override/0 = SubResource("StandardMaterial3D_grabbable")
+
+[node name="GrabbableCube3" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.5)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrabbableCube3"]
+shape = SubResource("BoxShape3D_grabbable")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GrabbableCube3"]
+mesh = SubResource("BoxMesh_grabbable")
+surface_material_override/0 = SubResource("StandardMaterial3D_grabbable")

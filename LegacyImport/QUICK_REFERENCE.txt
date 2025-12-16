@@ -1,0 +1,135 @@
+===============================================================================
+BATCH PORT UPDATE TOOL - QUICK REFERENCE
+===============================================================================
+
+BASIC USAGE
+-----------
+  python batch_port_update.py                    # Dry-run (safe, no changes)
+  python batch_port_update.py --execute          # Execute replacements
+  python batch_port_update.py --help             # Show help
+
+COMMON COMMANDS
+---------------
+  # Generate report to file
+  python batch_port_update.py --report report.md
+
+  # Execute with changelog
+  python batch_port_update.py --execute --changelog changes.md
+
+  # Scan specific directory
+  python batch_port_update.py --root C:/godot/scripts
+
+  # More context (5 lines instead of 3)
+  python batch_port_update.py --context 5
+
+PORT MIGRATION GUIDE
+--------------------
+  8081 (DEPRECATED) -> 8080 (HTTP API)
+                    -> 8081 (WebSocket Telemetry)
+
+  Detection Logic:
+    HTTP indicators    -> Port 8080
+    WebSocket indicators -> Port 8081
+    No clear context   -> Port 8080 (default)
+
+SAFETY FEATURES
+---------------
+  ✓ Dry-run by default (--execute required for changes)
+  ✓ Automatic .bak backups before modification
+  ✓ Confirmation prompt before executing
+  ✓ Excludes .venv, addons/gdUnit4, build artifacts
+  ✓ Detailed changelog generation
+
+EXCLUDED DIRECTORIES
+--------------------
+  .venv, venv, __pycache__, .git, node_modules, build, dist, addons/gdUnit4
+
+FILE TYPES SCANNED
+------------------
+  .py, .gd, .md, .txt, .json, .cfg, .sh, .bat, .yml, .yaml, .toml,
+  .godot, .tscn, .tres, .cs
+
+ROLLBACK PROCEDURE
+------------------
+  # Restore from backups
+  cp path/to/file.bak path/to/file
+
+  # Or use git (if committed)
+  git checkout -- .
+
+TYPICAL WORKFLOW
+----------------
+  1. python batch_port_update.py --report review.md
+  2. Review report carefully
+  3. python batch_port_update.py --execute --changelog changes.md
+  4. Test services: curl http://127.0.0.1:8080/status
+  5. Run tests: python tests/test_runner.py
+  6. Commit if successful
+
+REPORT SECTIONS
+---------------
+  Summary           - Overall statistics
+  Breakdown by Port - How many to 8080 vs 8081
+  Breakdown by Type - Which file types affected
+  Detailed Occurrences - File-by-file with context
+  Recommendations   - Next steps
+
+CONTEXT INDICATORS
+------------------
+  HTTP API (8080):
+    - http://, https://, curl, request, api, endpoint, rest, get, post
+
+  WebSocket (8081):
+    - websocket, ws://, wss://, telemetry, streaming, socket, broadcast
+
+TROUBLESHOOTING
+---------------
+  No occurrences found:
+    -> Check --root directory path
+    -> Verify not already migrated
+
+  Permission errors:
+    -> Close files in editor
+    -> Run as administrator (Windows)
+
+  Unicode errors:
+    -> Fixed in v1.0.0, set PYTHONIOENCODING=utf-8 if persists
+
+  False positives:
+    -> Review report context carefully
+    -> Make manual adjustments after execution
+
+WHAT GETS REPLACED
+------------------
+  ✓ Active code using port 8080
+  ✓ Configuration files
+  ✓ Documentation references
+  ✓ Comments (flagged for review)
+  ✓ Shell scripts and batch files
+  ✗ Binary files (automatically excluded)
+  ✗ Files in .venv or addons/gdUnit4
+
+POST-MIGRATION TESTING
+----------------------
+  # Test HTTP API
+  curl http://127.0.0.1:8080/status
+
+  # Test WebSocket Telemetry
+  python telemetry_client.py
+
+  # Run test suite
+  python tests/test_runner.py
+
+  # Check health
+  python tests/health_monitor.py
+
+VERSION
+-------
+  1.0.0 (2025-12-04)
+
+DOCUMENTATION
+-------------
+  Full guide: BATCH_PORT_UPDATE_README.md
+  Help: python batch_port_update.py --help
+
+===============================================================================

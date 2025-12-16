@@ -1,0 +1,170 @@
+# Godot Error Check Report
+**Generated:** 2025-12-09 16:04:02
+
+## Summary
+
+- Errors: 110
+- Warnings: 73
+- Addon Issues: 0
+- Compilation Errors: 20
+
+## Compilation Errors
+
+- Parse Error: Could not find type "GdUnitTestCIRunner" in the current scope.
+- Parse Error: Identifier "GdUnitTestCIRunner" not declared in the current scope.
+- Parse Error: Class "FloatingOriginSystem" hides a global script class.
+- Parse Error: Value of type "Window" cannot be assigned to a variable of type "Node3D".
+- Parse Error: Could not find type "LODManager" in the current scope.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scenes/interaction/resonance_tuner_deck.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/systems/resonance_tuner.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/tools/resource_scanner_tool.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/player/spacecraft.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/celestial/celestial_body.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/player/pilot_controller.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/player/transition_system.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/landing_detector.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/ui/moon_hud.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/moon_landing_initializer.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/moon_landing_vr_controller.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/vfx/moon_landing_polish.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/audio/moon_audio_manager.gd.
+- Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/vfx/lighting_installer.gd.
+- Parse Error: Invalid parameter. [Resource file res://scenes/production/moon_landing_minimal.tscn:24]
+
+## General Errors
+
+- ERROR: 9 RID allocations of type 'N9OpenXRAPI18InteractionProfileE' were leaked at exit.
+- ERROR: 23 RID allocations of type 'N9OpenXRAPI6ActionE' were leaked at exit.
+- ERROR: 1 RID allocations of type 'N9OpenXRAPI9ActionSetE' were leaked at exit.
+- ERROR: 18 RID allocations of type 'N9OpenXRAPI7TrackerE' were leaked at exit.
+- ERROR: Condition "array_len == 0" is true. Returning: ERR_INVALID_DATA
+- ERROR: Index (uint32_t)p_surface = 0 is out of bounds (mesh->surface_count = 0).
+- ERROR: 1 RID allocations of type 'P11GodotBody3D' were leaked at exit.
+- ERROR: 1 RID allocations of type 'P12GodotShape3D' were leaked at exit.
+- ERROR: Pages in use exist at exit in PagedAllocator: N33RendererSceneRenderImplementation22RenderForwardClustered32GeometryInstanceForwardClusteredE
+- ERROR: 2 shaders of type SceneForwardClusteredShaderRD were never freed
+- ERROR: 1 RID allocations of type 'N10RendererRD3Fog17FogVolumeInstanceE' were leaked at exit.
+- ERROR: 1 RID allocations of type 'N10RendererRD3Fog9FogVolumeE' were leaked at exit.
+- ERROR: 3 RID allocations of type 'N10RendererRD11MeshStorage4MeshE' were leaked at exit.
+- ERROR: 3 RID allocations of type 'N10RendererRD15MaterialStorage8MaterialE' were leaked at exit.
+- ERROR: 2 RID allocations of type 'N10RendererRD15MaterialStorage6ShaderE' were leaked at exit.
+- ERROR: 1 RID allocations of type 'N10RendererRD14TextureStorage7TextureE' were leaked at exit.
+- ERROR: 10 RID allocations of type 'N17RendererSceneCull8InstanceE' were leaked at exit.
+- ERROR: 1 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.
+- ERROR: 12 resources still in use at exit (run with --verbose for details).
+- ERROR: Failed to create XR instance [Error code -2].
+- ERROR: Parent node is busy setting up children, `add_child()` failed. Consider using `add_child.call_deferred(child)` instead.
+- ERROR: Invalid owner. Owner must be an ancestor in the tree.
+- ERROR: Attempted to push_back an object of type 'Node3D' into a TypedArray, which does not inherit from 'MeshInstance3D'.
+- ERROR: Condition "!_p->typed.validate(value, "push_back")" is true.
+- ERROR: Parse Error: Could not find type "GdUnitTestCIRunner" in the current scope.
+- ERROR: Parse Error: Identifier "GdUnitTestCIRunner" not declared in the current scope.
+- ERROR: Failed to load script "res://addons/gdUnit4/bin/GdUnitCmdTool.gd" with error "Parse error".
+- ERROR: Cannot open file 'res://scenes/vr_main.tscn'.
+- ERROR: Failed loading resource: res://scenes/vr_main.tscn.
+- ERROR: Could not load scene: res://scenes/vr_main.tscn
+- ERROR: Parse Error: Class "FloatingOriginSystem" hides a global script class.
+- ERROR: Parse Error: Value of type "Window" cannot be assigned to a variable of type "Node3D".
+- ERROR: Failed to load script "res://scripts/core/floating_origin.gd" with error "Parse error".
+- ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+- ERROR: Parse Error: Could not find type "LODManager" in the current scope.
+- ERROR: Failed to load script "res://scripts/rendering/performance_optimizer.gd" with error "Parse error".
+- ERROR: Cannot open file 'res://resources/streaming_config.tres'.
+- ERROR: Failed loading resource: res://resources/streaming_config.tres.
+- ERROR: Attempt to open script 'res://scripts/core/engine.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/core/engine.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://scripts/core/engine.gd.
+- ERROR: Attempt to open script 'res://scripts/core/settings_manager.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/core/settings_manager.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://scripts/core/settings_manager.gd.
+- ERROR: Attempt to open script 'res://addons/godot_debug_connection/godot_bridge.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://addons/godot_debug_connection/godot_bridge.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://addons/godot_debug_connection/godot_bridge.gd.
+- ERROR: Attempt to open script 'res://addons/godot_debug_connection/connection_manager.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://addons/godot_debug_connection/connection_manager.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://addons/godot_debug_connection/connection_manager.gd.
+- ERROR: Attempt to open script 'res://addons/godot_debug_connection/dap_adapter.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://addons/godot_debug_connection/dap_adapter.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://addons/godot_debug_connection/dap_adapter.gd.
+- ERROR: Attempt to open script 'res://addons/godot_debug_connection/lsp_adapter.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://addons/godot_debug_connection/lsp_adapter.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://addons/godot_debug_connection/lsp_adapter.gd.
+- ERROR: Attempt to open script 'res://addons/godot_debug_connection/telemetry_server.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://addons/godot_debug_connection/telemetry_server.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://addons/godot_debug_connection/telemetry_server.gd.
+- ERROR: Attempt to open script 'res://scripts/http_api/http_api_server.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/http_api/http_api_server.gd.
+- ERROR: Failed to instantiate an autoload, can't load from path: res://scripts/http_api/http_api_server.gd.
+- ERROR: Attempt to open script 'res://scripts/celestial/celestial_body.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/celestial/celestial_body.gd.
+- ERROR: Attempt to open script 'res://scripts/player/spacecraft.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/player/spacecraft.gd.
+- ERROR: Attempt to open script 'res://scenes/interaction/resonance_tuner_deck.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scenes/interaction/resonance_tuner_deck.gd.
+- ERROR: Attempt to open script 'res://scripts/systems/resonance_tuner.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/systems/resonance_tuner.gd.
+- ERROR: res://scenes/interaction/resonance_tuner_deck.tscn:7 - Parse Error: [ext_resource] referenced non-existent resource at: res://scenes/interaction/resonance_tuner_deck.gd.
+- ERROR: res://scenes/interaction/resonance_tuner_deck.tscn:10 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/systems/resonance_tuner.gd.
+- ERROR: Attempt to open script 'res://scripts/gameplay/tools/resource_scanner_tool.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/gameplay/tools/resource_scanner_tool.gd.
+- ERROR: res://scenes/tools/scanner_tool.tscn:7 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/tools/resource_scanner_tool.gd.
+- ERROR: res://scenes/player/player_ship.tscn:14 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/player/spacecraft.gd.
+- ERROR: Attempt to open script 'res://scripts/player/pilot_controller.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/player/pilot_controller.gd.
+- ERROR: Attempt to open script 'res://scripts/player/transition_system.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/player/transition_system.gd.
+- ERROR: Attempt to open script 'res://scripts/gameplay/landing_detector.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/gameplay/landing_detector.gd.
+- ERROR: Attempt to open script 'res://scripts/ui/moon_hud.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/ui/moon_hud.gd.
+- ERROR: Attempt to open script 'res://scripts/gameplay/moon_landing_initializer.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/gameplay/moon_landing_initializer.gd.
+- ERROR: Attempt to open script 'res://scripts/gameplay/moon_landing_vr_controller.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/gameplay/moon_landing_vr_controller.gd.
+- ERROR: Attempt to open script 'res://scripts/vfx/moon_landing_polish.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/vfx/moon_landing_polish.gd.
+- ERROR: Attempt to open script 'res://scripts/audio/moon_audio_manager.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/audio/moon_audio_manager.gd.
+- ERROR: Attempt to open script 'res://scripts/vfx/lighting_installer.gd' resulted in error 'File not found'.
+- ERROR: Failed loading resource: res://scripts/vfx/lighting_installer.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:88 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/celestial/celestial_body.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:108 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/celestial/celestial_body.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:125 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/player/pilot_controller.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:128 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/player/transition_system.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:131 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/landing_detector.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:144 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/ui/moon_hud.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:205 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/moon_landing_initializer.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:208 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/gameplay/moon_landing_vr_controller.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:211 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/vfx/moon_landing_polish.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:214 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/audio/moon_audio_manager.gd.
+- ERROR: res://scenes/production/moon_landing.tscn:217 - Parse Error: [ext_resource] referenced non-existent resource at: res://scripts/vfx/lighting_installer.gd.
+- ERROR: Condition "!int_resources.has(id)" is true. Returning: ERR_INVALID_PARAMETER
+- ERROR: Parse Error: Invalid parameter. [Resource file res://scenes/production/moon_landing_minimal.tscn:24]
+- ERROR: Failed loading resource: res://scenes/production/moon_landing_minimal.tscn.
+- ERROR: Failed loading scene: res://scenes/production/moon_landing_minimal.tscn.
+- ERROR: Terrain node missing expected methods.
+
+## Warnings
+
+- WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+- WARNING: res://scenes/main_vr.tscn:4 - ext_resource, invalid UID: uid://cgtb5nuoj0ple - using text path instead: res://Scripts/MainVr.cs
+- WARNING: Mesh uses old surface format, which is deprecated (and loads slower). Consider re-importing or re-saving the scene. Path: "res://addons/quaternius-ultimate-spaceships-pack/meshes/zenith/mesh/zenith_base.tscn::4"
+- WARNING: res://scenes/main_vr.tscn:9 - ext_resource, invalid UID: uid://kgixpdplmyxg - using text path instead: res://Scripts/CelestialSun.cs
+- WARNING: res://scenes/main_vr.tscn:10 - ext_resource, invalid UID: uid://c5231sd35xplw - using text path instead: res://Scripts/Planet.cs
+- WARNING: res://scenes/main_vr.tscn:11 - ext_resource, invalid UID: uid://bg0k54poglhs5 - using text path instead: res://Scripts/CelestialMoon.cs
+- WARNING: res://scenes/main_vr.tscn:12 - ext_resource, invalid UID: uid://cjrblmdq6qcn - using text path instead: res://Scripts/MultiBodyGravitySystem.cs
+- WARNING: res://scenes/main_vr.tscn:13 - ext_resource, invalid UID: uid://bf1cnhevdayug - using text path instead: res://Scripts/FloatingOriginManager.cs
+- WARNING: res://scenes/main_vr.tscn:14 - ext_resource, invalid UID: uid://c4r85jug2cgg6 - using text path instead: res://Scripts/GalacticMapSystem.cs
+- WARNING: res://scenes/main_vr.tscn:15 - ext_resource, invalid UID: uid://v7d81lkp25ro - using text path instead: res://Scripts/GalacticMiniMapHUD.cs
+- WARNING: res://scenes/main_vr.tscn:16 - ext_resource, invalid UID: uid://ckww7mis62d3k - using text path instead: res://Scripts/VegetationManager.cs
+- WARNING: res://scenes/main_vr.tscn:18 - ext_resource, invalid UID: uid://dhtxvmc12bq2a - using text path instead: res://Scripts/ShaderLODController.cs
+- WARNING: res://scenes/main_vr.tscn:23 - ext_resource, invalid UID: uid://bmcg8f5afr51m - using text path instead: res://Scripts/QuestSystem.cs
+- WARNING: res://scenes/main_vr.tscn:24 - ext_resource, invalid UID: uid://bxo0bw0ki8wt0 - using text path instead: res://Scripts/PlayerProgression.cs
+- WARNING: res://scenes/main_vr.tscn:25 - ext_resource, invalid UID: uid://blxdebeqw5oi1 - using text path instead: res://Scripts/CombatSystem.cs
+- WARNING: res://scenes/main_vr.tscn:27 - ext_resource, invalid UID: uid://cqq4vwc2ct207 - using text path instead: res://Scripts/ShipCameraController.cs
+- WARNING: res://scenes/main_vr.tscn:28 - ext_resource, invalid UID: uid://bjrutc2ct0kmh - using text path instead: res://Scripts/SimplifiedFlightHUD.cs
+- WARNING: res://scenes/main_vr.tscn:29 - ext_resource, invalid UID: uid://4leem2dfwoej - using text path instead: res://Scripts/AudioSystemManager.cs
+- WARNING: res://scenes/main_vr.tscn:31 - ext_resource, invalid UID: uid://b4y1kgjtmsiy4 - using text path instead: res://Scripts/VRHand.cs
+- WARNING: res://scenes/main_vr.tscn:32 - ext_resource, invalid UID: uid://dadybixte0p0p - using text path instead: res://Scripts/VRBody.cs
+
+... and 53 more warnings

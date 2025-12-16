@@ -1,0 +1,48 @@
+# SpaceTime VR Machine Learning Training Requirements
+# Install with: pip install -r scripts/ml/requirements.txt
+
+# Core RL Framework
+gymnasium>=0.29.0
+stable-baselines3>=2.2.0
+sb3-contrib>=2.2.0
+
+# Deep Learning
+torch>=2.1.0
+tensorboard>=2.15.0
+
+# Numerical Computing
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Data Processing
+pandas>=2.1.0
+
+# HTTP Communication
+requests>=2.31.0
+websockets>=12.0
+
+# System Monitoring
+psutil>=5.9.0
+
+# Testing (optional)
+pytest>=7.4.0
+pytest-timeout>=2.2.0
+hypothesis>=6.92.0
+
+# Visualization (optional)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Progress Bars
+tqdm>=4.66.0
+
+# Configuration
+pyyaml>=6.0.1
+
+# Optional: Godot RL Integration
+# godot-rl>=0.6.0  # Uncomment if using official godot-rl
+
+# Development Tools (optional)
+# black>=23.12.0
+# pylint>=3.0.0
+# mypy>=1.7.0

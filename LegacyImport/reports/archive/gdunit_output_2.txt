@@ -1,0 +1,309 @@
+Running gdUnit4 tests in: tests/unit/test_example_gdunit.gd
+Godot Executable: c:\godot\Godot_v4.5.1-stable_mono_win64\Godot_v4.5.1-stable_mono_win64\Godot_v4.5.1-stable_mono_win64.exe
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.3
+
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+[2025-12-01T14:04:02] [INFO] ResonanceEngine initializing...
+[2025-12-01T14:04:02] [INFO] Target FPS set to 90
+[2025-12-01T14:04:02] [INFO] Subsystem registered: TimeManager
+[2025-12-01T14:04:02] [INFO] TimeManager initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: TimeManager
+[2025-12-01T14:04:02] [INFO] Subsystem registered: Relativity
+[2025-12-01T14:04:02] [INFO] RelativityManager initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: RelativityManager
+[2025-12-01T14:04:02] [INFO] Subsystem registered: FloatingOrigin
+[2025-12-01T14:04:02] [INFO] FloatingOriginSystem created - awaiting player node assignment
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: FloatingOrigin
+[2025-12-01T14:04:02] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-01T14:04:02] [INFO] PhysicsEngine initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-01T14:04:02] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-01T14:04:02] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+[2025-12-01T14:04:02] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-01T14:04:02] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-01T14:04:02] [INFO] Subsystem registered: VRManager
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Vignetting effect initialized
+VRComfortSystem: Initialized successfully
+[2025-12-01T14:04:02] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-01T14:04:02] [INFO] VRComfortSystem initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-01T14:04:02] [INFO] [HapticManager] Initializing Haptic Manager...
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: HapticManager
+[2025-12-01T14:04:02] [INFO] Subsystem registered: Renderer
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-01T14:04:02] [INFO] PerformanceOptimizer initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: PerformanceOptimizer
+[2025-12-01T14:04:02] [INFO] Subsystem registered: FractalZoom
+[2025-12-01T14:04:02] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: FractalZoom
+[2025-12-01T14:04:02] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-01T14:04:02] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-01T14:04:02] [INFO] Subsystem registered: SettingsManager
+[2025-12-01T14:04:02] [INFO] SettingsManager initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: SettingsManager
+[2025-12-01T14:04:02] [INFO] Subsystem registered: SaveSystem
+[2025-12-01T14:04:02] [INFO] SaveSystem initialized
+[2025-12-01T14:04:02] [INFO] Subsystem initialized: SaveSystem
+[2025-12-01T14:04:02] [INFO] ResonanceEngine initialization complete
+=== GODOT BRIDGE INITIALIZATION ===
+GodotBridge _ready() called
+Creating ConnectionManager...
+DEBUG: ConnectionManager _init started
+DEBUG: DAPAdapter created: <RefCounted#-9223371959411145170>
+DEBUG: LSPAdapter created: <RefCounted#-9223371959344035896>
+ConnectionManager created and added as child
+Starting HTTP server with fallback...
+=== HTTP SERVER STARTUP ===
+TCPServer created
+Ports to try: [8080, 8083, 8084, 8085]
+Attempting to bind to port 8080...
+Attempting to bind to port 8083...
+├ó┼ôΓÇ£ SUCCESS: GodotBridge HTTP server started on http://127.0.0.1:8083
+Available endpoints:
+  POST /connect - Connect to GDA services
+  POST /disconnect - Disconnect from GDA services
+  GET  /status - Get connection status
+  POST /debug/* - Debug adapter commands
+  POST /lsp/* - Language server requests
+  POST /edit/* - File editing operations
+  POST /execute/* - Code execution operations
+=== HTTP SERVER STARTUP COMPLETE ===
+Service discovery broadcaster initialized on port 8087
+=== GODOT BRIDGE INITIALIZATION COMPLETE ===
+Failed to bind WebSocket server to port 8081: Already in use (trying next port)
+Failed to bind WebSocket server to port 8081: Already in use (trying next port)
+Failed to bind WebSocket server to port 8083: Already in use (trying next port)
+WebSocket telemetry server started on ws://127.0.0.1:8084
+[INFO] [SettingsManager] Settings loaded successfully.
+GdUnit4Net version '' loaded.
+TelemetryServer connected to ConnectionManager signals
+[38;5;216m
+--------------------------------------------------------------------------------------------------
+GdUnit4 Comandline Tool
+--------------------------------------------------------------------------------------------------[0m
+
+[38;5;214m
+Headless mode is ignored by option '--ignoreHeadlessMode'"
+
+Please note that tests that use UI interaction do not work correctly in headless mode.
+Godot 'InputEvents' are not transported by the Godot engine in headless mode and therefore
+have no effect in the test!
+[0m
+
+[38;5;231mRun Test Suite res://tests/unit/test_example_gdunit.gd [0m
+[38;5;231m	Run Test: res://tests/unit/test_example_gdunit.gd > test_example_assertion :[0m[38;5;34mSTARTED[0m
+[s[38;5;231m	Run Test: res://tests/unit/test_example_gdunit.gd > test_example_assertion :[0m[38;5;34m[1mPASSED[0m[38;5;111m 33ms[0m
+
+[38;5;231m	Run Test: res://tests/unit/test_example_gdunit.gd > test_vector_math :[0m[38;5;34mSTARTED[0m
+[s[38;5;231m	Run Test: res://tests/unit/test_example_gdunit.gd > test_vector_math :[0m[38;5;34m[1mPASSED[0m[38;5;111m 23ms[0m
+
+
+[38;5;34m[1mPASSED[0m[38;5;111m 56ms[0m
+[38;5;231mStatistics: | 2 tests cases | 0 error | 0 failed | 0 skipped | 0 orphans |
+[0m
+[38;5;216mExecuted test suites: (1/1)[0m
+[38;5;216mExecuted test cases: (2/2)[0m
+[38;5;216mTotal time:        56ms[0m
+[38;5;111mOpen Report at: file://C:/godot/reports/report_4/index.html[0m
+[38;5;216mExit code: 0[0m
+WebSocket telemetry server stopped
+Cleaning up 0 client connections...
+GodotBridge HTTP server stopped
+Finallize .. done
+[2025-12-01T14:04:02] [INFO] ResonanceEngine shutting down...
+SaveSystem: SaveSystem shutdown
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: SaveSystem
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: SettingsManager
+CaptureEventSystem shutdown
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: Renderer
+VRComfortSystem: Shutdown complete
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: VRComfortSystem
+[INFO] [VRManager] VRManager shutting down...
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: VRManager
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: FloatingOrigin
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-01T14:04:02] [INFO] Subsystem shutdown: TimeManager
+[2025-12-01T14:04:02] [INFO] ResonanceEngine shutdown complete
+
+STDERR: WARNING: [2025-12-01T14:04:02] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:672)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:134)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:91)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:203)
+       [6] _init_subsystem (res://scripts/core/engine.gd:126)
+       [7] _initialize_engine (res://scripts/core/engine.gd:95)
+       [8] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed, enabling desktop fallback
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:672)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:98)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:203)
+       [5] _init_subsystem (res://scripts/core/engine.gd:126)
+       [6] _initialize_engine (res://scripts/core/engine.gd:95)
+       [7] _ready (res://scripts/core/engine.gd:73)
+SCRIPT ERROR: Invalid access to property or key 'vr_comfort_mode' on a base object of type 'Node (settings_manager.gd)'.
+   at: VRComfortSystem._load_settings (res://scripts/core/vr_comfort_system.gd:104)
+   GDScript backtrace (most recent call first):
+       [0] _load_settings (res://scripts/core/vr_comfort_system.gd:104)
+       [1] initialize (res://scripts/core/vr_comfort_system.gd:84)
+       [2] _init_vr_comfort_system (res://scripts/core/engine.gd:230)
+       [3] _init_subsystem (res://scripts/core/engine.gd:126)
+       [4] _initialize_engine (res://scripts/core/engine.gd:96)
+       [5] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:481)
+       [3] initialize (res://scripts/core/haptic_manager.gd:79)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:258)
+       [5] _init_subsystem (res://scripts/core/engine.gd:126)
+       [6] _initialize_engine (res://scripts/core/engine.gd:97)
+       [7] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:264)
+       [3] _init_subsystem (res://scripts/core/engine.gd:126)
+       [4] _initialize_engine (res://scripts/core/engine.gd:97)
+       [5] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] Unknown subsystem name: HapticManager
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] register_subsystem (res://scripts/core/engine.gd:620)
+       [3] _init_haptic_manager (res://scripts/core/engine.gd:267)
+       [4] _init_subsystem (res://scripts/core/engine.gd:126)
+       [5] _initialize_engine (res://scripts/core/engine.gd:97)
+       [6] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] Scene not ready for RenderingSystem - will initialize later
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] _init_renderer (res://scripts/core/engine.gd:292)
+       [3] _init_subsystem (res://scripts/core/engine.gd:126)
+       [4] _initialize_engine (res://scripts/core/engine.gd:98)
+       [5] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] Unknown subsystem name: PerformanceOptimizer
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] register_subsystem (res://scripts/core/engine.gd:620)
+       [3] _init_performance_optimizer (res://scripts/core/engine.gd:318)
+       [4] _init_subsystem (res://scripts/core/engine.gd:126)
+       [5] _initialize_engine (res://scripts/core/engine.gd:101)
+       [6] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-01T14:04:02] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:694)
+       [1] log_warning (res://scripts/core/engine.gd:672)
+       [2] _init_subsystem (res://scripts/core/engine.gd:130)
+       [3] _initialize_engine (res://scripts/core/engine.gd:104)
+       [4] _ready (res://scripts/core/engine.gd:73)
+WARNING: ├ó┼ôΓÇö FAILED to bind to port 8080: Already in use
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _start_server_with_fallback (res://addons/godot_debug_connection/godot_bridge.gd:100)
+       [1] _ready (res://addons/godot_debug_connection/godot_bridge.gd:66)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'CSharpScript'.
+   at: <anonymous lambda> (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:9)
+   GDScript backtrace (most recent call first):
+       [0] <anonymous lambda> (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:9)
+       [1] instance (res://addons/gdUnit4/src/core/GdUnitSingleton.gd:18)
+       [2] instance (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:6)
+       [3] version (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:25)
+       [4] _ready (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:112)
+SCRIPT ERROR: Invalid call. Nonexistent function 'Version' in base 'Nil'.
+   at: version (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:25)
+   GDScript backtrace (most recent call first):
+       [0] version (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:25)
+       [1] _ready (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:112)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'CSharpScript'.
+   at: <anonymous lambda> (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:9)
+   GDScript backtrace (most recent call first):
+       [0] <anonymous lambda> (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:9)
+       [1] instance (res://addons/gdUnit4/src/core/GdUnitSingleton.gd:18)
+       [2] instance (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:6)
+       [3] create_executor (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:59)
+       [4] _ready (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:113)
+SCRIPT ERROR: Invalid call. Nonexistent function 'Executor' in base 'Nil'.
+   at: create_executor (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:59)
+   GDScript backtrace (most recent call first):
+       [0] create_executor (res://addons/gdUnit4/src/mono/GdUnit4CSharpApiLoader.gd:59)
+       [1] _ready (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:113)
+ERROR: The object does not have any 'meta' values with the key 'GdUnit4CSharpApi'.
+   at: get_meta (core/object/object.cpp:1091)
+   GDScript backtrace (most recent call first):
+       [0] unregister (res://addons/gdUnit4/src/core/GdUnitSingleton.gd:37)
+       [1] dispose (res://addons/gdUnit4/src/core/GdUnitSingleton.gd:51)
+       [2] dispose_all (res://addons/gdUnit4/src/core/GdUnitTools.gd:108)
+       [3] quit (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:153)
+       [4] _process (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:148)
+ERROR: The object does not have any 'meta' values with the key 'GdUnit4CSharpApi'.
+   at: get_meta (core/object/object.cpp:1091)
+   GDScript backtrace (most recent call first):
+       [0] unregister (res://addons/gdUnit4/src/core/GdUnitSingleton.gd:37)
+       [1] dispose (res://addons/gdUnit4/src/core/GdUnitSingleton.gd:51)
+       [2] dispose_all (res://addons/gdUnit4/src/core/GdUnitTools.gd:108)
+       [3] quit (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:153)
+       [4] _process (res://addons/gdUnit4/bin/GdUnitCmdTool.gd:148)
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _log_info (res://scripts/core/save_system.gd:466)
+       [1] shutdown (res://scripts/core/save_system.gd:481)
+       [2] _shutdown_subsystem (res://scripts/core/engine.gd:566)
+       [3] shutdown (res://scripts/core/engine.gd:535)
+       [4] _notification (res://scripts/core/engine.gd:578)
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:688)
+       [1] _log_info (res://scripts/core/vr_manager.gd:662)
+       [2] shutdown (res://scripts/core/vr_manager.gd:630)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:566)
+       [4] shutdown (res://scripts/core/engine.gd:542)
+       [5] _notification (res://scripts/core/engine.gd:578)
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:688)
+       [1] _log_info (res://scripts/core/vr_manager.gd:662)
+       [2] shutdown (res://scripts/core/vr_manager.gd:648)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:566)
+       [4] shutdown (res://scripts/core/engine.gd:542)
+       [5] _notification (res://scripts/core/engine.gd:578)
+ERROR: 9 RID allocations of type 'N9OpenXRAPI18InteractionProfileE' were leaked at exit.
+ERROR: 23 RID allocations of type 'N9OpenXRAPI6ActionE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N9OpenXRAPI9ActionSetE' were leaked at exit.
+ERROR: 18 RID allocations of type 'N9OpenXRAPI7TrackerE' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)
+

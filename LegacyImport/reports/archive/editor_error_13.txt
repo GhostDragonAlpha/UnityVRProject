@@ -1,0 +1,144 @@
+WARNING: Language server port 6005 appears to be unavailable, trying next port...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:82)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Language server port 6007 appears to be unavailable, trying next port...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:82)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Language server port 6008 appears to be unavailable, trying next port...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:82)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+ERROR: Failed to connect to language server: All ports (6005, 6006, 6007, 6008) are unavailable
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:85)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Connection attempt 1 failed. Retrying in 1.0s...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _handle_connection_failure (res://addons/godot_debug_connection/lsp_adapter.gd:189)
+       [1] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:86)
+       [2] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [3] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "state_name" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scripts/rendering/quantum_render.gd:610)
+ERROR: Failed to load script "res://scripts/rendering/quantum_render.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type "String" as "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_atmospheric_entry.gd:32)
+SCRIPT ERROR: Parse Error: Value of type "String" cannot be assigned to a variable of type "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_atmospheric_entry.gd:32)
+ERROR: Failed to load script "res://tests/integration/test_atmospheric_entry.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type "String" as "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_walking_integration.gd:41)
+SCRIPT ERROR: Parse Error: Value of type "String" cannot be assigned to a variable of type "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_walking_integration.gd:41)
+ERROR: Failed to load script "res://tests/integration/test_walking_integration.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type "String" as "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/unit/test_atmosphere_system.gd:34)
+SCRIPT ERROR: Parse Error: Value of type "String" cannot be assigned to a variable of type "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/unit/test_atmosphere_system.gd:34)
+ERROR: Failed to load script "res://tests/unit/test_atmosphere_system.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_connection_manager.gd:6)
+ERROR: Failed to load script "res://tests/unit/test_connection_manager.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_connection_state.gd:5)
+ERROR: Failed to load script "res://tests/unit/test_connection_state.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_lsp_adapter.gd:6)
+ERROR: Failed to load script "res://tests/unit/test_lsp_adapter.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_menu_system.gd:1)
+ERROR: Failed to load script "res://tests/unit/test_menu_system.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_mission_system.gd:6)
+ERROR: Failed to load script "res://tests/unit/test_mission_system.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GutTest".
+   at: GDScript::reload (res://tests/unit/test_walking_controller.gd:1)
+ERROR: Failed to load script "res://tests/unit/test_walking_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Too few arguments for "disconnect()" call. Expected at least 2 but received 0.
+   at: GDScript::reload (res://tests/test_lsp_adapter_simple.gd:164)
+ERROR: Failed to load script "res://tests/test_lsp_adapter_simple.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "state_name" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scripts/rendering/quantum_render.gd:610)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tests/test_quantum_render.gd:0)
+ERROR: Failed to load script "res://tests/test_quantum_render.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Unexpected identifier "import" in class body.
+   at: GDScript::reload (res://test_mandatory_debug.gd:8)
+ERROR: Failed to load script "res://test_mandatory_debug.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is "_process(float) -> bool".
+   at: GDScript::reload (res://test_vr_initialization.gd:32)
+ERROR: Failed to load script "res://test_vr_initialization.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+WARNING: Language server not connected (state: 3)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:61)
+WARNING: Code intelligence features will be limited
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:62)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: DAP initialization failed multiple times. Reconnecting...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _poll_initializing (res://addons/godot_debug_connection/dap_adapter.gd:193)
+       [1] poll (res://addons/godot_debug_connection/dap_adapter.gd:132)
+       [2] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)

@@ -1,0 +1,135 @@
+[gd_scene load_steps=2 format=3 uid="uid://vr_stats_hud_scene"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.1, 0.1, 0.15, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.6, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="VRStatsHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -420.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 420.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "SURVIVAL STATS"
+horizontal_alignment = 1
+
+[node name="LifeSupportPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/LifeSupportPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="LifeSupportTitle" type="Label" parent="MarginContainer/VBoxContainer/LifeSupportPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Life Support"
+
+[node name="OxygenLabel" type="Label" parent="MarginContainer/VBoxContainer/LifeSupportPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Oxygen: 100.0%"
+
+[node name="OxygenBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/LifeSupportPanel/VBoxContainer"]
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="TemperatureLabel" type="Label" parent="MarginContainer/VBoxContainer/LifeSupportPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Temperature: 20.0°C"
+
+[node name="InventoryPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/InventoryPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="InventoryTitle" type="Label" parent="MarginContainer/VBoxContainer/InventoryPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Inventory"
+
+[node name="CapacityLabel" type="Label" parent="MarginContainer/VBoxContainer/InventoryPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Capacity: 0/1000"
+
+[node name="CapacityBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/InventoryPanel/VBoxContainer"]
+layout_mode = 2
+max_value = 1000.0
+show_percentage = false
+
+[node name="SlotsLabel" type="Label" parent="MarginContainer/VBoxContainer/InventoryPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Slots Used: 0/50"
+
+[node name="PowerPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PowerPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PowerTitle" type="Label" parent="MarginContainer/VBoxContainer/PowerPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Power Status"
+
+[node name="PowerLabel" type="Label" parent="MarginContainer/VBoxContainer/PowerPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Available: 0.0 kW"
+
+[node name="PowerBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/PowerPanel/VBoxContainer"]
+layout_mode = 2
+max_value = 100.0
+show_percentage = false
+
+[node name="BalanceLabel" type="Label" parent="MarginContainer/VBoxContainer/PowerPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Balance: +0.0 kW"

@@ -1,0 +1,644 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : LoaderInstance::CreateInstance chained CreateInstance call failed
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : xrCreateInstance failed
+ERROR: Failed to create XR instance [Error code -2].
+   at: create_instance (modules/openxr/openxr_api.cpp:641)
+WARNING: OpenXR was requested but failed to start.
+Please check if your HMD is connected.
+When using Windows Mixed Reality, note that WMR only has DirectX support. Make sure SteamVR is your default OpenXR runtime.
+Godot will start in normal mode.
+
+   at: initialize_openxr_module (modules/openxr/register_types.cpp:203)
+
+
+================================================================================
+SCENE VALIDATION REPORT
+================================================================================
+Testing 14 critical scenes...
+================================================================================
+
+
+--- Testing: res://scenes/vr_main.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+!!! VRMAIN OPTIMIZED _INIT !!!
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 84
+    - Has script: res://vr_main_optimized.gd
+  [4/4] Checking required nodes...
+    [OK] Found required node: XROrigin3D
+    [OK] Found required node: XRCamera3D
+  [RESULT] PASS
+
+--- Testing: res://scenes/test/minimal_test.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 1
+    - No script attached
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://moon_landing.tscn ---
+  [1/4] Loading scene...
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/player/planet_surface_spawner.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/player/transition_system.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/player/transition_system.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/ui/moon_hud.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/ui/moon_hud.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/gameplay/moon_landing_initializer.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/gameplay/moon_landing_initializer.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/gameplay/moon_landing_vr_controller.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/gameplay/moon_landing_vr_controller.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/vfx/walking_dust_effects.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/vfx/moon_landing_polish.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/vfx/moon_landing_polish.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/audio/moon_audio_manager.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/audio/moon_audio_manager.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 36
+    - No script attached
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/spacecraft/cockpit_model.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 38
+    - Has script: res://scripts/ui/cockpit_model.gd
+  [4/4] Checking required nodes...
+  [RESULT] PASS
+
+--- Testing: res://scenes/spacecraft/spacecraft_exterior.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 8
+    - Has script: res://scripts/player/spacecraft_exterior.gd
+  [4/4] Checking required nodes...
+  [RESULT] PASS
+
+--- Testing: res://scenes/test/voxel/voxel_test_terrain.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 1
+    - Has script: res://voxel_test_terrain.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/test/voxel/test_voxel_instantiation.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node
+    - Node count: 1
+    - Has script: res://test_voxel_instantiation.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/test/voxel/test_voxel_generator_procedural.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node
+    - Node count: 1
+    - Has script: res://test_voxel_generator_procedural.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/test/voxel/voxel_terrain_test.tscn ---
+  [1/4] Loading scene...
+SCRIPT ERROR: Compile Error: Identifier not found: VoxelPerformanceMonitor
+   at: GDScript::reload (res://scripts/test_voxel_stats.gd:23)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/test_voxel_stats.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 7
+    - Has script: res://scripts/test_voxel_stats.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/celestial/solar_system.tscn ---
+  [1/4] Loading scene...
+SCRIPT ERROR: Parse Error: Could not parse global class "JetpackEffects" from "res://scripts/player/jetpack_effects.gd".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Could not find script for class "JetpackEffects".
+   at: GDScript::reload (res://scripts/player/walking_controller.gd:594)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/celestial/planet_terrain_manager.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/celestial/planet_terrain_manager.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 2
+    - Has script: res://scripts/celestial/solar_system_initializer.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/celestial/solar_system_master.tscn ---
+  [1/4] Loading scene...
+SCRIPT ERROR: Parse Error: Cannot infer the type of "success" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scripts/celestial/solar_system_manager.gd:347)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/celestial/solar_system_manager.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Cannot find member "COLOR_8BIT" in base "MultiMesh".
+   at: GDScript::reload (res://scripts/celestial/star_field.gd:307)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+SCRIPT ERROR: Parse Error: Cannot find member "CUSTOM_DATA_NONE" in base "MultiMesh".
+   at: GDScript::reload (res://scripts/celestial/star_field.gd:308)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed to load script "res://scripts/celestial/star_field.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Condition "!int_resources.has(id)" is true. Returning: ERR_INVALID_PARAMETER
+   at: _parse_sub_resource (scene/resources/resource_format_text.cpp:113)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Parse Error: Invalid parameter. [Resource file res://scenes/celestial/solar_system_master.tscn:48]
+   at: _parse_node_tag (scene/resources/resource_format_text.cpp:279)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+ERROR: Failed loading resource: res://scenes/celestial/solar_system_master.tscn.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] test_scene (res://scene_validator.gd:97)
+       [1] _init (res://scene_validator.gd:64)
+  [ERROR] Failed to load scene
+
+--- Testing: res://scenes/celestial/solar_system_landing.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 25
+    - Has script: res://scripts/celestial/solar_system_landing_controller.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+--- Testing: res://scenes/player/walking_controller.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: CharacterBody3D
+    - Node count: 3
+    - Has script: res://scripts/player/walking_controller.gd
+  [4/4] Checking required nodes...
+    [OK] Found required node: CharacterBody3D
+  [RESULT] PASS
+
+--- Testing: res://scenes/player/resonance_input_controller.tscn ---
+  [1/4] Loading scene...
+  [OK] Scene loaded successfully
+  [2/4] Instantiating scene...
+  [OK] Scene instantiated successfully
+  [3/4] Analyzing scene structure...
+    - Scene type: Node3D
+    - Node count: 3
+    - Has script: res://scripts/player/resonance_input_controller.gd
+  [4/4] Checking required nodes...
+    [INFO] No required nodes defined for this scene
+  [RESULT] PASS
+
+================================================================================
+VALIDATION SUMMARY
+================================================================================
+
+Overall Statistics:
+  Total scenes tested: 14
+  Passed: 13 (92.9%)
+  Failed: 1 (7.1%)
+  Total errors: 1
+  Total warnings: 4
+
+--------------------------------------------------------------------------------
+FAILED SCENES:
+--------------------------------------------------------------------------------
+
+res://scenes/celestial/solar_system_master.tscn
+  [ERROR] Failed to load scene
+
+--------------------------------------------------------------------------------
+WARNINGS:
+--------------------------------------------------------------------------------
+
+res://scenes/test/minimal_test.tscn
+  [WARN] Scene appears empty (only 1 node)
+
+res://scenes/test/voxel/voxel_test_terrain.tscn
+  [WARN] Scene appears empty (only 1 node)
+
+res://scenes/test/voxel/test_voxel_instantiation.tscn
+  [WARN] Scene appears empty (only 1 node)
+
+res://scenes/test/voxel/test_voxel_generator_procedural.tscn
+  [WARN] Scene appears empty (only 1 node)
+
+--------------------------------------------------------------------------------
+PASSED SCENES:
+--------------------------------------------------------------------------------
+  [PASS] res://scenes/vr_main.tscn (84 nodes, Node3D)
+  [PASS] res://scenes/test/minimal_test.tscn (1 nodes, Node3D)
+  [PASS] res://moon_landing.tscn (36 nodes, Node3D)
+  [PASS] res://scenes/spacecraft/cockpit_model.tscn (38 nodes, Node3D)
+  [PASS] res://scenes/spacecraft/spacecraft_exterior.tscn (8 nodes, Node3D)
+  [PASS] res://scenes/test/voxel/voxel_test_terrain.tscn (1 nodes, Node3D)
+  [PASS] res://scenes/test/voxel/test_voxel_instantiation.tscn (1 nodes, Node)
+  [PASS] res://scenes/test/voxel/test_voxel_generator_procedural.tscn (1 nodes, Node)
+  [PASS] res://scenes/test/voxel/voxel_terrain_test.tscn (7 nodes, Node3D)
+  [PASS] res://scenes/celestial/solar_system.tscn (2 nodes, Node3D)
+  [PASS] res://scenes/celestial/solar_system_landing.tscn (25 nodes, Node3D)
+  [PASS] res://scenes/player/walking_controller.tscn (3 nodes, CharacterBody3D)
+  [PASS] res://scenes/player/resonance_input_controller.tscn (3 nodes, Node3D)
+
+================================================================================
+
+[FAIL] 1/14 scenes failed validation
+[2025-12-05T15:06:39] [INFO] ResonanceEngine initializing...
+[2025-12-05T15:06:39] [INFO] Launch arguments: ["--script", "scene_validator.gd"]
+[2025-12-05T15:06:39] [INFO] Target FPS set to 90
+[2025-12-05T15:06:39] [INFO] Subsystem registered: TimeManager
+[2025-12-05T15:06:39] [INFO] TimeManager initialized
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: TimeManager
+[2025-12-05T15:06:39] [INFO] Subsystem registered: Relativity
+[2025-12-05T15:06:39] [INFO] RelativityManager initialized
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: RelativityManager
+[2025-12-05T15:06:39] [INFO] Subsystem registered: FloatingOrigin
+[2025-12-05T15:06:39] [INFO] FloatingOriginSystem created - awaiting player node assignment
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: FloatingOrigin
+[2025-12-05T15:06:39] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-05T15:06:39] [INFO] PhysicsEngine initialized
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-05T15:06:39] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-05T15:06:39] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-05T15:06:39] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+WARNING: [2025-12-05T15:06:39] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:854)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:155)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:108)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:271)
+       [6] _init_subsystem (res://scripts/core/engine.gd:149)
+       [7] _initialize_engine (res://scripts/core/engine.gd:111)
+       [8] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T15:06:39] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed, enabling desktop fallback
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:854)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:119)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:271)
+       [5] _init_subsystem (res://scripts/core/engine.gd:149)
+       [6] _initialize_engine (res://scripts/core/engine.gd:111)
+       [7] _ready (res://scripts/core/engine.gd:74)
+[2025-12-05T15:06:39] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-05T15:06:39] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-05T15:06:39] [INFO] Subsystem registered: VRManager
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Vignette attached to scene root CanvasLayer - stays fixed to camera viewport
+VRComfortSystem: Initialized successfully
+[2025-12-05T15:06:39] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-05T15:06:39] [INFO] VRComfortSystem initialized
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-05T15:06:39] [INFO] [HapticManager] Initializing Haptic Manager...
+WARNING: [2025-12-05T15:06:39] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:536)
+       [3] initialize (res://scripts/core/haptic_manager.gd:90)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:326)
+       [5] _init_subsystem (res://scripts/core/engine.gd:149)
+       [6] _initialize_engine (res://scripts/core/engine.gd:113)
+       [7] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T15:06:39] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:332)
+       [3] _init_subsystem (res://scripts/core/engine.gd:149)
+       [4] _initialize_engine (res://scripts/core/engine.gd:113)
+       [5] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T15:06:39] [WARN] Unknown subsystem name: HapticManager
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] register_subsystem (res://scripts/core/engine.gd:690)
+       [3] _init_haptic_manager (res://scripts/core/engine.gd:335)
+       [4] _init_subsystem (res://scripts/core/engine.gd:149)
+       [5] _initialize_engine (res://scripts/core/engine.gd:113)
+       [6] _ready (res://scripts/core/engine.gd:74)
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: HapticManager
+WARNING: [2025-12-05T15:06:39] [WARN] Scene not ready for RenderingSystem - will initialize later
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _init_renderer (res://scripts/core/engine.gd:361)
+       [3] _init_subsystem (res://scripts/core/engine.gd:149)
+       [4] _initialize_engine (res://scripts/core/engine.gd:114)
+       [5] _ready (res://scripts/core/engine.gd:74)
+[2025-12-05T15:06:39] [INFO] Subsystem registered: Renderer
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+WARNING: [2025-12-05T15:06:39] [WARN] Unknown subsystem name: PerformanceOptimizer
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] register_subsystem (res://scripts/core/engine.gd:690)
+       [3] _init_performance_optimizer (res://scripts/core/engine.gd:387)
+       [4] _init_subsystem (res://scripts/core/engine.gd:149)
+       [5] _initialize_engine (res://scripts/core/engine.gd:117)
+       [6] _ready (res://scripts/core/engine.gd:74)
+[2025-12-05T15:06:39] [INFO] PerformanceOptimizer initialized
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: PerformanceOptimizer
+WARNING: [2025-12-05T15:06:39] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _init_subsystem (res://scripts/core/engine.gd:153)
+       [3] _initialize_engine (res://scripts/core/engine.gd:120)
+       [4] _ready (res://scripts/core/engine.gd:74)
+[2025-12-05T15:06:39] [INFO] Subsystem registered: FractalZoom
+[2025-12-05T15:06:39] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-05T15:06:39] [INFO] Subsystem initialized: FractalZoom
+[2025-12-05T15:06:39] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-05T15:06:39] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-05T15:06:40] [INFO] Subsystem initialized: CaptureEventSystem
+[2025-12-05T15:06:40] [INFO] Subsystem registered: SettingsManager
+[2025-12-05T15:06:40] [INFO] SettingsManager (Autoload) registered as subsystem
+[2025-12-05T15:06:40] [INFO] Subsystem initialized: SettingsManager
+[2025-12-05T15:06:40] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-05T15:06:40] [INFO] Subsystem registered: SaveSystem
+[2025-12-05T15:06:40] [INFO] SaveSystem initialized
+[2025-12-05T15:06:40] [INFO] Subsystem initialized: SaveSystem
+[2025-12-05T15:06:40] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[SettingsManager] Validating settings. Defaults type: 27
+[SettingsManager] Defaults keys: ["graphics", "audio", "controls", "vr", "http_server"]
+[SettingsManager] Checking section: graphics Type: 27
+[SettingsManager] Checking section: audio Type: 27
+[SettingsManager] Checking section: controls Type: 27
+[SettingsManager] Checking section: vr Type: 27
+[SettingsManager] Checking section: http_server Type: 27
+VoxelPerformanceMonitor: Initialized (90 FPS target, 11.11 ms budget)
+[VR UI Initializer] Waiting for VRMain scene...
+WARNING: VoxelPerformanceMonitor: Physics frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:402)
+       [1] _check_physics_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:359)
+       [2] _physics_process (res://scripts/core/voxel_performance_monitor.gd:147)
+WARNING: VoxelPerformanceMonitor: Render frame time 100.00 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:402)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:349)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:127)
+[2025-12-05T15:06:40] [INFO] [HapticManager] HapticManager exiting tree, cleaning up...
+[2025-12-05T15:06:40] [INFO] [HapticManager] HapticManager cleanup complete
+[2025-12-05T15:06:40] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-05T15:06:40] [INFO] [VRManager] VRManager resource cleanup complete
+VoxelPerformanceMonitor: Debug UI disabled
+VoxelPerformanceMonitor: Shutdown complete
+[2025-12-05T15:06:40] [INFO] ResonanceEngine shutting down...
+SaveSystem: SaveSystem shutdown
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: SaveSystem
+CaptureEventSystem shutdown
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: Renderer
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: VRComfortSystem
+[INFO] [VRManager] VRManager shutting down...
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: VRManager
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: FloatingOrigin
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-05T15:06:40] [INFO] Subsystem shutdown: TimeManager
+[2025-12-05T15:06:40] [INFO] ResonanceEngine shutdown complete

@@ -1,0 +1,187 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8j5k3n2p9m4h"]
+
+[ext_resource type="Script" path="res://scripts/ui/power_grid_hud.gd" id="1_power_grid"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.1, 0.1, 0.15, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.6, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PowerGridPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_power_grid")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -400.0
+offset_right = 420.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "POWER GRID MONITOR"
+horizontal_alignment = 1
+
+[node name="StatsPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="StatsTitle" type="Label" parent="MarginContainer/VBoxContainer/StatsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Power Statistics"
+
+[node name="ProductionLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Production: 0.0 kW"
+
+[node name="ConsumptionLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Consumption: 0.0 kW"
+
+[node name="BalanceLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Balance: +0.0 kW"
+
+[node name="StorageLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Storage: 100.0%"
+
+[node name="EfficiencyLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Efficiency: 100.0%"
+
+[node name="BarsPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BarsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BarsTitle" type="Label" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Power Distribution"
+
+[node name="ProductionContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ProductionBarLabel" type="Label" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer/ProductionContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Production"
+
+[node name="ProductionBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/BarsPanel"]
+layout_mode = 2
+max_value = 1000.0
+show_percentage = false
+
+[node name="ConsumptionContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ConsumptionBarLabel" type="Label" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer/ConsumptionContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Consumption"
+
+[node name="ConsumptionBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/BarsPanel"]
+layout_mode = 2
+max_value = 1000.0
+show_percentage = false
+
+[node name="StorageContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="StorageBarLabel" type="Label" parent="MarginContainer/VBoxContainer/BarsPanel/VBoxContainer/StorageContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Energy Storage"
+
+[node name="StorageBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/BarsPanel"]
+layout_mode = 2
+show_percentage = false
+
+[node name="WarningPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="WarningLabel" type="Label" parent="MarginContainer/VBoxContainer/WarningPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 14
+text = "⚠ WARNING"
+horizontal_alignment = 1
+
+[node name="NetworkPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/NetworkPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="NetworkTitle" type="Label" parent="MarginContainer/VBoxContainer/NetworkPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Grid Network"
+
+[node name="ViewportContainer" type="SubViewportContainer" parent="MarginContainer/VBoxContainer/NetworkPanel"]
+custom_minimum_size = Vector2(360, 200)
+layout_mode = 2
+stretch = true
+
+[node name="NetworkViewport" type="SubViewport" parent="MarginContainer/VBoxContainer/NetworkPanel/ViewportContainer"]
+handle_input_locally = false
+size = Vector2i(360, 200)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MarginContainer/VBoxContainer/NetworkPanel/ViewportContainer/NetworkViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 50, 50)
+
+[node name="NetworkRoot" type="Node3D" parent="MarginContainer/VBoxContainer/NetworkPanel/ViewportContainer/NetworkViewport"]
+
+[node name="WarningSound" type="AudioStreamPlayer" parent="."]

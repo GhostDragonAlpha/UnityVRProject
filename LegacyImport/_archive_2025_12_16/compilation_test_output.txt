@@ -1,0 +1,627 @@
+Godot Engine v4.5.1.stable.mono.official.f62fdbde1 - https://godotengine.org
+
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[GravityManager] Initialized
+[GravityManager] Gravitational constant: 10.00
+[VertexScalingSystem] Initialized
+[VertexScalingSystem] Influence formula: radius / (distance * distance)
+[VertexScalingSystem] Min distance: 0.10 m
+[VertexScalingSystem] Max influence: 1000000.0
+[VertexScalingSystem] Gravity scale: 10.00
+[2025-12-14T09:34:18] [INFO] ResonanceEngine initializing...
+[2025-12-14T09:34:18] [INFO] Launch arguments: ["c:\\Ignotus\\tests\\unit\\test_all_scripts_compilation.tscn"]
+[2025-12-14T09:34:18] [INFO] Target FPS set to 90
+[2025-12-14T09:34:18] [INFO] Subsystem registered: TimeManager
+[2025-12-14T09:34:18] [INFO] TimeManager initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: TimeManager
+[2025-12-14T09:34:18] [INFO] Subsystem registered: Relativity
+[2025-12-14T09:34:18] [INFO] RelativityManager initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: RelativityManager
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[2025-12-14T09:34:18] [INFO] Subsystem registered: AstronomicalCoords
+[2025-12-14T09:34:18] [INFO] AstronomicalCoordinateSystem initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: AstronomicalCoords
+[2025-12-14T09:34:18] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-14T09:34:18] [INFO] PhysicsEngine initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-14T09:34:18] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-14T09:34:18] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-14T09:34:18] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+WARNING: [2025-12-14T09:34:18] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:821)
+       [1] log_warning (res://scripts/core/engine.gd:799)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:876)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:175)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:127)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:279)
+       [6] _init_subsystem (res://scripts/core/engine.gd:158)
+       [7] _initialize_engine (res://scripts/core/engine.gd:118)
+       [8] _ready (res://scripts/core/engine.gd:82)
+WARNING: [2025-12-14T09:34:18] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed, enabling desktop fallback
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:821)
+       [1] log_warning (res://scripts/core/engine.gd:799)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:876)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:139)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:279)
+       [5] _init_subsystem (res://scripts/core/engine.gd:158)
+       [6] _initialize_engine (res://scripts/core/engine.gd:118)
+       [7] _ready (res://scripts/core/engine.gd:82)
+[2025-12-14T09:34:18] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-14T09:34:18] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-14T09:34:18] [INFO] Subsystem registered: VRManager
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Initialized successfully
+[2025-12-14T09:34:18] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-14T09:34:18] [INFO] VRComfortSystem initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-14T09:34:18] [INFO] [HapticManager] Initializing Haptic Manager...
+WARNING: [2025-12-14T09:34:18] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:821)
+       [1] log_warning (res://scripts/core/engine.gd:799)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:540)
+       [3] initialize (res://scripts/core/haptic_manager.gd:94)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:334)
+       [5] _init_subsystem (res://scripts/core/engine.gd:158)
+       [6] _initialize_engine (res://scripts/core/engine.gd:120)
+       [7] _ready (res://scripts/core/engine.gd:82)
+WARNING: [2025-12-14T09:34:18] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:821)
+       [1] log_warning (res://scripts/core/engine.gd:799)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:340)
+       [3] _init_subsystem (res://scripts/core/engine.gd:158)
+       [4] _initialize_engine (res://scripts/core/engine.gd:120)
+       [5] _ready (res://scripts/core/engine.gd:82)
+[2025-12-14T09:34:18] [INFO] Subsystem registered: HapticManager
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: HapticManager
+WARNING: [2025-12-14T09:34:18] [WARN] Scene not ready for RenderingSystem - will initialize later
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:821)
+       [1] log_warning (res://scripts/core/engine.gd:799)
+       [2] _init_renderer (res://scripts/core/engine.gd:369)
+       [3] _init_subsystem (res://scripts/core/engine.gd:158)
+       [4] _initialize_engine (res://scripts/core/engine.gd:121)
+       [5] _ready (res://scripts/core/engine.gd:82)
+[2025-12-14T09:34:18] [INFO] Subsystem registered: Renderer
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-14T09:34:18] [INFO] Subsystem registered: PerformanceOptimizer
+[2025-12-14T09:34:18] [INFO] PerformanceOptimizer initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: PerformanceOptimizer
+WARNING: [2025-12-14T09:34:18] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:821)
+       [1] log_warning (res://scripts/core/engine.gd:799)
+       [2] _init_subsystem (res://scripts/core/engine.gd:162)
+       [3] _initialize_engine (res://scripts/core/engine.gd:127)
+       [4] _ready (res://scripts/core/engine.gd:82)
+[2025-12-14T09:34:18] [INFO] Subsystem registered: FractalZoom
+[2025-12-14T09:34:18] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: FractalZoom
+[2025-12-14T09:34:18] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-14T09:34:18] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-14T09:34:18] [INFO] Subsystem registered: SettingsManager
+[2025-12-14T09:34:18] [INFO] SettingsManager initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: SettingsManager
+[2025-12-14T09:34:18] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-14T09:34:18] [INFO] Subsystem registered: SaveSystem
+[2025-12-14T09:34:18] [INFO] SaveSystem initialized
+[2025-12-14T09:34:18] [INFO] Subsystem initialized: SaveSystem
+[2025-12-14T09:34:18] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[RLObservationManager] Initialized
+[RLTrainingController] Initialized
+[PowerSystem] Initialized
+[2025-12-14T09:34:18] [INFO] Subsystem registered: PowerSystem
+[BuildingManager] System initialized
+[CelestialBodyLOD] Initialized
+[2025-12-14T09:34:18] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+Starting comprehensive script compilation test...
+SCRIPT ERROR: Parse Error: Identifier "hint_text" not declared in the current scope.
+   at: GDScript::reload (res://scripts/ui/vr_tutorial_overlay.gd:347)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/ui/tutorial_visual_feedback.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/ui/tutorial_visual_feedback.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "enable" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/cosmic_interaction_controller.gd:877)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/interaction/cosmic_interaction_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Could not resolve class "CosmicInteractionController".
+   at: GDScript::reload (res://scripts/interaction/earth_interaction_controller.gd:1)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/interaction/earth_interaction_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Could not resolve class "CosmicInteractionController".
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "manipulation_type" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1100)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1100)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "manipulation_type" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1104)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1106)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1106)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1108)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1108)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1110)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1110)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1112)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1112)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "affect_type" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1239)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1239)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "affect_type" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1243)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1245)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1245)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1247)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1247)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1249)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1249)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "point" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1251)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "intensity" not declared in the current scope.
+   at: GDScript::reload (res://scripts/interaction/jupiter_interaction_controller.gd:1251)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/interaction/jupiter_interaction_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Could not resolve class "CosmicInteractionController".
+   at: GDScript::reload (res://scripts/interaction/mars_interaction_controller.gd:1)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/interaction/mars_interaction_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+Unicode parsing error, some characters were replaced with ∩┐╜ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with ∩┐╜ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with ∩┐╜ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with ∩┐╜ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with ∩┐╜ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with ∩┐╜ (U+FFFD): Unexpected NUL character
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:260)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:261)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:262)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:265)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:266)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:267)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:268)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:269)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "router" not declared in the current scope.
+   at: GDScript::reload (res://scripts/http_api/monitoring_integration_example.gd:270)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/http_api/monitoring_integration_example.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:81)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:84)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:32)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:34)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:37)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:41)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:55)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "child" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:61)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/gameplay/behavior_tree.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "biome" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/creature_data.gd:53)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:81)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:84)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:32)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:34)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:37)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:41)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "creature" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:55)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "child" not declared in the current scope.
+   at: GDScript::reload (res://scripts/gameplay/behavior_tree.gd:61)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/gameplay/creature_ai.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/gameplay/creature_ai.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "hint_text" not declared in the current scope.
+   at: GDScript::reload (res://scripts/ui/vr_tutorial_overlay.gd:347)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/gameplay/moon_landing_tutorial.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/gameplay/moon_landing_tutorial.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:20)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:21)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:22)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:23)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/docker_ai/audit_logger.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:20)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:21)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:22)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "config" not declared in the current scope.
+   at: GDScript::reload (res://scripts/docker_ai/audit_logger.gd:23)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/docker_ai/docker_ai_manager.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/docker_ai/docker_ai_manager.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "node" not declared in the current scope.
+   at: GDScript::reload (res://scripts/debug/automated_movement_test.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "target_name" not declared in the current scope.
+   at: GDScript::reload (res://scripts/debug/automated_movement_test.gd:48)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "node" not declared in the current scope.
+   at: GDScript::reload (res://scripts/debug/automated_movement_test.gd:49)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "node" not declared in the current scope.
+   at: GDScript::reload (res://scripts/debug/automated_movement_test.gd:51)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "target_name" not declared in the current scope.
+   at: GDScript::reload (res://scripts/debug/automated_movement_test.gd:52)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/debug/automated_movement_test.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:79)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:79)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:84)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:89)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:95)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:98)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:100)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/building/procedural_building_renderer.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:79)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:79)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:84)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:89)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:95)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:98)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "building_data" not declared in the current scope.
+   at: GDScript::reload (res://scripts/building/procedural_building_renderer.gd:100)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://scripts/building/procedural_demo_controller.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/building/procedural_demo_controller.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "limit" not declared in the current scope.
+   at: GDScript::reload (res://scripts/analytics/tutorial_analytics_reporting.gd:690)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "limit" not declared in the current scope.
+   at: GDScript::reload (res://scripts/analytics/tutorial_analytics_reporting.gd:691)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "schedule_id" not declared in the current scope.
+   at: GDScript::reload (res://scripts/analytics/tutorial_analytics_reporting.gd:701)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "schedule_id" not declared in the current scope.
+   at: GDScript::reload (res://scripts/analytics/tutorial_analytics_reporting.gd:702)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+SCRIPT ERROR: Parse Error: Identifier "schedule_id" not declared in the current scope.
+   at: GDScript::reload (res://scripts/analytics/tutorial_analytics_reporting.gd:703)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+ERROR: Failed to load script "res://scripts/analytics/tutorial_analytics_reporting.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://tests/unit/test_all_scripts_compilation.gd:26)
+Checked 529 scripts.
+SUCCESS: All scripts compiled.
+[2025-12-14T09:34:21] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-14T09:34:21] [INFO] [VRManager] VRManager resource cleanup complete
+[2025-12-14T09:34:21] [INFO] [HapticManager] HapticManager exiting tree, cleaning up...
+[2025-12-14T09:34:21] [INFO] [HapticManager] HapticManager cleanup complete
+[2025-12-14T09:34:21] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-14T09:34:21] [INFO] [VRManager] VRManager resource cleanup complete
+[2025-12-14T09:34:21] [INFO] ResonanceEngine shutting down...
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _log_info (res://scripts/core/save_system.gd:850)
+       [1] shutdown (res://scripts/core/save_system.gd:865)
+       [2] _shutdown_subsystem (res://scripts/core/engine.gd:650)
+       [3] shutdown (res://scripts/core/engine.gd:619)
+       [4] _notification (res://scripts/core/engine.gd:662)
+SaveSystem: SaveSystem shutdown
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: SaveSystem
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: SettingsManager
+CaptureEventSystem shutdown
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: Renderer
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: VRComfortSystem
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:507)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:892)
+       [1] _log_info (res://scripts/core/vr_manager.gd:866)
+       [2] shutdown (res://scripts/core/vr_manager.gd:714)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:650)
+       [4] shutdown (res://scripts/core/engine.gd:626)
+       [5] _notification (res://scripts/core/engine.gd:662)
+[INFO] [VRManager] VRManager shutting down...
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:507)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:892)
+       [1] _log_info (res://scripts/core/vr_manager.gd:866)
+       [2] shutdown (res://scripts/core/vr_manager.gd:732)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:650)
+       [4] shutdown (res://scripts/core/engine.gd:626)
+       [5] _notification (res://scripts/core/engine.gd:662)
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: VRManager
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-14T09:34:21] [INFO] Subsystem shutdown: TimeManager
+[2025-12-14T09:34:21] [INFO] ResonanceEngine shutdown complete

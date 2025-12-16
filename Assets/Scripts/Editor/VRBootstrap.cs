@@ -69,7 +69,7 @@ namespace EditorScripts
             cube.transform.position = new Vector3(0, 0.8f, 0.5f); // Chest height, front
             cube.transform.localScale = Vector3.one * 0.2f;
             cube.AddComponent<Rigidbody>();
-            cube.AddComponent<XRGrabInteractable>();
+            cube.AddComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
             
             Debug.Log("[VRBootstrap] Scene Setup Complete! \n1. Ensure 'XR Plugin Management' is initialized.\n2. Ensure Input Actions are set.");
         }

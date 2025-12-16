@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/celestial/celestial_body.gd" id="1_planet"]
+[ext_resource type="Script" path="res://scripts/celestial/planet_terrain_manager.gd" id="2_terrain_mgr"]
+
+[sub_resource type="Environment" id="Environment_space"]
+background_mode = 1
+background_color = Color(0.01, 0.01, 0.02, 1)
+ambient_light_source = 1
+ambient_light_color = Color(0.3, 0.3, 0.3, 1)
+ambient_light_energy = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.3
+height = 1.8
+
+[node name="TestPlanetTerrain" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_space")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 0, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="TestPlanet" type="Node3D" parent="."]
+script = ExtResource("1_planet")
+body_name = "TestEarth"
+body_type = 1
+mass = 5.972e+24
+radius = 6.371
+rotation_period = 86400.0
+axial_tilt = 0.408
+albedo_color = Color(0.2, 0.4, 0.8, 1)
+
+[node name="PlanetTerrainManager" type="Node" parent="."]
+script = ExtResource("2_terrain_mgr")
+generation_distance = 100.0
+debug_mode = true
+
+[node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+current = true
+far = 1000000.0

@@ -1,0 +1,186 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3k8m5p7q2n6j"]
+
+[ext_resource type="PackedScene" uid="uid://c8j5k3n2p9m4h" path="res://scenes/ui/power_grid_panel.tscn" id="1_power_grid"]
+[ext_resource type="Script" path="res://scenes/ui/test_power_grid_controller.gd" id="2_test_controller"]
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode = 1
+background_color = Color(0.1, 0.1, 0.15, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.5, 0.5, 0.6, 1)
+
+[node name="TestPowerGridHUD" type="Node3D"]
+script = ExtResource("2_test_controller")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 15)
+fov = 75.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 5, 10, 5)
+light_energy = 0.5
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PowerGridPanel" parent="UI" instance=ExtResource("1_power_grid")]
+
+[node name="TestControls" type="PanelContainer" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 400.0
+grow_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/TestControls"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/TestControls/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.7, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "TEST CONTROLS"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ProductionControl" type="VBoxContainer" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ProductionLabel" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/ProductionControl"]
+layout_mode = 2
+text = "Production (kW)"
+
+[node name="ProductionSlider" type="HSlider" parent="UI/TestControls/MarginContainer/VBoxContainer/ProductionControl"]
+layout_mode = 2
+max_value = 500.0
+step = 10.0
+value = 150.0
+
+[node name="ProductionValue" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/ProductionControl"]
+layout_mode = 2
+text = "150 kW"
+
+[node name="ConsumptionControl" type="VBoxContainer" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConsumptionLabel" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/ConsumptionControl"]
+layout_mode = 2
+text = "Consumption (kW)"
+
+[node name="ConsumptionSlider" type="HSlider" parent="UI/TestControls/MarginContainer/VBoxContainer/ConsumptionControl"]
+layout_mode = 2
+max_value = 500.0
+step = 10.0
+value = 100.0
+
+[node name="ConsumptionValue" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/ConsumptionControl"]
+layout_mode = 2
+text = "100 kW"
+
+[node name="StorageControl" type="VBoxContainer" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StorageLabel" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/StorageControl"]
+layout_mode = 2
+text = "Storage (%)"
+
+[node name="StorageSlider" type="HSlider" parent="UI/TestControls/MarginContainer/VBoxContainer/StorageControl"]
+layout_mode = 2
+max_value = 100.0
+step = 5.0
+value = 75.0
+
+[node name="StorageValue" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/StorageControl"]
+layout_mode = 2
+text = "75%"
+
+[node name="EfficiencyControl" type="VBoxContainer" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EfficiencyLabel" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/EfficiencyControl"]
+layout_mode = 2
+text = "Efficiency (%)"
+
+[node name="EfficiencySlider" type="HSlider" parent="UI/TestControls/MarginContainer/VBoxContainer/EfficiencyControl"]
+layout_mode = 2
+min_value = 50.0
+max_value = 100.0
+step = 5.0
+value = 95.0
+
+[node name="EfficiencyValue" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/EfficiencyControl"]
+layout_mode = 2
+text = "95%"
+
+[node name="HSeparator2" type="HSeparator" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PresetButtons" type="VBoxContainer" parent="UI/TestControls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="PresetLabel" type="Label" parent="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons"]
+layout_mode = 2
+text = "Presets"
+
+[node name="NormalButton" type="Button" parent="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons"]
+layout_mode = 2
+text = "Normal Operation"
+
+[node name="CriticalButton" type="Button" parent="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons"]
+layout_mode = 2
+text = "Critical Storage"
+
+[node name="OverloadButton" type="Button" parent="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons"]
+layout_mode = 2
+text = "Power Overload"
+
+[node name="FailureButton" type="Button" parent="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons"]
+layout_mode = 2
+text = "System Failure"
+
+[node name="ResetButton" type="Button" parent="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons"]
+layout_mode = 2
+text = "Reset to Defaults"
+
+[node name="InfoLabel" type="Label" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -40.0
+offset_right = 300.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.7, 0.7, 0.8, 1)
+theme_override_font_sizes/font_size = 12
+text = "Test scene for Power Grid HUD - Use sliders to adjust values or click presets"
+horizontal_alignment = 1
+
+[connection signal="value_changed" from="UI/TestControls/MarginContainer/VBoxContainer/ProductionControl/ProductionSlider" to="." method="_on_production_changed"]
+[connection signal="value_changed" from="UI/TestControls/MarginContainer/VBoxContainer/ConsumptionControl/ConsumptionSlider" to="." method="_on_consumption_changed"]
+[connection signal="value_changed" from="UI/TestControls/MarginContainer/VBoxContainer/StorageControl/StorageSlider" to="." method="_on_storage_changed"]
+[connection signal="value_changed" from="UI/TestControls/MarginContainer/VBoxContainer/EfficiencyControl/EfficiencySlider" to="." method="_on_efficiency_changed"]
+[connection signal="pressed" from="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons/NormalButton" to="." method="_on_normal_preset"]
+[connection signal="pressed" from="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons/CriticalButton" to="." method="_on_critical_preset"]
+[connection signal="pressed" from="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons/OverloadButton" to="." method="_on_overload_preset"]
+[connection signal="pressed" from="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons/FailureButton" to="." method="_on_failure_preset"]
+[connection signal="pressed" from="UI/TestControls/MarginContainer/VBoxContainer/PresetButtons/ResetButton" to="." method="_on_reset_preset"]

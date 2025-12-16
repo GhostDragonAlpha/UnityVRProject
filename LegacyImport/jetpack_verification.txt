@@ -1,0 +1,83 @@
+JETPACK MECHANICS VERIFICATION
+================================
+
+File: C:/godot/scripts/player/walking_controller.gd
+
+REQUIREMENTS MET:
+-----------------
+
+1. ✓ JETPACK THRUST - Space key activation (Desktop mode)
+   - Line 395-396: Desktop mode uses KEY_SPACE (hold to fly)
+   - Line 390-393: VR mode uses right controller grip button
+   - Line 261-264: Thrust applied in _physics_process()
+
+2. ✓ UPWARD FORCE AGAINST GRAVITY
+   - Line 264: velocity += -gravity_direction * jetpack_thrust * delta
+   - Thrust force: 15.0 m/s² (line 25)
+   - Default gravity: 9.8 m/s² (line 51)
+   - Net upward force: 15.0 - 9.8 = 5.2 m/s² when thrusting
+
+3. ✓ FUEL CONSUMPTION AT 10% PER SECOND
+   - Line 27: jetpack_fuel_consumption: 10.0 (10% of max 100)
+   - Line 266: current_fuel -= jetpack_fuel_consumption * delta
+   - At 10 units/sec with max 100 = 10% per second ✓
+
+4. ✓ MAX FUEL: 100%, REGENERATE AT 5%/SEC ON GROUND
+   - Line 26: jetpack_fuel: 100.0 (max fuel)
+   - Line 28: jetpack_fuel_recharge: 5.0 (5% of max 100)
+   - Line 270-271: Recharge when is_on_floor() = true
+   - current_fuel += jetpack_fuel_recharge * delta
+
+5. ✓ THRUST OVERCOMES PLANETARY GRAVITY
+   - Thrust: 15.0 m/s² vs Standard gravity: 9.8 m/s²
+   - Ratio: 15.0/9.8 = 1.53x (53% more force than gravity)
+   - Result: Player accelerates upward when thrusting ✓
+
+PHYSICS IMPLEMENTATION:
+-----------------------
+
+Gravity Application (lines 254-258):
+- Applied every frame when not is_on_floor()
+- Direction: toward planet center (gravity_direction)
+- Magnitude: current_gravity * delta
+- Reduced by 70% in low-gravity flight mode
+
+Jetpack Thrust (lines 260-271):
+- Checks: jetpack_enabled AND is_jetpack_thrust_pressed() AND current_fuel > 0
+- Direction: opposite of gravity_direction (-gravity_direction)
+- Magnitude: jetpack_thrust (15.0 m/s²) * delta
+- Fuel consumption: 10.0 units/sec
+- Fuel recharge: 5.0 units/sec when on ground
+
+FUEL SYSTEM:
+------------
+- Max fuel: 100.0 units
+- Current fuel: tracked in variable 'current_fuel' (line 37)
+- Consumption rate: 10.0/sec (10% per second)
+- Recharge rate: 5.0/sec (5% per second) on ground only
+- Empty tank time: 100 / 10 = 10 seconds of continuous thrust
+- Full recharge time: 100 / 5 = 20 seconds on ground
+
+CONTROL MAPPING:
+----------------
+Desktop Mode:
+- Space key (hold) = Jetpack thrust
+- WASD = Movement
+- Shift = Sprint
+- E = Interact
+
+VR Mode:
+- Right grip (hold) = Jetpack thrust
+- Left thumbstick = Movement
+- Left thumbstick click = Sprint
+- Right B button = Interact
+
+API FUNCTIONS:
+--------------
+- get_jetpack_fuel() -> float : Returns current fuel (0-100)
+- get_max_jetpack_fuel() -> float : Returns max fuel (100)
+- get_jetpack_fuel_percent() -> float : Returns fuel % (0.0-1.0)
+- is_jetpack_firing() -> bool : Returns true if actively thrusting
+- set_jetpack_enabled(bool) : Enable/disable jetpack system
+
+VERIFICATION STATUS: ✓ ALL REQUIREMENTS MET

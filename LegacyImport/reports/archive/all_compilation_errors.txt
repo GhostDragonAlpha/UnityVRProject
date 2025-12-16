@@ -1,0 +1,564 @@
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+ERROR: Failed to load script "res://scripts/planetary_survival/core/creature_egg.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expression is of type "Node3D" so it can't be of type "ResourceNode".
+SCRIPT ERROR: Parse Error: Invalid cast. Cannot convert from "Node3D" to "ResourceNode".
+ERROR: Failed to load script "res://scripts/planetary_survival/core/drone.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expression is of type "Node3D" so it can't be of type "ResourceNode".
+SCRIPT ERROR: Parse Error: Invalid cast. Cannot convert from "Node3D" to "ResourceNode".
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/core/drone_hub.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "available" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/core/fabricator_module.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/core/habitat_module.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "PhysicsSphereQueryParameters3D" not declared in the current scope.
+ERROR: Failed to load script "res://scripts/planetary_survival/core/mining_outpost.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/core/oxygen_module.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "progress_delta" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "recipe" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "available" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "recipe" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/core/particle_accelerator.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "available" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/core/storage_module.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "collision_layer" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "collision_mask" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "collision_layer" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "collision_mask" not declared in the current scope.
+ERROR: Failed to load script "res://scripts/planetary_survival/core/turret.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "synergy" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "synergy" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "synergy" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "rarity_name" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/alien_artifact_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "provided" variable because the value doesn't have a set type.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/automation_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/base_building_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/blueprint_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/creature_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid argument for "register_server_node()" function: argument 1 should be "String" but is "int".
+SCRIPT ERROR: Parse Error: Invalid argument for "register_server_node()" function: argument 2 should be "int" but is "Dictionary".
+SCRIPT ERROR: Parse Error: Function "spawn_server_node()" is a coroutine, so it must be called with "await".
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/dynamic_scaler.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "elapsed_sec" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/failover_handler.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "elapsed_sec" variable because the value doesn't have a set type.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/fault_tolerance_api.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid argument for "register_server_node()" function: argument 1 should be "String" but is "int".
+SCRIPT ERROR: Parse Error: Invalid argument for "register_server_node()" function: argument 2 should be "int" but is "Dictionary".
+SCRIPT ERROR: Parse Error: Function "spawn_server_node()" is a coroutine, so it must be called with "await".
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/hotspot_handler.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "has_resource()" not found in base Dictionary.
+SCRIPT ERROR: Parse Error: Function "queue_redraw()" not found in base self.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/logistics_controller.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "PhysicsSphereQueryParameters3D" not declared in the current scope.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/mining_outpost_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "MEMORY_DYNAMIC" in base "Performance".
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/monitoring_integration.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "progress_delta" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "recipe" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "available" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "recipe" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/particle_accelerator_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Class "CreatureData" hides a global script class.
+SCRIPT ERROR: Parse Error: Invalid operands "int" and "float" for "%" operator.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/persistence_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "player_instance" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "life_support_system" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Function "is_player_spawned()" not found in base self.
+SCRIPT ERROR: Parse Error: Identifier "player_instance" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "player_instance" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "current_planet" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "current_planet" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "life_support_system" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "life_support_system" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "life_support_system" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "life_support_system" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "life_support_system" not declared in the current scope.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/player_spawn_system_damage_impl.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/player_spawn_system_enhanced.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "has_power" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/teleportation_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Class "CreatureData" hides a global script class.
+SCRIPT ERROR: Parse Error: Invalid operands "int" and "float" for "%" operator.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/terrain_persistence_adapter.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "price" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "current" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "new_reputation" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/trading_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "LASER" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "LASER" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot return value of type "PowerGrid" because the function return type is "Node".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/turret_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot call the parent class' virtual function "_exit_tree()" because it hasn't been defined.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/voxel_terrain_optimized.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "chunk_world_y" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "neighbor_pos" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/voxel_terrain_optimizer.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Class "CreatureData" hides a global script class.
+SCRIPT ERROR: Parse Error: Invalid operands "int" and "float" for "%" operator.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/systems/world_save_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/ui/conflict_debug_ui.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "slot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/ui/inventory_manager.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "charge_percentage" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://scripts/planetary_survival/ui/power_grid_hud.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "charge_percentage" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "gen_power" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "fuel_pct" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "cons_power" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "charge" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "capacity" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "charge_pct" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/planetary_survival/ui/power_grid_hud_enhanced.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Class "CreatureData" hides a global script class.
+SCRIPT ERROR: Parse Error: Invalid operands "int" and "float" for "%" operator.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/ui/vr_save_load_menu.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "provided" variable because the value doesn't have a set type.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/planetary_survival/planetary_survival_coordinator.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Class "LODManager" hides a global script class.
+ERROR: Failed to load script "res://scripts/rendering/lod_manager_optimized.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://scripts/security/security_config_instrumented.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "HttpApiSecurityConfigInstrumented", because of a parser error.
+ERROR: Failed to load script "res://scripts/security/security_monitoring_integration_example.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Static function "get_token_manager()" not found in base "HttpApiSecurityConfig".
+ERROR: Failed to load script "res://scripts/security/security_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot return a value of type "null" as "HttpApiRBAC.Permission".
+SCRIPT ERROR: Parse Error: Cannot return value of type "null" because the function return type is "HttpApiRBAC.Permission".
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+ERROR: Failed to load script "res://scripts/security/security_system_integrated.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "chunk_world_y" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "neighbor_pos" variable because the value doesn't have a set type.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/tools/vr_performance_profiler.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "balance" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "production_ratio" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "consumption_ratio" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "balance" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://scripts/ui/power_grid_hud.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "instance" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "interaction_areas" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "area" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "collision_shape" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "overlaps" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "areas_overlap" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "instance" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "collision_shape" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "instance" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "rabbit" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "rabbit_collision" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "ground" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "ground_collision" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://scripts/validation/collision_validator.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+ERROR: Failed to load script "res://scripts/version.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "provided" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/integration/test_integration_suite.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not parse global class "PlayerSpawnSystemEnhanced" from "res://scripts/planetary_survival/systems/player_spawn_system_enhanced.gd".
+SCRIPT ERROR: Parse Error: Could not resolve class "PlayerSpawnSystemEnhanced", because of a parser error.
+ERROR: Failed to load script "res://tests/integration/test_player_spawn_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expected end of statement after expression, found ":" instead.
+ERROR: Failed to load script "res://tests/integration/test_resonance_diagnostic.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "transfer_time" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "initial_state" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Function "assert_string()" not found in base self.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "state" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://tests/multiplayer/test_authority_transfer.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_same()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "assert_not_null()" not found in base self.
+ERROR: Failed to load script "res://tests/planetary_survival/test_coordinator_initialization.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://tests/planetary_survival/test_persistence_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+ERROR: Failed to load script "res://tests/property/test_conveyor_transport_runner.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+ERROR: Failed to load script "res://tests/property/test_stream_merging_runner.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot assign a new value to a constant.
+SCRIPT ERROR: Parse Error: Cannot assign a new value to a constant.
+ERROR: Failed to load script "res://tests/security/test_audit_logging.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://tests/security/test_input_validation.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://tests/security/test_jwt_security.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://tests/security/test_scene_path_validation.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://tests/security/test_scene_whitelist.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not find base class "GutTest".
+ERROR: Failed to load script "res://tests/security/test_token_manager.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "has_resource()" not found in base Dictionary.
+SCRIPT ERROR: Parse Error: Function "queue_redraw()" not found in base self.
+SCRIPT ERROR: Parse Error: Expression is of type "Node3D" so it can't be of type "ResourceNode".
+SCRIPT ERROR: Parse Error: Invalid cast. Cannot convert from "Node3D" to "ResourceNode".
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_advanced_automation.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "has_power" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "progress_delta" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "recipe" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "available" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "recipe" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "synergy" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "synergy" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "synergy" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "rarity_name" variable because the value doesn't have a set type.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_advanced_technologies.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "passed" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://tests/unit/test_base_building_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+ERROR: Failed to load script "res://tests/unit/test_base_customization.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+ERROR: Failed to load script "res://tests/unit/test_base_defense_integration.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+ERROR: Failed to load script "res://tests/unit/test_base_defense_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "ability" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "ability" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://tests/unit/test_boss_encounter.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "p1_correct" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "p2_correct" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "p3_correct" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://tests/unit/test_conflict_resolution.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not find type "ConnectionManager" in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionManager" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+ERROR: Failed to load script "res://tests/unit/test_connection_manager.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+ERROR: Failed to load script "res://tests/unit/test_connection_state.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not find base class "GutTest".
+ERROR: Failed to load script "res://tests/unit/test_controller_button_remapper.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expected function name after "func".
+ERROR: Failed to load script "res://tests/unit/test_crafting_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Too many arguments for "new()" call. Expected at most 0 but received 2.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_creature_breeding.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not find type "DAPAdapter" in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "DAPAdapter" not declared in the current scope.
+ERROR: Failed to load script "res://tests/unit/test_dap_commands.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid argument for "register_server_node()" function: argument 1 should be "String" but is "int".
+SCRIPT ERROR: Parse Error: Invalid argument for "register_server_node()" function: argument 2 should be "int" but is "Dictionary".
+SCRIPT ERROR: Parse Error: Function "spawn_server_node()" is a coroutine, so it must be called with "await".
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_dynamic_scaling.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expected function name after "func".
+ERROR: Failed to load script "res://tests/unit/test_environmental_systems.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "registered_wheat" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "all_species" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "planted" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "progress" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "overflow" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "initial_water" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "initial_progress" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot1" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot2" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "ratio" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "harvest_result" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot1" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot2" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot3" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "all_plots" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "harvestable" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "plot_dict" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "system_dict" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://tests/unit/test_farming_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "get_tree()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "get_tree()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "get_tree()" not found in base self.
+ERROR: Failed to load script "res://tests/unit/test_fault_tolerance.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "REBASE_THRESHOLD" in base "FloatingOriginSystem".
+ERROR: Failed to load script "res://tests/unit/test_floating_origin_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_hostile_creature_ai.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "slot" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_inventory_manager.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+ERROR: Failed to load script "res://tests/unit/test_life_support_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not find type "LSPAdapter" in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "LSPAdapter" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "ConnectionState" not declared in the current scope.
+ERROR: Failed to load script "res://tests/unit/test_lsp_adapter.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "PhysicsSphereQueryParameters3D" not declared in the current scope.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_mining_outpost_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://tests/unit/test_multiplayer_systems.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+ERROR: Failed to load script "res://tests/unit/test_network_sync_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "get_tree()" not found in base self.
+ERROR: Failed to load script "res://tests/unit/test_persistence_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "passed" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "passed" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: Cannot infer the type of "passed" variable because the value doesn't have a set type.
+ERROR: Failed to load script "res://tests/unit/test_power_grid_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+SCRIPT ERROR: Parse Error: Cannot find member "BASIC" in base "Turret.TurretType".
+ERROR: Failed to load script "res://tests/unit/test_turret_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+ERROR: Failed to load script "res://tests/unit/test_underwater_base.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Too few arguments for "new()" call. Expected at least 1 but received 0.
+ERROR: Failed to load script "res://tests/unit/test_voxel_terrain_optimizer.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Class "CreatureData" hides a global script class.
+SCRIPT ERROR: Parse Error: Invalid operands "int" and "float" for "%" operator.
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://tests/unit/test_world_save_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+ERROR: Failed to load script "res://tests/benchmark_physics_optimization.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot call non-static function "add_celestial_body()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "add_rigid_body()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "set_spatial_partitioning_enabled()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "calculate_n_body_gravity()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "get_statistics()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "set_spatial_partitioning_enabled()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "calculate_n_body_gravity()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "get_statistics()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "remove_celestial_body()" on the class "PhysicsEngine" directly. Make an instance instead.
+SCRIPT ERROR: Parse Error: Cannot call non-static function "remove_rigid_body()" on the class "PhysicsEngine" directly. Make an instance instead.
+ERROR: Failed to load script "res://tests/performance_benchmark.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, String and Nil.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, Nil and String.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, String and Nil.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, Nil and String.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, String and Nil.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, Nil and String.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, String and Nil.
+SCRIPT ERROR: Parse Error: Invalid operands to operator *, String and int.
+SCRIPT ERROR: Parse Error: Invalid operands to operator +, Nil and String.
+SCRIPT ERROR: Parse Error: Function "has_node()" not found in base self.
+ERROR: BUG: Unreferenced static string to 0: _enter_world
+ERROR: BUG: Unreferenced static string to 0: use_dynamic_gi
+ERROR: BUG: Unreferenced static string to 0: use_in_baked_light
+ERROR: BUG: Unreferenced static string to 0: servers
+ERROR: BUG: Unreferenced static string to 0: luminance_buffers
+ERROR: BUG: Unreferenced static string to 0: color_upscaled
+ERROR: BUG: Unreferenced static string to 0: quarter_texture
+ERROR: BUG: Unreferenced static string to 0: sky_buffers
+ERROR: BUG: Unreferenced static string to 0: half_texture
+ERROR: BUG: Unreferenced static string to 0: rb_ssil
+ERROR: BUG: Unreferenced static string to 0: reflection
+ERROR: BUG: Unreferenced static string to 0: rb_ssao
+ERROR: BUG: Unreferenced static string to 0: final
+ERROR: BUG: Unreferenced static string to 0: back_color
+ERROR: BUG: Unreferenced static string to 0: back_depth
+ERROR: BUG: Unreferenced static string to 0: normal_roughness
+ERROR: BUG: Unreferenced static string to 0: VRS
+ERROR: BUG: Unreferenced static string to 0: Fog
+ERROR: BUG: Unreferenced static string to 0: sdfgi
+ERROR: BUG: Unreferenced static string to 0: EditorRect2D
+ERROR: BUG: Unreferenced static string to 0: _editor_region_rect_enabled

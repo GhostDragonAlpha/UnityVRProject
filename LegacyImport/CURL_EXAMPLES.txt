@@ -1,0 +1,107 @@
+SCENE VALIDATION ENDPOINT - CURL EXAMPLES
+==========================================
+
+All examples assume Godot is running with HTTP API on http://127.0.0.1:8080
+
+Example 1: Validate Existing Scene
+-----------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://vr_main.tscn"}'
+
+Expected: {"valid": true, ...}
+
+
+Example 2: Validate Non-Existent Scene
+---------------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://nonexistent.tscn"}'
+
+Expected: {"valid": false, "errors": ["Scene file not found: ..."]}
+
+
+Example 3: Invalid Path Format
+-------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "invalid_path.tscn"}'
+
+Expected: {"valid": false, "errors": ["Scene path must start with 'res://'"]}
+
+
+Example 4: Invalid File Extension
+----------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://somefile.txt"}'
+
+Expected: {"valid": false, "errors": ["Scene path must end with '.tscn'"]}
+
+
+Example 5: Empty Scene Path
+----------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": ""}'
+
+Expected: {"valid": false, "errors": ["Scene path cannot be empty"]}
+
+
+Example 6: Missing JSON Body (Error Case)
+------------------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json"
+
+Expected: {"error": "Bad Request", "message": "Invalid JSON body..."}
+
+
+Example 7: With Pretty Print (Linux/Mac)
+-----------------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://vr_main.tscn"}' | jq .
+
+
+Example 8: With Pretty Print (Cross-Platform)
+----------------------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://vr_main.tscn"}' | python -m json.tool
+
+
+Example 9: Save Response to File
+---------------------------------
+curl -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://vr_main.tscn"}' \
+  -o validation_result.json
+
+
+Example 10: Silent Mode (Only Show Output)
+-------------------------------------------
+curl -s -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://vr_main.tscn"}'
+
+
+Example 11: Validate Multiple Scenes (Bash Loop)
+-------------------------------------------------
+for scene in "res://vr_main.tscn" "res://tests/test_walking_scene.tscn"; do
+  echo "Validating: $scene"
+  curl -s -X PUT http://127.0.0.1:8080/scene \
+    -H "Content-Type: application/json" \
+    -d "{\"scene_path\": \"$scene\"}" | python -m json.tool
+  echo ""
+done
+
+
+Example 12: Check Only If Valid (Exit Code)
+--------------------------------------------
+curl -s -X PUT http://127.0.0.1:8080/scene \
+  -H "Content-Type: application/json" \
+  -d '{"scene_path": "res://vr_main.tscn"}' | \
+  python -c "import sys, json; data = json.load(sys.stdin); sys.exit(0 if data['valid'] else 1)"
+
+echo $?  # 0 = valid, 1 = invalid
+

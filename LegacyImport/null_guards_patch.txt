@@ -1,0 +1,216 @@
+NULL REFERENCE FIXES FOR C:/godot/scripts/celestial/celestial_body.gd
+================================================================
+
+Total Null Guards Added: 14
+
+LOCATION 1: attach_model() - Line 330
+----------------------------------------
+OLD CODE:
+	if model != null and model.get_parent() == self:
+		model.queue_free()
+
+NEW CODE:
+	# NULL GUARD 1: Clean up existing model safely
+	if is_instance_valid(model):
+		if is_instance_valid(model.get_parent()) and model.get_parent() == self:
+			model.queue_free()
+
+RISK: model.get_parent() could return null, causing null reference error
+
+
+LOCATION 2: attach_model() - Line 334
+----------------------------------------
+OLD CODE:
+	model = mesh_instance
+	if model != null:
+		add_child(model)
+		model.position = Vector3.ZERO
+
+NEW CODE:
+	model = mesh_instance
+	# NULL GUARD 2: Validate new model before use
+	if is_instance_valid(model):
+		add_child(model)
+		model.position = Vector3.ZERO
+
+RISK: model could become invalid between assignment and use
+
+
+LOCATION 3: create_default_model() - Line 342
+----------------------------------------
+OLD CODE:
+	if model != null:
+		return
+
+NEW CODE:
+	# NULL GUARD 3: Check if model already exists
+	if is_instance_valid(model):
+		return
+
+RISK: model could be non-null but freed/invalid
+
+
+LOCATION 4: create_default_model() - After MeshInstance3D.new()
+----------------------------------------
+NEW CODE ADDED:
+	model = MeshInstance3D.new()
+	# NULL GUARD 4: Validate created instance
+	if not is_instance_valid(model):
+		push_error("Failed to create MeshInstance3D for celestial body: " + body_name)
+		return
+
+RISK: Resource allocation could fail
+
+
+LOCATION 5: create_default_model() - After SphereMesh.new()
+----------------------------------------
+NEW CODE ADDED:
+	var sphere_mesh = SphereMesh.new()
+	# NULL GUARD 5: Validate mesh creation
+	if not is_instance_valid(sphere_mesh):
+		push_error("Failed to create SphereMesh for celestial body: " + body_name)
+		model.queue_free()
+		model = null
+		return
+
+RISK: Mesh creation could fail
+
+
+LOCATION 6: create_default_model() - After StandardMaterial3D.new()
+----------------------------------------
+NEW CODE ADDED:
+	var material = StandardMaterial3D.new()
+	# NULL GUARD 6: Validate material creation
+	if not is_instance_valid(material):
+		push_error("Failed to create material for celestial body: " + body_name)
+		model.queue_free()
+		model = null
+		return
+
+RISK: Material creation could fail
+
+
+LOCATION 7: update_model_scale() - Line 371
+----------------------------------------
+OLD CODE:
+	if model != null and model.mesh is SphereMesh:
+		var sphere_mesh = model.mesh as SphereMesh
+		sphere_mesh.radius = radius
+		sphere_mesh.height = radius * 2.0
+
+NEW CODE:
+	# NULL GUARD 7: Validate model before accessing
+	if not is_instance_valid(model):
+		return
+
+	# NULL GUARD 8: Validate mesh before accessing
+	if not is_instance_valid(model.mesh):
+		return
+
+	if model.mesh is SphereMesh:
+		var sphere_mesh = model.mesh as SphereMesh
+		sphere_mesh.radius = radius
+		sphere_mesh.height = radius * 2.0
+
+RISK: model.mesh could be null even if model is not null
+
+
+LOCATION 9-10: _update_derived_properties() - Lines 482-485
+----------------------------------------
+OLD CODE:
+	if parent_body != null and is_instance_valid(parent_body):
+		var distance_to_parent = get_distance_to(parent_body)
+		if distance_to_parent > EPSILON:
+			sphere_of_influence = calculate_hill_sphere(distance_to_parent, parent_body.mass)
+	else:
+		sphere_of_influence = radius * pow(mass / 1000.0, 0.4) * 10.0
+
+NEW CODE:
+	# NULL GUARD 9: Validate parent_body before accessing its properties
+	if is_instance_valid(parent_body):
+		var distance_to_parent = get_distance_to(parent_body)
+		# NULL GUARD 10: Ensure distance calculation succeeded
+		if distance_to_parent > EPSILON and distance_to_parent < INF:
+			# Safe to access parent_body.mass after validation
+			sphere_of_influence = calculate_hill_sphere(distance_to_parent, parent_body.mass)
+		else:
+			# Fallback if distance calculation fails
+			sphere_of_influence = radius * pow(mass / 1000.0, 0.4) * 10.0
+	else:
+		sphere_of_influence = radius * pow(mass / 1000.0, 0.4) * 10.0
+
+RISK: parent_body could be freed, distance could return INF on error
+
+
+LOCATION 11: _update_rotation() - Line 513
+----------------------------------------
+OLD CODE:
+	# Apply rotation to the model if it exists
+	if model != null:
+		model.rotation = rotation_axis * current_rotation
+
+NEW CODE:
+	# NULL GUARD 11: Apply rotation to the model if it exists and is valid
+	if is_instance_valid(model):
+		model.rotation = rotation_axis * current_rotation
+
+RISK: model could be freed but not null
+
+
+LOCATION 12-14: _setup_model() - Lines 520-530
+----------------------------------------
+OLD CODE:
+	if model_scene != null:
+		var instance = model_scene.instantiate()
+		if instance is MeshInstance3D:
+			attach_model(instance)
+		else:
+			# If the scene root isn't a MeshInstance3D, find one
+			var mesh_instance = instance.find_child("*", true, false)
+			if mesh_instance is MeshInstance3D:
+				attach_model(mesh_instance)
+			else:
+				add_child(instance)
+	else:
+		create_default_model()
+
+NEW CODE:
+	# NULL GUARD 12: Validate model_scene before instantiation
+	if is_instance_valid(model_scene):
+		var instance = model_scene.instantiate()
+		# NULL GUARD 13: Validate instantiated instance
+		if not is_instance_valid(instance):
+			push_error("Failed to instantiate model_scene for celestial body: " + body_name)
+			create_default_model()
+			return
+
+		if instance is MeshInstance3D:
+			attach_model(instance)
+		else:
+			# If the scene root isn't a MeshInstance3D, find one
+			var mesh_instance = instance.find_child("*", true, false)
+			# NULL GUARD 14: Validate found mesh_instance
+			if is_instance_valid(mesh_instance) and mesh_instance is MeshInstance3D:
+				attach_model(mesh_instance)
+			elif is_instance_valid(instance):
+				add_child(instance)
+			else:
+				push_error("Invalid scene instance for celestial body: " + body_name)
+				create_default_model()
+	else:
+		create_default_model()
+
+RISK: Instantiation could fail, find_child could return invalid node
+
+
+SUMMARY
+========
+Total Null Guards Added: 14
+Critical Fixes: 3 (Lines 330, 482-485, 513)
+Defensive Error Handling: 11
+
+All orbit_parent references have been secured with proper null checks.
+All model/mesh accesses now validate instance validity before use.
+Added error logging for debugging failures.
+Added fallback logic to prevent crashes on resource creation failures.
+

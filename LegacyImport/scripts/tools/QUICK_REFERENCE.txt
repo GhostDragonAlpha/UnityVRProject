@@ -1,0 +1,152 @@
+================================================================================
+FIX ADDON STRUCTURE TOOL - QUICK REFERENCE
+================================================================================
+
+Location: C:/Ignotus/scripts/tools/fix_addon_structure.py
+
+SYNTAX
+======
+
+  python fix_addon_structure.py [ADDON_NAME] [OPTIONS]
+
+MOST COMMON USES
+================
+
+1. Check all addons for issues (no changes):
+   python fix_addon_structure.py --verify-only
+
+2. Fix all addons automatically:
+   python fix_addon_structure.py --all
+
+3. Check specific addon:
+   python fix_addon_structure.py godot-xr-tools
+
+4. Get help:
+   python fix_addon_structure.py --help
+
+OPTIONS
+=======
+
+  --all              Process all addons (default if no addon specified)
+  --verify-only      Check only, do not make changes
+  -v, --verbose      Show detailed information
+  --godot-root PATH  Override Godot project root path
+  -h, --help         Show help message
+
+EXIT CODES
+==========
+
+  0 = Success (no issues found)
+  1 = Error or issue detected
+
+OUTPUT INDICATORS
+=================
+
+  [OK]    - Operation successful
+  [WARN]  - Warning (non-critical issue)
+  [ERROR] - Error (critical issue)
+  [FIX]   - Fix applied
+  [INFO]  - Information (verbose only)
+
+WHAT IT FIXES
+=============
+
+Problem: Addons extracted with nested structure
+  addons/addon-name/addons/addon-name/plugin.cfg
+
+Solution: Flattens to correct structure
+  addons/addon-name/plugin.cfg
+
+WORKFLOW
+========
+
+1. Check current state:
+   python fix_addon_structure.py --verify-only
+
+2. Review warnings/errors in output
+
+3. If needed, fix all:
+   python fix_addon_structure.py --all
+
+4. Verify fixed:
+   python fix_addon_structure.py --verify-only
+
+5. If errors occurred, check backups:
+   (created as addon-name_backup_<id> in addons/)
+
+EXAMPLE SESSION
+===============
+
+C:\Ignotus> python scripts/tools/fix_addon_structure.py --all -v
+======================================================================
+GODOT ADDON STRUCTURE VALIDATOR
+======================================================================
+
+[OK] Found addons directory: C:\Ignotus\addons
+
+Found 6 addon(s)
+----------------------------------------------------------------------
+[OK] Addon gdUnit4 structure is valid
+[OK] Addon godot-xr-tools structure is valid
+[WARN] Missing plugin.cfg in godot_rl_agents
+[OK] Addon godottpd structure is valid
+----------------------------------------------------------------------
+
+======================================================================
+SUMMARY
+======================================================================
+
+Warnings (1):
+  - Missing plugin.cfg in godot_rl_agents
+
+No errors detected!
+======================================================================
+
+Exit code: 0 (Success)
+
+TROUBLESHOOTING
+===============
+
+Issue: "Addon not found"
+  Solution: Check addon name matches directory in addons/
+
+Issue: "Missing plugin.cfg"
+  Solution: Addon is incomplete. Either:
+    - Add plugin.cfg from addon source
+    - Remove the addon directory
+    - Check if nested (run fix_addon_structure.py --all)
+
+Issue: Python not found
+  Solution: Install Python 3.7+ or add python to PATH
+
+Issue: Permission denied
+  Solution: Run with administrator privileges or check directory permissions
+
+FILE STRUCTURE
+==============
+
+Scripts directory:
+  scripts/tools/
+    fix_addon_structure.py       <- Main script
+    FIX_ADDON_STRUCTURE_README.md <- Full documentation
+    QUICK_REFERENCE.txt          <- This file
+
+Typical output location:
+  C:\Ignotus\addons\
+    gdUnit4/
+    godot-xr-tools/
+    godottpd/
+    ...
+
+PLATFORM SUPPORT
+================
+
+  Windows: Full support (tested)
+  Linux:   Full support
+  macOS:   Full support
+
+All output uses ASCII only (no Unicode emojis) for Windows console compatibility.
+
+================================================================================
+For full documentation, see: FIX_ADDON_STRUCTURE_README.md
+================================================================================

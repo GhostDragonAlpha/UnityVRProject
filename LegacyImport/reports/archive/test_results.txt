@@ -1,0 +1,41 @@
+============================================================
+SpaceTime VR - Smoke Test Suite
+============================================================
+Endpoint: http://127.0.0.1:8080
+Timestamp: 2025-12-04T12:08:27.517325
+============================================================
+
+[0;31m[FAIL][0m Health Endpoint: HTTP 404
+[0;31m[FAIL][0m Status Endpoint: HTTP 404
+[1;33m[WARN][0m API Version: HTTP 404
+[0;31m[FAIL][0m JWT Token Generation: HTTP 404
+[0;31m[FAIL][0m Authentication Required: Expected 401, got 404
+[0;31m[FAIL][0m Authentication With Token: No JWT token available
+[1;33m[WARN][0m Invalid Token Rejected: Expected 401, got 404
+[1;33m[WARN][0m Rate Limiting Active: No JWT token available
+[0;31m[FAIL][0m Scene Loaded: HTTP 404
+[0;31m[FAIL][0m Scene Whitelist Enforced: No JWT token available
+[1;33m[WARN][0m Player Spawned: HTTP 404
+[1;33m[WARN][0m Performance Endpoint: No JWT token available
+[1;33m[WARN][0m FPS Metrics: No JWT token available
+[1;33m[WARN][0m Telemetry WebSocket: WebSocket connection failed: [WinError 10061] No connection could be made because the target machine actively refused it
+[1;33m[WARN][0m VR Initialization: HTTP 404
+[0;31m[FAIL][0m Autoloads Verification: HTTP 404
+
+============================================================
+Test Summary:
+  Total:  16
+  Passed: [0;32m0[0m
+  Failed: [0;31m16[0m
+  Critical Failures: [0;31m8[0m
+
+Category Breakdown:
+  API Health: 0/3 passed
+  Authentication: 0/4 passed
+  Rate Limiting: 0/1 passed
+  Scene Management: 0/3 passed
+  Performance: 0/2 passed
+  Telemetry: 0/1 passed
+  VR System: 0/1 passed
+  Autoloads: 0/1 passed
+============================================================

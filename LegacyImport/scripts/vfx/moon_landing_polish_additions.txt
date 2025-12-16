@@ -1,0 +1,71 @@
+
+
+## Setup walking dust effects
+## INCLUDES: Footstep dust clouds AND jump landing dust (GPUParticles3D)
+func setup_walking_dust_effects() -> void:
+	# Walking controller may not exist yet (created during landing)
+	# We will defer connection until walking mode starts
+
+	# Try to find transition system to connect to walking mode signal
+	var spacecraft = get_node_or_null("../Spacecraft") as Spacecraft
+	if not spacecraft:
+		print("[MoonLandingPolish] Spacecraft not found - walking dust will be setup on walking_started signal")
+		return
+
+	var transition_system = spacecraft.get_node_or_null("TransitionSystem")
+	if transition_system and transition_system.has_signal("walking_mode_enabled"):
+		transition_system.walking_mode_enabled.connect(_on_walking_mode_enabled)
+		print("[MoonLandingPolish] Connected to walking_mode_enabled signal")
+	else:
+		print("[MoonLandingPolish] TransitionSystem not found - will setup walking dust manually")
+
+
+## Called when walking mode is enabled
+func _on_walking_mode_enabled() -> void:
+	print("[MoonLandingPolish] Walking mode enabled - setting up walking dust effects")
+
+	# Find walking controller (should be created by now)
+	var scene_root = get_tree().root.get_child(get_tree().root.get_child_count() - 1)
+	walking_controller = find_walking_controller(scene_root)
+
+	if not walking_controller:
+		print("[MoonLandingPolish] WalkingController not found!")
+		return
+
+	# Create walking dust effects
+	walking_dust_effects = WalkingDustEffects.new()
+	walking_dust_effects.name = "WalkingDustEffects"
+	walking_controller.add_child(walking_dust_effects)
+	walking_dust_effects.set_walking_controller(walking_controller)
+
+	# Connect to walking signals
+	if walking_controller.has_signal("walking_started"):
+		walking_controller.walking_started.connect(_on_walking_started)
+	if walking_controller.has_signal("walking_stopped"):
+		walking_controller.walking_stopped.connect(_on_walking_stopped)
+
+	print("[MoonLandingPolish] Walking dust effects added (footsteps + jump landings)")
+
+
+## Recursively find WalkingController in scene tree
+func find_walking_controller(node: Node) -> WalkingController:
+	if node is WalkingController:
+		return node
+
+	for child in node.get_children():
+		var result = find_walking_controller(child)
+		if result:
+			return result
+
+	return null
+
+
+## Called when walking mode starts
+func _on_walking_started() -> void:
+	print("[MoonLandingPolish] Walking started - dust effects active")
+
+
+## Called when walking mode stops
+func _on_walking_stopped() -> void:
+	print("[MoonLandingPolish] Walking stopped - dust effects paused")
+

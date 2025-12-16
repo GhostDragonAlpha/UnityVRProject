@@ -1,0 +1,184 @@
+GODOT STARTUP ERROR ANALYSIS
+=============================
+Generated: 2025-12-02
+Log file: C:/Users/allen/AppData/Roaming/Godot/app_userdata/SpaceTime/logs/godot.log
+
+TOTAL ERRORS: 62
+
+=============================
+CATEGORY 1: MISSING CLASS DEFINITIONS (29 errors)
+=============================
+BehaviorTree class resolution failures:
+- creature_ai.gd:30 - Could not parse global class "BehaviorTree" (referenced at line 30)
+- creature_ai.gd:107-199 - Could not resolve class "BehaviorTree" (multiple references)
+  Files affected: res://scripts/gameplay/creature_ai.gd
+  Root cause: BehaviorTree file exists but parser may have dependency issues
+
+=============================
+CATEGORY 2: MISSING IDENTIFIER ERRORS (14 errors)
+=============================
+TelemetryServer not in scope:
+- vr_setup.gd:22, 46, 66-72, 85, 89, 133, 141, 172
+  Root cause: TelemetryServer autoload may not be initialized before vr_setup.gd loads
+  Status: CRITICAL - Blocks VR initialization
+
+=============================
+CATEGORY 3: PARSE ERRORS - CLASS NAME PLACEMENT (3 errors)
+=============================
+NetworkSyncSystem class definition:
+- network_sync_system.gd:18 - Could not parse global class "NetworkSyncSystem"
+- planetary_survival_coordinator.gd:19, 214 - Cannot resolve NetworkSyncSystem
+  Root cause: class_name MUST come BEFORE extends in GDScript
+  File: res://scripts/planetary_survival/systems/network_sync_system.gd:17-18
+  Current: extends Node\n class_name NetworkSyncSystem
+  Should be: class_name NetworkSyncSystem\n extends Node
+
+=============================
+CATEGORY 4: MISSING FUNCTIONS (3 errors)
+=============================
+VRComfortSystem missing implementations:
+- vr_comfort_system.gd:72 - Identifier "_on_setting_changed" not declared
+- vr_comfort_system.gd:75 - Function "_setup_vignetting()" not found
+- engine.gd:225 - Invalid call to 'new' on GDScript (due to VRComfortSystem parse failure)
+  Root cause: Missing function implementations in VRComfortSystem
+  Status: CRITICAL - Blocks VR comfort features
+
+=============================
+CATEGORY 5: CASCADING COMPILATION FAILURES (3 errors)
+=============================
+- godot_bridge.gd:0 - Failed to compile depended scripts
+  Root cause: Depends on creature_ai.gd which depends on BehaviorTree
+- planetary_survival_coordinator.gd - Failed to load (depends on NetworkSyncSystem)
+- vr_setup.gd - Failed to load (depends on TelemetryServer)
+
+=============================
+CATEGORY 6: AUTOLOAD FAILURES (1 error)
+=============================
+- PlanetarySurvivalCoordinator autoload failed to instantiate
+  Root cause: Script doesn't inherit from Node due to parse error
+  File: res://scripts/planetary_survival/planetary_survival_coordinator.gd
+
+=============================
+CATEGORY 7: RUNTIME ERRORS (4 errors)
+=============================
+- Invalid call to 'has' on RefCounted (HttpRequest) - 4 occurrences (lines 20450, 20464, 20657, 20671)
+  Root cause: HttpRequest API usage error
+  Status: Runtime only, doesn't block startup
+
+=============================
+CATEGORY 8: ENGINE/RENDERING ERRORS (2 errors)
+=============================
+- Mesh surface error: array_len == 0, ERR_INVALID_DATA
+- Mesh surface index out of bounds (p_surface = 0)
+  Root cause: Mesh resource loading issue
+  Status: Non-critical rendering warning
+
+- Transform3D error: !is_inside_tree() (line 20645)
+  Status: Runtime warning
+
+=============================
+FILE-BY-FILE BREAKDOWN
+=============================
+
+CRITICAL FILES (blocking startup):
+1. vr_comfort_system.gd - Missing 2 functions
+2. network_sync_system.gd - Wrong class_name placement
+3. vr_setup.gd - TelemetryServer dependency issue
+4. planetary_survival_coordinator.gd - Depends on NetworkSyncSystem
+
+MEDIUM PRIORITY:
+5. creature_ai.gd - BehaviorTree dependency (29 errors)
+6. godot_bridge.gd - Cascading failure from creature_ai
+
+LOW PRIORITY (runtime only):
+7. HttpRequest usage errors (4 errors)
+8. Mesh/rendering errors (3 errors)
+
+=============================
+FIXABLE vs NON-FIXABLE
+=============================
+
+FIXABLE (Quick wins - 35 errors):
+1. network_sync_system.gd - Swap class_name and extends (fixes 3 errors)
+2. vr_comfort_system.gd - Add missing functions:
+   - _on_setting_changed(key: String, value: Variant)
+   - _setup_vignetting()
+   (fixes 3 errors + cascading engine.gd error)
+3. vr_setup.gd - Add null checks for TelemetryServer (fixes 14 errors)
+4. HttpRequest 'has' calls - Fix API usage (fixes 4 errors)
+
+ARCHITECTURAL/COMPLEX (27 errors):
+1. BehaviorTree loading issue - May need dependency investigation (29 errors)
+   Note: File exists and looks correct, may be initialization order issue
+2. Autoload initialization order - May need project.godot review
+3. Mesh loading issues - Asset-related, not code
+
+NON-FIXABLE (Runtime warnings - 3 errors):
+1. Mesh surface warnings - Rendering system warnings
+2. Transform3D tree check - Runtime state warning
+
+=============================
+PRIORITY RANKING (Top 10 fixes)
+=============================
+
+PRIORITY 1 (CRITICAL - VR System):
+1. Fix network_sync_system.gd class_name placement
+   Impact: Unblocks autoload, fixes 3 errors
+   
+2. Add _setup_vignetting() to vr_comfort_system.gd
+   Impact: Unblocks VR comfort system, fixes 1 error
+   
+3. Add _on_setting_changed() to vr_comfort_system.gd
+   Impact: Fixes settings integration, fixes 1 error
+   
+4. Fix engine.gd line 225 - Use .new() correctly or use VRComfortSystem.new()
+   Impact: Fixes instantiation, fixes 1 error
+
+PRIORITY 2 (HIGH - Core Systems):
+5. Add TelemetryServer null checks in vr_setup.gd
+   Impact: Makes VR setup resilient, fixes 14 errors
+   
+6. Investigate BehaviorTree parsing issue
+   Impact: Unblocks creature_ai and godot_bridge, fixes 29 errors
+
+PRIORITY 3 (MEDIUM - Polish):
+7. Fix HttpRequest.has() calls (use has_method or different API)
+   Impact: Fixes runtime errors, 4 errors
+   
+8. Review autoload initialization order in project.godot
+   Impact: May fix TelemetryServer availability
+
+PRIORITY 4 (LOW - Optional):
+9. Investigate mesh loading warnings
+   Impact: Clean logs, 2 errors
+   
+10. Review Transform3D tree state checks
+    Impact: Clean runtime warnings, 1 error
+
+=============================
+ESTIMATED FIX IMPACT
+=============================
+
+Quick fixes (< 15 min each):
+- network_sync_system.gd: -3 errors
+- vr_comfort_system functions: -3 errors
+- TelemetryServer null checks: -14 errors
+Total quick wins: -20 errors (down to 42 errors)
+
+Medium fixes (30-60 min):
+- BehaviorTree dependency: -29 errors
+- HttpRequest API: -4 errors
+Total with medium: -33 errors (down to 29 errors)
+
+Remaining: 9 errors (mostly runtime/rendering warnings)
+
+=============================
+NOTES
+=============================
+
+1. BehaviorTree file exists at res://scripts/gameplay/behavior_tree.gd and appears syntactically correct
+2. The class_name/extends ordering is a GDScript requirement since Godot 4.x
+3. TelemetryServer is likely an autoload that may load after vr_setup.gd
+4. The 'new' function must be called on a class, not a GDScript resource
+5. HttpRequest doesn't have a 'has' method - likely need 'has_method' or different check
+

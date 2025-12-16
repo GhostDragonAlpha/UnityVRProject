@@ -1,0 +1,17 @@
+# SpaceTime Examples Dependencies
+# Install with: pip install -r examples/requirements.txt
+
+# Web framework for webhook server
+Flask>=2.3.0
+
+# HTTP client
+requests>=2.31.0
+
+# WebSocket support
+websockets>=12.0
+
+# JSON and data handling
+python-dateutil>=2.8.2
+
+# Utilities
+python-dotenv>=1.0.0

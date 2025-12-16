@@ -1,0 +1,108 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+[WorldModel] Verifying Physics Truths...
+[PASS] The Sun is at (0,0,0)
+[PASS] Gravity vector points towards planet center
+[PASS] Gravity is strictly DOWN relative to surface normal
+[PASS] OrbitCalculator exists and can be instantiated
+--- World Model Physics Report ---
+Passed: 4 / 4
+>> WORLD MODEL PHYSICS: VERIFIED <<
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[GravityManager] Initialized
+[GravityManager] Gravitational constant: 10.00
+[VertexScalingSystem] Initialized
+[VertexScalingSystem] Influence formula: radius / (distance * distance)
+[VertexScalingSystem] Min distance: 0.10 m
+[VertexScalingSystem] Max influence: 1000000.0
+[VertexScalingSystem] Gravity scale: 10.00
+[2025-12-15T00:35:42] [INFO] ResonanceEngine initializing...
+[2025-12-15T00:35:42] [INFO] Launch arguments: ["-s", "scripts/tools/verify_world_model_physics.gd"]
+[2025-12-15T00:35:42] [INFO] Target FPS set to 90
+[2025-12-15T00:35:42] [INFO] Subsystem registered: TimeManager
+[2025-12-15T00:35:42] [INFO] TimeManager initialized
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: TimeManager
+[2025-12-15T00:35:42] [INFO] Subsystem registered: Relativity
+[2025-12-15T00:35:42] [INFO] RelativityManager initialized
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: RelativityManager
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[2025-12-15T00:35:42] [INFO] Subsystem registered: AstronomicalCoords
+[2025-12-15T00:35:42] [INFO] AstronomicalCoordinateSystem initialized
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: AstronomicalCoords
+[2025-12-15T00:35:42] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-15T00:35:42] [INFO] PhysicsEngine initialized
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-15T00:35:42] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-15T00:35:42] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-15T00:35:42] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+[2025-12-15T00:35:42] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-15T00:35:42] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-15T00:35:42] [INFO] Subsystem registered: VRManager
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Initialized successfully
+[2025-12-15T00:35:42] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-15T00:35:42] [INFO] VRComfortSystem initialized
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-15T00:35:42] [INFO] [HapticManager] Initializing Haptic Manager...
+[2025-12-15T00:35:42] [INFO] Subsystem registered: HapticManager
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: HapticManager
+[2025-12-15T00:35:42] [INFO] Subsystem registered: Renderer
+[2025-12-15T00:35:42] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-15T00:35:43] [INFO] Subsystem registered: PerformanceOptimizer
+[2025-12-15T00:35:43] [INFO] PerformanceOptimizer initialized
+[2025-12-15T00:35:43] [INFO] Subsystem initialized: PerformanceOptimizer
+[2025-12-15T00:35:43] [INFO] Subsystem registered: FractalZoom
+[2025-12-15T00:35:43] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-15T00:35:43] [INFO] Subsystem initialized: FractalZoom
+[2025-12-15T00:35:43] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-15T00:35:43] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-15T00:35:43] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-15T00:35:43] [INFO] Subsystem registered: SettingsManager
+[2025-12-15T00:35:43] [INFO] SettingsManager initialized
+[2025-12-15T00:35:43] [INFO] Subsystem initialized: SettingsManager
+[2025-12-15T00:35:43] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-15T00:35:43] [INFO] Subsystem registered: SaveSystem
+[2025-12-15T00:35:43] [INFO] SaveSystem initialized
+[2025-12-15T00:35:43] [INFO] Subsystem initialized: SaveSystem
+[2025-12-15T00:35:43] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[RLObservationManager] Initialized
+[RLTrainingController] Initialized
+[PowerSystem] Initialized
+[2025-12-15T00:35:43] [INFO] Subsystem registered: PowerSystem
+[BuildingManager] System initialized
+[CelestialBodyLOD] Initialized
+[2025-12-15T00:35:43] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-15T00:35:43] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-15T00:35:43] [INFO] [VRManager] VRManager resource cleanup complete
+[2025-12-15T00:35:43] [INFO] [HapticManager] HapticManager exiting tree, cleaning up...
+[2025-12-15T00:35:43] [INFO] [HapticManager] HapticManager cleanup complete
+[2025-12-15T00:35:43] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-15T00:35:43] [INFO] [VRManager] VRManager resource cleanup complete
+[2025-12-15T00:35:43] [INFO] ResonanceEngine shutting down...
+SaveSystem: SaveSystem shutdown
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: SaveSystem
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: SettingsManager
+CaptureEventSystem shutdown
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: Renderer
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: VRComfortSystem
+[INFO] [VRManager] VRManager shutting down...
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: VRManager
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-15T00:35:43] [INFO] Subsystem shutdown: TimeManager
+[2025-12-15T00:35:43] [INFO] ResonanceEngine shutdown complete

@@ -1,0 +1,116 @@
+================================================================================
+RPC ANNOTATIONS ADDED TO network_sync_system.gd
+================================================================================
+
+SUMMARY:
+- Total @rpc annotations added: 17
+- File: C:/godot/scripts/planetary_survival/systems/network_sync_system.gd
+- All receive_* functions now have proper @rpc annotations
+
+BREAKDOWN BY TYPE:
+- Authority + Reliable: 6 functions (important state from server)
+- Any Peer + Reliable: 4 functions (critical p2p operations)
+- Any Peer + Unreliable: 7 functions (high-frequency updates)
+
+DETAILED LIST:
+
+Authority-Only Functions (called by server/host only):
+========================================================
+1.  @rpc("authority", "call_remote", "reliable")
+    func receive_world_state(state: Dictionary) -> void
+    Purpose: Download complete world state when joining
+
+2.  @rpc("authority", "call_remote", "reliable")
+    func receive_structure_placement_approval(structure_id, structure_type, position, rotation, player_id) -> void
+    Purpose: Server approval for structure placement
+
+3.  @rpc("authority", "call_remote", "reliable")
+    func receive_item_pickup_approval(player_id, item_id, timestamp) -> void
+    Purpose: Server approval for item pickup
+
+4.  @rpc("authority", "call_remote", "reliable")
+    func receive_item_pickup_rejection(item_id, winner_id, timestamp) -> void
+    Purpose: Server rejection for item pickup conflict
+
+5.  @rpc("authority", "call_remote", "reliable")
+    func receive_resource_fragments(resource_node_id, fragments, timestamp) -> void
+    Purpose: Server notification of resource distribution
+
+6.  @rpc("authority", "call_remote", "reliable")
+    func receive_conflict_notification(conflict_type, conflict_data, timestamp) -> void
+    Purpose: Server notification of conflicts
+
+Any Peer Functions - Reliable (important state changes):
+=========================================================
+7.  @rpc("any_peer", "call_remote", "reliable")
+    func receive_structure_placement_request(structure_id, structure_type, position, rotation, player_id) -> void
+    Purpose: Client request for structure placement
+
+8.  @rpc("any_peer", "call_remote", "reliable")
+    func receive_interface_lock(player_id, interface_id, action, timestamp) -> void
+    Purpose: Lock/unlock machine interfaces
+
+9.  @rpc("any_peer", "call_remote", "reliable")
+    func receive_item_pickup_request(player_id, item_id, position, timestamp) -> void
+    Purpose: Client request for item pickup
+
+10. @rpc("any_peer", "call_remote", "reliable")
+    func receive_terrain_modification(chunk_pos, compressed_data, player_id, timestamp) -> void
+    Purpose: Broadcast terrain modifications
+
+Any Peer Functions - Unreliable (high-frequency updates):
+==========================================================
+11. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_automation_update(network_id, state, timestamp) -> void
+    Purpose: Sync automation network state (5Hz)
+
+12. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_conveyor_items_update(conveyor_id, items, timestamp) -> void
+    Purpose: Sync conveyor belt item positions (5Hz)
+
+13. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_machine_state_update(machine_id, state, timestamp) -> void
+    Purpose: Sync production machine state (5Hz)
+
+14. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_creature_update(creature_id, position, velocity, state, timestamp) -> void
+    Purpose: Sync creature positions with interpolation (5Hz)
+
+15. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_player_transform(player_id, position, rotation, velocity, input_sequence, timestamp) -> void
+    Purpose: Sync player position/rotation (20Hz)
+
+16. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_terrain_tool_action(player_id, active, mode, position, radius, timestamp) -> void
+    Purpose: Display remote player terrain tool usage (20Hz)
+
+17. @rpc("any_peer", "call_remote", "unreliable")
+    func receive_vr_hands_update(player_id, left_hand, right_hand, left_gesture, right_gesture, timestamp) -> void
+    Purpose: Sync VR hand positions for social presence (20Hz)
+
+AUTHORITY VALIDATION:
+=====================
+All authority-restricted functions already have proper validation:
+- receive_structure_placement_request: checks "if not is_host: return"
+- receive_structure_placement_approval: checks "if is_host: return"
+- receive_item_pickup_approval: checks "if is_host: return"
+- receive_item_pickup_rejection: checks "if is_host: return"
+- receive_resource_fragments: checks "if is_host: return"
+- receive_conflict_notification: checks "if is_host: return"
+
+NETWORK OPTIMIZATION FEATURES:
+==============================
+The system includes:
+- Spatial partitioning to limit updates to nearby players
+- Distance-based update rates (20Hz close, 2Hz far)
+- Client-side prediction with server reconciliation
+- Delta encoding for transforms
+- Voxel data compression (run-length encoding)
+- Bandwidth limiting (100 KB/s per player)
+- Interest management (2km radius)
+- Message prioritization and batching
+
+STATUS: ✓ COMPLETE
+All 17 receive_* functions now have appropriate @rpc annotations with
+proper authority modes (authority/any_peer) and reliability modes
+(reliable/unreliable) based on their purpose and update frequency.

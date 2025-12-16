@@ -1,0 +1,14 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.3
+
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+SCRIPT ERROR: Parse Error: Expected variable name after "var".
+   at: GDScript::reload (res://simple_syntax_test.gd:4)
+ERROR: Failed to load script "res://simple_syntax_test.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+ERROR: 9 RID allocations of type 'N9OpenXRAPI18InteractionProfileE' were leaked at exit.
+ERROR: 23 RID allocations of type 'N9OpenXRAPI6ActionE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N9OpenXRAPI9ActionSetE' were leaked at exit.
+ERROR: 18 RID allocations of type 'N9OpenXRAPI7TrackerE' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)

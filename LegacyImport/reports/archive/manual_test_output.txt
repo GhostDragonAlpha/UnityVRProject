@@ -1,0 +1,1309 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : LoaderInstance::CreateInstance chained CreateInstance call failed
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : xrCreateInstance failed
+ERROR: Failed to create XR instance [Error code -2].
+   at: create_instance (modules/openxr/openxr_api.cpp:641)
+WARNING: OpenXR was requested but failed to start.
+Please check if your HMD is connected.
+When using Windows Mixed Reality, note that WMR only has DirectX support. Make sure SteamVR is your default OpenXR runtime.
+Godot will start in normal mode.
+
+   at: initialize_openxr_module (modules/openxr/register_types.cpp:203)
+
+[2025-12-04T23:38:41] [INFO] ResonanceEngine initializing...
+[2025-12-04T23:38:41] [INFO] Launch arguments: ["-s", "addons/gdUnit4/bin/GdUnitCmdTool.gd", "--add", "res://tests/unit/test_voxel_performance_monitor.gd", "--ignoreHeadlessMode"]
+[2025-12-04T23:38:41] [INFO] Target FPS set to 90
+[2025-12-04T23:38:41] [INFO] Subsystem registered: TimeManager
+[2025-12-04T23:38:41] [INFO] TimeManager initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: TimeManager
+[2025-12-04T23:38:41] [INFO] Subsystem registered: Relativity
+[2025-12-04T23:38:41] [INFO] RelativityManager initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: RelativityManager
+[2025-12-04T23:38:41] [INFO] Subsystem registered: FloatingOrigin
+[2025-12-04T23:38:41] [INFO] FloatingOriginSystem created - awaiting player node assignment
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: FloatingOrigin
+[2025-12-04T23:38:41] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-04T23:38:41] [INFO] PhysicsEngine initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-04T23:38:41] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-04T23:38:41] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-04T23:38:41] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+WARNING: [2025-12-04T23:38:41] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:854)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:155)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:108)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:271)
+       [6] _init_subsystem (res://scripts/core/engine.gd:149)
+       [7] _initialize_engine (res://scripts/core/engine.gd:111)
+       [8] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-04T23:38:41] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed, enabling desktop fallback
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:854)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:119)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:271)
+       [5] _init_subsystem (res://scripts/core/engine.gd:149)
+       [6] _initialize_engine (res://scripts/core/engine.gd:111)
+       [7] _ready (res://scripts/core/engine.gd:74)
+[2025-12-04T23:38:41] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-04T23:38:41] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-04T23:38:41] [INFO] Subsystem registered: VRManager
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Vignette attached to scene root CanvasLayer - stays fixed to camera viewport
+VRComfortSystem: Initialized successfully
+[2025-12-04T23:38:41] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-04T23:38:41] [INFO] VRComfortSystem initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-04T23:38:41] [INFO] [HapticManager] Initializing Haptic Manager...
+WARNING: [2025-12-04T23:38:41] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:536)
+       [3] initialize (res://scripts/core/haptic_manager.gd:90)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:326)
+       [5] _init_subsystem (res://scripts/core/engine.gd:149)
+       [6] _initialize_engine (res://scripts/core/engine.gd:113)
+       [7] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-04T23:38:41] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:332)
+       [3] _init_subsystem (res://scripts/core/engine.gd:149)
+       [4] _initialize_engine (res://scripts/core/engine.gd:113)
+       [5] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-04T23:38:41] [WARN] Unknown subsystem name: HapticManager
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] register_subsystem (res://scripts/core/engine.gd:695)
+       [3] _init_haptic_manager (res://scripts/core/engine.gd:335)
+       [4] _init_subsystem (res://scripts/core/engine.gd:149)
+       [5] _initialize_engine (res://scripts/core/engine.gd:113)
+       [6] _ready (res://scripts/core/engine.gd:74)
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: HapticManager
+WARNING: [2025-12-04T23:38:41] [WARN] Scene not ready for RenderingSystem - will initialize later
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _init_renderer (res://scripts/core/engine.gd:361)
+       [3] _init_subsystem (res://scripts/core/engine.gd:149)
+       [4] _initialize_engine (res://scripts/core/engine.gd:114)
+       [5] _ready (res://scripts/core/engine.gd:74)
+[2025-12-04T23:38:41] [INFO] Subsystem registered: Renderer
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+WARNING: [2025-12-04T23:38:41] [WARN] Unknown subsystem name: PerformanceOptimizer
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] register_subsystem (res://scripts/core/engine.gd:695)
+       [3] _init_performance_optimizer (res://scripts/core/engine.gd:387)
+       [4] _init_subsystem (res://scripts/core/engine.gd:149)
+       [5] _initialize_engine (res://scripts/core/engine.gd:117)
+       [6] _ready (res://scripts/core/engine.gd:74)
+[2025-12-04T23:38:41] [INFO] PerformanceOptimizer initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: PerformanceOptimizer
+WARNING: [2025-12-04T23:38:41] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _init_subsystem (res://scripts/core/engine.gd:153)
+       [3] _initialize_engine (res://scripts/core/engine.gd:120)
+       [4] _ready (res://scripts/core/engine.gd:74)
+[2025-12-04T23:38:41] [INFO] Subsystem registered: FractalZoom
+[2025-12-04T23:38:41] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: FractalZoom
+[2025-12-04T23:38:41] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-04T23:38:41] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-04T23:38:41] [INFO] Subsystem registered: SettingsManager
+[2025-12-04T23:38:41] [INFO] SettingsManager initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: SettingsManager
+[2025-12-04T23:38:41] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-04T23:38:41] [INFO] Subsystem registered: SaveSystem
+[2025-12-04T23:38:41] [INFO] SaveSystem initialized
+[2025-12-04T23:38:41] [INFO] Subsystem initialized: SaveSystem
+[2025-12-04T23:38:41] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+VoxelPerformanceMonitor: Initialized (90 FPS target, 11.11 ms budget)
+[WebhookManager] Initialized webhook system
+[JobQueue] Initialized job queue system
+[HttpApiServer] Detecting environment...
+[HttpApiServer]   Environment from build type: development (DEBUG)
+[HttpApiServer] Initializing SECURE HTTP API server on port 8080
+[HttpApiServer] Build Type: DEBUG
+[HttpApiServer] Environment: development
+[HttpApiServer] Audit logging temporarily disabled due to class loading issues
+[Security] Loaded whitelist config for environment: development
+[Security]   Exact scenes: 5
+[Security]   Directories: 4
+[Security]   Wildcards: 1
+[Security]   Blacklist patterns: 3
+[Security]   Blacklist exact: 1
+[HttpApiServer] Whitelist configuration loaded for 'development' environment
+[Security] JWT secret generated
+[Security] JWT token generated (expires in 3600s)
+[Security] Include in requests: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQ5MTY3MjEsImlhdCI6MTc2NDkxMzEyMSwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.HliQf74q34SzcQMyLqVi4t2AL9K9KMKeROt4i4FieN8
+[Security] Configuration:
+[Security]   Authentication Method: JWT
+[Security]   Token Manager: DISABLED (legacy mode)
+[Security]   Authentication: ENABLED
+[Security]   Scene Whitelist: ENABLED
+[Security]   Size Limits: ENABLED
+[Security]   Bind Address: 127.0.0.1
+[Security]   Rate Limiting: ENABLED
+[Security]   Max Request Size: 1048576 bytes
+[Security]   Whitelisted Scenes: 5
+[Security]   Default Rate Limit: 100 req/min
+[Security]     - res://vr_main.tscn
+[Security]     - res://node_3d.tscn
+[Security]     - res://scenes/celestial/solar_system.tscn
+[Security]     - res://scenes/celestial/day_night_test.tscn
+[Security]     - res://scenes/creature_test.tscn
+[HttpApiServer] Registered /scene/history router
+[HttpApiServer] Registered /status router
+[HttpApiServer] Registered /scene/reload router
+[HttpApiServer] Registered /scene router
+[HttpApiServer] Registered /scenes router
+[HttpApiServer] Registered /scene/dump router
+[HttpApiServer] Registered /debug/screenshot router
+[HttpApiServer] Registered /performance router
+[HttpApiServer] Registered /webhooks/:id router
+[HttpApiServer] Registered /webhooks router
+[HttpApiServer] Registered /jobs/:id router
+[HttpApiServer] Registered /jobs router
+[SERVER] 2025-12-04 23:38:41 >> HTTP Server listening on http://127.0.0.1:8080
+[SceneLoadMonitor] Initialized and monitoring scene changes
+[VR UI Initializer] Waiting for VRMain scene...
+WARNING: VoxelPerformanceMonitor: Physics frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:401)
+       [1] _check_physics_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:358)
+       [2] _physics_process (res://scripts/core/voxel_performance_monitor.gd:146)
+WARNING: VoxelPerformanceMonitor: Render frame time 100.00 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:401)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:348)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:126)
+[2J[H[38;2;233;150;122m
+--------------------------------------------------------------------------------------------------
+GdUnit4 Comandline Tool
+--------------------------------------------------------------------------------------------------[0m
+[38;2;218;165;32m
+Headless mode is ignored by option '--ignoreHeadlessMode'"
+
+Please note that tests that use UI interaction do not work correctly in headless mode.
+Godot 'InputEvents' are not transported by the Godot engine in headless mode and therefore
+have no effect in the test!
+[0m
+[HttpApiServer] SECURE HTTP API server started on 127.0.0.1:8080
+[HttpApiServer] Available endpoints:
+[HttpApiServer]   POST /scene - Load a scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scene - Get current scene (AUTH REQUIRED)
+[HttpApiServer]   PUT  /scene - Validate a scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scenes - List available scenes (AUTH REQUIRED)
+[HttpApiServer]   POST /scene/reload - Reload current scene (AUTH REQUIRED)
+[HttpApiServer]   GET  /scene/history - Get scene load history (AUTH REQUIRED)
+[HttpApiServer] 
+[HttpApiServer] API TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQ5MTY3MjEsImlhdCI6MTc2NDkxMzEyMSwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.HliQf74q34SzcQMyLqVi4t2AL9K9KMKeROt4i4FieN8
+[HttpApiServer] Use: curl -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjQ5MTY3MjEsImlhdCI6MTc2NDkxMzEyMSwidHlwZSI6ImFwaV9hY2Nlc3MifQ=.HliQf74q34SzcQMyLqVi4t2AL9K9KMKeROt4i4FieN8' ...
+[HttpApiServer] Token saved to jwt_token.txt
+[RuntimeVerifier] Starting self-tests...
+[RuntimeVerifier] Completed. Passed: 0, Failed: 0
+WARNING: [VR UI Initializer] VRMain not found - UI not loaded
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/ui/vr_ui_initializer.gd:14)
+[38;2;100;149;237mInstalling GdUnit4 session system hooks.[0m
+[38;2;100;149;237mSession hook 'GdUnitHtmlTestReporter' installed.[0m
+[38;2;100;149;237mSession hook 'GdUnitXMLTestReporter' installed.[0m
+[38;2;0;206;209mRun Test Suite: [0m[38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_monitor_initializes_correctly[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] execute (res://addons/gdUnit4/src/core/execution/GdUnitTestSuiteExecutor.gd:23)
+SCRIPT ERROR: Invalid access to property or key '_is_initialized' on a base object of type 'Nil'.
+   at: test_monitor_initializes_correctly (res://tests/unit/test_voxel_performance_monitor.gd:61)
+   GDScript backtrace (most recent call first):
+       [0] test_monitor_initializes_correctly (res://tests/unit/test_voxel_performance_monitor.gd:61)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] execute (res://addons/gdUnit4/src/core/execution/GdUnitTestSuiteExecutor.gd:23)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_monitor_initializes_correctly[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m61:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_monitor_initializes_correctly (res://tests/unit/test_voxel_performance_monitor.gd:61)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid access to property or key '_is_initialized' on a base object of type 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+WARNING: VoxelPerformanceMonitor: Render frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:401)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:348)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:126)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_constants_match_90fps_target[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_constants_match_90fps_target[0m[38;2;34;139;34m PASSED[0m[38;2;100;149;237m 22ms[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_generation_timing[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid access to property or key 'chunk_generation_completed' on a base object of type 'Nil'.
+   at: test_chunk_generation_timing (res://tests/unit/test_voxel_performance_monitor.gd:82)
+   GDScript backtrace (most recent call first):
+       [0] test_chunk_generation_timing (res://tests/unit/test_voxel_performance_monitor.gd:82)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_generation_timing[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m82:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_chunk_generation_timing (res://tests/unit/test_voxel_performance_monitor.gd:82)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid access to property or key 'chunk_generation_completed' on a base object of type 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_collision_generation_timing[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid access to property or key 'collision_generation_completed' on a base object of type 'Nil'.
+   at: test_collision_generation_timing (res://tests/unit/test_voxel_performance_monitor.gd:102)
+   GDScript backtrace (most recent call first):
+       [0] test_collision_generation_timing (res://tests/unit/test_voxel_performance_monitor.gd:102)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_collision_generation_timing[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m102:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_collision_generation_timing (res://tests/unit/test_voxel_performance_monitor.gd:102)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid access to property or key 'collision_generation_completed' on a base object of type 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_count_tracking[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid access to property or key '_active_chunk_count' on a base object of type 'Nil'.
+   at: test_chunk_count_tracking (res://tests/unit/test_voxel_performance_monitor.gd:121)
+   GDScript backtrace (most recent call first):
+       [0] test_chunk_count_tracking (res://tests/unit/test_voxel_performance_monitor.gd:121)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_count_tracking[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m121:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_chunk_count_tracking (res://tests/unit/test_voxel_performance_monitor.gd:121)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid access to property or key '_active_chunk_count' on a base object of type 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_count_warning_triggers[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_chunk_count_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:152)
+   GDScript backtrace (most recent call first):
+       [0] test_chunk_count_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:152)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_count_warning_triggers[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m152:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_chunk_count_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:152)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_count_warning_clears[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_chunk_count_warning_clears (res://tests/unit/test_voxel_performance_monitor.gd:166)
+   GDScript backtrace (most recent call first):
+       [0] test_chunk_count_warning_clears (res://tests/unit/test_voxel_performance_monitor.gd:166)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_count_warning_clears[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m166:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_chunk_count_warning_clears (res://tests/unit/test_voxel_performance_monitor.gd:166)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_generation_warning_triggers[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'start_chunk_generation' in base 'Nil'.
+   at: test_chunk_generation_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:188)
+   GDScript backtrace (most recent call first):
+       [0] test_chunk_generation_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:188)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_chunk_generation_warning_triggers[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m188:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_chunk_generation_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:188)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'start_chunk_generation' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_collision_generation_warning_triggers[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'start_collision_generation' in base 'Nil'.
+   at: test_collision_generation_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:200)
+   GDScript backtrace (most recent call first):
+       [0] test_collision_generation_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:200)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_collision_generation_warning_triggers[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m200:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_collision_generation_warning_triggers (res://tests/unit/test_voxel_performance_monitor.gd:200)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'start_collision_generation' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_statistics_returns_complete_data[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_statistics' in base 'Nil'.
+   at: test_get_statistics_returns_complete_data (res://tests/unit/test_voxel_performance_monitor.gd:213)
+   GDScript backtrace (most recent call first):
+       [0] test_get_statistics_returns_complete_data (res://tests/unit/test_voxel_performance_monitor.gd:213)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_statistics_returns_complete_data[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m213:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_get_statistics_returns_complete_data (res://tests/unit/test_voxel_performance_monitor.gd:213)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'get_statistics' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_statistics_update_with_chunk_operations[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_statistics_update_with_chunk_operations (res://tests/unit/test_voxel_performance_monitor.gd:243)
+   GDScript backtrace (most recent call first):
+       [0] test_statistics_update_with_chunk_operations (res://tests/unit/test_voxel_performance_monitor.gd:243)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_statistics_update_with_chunk_operations[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m243:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_statistics_update_with_chunk_operations (res://tests/unit/test_voxel_performance_monitor.gd:243)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_performance_report_returns_formatted_string[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_performance_report' in base 'Nil'.
+   at: test_get_performance_report_returns_formatted_string (res://tests/unit/test_voxel_performance_monitor.gd:259)
+   GDScript backtrace (most recent call first):
+       [0] test_get_performance_report_returns_formatted_string (res://tests/unit/test_voxel_performance_monitor.gd:259)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_performance_report_returns_formatted_string[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m259:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_get_performance_report_returns_formatted_string (res://tests/unit/test_voxel_performance_monitor.gd:259)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'get_performance_report' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_is_performance_acceptable_returns_true_when_no_warnings[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'is_performance_acceptable' in base 'Nil'.
+   at: test_is_performance_acceptable_returns_true_when_no_warnings (res://tests/unit/test_voxel_performance_monitor.gd:274)
+   GDScript backtrace (most recent call first):
+       [0] test_is_performance_acceptable_returns_true_when_no_warnings (res://tests/unit/test_voxel_performance_monitor.gd:274)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_is_performance_acceptable_returns_true_when_no_warnings[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m274:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_is_performance_acceptable_returns_true_when_no_warnings (res://tests/unit/test_voxel_performance_monitor.gd:274)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'is_performance_acceptable' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_is_performance_acceptable_returns_false_with_warnings[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_is_performance_acceptable_returns_false_with_warnings (res://tests/unit/test_voxel_performance_monitor.gd:281)
+   GDScript backtrace (most recent call first):
+       [0] test_is_performance_acceptable_returns_false_with_warnings (res://tests/unit/test_voxel_performance_monitor.gd:281)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_is_performance_acceptable_returns_false_with_warnings[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m281:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_is_performance_acceptable_returns_false_with_warnings (res://tests/unit/test_voxel_performance_monitor.gd:281)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_active_warnings_returns_empty_when_no_warnings[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_active_warnings' in base 'Nil'.
+   at: test_get_active_warnings_returns_empty_when_no_warnings (res://tests/unit/test_voxel_performance_monitor.gd:291)
+   GDScript backtrace (most recent call first):
+       [0] test_get_active_warnings_returns_empty_when_no_warnings (res://tests/unit/test_voxel_performance_monitor.gd:291)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_active_warnings_returns_empty_when_no_warnings[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m291:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_get_active_warnings_returns_empty_when_no_warnings (res://tests/unit/test_voxel_performance_monitor.gd:291)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'get_active_warnings' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_active_warnings_returns_warning_types[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_get_active_warnings_returns_warning_types (res://tests/unit/test_voxel_performance_monitor.gd:299)
+   GDScript backtrace (most recent call first):
+       [0] test_get_active_warnings_returns_warning_types (res://tests/unit/test_voxel_performance_monitor.gd:299)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_get_active_warnings_returns_warning_types[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m299:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_get_active_warnings_returns_warning_types (res://tests/unit/test_voxel_performance_monitor.gd:299)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_set_monitoring_enabled_disables_monitoring[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'set_monitoring_enabled' in base 'Nil'.
+   at: test_set_monitoring_enabled_disables_monitoring (res://tests/unit/test_voxel_performance_monitor.gd:311)
+   GDScript backtrace (most recent call first):
+       [0] test_set_monitoring_enabled_disables_monitoring (res://tests/unit/test_voxel_performance_monitor.gd:311)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_set_monitoring_enabled_disables_monitoring[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m311:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_set_monitoring_enabled_disables_monitoring (res://tests/unit/test_voxel_performance_monitor.gd:311)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'set_monitoring_enabled' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_reset_statistics_clears_all_data[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_reset_statistics_clears_all_data (res://tests/unit/test_voxel_performance_monitor.gd:323)
+   GDScript backtrace (most recent call first):
+       [0] test_reset_statistics_clears_all_data (res://tests/unit/test_voxel_performance_monitor.gd:323)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_reset_statistics_clears_all_data[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m323:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_reset_statistics_clears_all_data (res://tests/unit/test_voxel_performance_monitor.gd:323)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_physics_process_tracks_frame_time[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_statistics' in base 'Nil'.
+   at: test_physics_process_tracks_frame_time (res://tests/unit/test_voxel_performance_monitor.gd:350)
+   GDScript backtrace (most recent call first):
+       [0] test_physics_process_tracks_frame_time (res://tests/unit/test_voxel_performance_monitor.gd:350)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_physics_process_tracks_frame_time[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 133ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m350:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_physics_process_tracks_frame_time (res://tests/unit/test_voxel_performance_monitor.gd:350)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'get_statistics' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_process_tracks_frame_time[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+WARNING: [2025-12-04T23:38:43] [WARN] FPS below target: 79.1 (target: 90)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:801)
+       [1] log_warning (res://scripts/core/engine.gd:779)
+       [2] _update_fps_counter (res://scripts/core/engine.gd:540)
+       [3] _process (res://scripts/core/engine.gd:505)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_statistics' in base 'Nil'.
+   at: test_process_tracks_frame_time (res://tests/unit/test_voxel_performance_monitor.gd:364)
+   GDScript backtrace (most recent call first):
+       [0] test_process_tracks_frame_time (res://tests/unit/test_voxel_performance_monitor.gd:364)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_process_tracks_frame_time[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 134ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m364:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_process_tracks_frame_time (res://tests/unit/test_voxel_performance_monitor.gd:364)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'get_statistics' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_debug_ui_can_be_enabled[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'set_debug_ui_enabled' in base 'Nil'.
+   at: test_debug_ui_can_be_enabled (res://tests/unit/test_voxel_performance_monitor.gd:375)
+   GDScript backtrace (most recent call first):
+       [0] test_debug_ui_can_be_enabled (res://tests/unit/test_voxel_performance_monitor.gd:375)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_debug_ui_can_be_enabled[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m375:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_debug_ui_can_be_enabled (res://tests/unit/test_voxel_performance_monitor.gd:375)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'set_debug_ui_enabled' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_debug_ui_can_be_disabled[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'set_debug_ui_enabled' in base 'Nil'.
+   at: test_debug_ui_can_be_disabled (res://tests/unit/test_voxel_performance_monitor.gd:388)
+   GDScript backtrace (most recent call first):
+       [0] test_debug_ui_can_be_disabled (res://tests/unit/test_voxel_performance_monitor.gd:388)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_debug_ui_can_be_disabled[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m388:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_debug_ui_can_be_disabled (res://tests/unit/test_voxel_performance_monitor.gd:388)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'set_debug_ui_enabled' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_end_generation_without_start_shows_warning[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'end_chunk_generation' in base 'Nil'.
+   at: test_end_generation_without_start_shows_warning (res://tests/unit/test_voxel_performance_monitor.gd:405)
+   GDScript backtrace (most recent call first):
+       [0] test_end_generation_without_start_shows_warning (res://tests/unit/test_voxel_performance_monitor.gd:405)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_end_generation_without_start_shows_warning[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 23ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m405:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_end_generation_without_start_shows_warning (res://tests/unit/test_voxel_performance_monitor.gd:405)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'end_chunk_generation' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_monitor_handles_rapid_chunk_changes[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_monitor_handles_rapid_chunk_changes (res://tests/unit/test_voxel_performance_monitor.gd:416)
+   GDScript backtrace (most recent call first):
+       [0] test_monitor_handles_rapid_chunk_changes (res://tests/unit/test_voxel_performance_monitor.gd:416)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_monitor_handles_rapid_chunk_changes[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m416:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_monitor_handles_rapid_chunk_changes (res://tests/unit/test_voxel_performance_monitor.gd:416)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_multiple_warnings_can_be_active_simultaneously[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.
+   at: test_multiple_warnings_can_be_active_simultaneously (res://tests/unit/test_voxel_performance_monitor.gd:431)
+   GDScript backtrace (most recent call first):
+       [0] test_multiple_warnings_can_be_active_simultaneously (res://tests/unit/test_voxel_performance_monitor.gd:431)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_multiple_warnings_can_be_active_simultaneously[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 22ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m431:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_multiple_warnings_can_be_active_simultaneously (res://tests/unit/test_voxel_performance_monitor.gd:431)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'increment_chunk_count' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_shutdown_cleans_up_resources[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'Node (voxel_performance_monitor.gd)'.
+   at: before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+   GDScript backtrace (most recent call first):
+       [0] before_test (res://tests/unit/test_voxel_performance_monitor.gd:15)
+       [1] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseBeforeStage.gd:18)
+       [2] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:15)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [10] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [11] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+SCRIPT ERROR: Invalid call. Nonexistent function 'set_debug_ui_enabled' in base 'Nil'.
+   at: test_shutdown_cleans_up_resources (res://tests/unit/test_voxel_performance_monitor.gd:450)
+   GDScript backtrace (most recent call first):
+       [0] test_shutdown_cleans_up_resources (res://tests/unit/test_voxel_performance_monitor.gd:450)
+       [1] _execute_test_case (res://addons/gdUnit4/src/core/_TestCase.gd:93)
+       [2] execute (res://addons/gdUnit4/src/core/_TestCase.gd:38)
+       [3] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd:10)
+       [4] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [5] _execute (res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd:17)
+       [6] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [7] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:24)
+       [8] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [9] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd:31)
+       [10] execute (res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd:19)
+       [11] _execute (res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd:31)
+       [12] error_monitor_stop (res://addons/gdUnit4/src/core/execution/GdUnitExecutionContext.gd:128)
+       [13] scan (res://addons/gdUnit4/src/monitor/GodotGdErrorMonitor.gd:48)
+  [38;2;250;235;215mres://tests/unit/test_voxel_performance_monitor.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_shutdown_cleans_up_resources[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 24ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m450:[0m [38;2;205;92;92mGodot Runtime Error ![0m[0m
+    [38;2;0;206;209m	'[38;2;30;144;255mat: test_shutdown_cleans_up_resources (res://tests/unit/test_voxel_performance_monitor.gd:450)[0m'[0m
+    [38;2;0;206;209m[38;2;205;92;92mError:[0m '[38;2;30;144;255mInvalid call. Nonexistent function 'set_debug_ui_enabled' in base 'Nil'.[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+[38;2;30;144;255mStatistics:[0m[38;2;250;235;215m 26 test cases | 25 errors | 0 failures | 0 flaky | 0 skipped | 0 orphans |[0m[38;2;34;139;34m PASSED[0m[38;2;100;149;237m 1s 100ms[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+[38;2;30;144;255mOverall Summary:[0m[38;2;255;255;255m 26 test cases | 25 errors | 0 failures | 0 flaky | 0 skipped | 0 orphans |[0m
+[38;2;233;150;122mExecuted test suites: (1/1)[0m
+[38;2;233;150;122mExecuted test cases : (26/26)[0m
+[38;2;233;150;122mTotal execution time: 1s 100ms[0m
+[38;2;255;255;255m [0m[38;2;100;149;237mOpen XML Report at: file://c:/Ignotus/reports/report_22/results.xml[0m
+[38;2;100;149;237mOpen HTML Report at: file://c:/Ignotus/reports/report_22/index.html[0m
+[38;2;178;34;34mExit code: 100[0m
+[HttpApiServer] Stopping HTTP server...
+[SERVER] 2025-12-04 23:38:43 >> Server stopped.
+[2025-12-04T23:38:43] [INFO] [HapticManager] HapticManager exiting tree, cleaning up...
+[2025-12-04T23:38:43] [INFO] [HapticManager] HapticManager cleanup complete
+[2025-12-04T23:38:43] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-04T23:38:43] [INFO] [VRManager] VRManager resource cleanup complete
+Finallize .. done
+VoxelPerformanceMonitor: Debug UI disabled
+VoxelPerformanceMonitor: Shutdown complete
+[2025-12-04T23:38:43] [INFO] ResonanceEngine shutting down...
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _log_info (res://scripts/core/save_system.gd:853)
+       [1] shutdown (res://scripts/core/save_system.gd:868)
+       [2] _shutdown_subsystem (res://scripts/core/engine.gd:641)
+       [3] shutdown (res://scripts/core/engine.gd:610)
+       [4] _notification (res://scripts/core/engine.gd:653)
+SaveSystem: SaveSystem shutdown
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: SaveSystem
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: SettingsManager
+CaptureEventSystem shutdown
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: Renderer
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: VRComfortSystem
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:870)
+       [1] _log_info (res://scripts/core/vr_manager.gd:844)
+       [2] shutdown (res://scripts/core/vr_manager.gd:694)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:641)
+       [4] shutdown (res://scripts/core/engine.gd:617)
+       [5] _notification (res://scripts/core/engine.gd:653)
+[INFO] [VRManager] VRManager shutting down...
+ERROR: Can't use get_node() with absolute paths from outside the active scene tree.
+   at: get_node_or_null (scene/main/node.cpp:1842)
+   GDScript backtrace (most recent call first):
+       [0] _get_engine (res://scripts/core/vr_manager.gd:870)
+       [1] _log_info (res://scripts/core/vr_manager.gd:844)
+       [2] shutdown (res://scripts/core/vr_manager.gd:712)
+       [3] _shutdown_subsystem (res://scripts/core/engine.gd:641)
+       [4] shutdown (res://scripts/core/engine.gd:617)
+       [5] _notification (res://scripts/core/engine.gd:653)
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: VRManager
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: FloatingOrigin
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-04T23:38:43] [INFO] Subsystem shutdown: TimeManager
+[2025-12-04T23:38:43] [INFO] ResonanceEngine shutdown complete
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)
+ERROR: 11 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:795)

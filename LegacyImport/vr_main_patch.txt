@@ -1,0 +1,18 @@
+		xr_origin.global_position = surface_position
+		print("[VRMain] === INITIALIZATION DEBUG ===")
+		print("[VRMain] Earth position: ", earth.global_position)
+		print("[VRMain] Earth radius: ", earth.radius, " units")
+		print("[VRMain] Player initialized on Earth's surface at ", surface_position)
+		print("[VRMain] Surface radius: ", surface_radius, " units (", surface_radius * 1000, " km)")
+		print("[VRMain] Rotational velocity: ", velocity.length(), " units/s")
+		print("[VRMain] Surface gravity: ", earth.get_surface_gravity(), " units/s²")
+
+		# Debug: Check Moon position
+		if solar_system.has_method("get_body"):
+			var moon = solar_system.get_body("moon")
+			if is_instance_valid(moon):
+				var moon_dist = (moon.global_position - earth.global_position).length()
+				print("[VRMain] Moon position: ", moon.global_position)
+				print("[VRMain] Moon distance from Earth center: ", moon_dist, " units (", moon_dist * 1000, " km)")
+				var moon_dist_from_player = (moon.global_position - xr_origin.global_position).length()
+				print("[VRMain] Moon distance from player: ", moon_dist_from_player, " units")

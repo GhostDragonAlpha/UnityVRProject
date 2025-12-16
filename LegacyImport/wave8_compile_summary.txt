@@ -1,0 +1,5 @@
+=== COMPILATION SUMMARY ===
+Total error lines: 0
+Unique files with errors: 0
+
+Top 5 files with errors:

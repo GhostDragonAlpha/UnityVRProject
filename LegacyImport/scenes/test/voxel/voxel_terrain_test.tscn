@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7xqm8vh3n5ty"]
+
+[ext_resource type="Script" path="res://scripts/test_voxel_stats.gd" id="1_stats"]
+
+[sub_resource type="VoxelGeneratorFlat" id="VoxelGeneratorFlat_1"]
+channel = 1
+voxel_type = 1
+height = 0.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.5
+height = 2.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1"]
+radius = 0.5
+height = 2.0
+
+[node name="VoxelTerrainTest" type="Node3D"]
+script = ExtResource("1_stats")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, 10, 5, 10)
+current = true
+fov = 75.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
+light_energy = 1.0
+shadow_enabled = true
+
+[node name="VoxelTerrain" type="VoxelTerrain" parent="."]
+generator = SubResource("VoxelGeneratorFlat_1")
+view_distance = 128
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+run_stream_in_editor = false
+material_override = null
+
+[node name="TestPlayer" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+collision_layer = 2
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestPlayer"]
+shape = SubResource("CapsuleShape3D_1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestPlayer"]
+mesh = SubResource("CapsuleMesh_1")

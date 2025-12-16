@@ -1,0 +1,1507 @@
+SCRIPT ERROR: Parse Error: Identifier "json_text" not declared in the current scope.
+   at: GDScript::reload (res://addons/godot_debug_connection/dap_adapter.gd:410)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://addons/godot_debug_connection/connection_manager.gd:0)
+SCRIPT ERROR: Parse Error: Identifier "json_text" not declared in the current scope.
+   at: GDScript::reload (res://addons/godot_debug_connection/dap_adapter.gd:410)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://addons/godot_debug_connection/godot_bridge.gd:0)
+ERROR: Failed to load script "res://addons/godot_debug_connection/godot_bridge.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: ConnectionManager._init (res://addons/godot_debug_connection/connection_manager.gd:58)
+   GDScript backtrace (most recent call first):
+       [0] _init (res://addons/godot_debug_connection/connection_manager.gd:58)
+       [1] _ready (res://addons/godot_debug_connection/godot_bridge.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'connect_to_debug_adapter' in base 'Nil'.
+   at: ConnectionManager.connect_services (res://addons/godot_debug_connection/connection_manager.gd:71)
+   GDScript backtrace (most recent call first):
+       [0] connect_services (res://addons/godot_debug_connection/connection_manager.gd:71)
+       [1] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "state_name" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scripts/rendering/quantum_render.gd:610)
+ERROR: Failed to load script "res://scripts/rendering/quantum_render.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type "String" as "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_atmospheric_entry.gd:32)
+SCRIPT ERROR: Parse Error: Value of type "String" cannot be assigned to a variable of type "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_atmospheric_entry.gd:32)
+ERROR: Failed to load script "res://tests/integration/test_atmospheric_entry.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type "String" as "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_walking_integration.gd:41)
+SCRIPT ERROR: Parse Error: Value of type "String" cannot be assigned to a variable of type "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/integration/test_walking_integration.gd:41)
+ERROR: Failed to load script "res://tests/integration/test_walking_integration.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Cannot assign a value of type "String" as "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/unit/test_atmosphere_system.gd:34)
+SCRIPT ERROR: Parse Error: Value of type "String" cannot be assigned to a variable of type "CelestialBody.BodyType".
+   at: GDScript::reload (res://tests/unit/test_atmosphere_system.gd:34)
+ERROR: Failed to load script "res://tests/unit/test_atmosphere_system.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_connection_manager.gd:6)
+ERROR: Failed to load script "res://tests/unit/test_connection_manager.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_connection_state.gd:5)
+ERROR: Failed to load script "res://tests/unit/test_connection_state.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Identifier "json_text" not declared in the current scope.
+   at: GDScript::reload (res://addons/godot_debug_connection/dap_adapter.gd:410)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tests/unit/test_dap_commands.gd:0)
+ERROR: Failed to load script "res://tests/unit/test_dap_commands.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_lsp_adapter.gd:6)
+ERROR: Failed to load script "res://tests/unit/test_lsp_adapter.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_menu_system.gd:1)
+ERROR: Failed to load script "res://tests/unit/test_menu_system.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Could not find base class "GdUnitTestSuite".
+   at: GDScript::reload (res://tests/unit/test_mission_system.gd:6)
+ERROR: Failed to load script "res://tests/unit/test_mission_system.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Parse Error: Could not find base class "GutTest".
+   at: GDScript::reload (res://tests/unit/test_walking_controller.gd:1)
+ERROR: Failed to load script "res://tests/unit/test_walking_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Too few arguments for "disconnect()" call. Expected at least 2 but received 0.
+   at: GDScript::reload (res://tests/test_lsp_adapter_simple.gd:164)
+ERROR: Failed to load script "res://tests/test_lsp_adapter_simple.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "state_name" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scripts/rendering/quantum_render.gd:610)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tests/test_quantum_render.gd:0)
+ERROR: Failed to load script "res://tests/test_quantum_render.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: Unexpected identifier "import" in class body.
+   at: GDScript::reload (res://test_mandatory_debug.gd:8)
+ERROR: Failed to load script "res://test_mandatory_debug.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is "_process(float) -> bool".
+   at: GDScript::reload (res://test_vr_initialization.gd:32)
+ERROR: Failed to load script "res://test_vr_initialization.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_status' in base 'Nil'.
+   at: ConnectionManager.get_status (res://addons/godot_debug_connection/connection_manager.gd:97)
+   GDScript backtrace (most recent call first):
+       [0] get_status (res://addons/godot_debug_connection/connection_manager.gd:97)
+       [1] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:50)
+SCRIPT ERROR: Invalid access to property or key 'debug_adapter' on a base object of type 'Dictionary'.
+   at: initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:51)
+   GDScript backtrace (most recent call first):
+       [0] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:51)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+SCRIPT ERROR: Invalid call. Nonexistent function 'poll' in base 'Nil'.
+   at: ConnectionManager._process (res://addons/godot_debug_connection/connection_manager.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] _process (res://addons/godot_debug_connection/connection_manager.gd:179)

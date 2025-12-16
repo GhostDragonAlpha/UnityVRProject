@@ -1,0 +1,29 @@
+================================================================================
+COMPREHENSIVE TEST RUNNER
+Started: 2025-12-14 00:49:39
+================================================================================
+
+[Discovery] Test Discovery Summary:
+  - gdunit: 23 files
+  - property: 0 files
+  - api: 125 files
+  - integration: 0 files
+  - performance: 0 files
+
+[Filter] Filtered to: gdunit
+
+[GdUnit4] Running 23 test files...
+
+================================================================================
+TEST EXECUTION SUMMARY
+================================================================================
+
+[X] GdUnit4              |  87/120 passed |  36.11s
+
+--------------------------------------------------------------------------------
+OVERALL: 87/120 passed (72.5%) | 36.15s
+================================================================================
+
+[Report] JSON report: test-reports\test-report-20251214_005015.json
+[Report] Markdown report: test-reports\TEST_REPORT_20251214_005015.md
+[Report] HTML report: test-reports\test-report-20251214_005015.html

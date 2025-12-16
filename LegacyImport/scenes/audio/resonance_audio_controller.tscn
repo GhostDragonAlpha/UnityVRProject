@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5a7a8b9d2e3f4g6h7i8j9k0l1m2n3o4"]
+
+[ext_resource type="Script" path="res://scripts/audio/resonance_audio_feedback.gd" id="1_resonance_audio"]
+
+[node name="ResonanceAudioController" type="Node"]
+script = ExtResource("1_resonance_audio")
+
+[node name="ProceduralAudioGenerator" type="Node" parent="."]
+script = ExtResource("res://scripts/audio/procedural_audio_generator.gd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"ResonanceSFX"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+bus = &"ResonanceSFX"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+bus = &"Resonance"
+
+[connection signal="object_scanned" from="." to="." method="_on_object_scanned"]
+[connection signal="interference_applied" from="." to="." method="_on_interference_applied"]
+[connection signal="object_cancelled" from="." to="." method="_on_object_cancelled"]

@@ -1,0 +1,201 @@
+================================================================================
+HapticManager Continuous Effect Tracking - BEFORE/AFTER Comparison
+================================================================================
+
+BEFORE (BROKEN - Lines 120-138)
+================================================================================
+## Update continuous haptic effects
+func _update_continuous_effects(delta: float) -> void:
+	var current_time := Time.get_ticks_msec() / 1000.0
+	
+	for hand in ["left", "right"]:
+		var effects: Dictionary = _continuous_effects[hand]
+		var effects_to_remove: Array[String] = []
+		
+		for effect_name in effects.keys():
+			var effect: Dictionary = effects[effect_name]
+			var elapsed: float = current_time - effect.start_time
+			
+			# Check if effect should continue
+			if elapsed >= effect.get("duration", DURATION_CONTINUOUS):
+				effects_to_remove.append(effect_name)
+		
+		# Remove expired effects
+		for effect_name in effects_to_remove:
+			effects.erase(effect_name)
+
+PROBLEM: No calls to trigger_haptic()! Effects are tracked but never activated.
+Result: Controllers receive no vibration despite active effects.
+
+
+AFTER (FIXED - Lines 124-156)
+================================================================================
+## Update continuous haptic effects
+## FIXED: Now actually triggers haptic feedback at throttled update rate (60 Hz max)
+func _update_continuous_effects(delta: float) -> void:
+	var current_time := Time.get_ticks_msec() / 1000.0
+	
+	# Throttle updates to respect hardware limits (max 60 Hz)
+	if current_time - _last_continuous_update_time < CONTINUOUS_UPDATE_INTERVAL:
+		return
+	
+	_last_continuous_update_time = current_time
+	
+	for hand in ["left", "right"]:
+		var effects: Dictionary = _continuous_effects[hand]
+		var effects_to_remove: Array[String] = []
+		
+		for effect_name in effects.keys():
+			var effect: Dictionary = effects[effect_name]
+			var elapsed: float = current_time - effect.start_time
+			
+			# Check if effect should continue
+			if elapsed >= effect.get("duration", DURATION_CONTINUOUS):
+				# Effect duration expired, mark for removal
+				effects_to_remove.append(effect_name)
+			else:
+				# Effect is still active - trigger haptic feedback
+				# This is the CRITICAL FIX: actually pulse the haptics
+				var intensity: float = effect.get("intensity", 0.5)
+				trigger_haptic(hand, intensity, DURATION_CONTINUOUS)
+		
+		# Remove expired effects
+		for effect_name in effects_to_remove:
+			effects.erase(effect_name)
+			_log_debug("Continuous effect '%s' stopped on %s hand" % [effect_name, hand])
+
+FIXES:
+1. Added throttling (lines 129-131) - respects 60 Hz hardware limit
+2. Added throttle timestamp update (line 133)
+3. In active effect path (lines 147-151):
+   - Extract effect intensity from dictionary
+   - CALL trigger_haptic() with intensity - THIS IS THE KEY FIX
+4. Added logging when effects stop (line 156) - for debugging
+
+
+THROTTLING CONSTANTS ADDED (Lines 57-59)
+================================================================================
+## Continuous effect update throttling
+var _last_continuous_update_time: float = 0.0
+const CONTINUOUS_UPDATE_INTERVAL: float = 0.0167  ## ~60 Hz (17ms per update)
+
+WHY: VR runs at 90 FPS, but haptic hardware maxes out at ~60 Hz.
+Without throttling, we'd spam haptic calls uselessly.
+
+
+LOGGING IMPROVEMENTS
+================================================================================
+
+start_continuous_effect() - BEFORE (line 296):
+	# No logging
+
+start_continuous_effect() - AFTER (line 316):
+	_log_debug("Continuous effect '%s' started on %s hand (intensity: %.2f)" % [effect_name, hand, intensity])
+
+Example log output:
+	[DEBUG] [HapticManager] Continuous effect 'gravity_well' started on left hand (intensity: 0.35)
+	[DEBUG] [HapticManager] Continuous effect 'gravity_well' started on right hand (intensity: 0.35)
+
+
+stop_continuous_effect() - BEFORE (line 303):
+	# No logging
+
+stop_continuous_effect() - AFTER (line 330):
+	_log_debug("Continuous effect '%s' stopped on %s hand" % [effect_name, hand])
+
+Example log output:
+	[DEBUG] [HapticManager] Continuous effect 'gravity_well' stopped on left hand
+	[DEBUG] [HapticManager] Continuous effect 'gravity_well' stopped on right hand
+
+
+EXECUTION FLOW COMPARISON
+================================================================================
+
+BEFORE (Broken):
+1. Game calls: start_continuous_effect("left", "gravity", 0.7, 5.0)
+   -> Effect stored in _continuous_effects["left"]["gravity"]
+
+2. Each frame, _process() calls _update_continuous_effects()
+   -> Checks if effect duration exceeded
+   -> NO HAPTIC CALL - Silent failure!
+   -> Effect removed when time expired
+
+3. Result: Controller never vibrates
+
+AFTER (Fixed):
+1. Game calls: start_continuous_effect("left", "gravity", 0.7, 5.0)
+   -> Effect stored in _continuous_effects["left"]["gravity"]
+   -> Logs: "Continuous effect 'gravity' started on left hand (intensity: 0.70)"
+
+2. Each frame, _process() calls _update_continuous_effects()
+   -> Throttle check: skip if < 17ms since last update
+   -> For active effects (not yet expired):
+      -> Extract intensity: 0.7
+      -> CALL trigger_haptic("left", 0.7, DURATION_CONTINUOUS)
+      -> Controller vibrates!
+   -> When duration expired:
+      -> Remove effect
+      -> Logs: "Continuous effect 'gravity' stopped on left hand"
+
+3. Result: Controller vibrates continuously for 5 seconds, then stops
+
+
+REQUIREMENT 69.3 IMPACT
+================================================================================
+
+BEFORE: set_gravity_well_intensity(0.7) had NO EFFECT
+   -> _update_gravity_well_haptics() runs
+   -> Calls trigger_haptic_both() - works fine
+   -> But continuous effects from start_continuous_effect() never trigger
+   -> Gravity well vibration BROKEN
+
+AFTER: set_gravity_well_intensity(0.7) WORKS
+   -> _update_gravity_well_haptics() runs every 100ms
+   -> Calls trigger_haptic_both(0.35, DURATION_CONTINUOUS) - works fine
+   -> Plus any continuous effects properly triggered in _update_continuous_effects()
+   -> Gravity well vibration FIXED
+
+
+CODE QUALITY IMPROVEMENTS
+================================================================================
+
+1. Throttling prevents hardware abuse
+   - Before: Could spam haptic calls every frame (90 calls/sec vs 60 max)
+   - After: Respects hardware limits, better battery life, smoother feedback
+
+2. Proper effect lifecycle management
+   - Before: Effects stored but never used
+   - After: Effects properly pulsed and cleaned up
+
+3. Debug logging
+   - Before: Silent failures, impossible to debug
+   - After: Clear logs show when effects start/stop and their intensities
+
+4. Performance safe
+   - Before: Wasted memory storing unused effects
+   - After: Effects properly utilized without frame rate impact
+
+
+VERIFICATION STEPS
+================================================================================
+
+Test 1: Start continuous effect manually
+  haptic_manager.start_continuous_effect("both", "test", 0.6, 3.0)
+  
+  Expected:
+  - Controllers vibrate for 3 seconds
+  - Logs show: "Continuous effect 'test' started on left hand (intensity: 0.60)"
+  - Logs show: "Continuous effect 'test' started on right hand (intensity: 0.60)"
+  - After 3 seconds: "Continuous effect 'test' stopped on left hand"
+  - After 3 seconds: "Continuous effect 'test' stopped on right hand"
+
+Test 2: Gravity well haptics (Requirement 69.3)
+  haptic_manager.set_gravity_well_intensity(0.8)
+  
+  Expected:
+  - Controllers vibrate with intensity 0.4 (0.8 * 0.5 scaled)
+  - Vibration updates every 100ms continuously
+  - When cleared: haptic_manager.set_gravity_well_intensity(0.0)
+  - Controllers stop vibrating
+
+================================================================================

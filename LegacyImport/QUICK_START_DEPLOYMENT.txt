@@ -1,0 +1,218 @@
+================================================================================
+                SpaceTime VR - Quick Deployment Guide
+================================================================================
+
+FASTEST PATH TO DEPLOYMENT (Windows)
+================================================================================
+
+1. EXPORT BUILD
+   > cd C:\godot
+   > export_production_build.bat
+   Expected: build/SpaceTime.exe created (~93 MB)
+
+2. VALIDATE BUILD
+   > python validate_build.py
+   Expected: "✓ BUILD IS READY FOR DEPLOYMENT"
+
+3. TEST BUILD
+   > test_exported_build.bat
+   Expected: Application launches, HTTP API responds
+
+4. PACKAGE FOR DEPLOYMENT
+   > package_for_deployment.bat
+   Expected: deploy/SpaceTime-Release-v1.0.zip created
+
+5. DISTRIBUTE
+   Upload deploy/SpaceTime-Release-v1.0.zip to distribution server
+
+================================================================================
+
+FASTEST PATH TO DEPLOYMENT (Linux/Mac/Git Bash)
+================================================================================
+
+1. EXPORT BUILD
+   $ cd /c/godot
+   $ ./export_production_build.sh
+   Expected: build/SpaceTime.exe created (~93 MB)
+
+2. VALIDATE BUILD
+   $ python validate_build.py
+   Expected: "✓ BUILD IS READY FOR DEPLOYMENT"
+
+3. TEST BUILD
+   $ ./test_exported_build.sh
+   Expected: Application launches, HTTP API responds
+
+4. PACKAGE FOR DEPLOYMENT
+   $ ./package_for_deployment.sh
+   Expected: deploy/SpaceTime-Release-v1.0.zip created
+
+5. DISTRIBUTE
+   Upload deploy/SpaceTime-Release-v1.0.zip to distribution server
+
+================================================================================
+
+VALIDATION COMMANDS
+================================================================================
+
+Check if export succeeded:
+  > dir C:\godot\build\SpaceTime.exe
+  Expected size: ~93 MB (95,000,000+ bytes)
+
+Verify checksums:
+  > certutil -hashfile C:\godot\build\SpaceTime.exe SHA256
+  Compare with: C:\godot\build\SpaceTime.exe.sha256
+
+Test HTTP API:
+  1. Launch: C:\godot\build\SpaceTime.exe
+  2. Wait 15 seconds
+  3. Test: curl http://127.0.0.1:8080/status
+  Expected: JSON response with "status": "ok"
+
+================================================================================
+
+TROUBLESHOOTING ONE-LINERS
+================================================================================
+
+Problem: "Godot executable not found"
+Fix: Update script with correct Godot path
+
+Problem: "Export templates not found"
+Fix: Open Godot Editor → Editor → Manage Export Templates → Download
+
+Problem: "Build won't launch"
+Fix: Install Visual C++ Redistributable x64 from Microsoft
+
+Problem: "HTTP API not responding"
+Fix: Wait 15 seconds, check firewall, verify port 8080 is free
+
+Problem: "Validation failed"
+Fix: Review VALIDATION_REPORT.txt, re-run export if needed
+
+================================================================================
+
+CRITICAL FILES
+================================================================================
+
+Scripts (in C:\godot\):
+  export_production_build.bat - Windows export
+  export_production_build.sh  - Linux/Mac export
+  validate_build.py           - Validation
+  test_exported_build.bat     - Windows testing
+  test_exported_build.sh      - Linux/Mac testing
+  package_for_deployment.bat  - Windows packaging
+  package_for_deployment.sh   - Linux/Mac packaging
+
+Documentation:
+  PRODUCTION_BUILD_READY.md   - COMPLETE GUIDE (READ THIS!)
+  build_deployment_summary.txt - Detailed summary
+  QUICK_START_DEPLOYMENT.txt  - This file
+
+Build Output (in C:\godot\build\):
+  SpaceTime.exe               - Main executable
+  SpaceTime.pck               - Game data
+  SpaceTime.exe.sha256        - Checksum
+  BUILD_INFO.txt              - Build metadata
+  VALIDATION_REPORT.txt       - Validation results
+
+Deployment Package (in C:\godot\deploy\):
+  SpaceTime-Release-v1.0/     - Package directory
+  SpaceTime-Release-v1.0.zip  - Distribution archive
+
+================================================================================
+
+EXPECTED BUILD ARTIFACTS
+================================================================================
+
+After export_production_build.bat/sh:
+  ✓ build/SpaceTime.exe              (~93 MB)
+  ✓ build/SpaceTime.pck              (~0.15 MB)
+  ✓ build/SpaceTime.exe.sha256       (~0.1 KB)
+  ✓ build/SpaceTime.pck.sha256       (~0.1 KB)
+  ✓ build/BUILD_INFO.txt             (~1 KB)
+  ✓ build/export_log_*.txt           (variable)
+
+After validate_build.py:
+  ✓ build/VALIDATION_REPORT.txt      (~2 KB)
+  ✓ Console output: "✓ Build validation PASSED!"
+
+After package_for_deployment.bat/sh:
+  ✓ deploy/SpaceTime-Release-v1.0/   (directory)
+  ✓ deploy/SpaceTime-Release-v1.0.zip (~93 MB compressed)
+  ✓ deploy/SpaceTime-Release-v1.0.zip.sha256
+
+================================================================================
+
+DEPLOYMENT PACKAGE CONTENTS
+================================================================================
+
+SpaceTime-Release-v1.0.zip contains:
+  SpaceTime.exe               - Main executable (required)
+  SpaceTime.pck               - Game data (required)
+  SpaceTime.exe.sha256        - Checksum (recommended)
+  SpaceTime.pck.sha256        - Checksum (recommended)
+  BUILD_INFO.txt              - Build metadata (recommended)
+  VALIDATION_REPORT.txt       - Validation results (optional)
+  README.txt                  - User instructions (required)
+  LICENSE.txt                 - License (required)
+  DEPLOYMENT_INFO.txt         - Deployment notes (optional)
+
+Minimum deployment: SpaceTime.exe + SpaceTime.pck + README.txt
+Recommended deployment: All files above
+
+================================================================================
+
+DEPLOYMENT CHECKLIST (30-SECOND VERSION)
+================================================================================
+
+[ ] Run export script → build/ artifacts created
+[ ] Run validate script → validation PASSED
+[ ] Run test script → application launches OK
+[ ] Run package script → deploy/ archive created
+[ ] Upload archive to distribution server
+[ ] Post checksums publicly
+[ ] Announce release
+
+================================================================================
+
+NEED MORE DETAILS?
+================================================================================
+
+See PRODUCTION_BUILD_READY.md for:
+  - Complete step-by-step instructions
+  - Detailed troubleshooting guide
+  - VR setup and testing procedures
+  - HTTP API documentation
+  - Performance expectations
+  - Known issues and workarounds
+  - Support contact information
+
+================================================================================
+
+SUPPORT QUICK LINKS
+================================================================================
+
+Build not working? Check these in order:
+  1. PRODUCTION_BUILD_READY.md (Troubleshooting section)
+  2. build/export_log_*.txt (Export errors)
+  3. build/VALIDATION_REPORT.txt (Validation issues)
+  4. build_deployment_summary.txt (Detailed reference)
+
+================================================================================
+
+VERSION INFORMATION
+================================================================================
+
+Godot Version: 4.5.1-stable
+Platform: Windows Desktop (x86_64)
+Build System Version: 1.0
+Documentation Date: 2025-12-04
+
+================================================================================
+
+READY TO DEPLOY!
+
+Follow the 5 steps at the top of this file.
+For detailed information, see PRODUCTION_BUILD_READY.md
+
+================================================================================

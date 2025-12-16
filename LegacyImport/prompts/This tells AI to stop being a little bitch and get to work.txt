@@ -1,0 +1,16 @@
+> OK. You will follow the UNIVERSAL MANDATORY TESTING WORKFLOW.
+
+Read: UNIVERSAL_MANDATORY_TESTING_PROMPT.md
+
+Execute the 5-phase cycle:
+1. DECIDE - What to work on next
+2. IMPLEMENT - Write code/files (use sub-agents for complex tasks)
+3. VERIFY - Run: python scripts/tools/verify_godot_zero_errors.py
+4. FIX - If exit code ≠ 0, fix errors and re-verify
+5. COMPLETE - Report when exit code = 0
+
+MANDATORY: Verification must pass (exit code 0) before completing.
+
+When spawning sub-agents, pass them the same workflow from UNIVERSAL_MANDATORY_TESTING_PROMPT.md
+
+Zero errors is the only acceptable state.

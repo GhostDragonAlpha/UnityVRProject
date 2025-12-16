@@ -1,0 +1,1221 @@
+SPACETIME VR - DOCUMENTATION AUDIT REPORT
+================================================================================
+
+File Coverage: 73.3%
+Function Coverage: 63.1%
+
+Files Missing Documentation (73):
+  - scripts\version.gd
+  - scripts\vr_controller_basic.gd
+  - scripts\core\performance_optimizer.gd
+  - scripts\core\vr_comfort_system.gd
+  - scripts\debug\automated_movement_test.gd
+  - scripts\debug\vr_input_diagnostic.gd
+  - scripts\debug\vr_input_simulator.gd
+  - scripts\gameplay\behavior_tree.gd
+  - scripts\gameplay\creature_ai.gd
+  - scripts\gameplay\creature_data.gd
+  - scripts\gameplay\hazard_system.gd
+  - scripts\gameplay\resonance_system.gd
+  - scripts\http_api\admin_router.gd
+  - scripts\http_api\admin_router_rbac.gd
+  - scripts\http_api\admin_websocket.gd
+  - scripts\http_api\audit_logger.gd
+  - scripts\http_api\auth_router.gd
+  - scripts\http_api\batch_operations_router.gd
+  - scripts\http_api\cache_manager.gd
+  - scripts\http_api\example_rate_limited_router.gd
+  - scripts\http_api\health_check.gd
+  - scripts\http_api\http_api_server.gd
+  - scripts\http_api\http_api_server_rbac_example.gd
+  - scripts\http_api\input_validator.gd
+  - scripts\http_api\job_detail_router.gd
+  - scripts\http_api\job_queue.gd
+  - scripts\http_api\job_router.gd
+  - scripts\http_api\jwt.gd
+  - scripts\http_api\metrics_exporter.gd
+  - scripts\http_api\monitoring_integration_example.gd
+  - scripts\http_api\performance_router.gd
+  - scripts\http_api\profiler.gd
+  - scripts\http_api\rate_limiter.gd
+  - scripts\http_api\scenes_list_router.gd
+  - scripts\http_api\scenes_list_router_optimized.gd
+  - scripts\http_api\scene_history_router.gd
+  - scripts\http_api\scene_load_monitor.gd
+  - scripts\http_api\scene_reload_router.gd
+  - scripts\http_api\scene_router.gd
+  - scripts\http_api\scene_router_etag.gd
+  - scripts\http_api\scene_router_optimized.gd
+  - scripts\http_api\scene_router_rbac.gd
+  - scripts\http_api\scene_router_with_audit.gd
+  - scripts\http_api\secure_response_wrapper.gd
+  - scripts\http_api\secure_router_base.gd
+  - scripts\http_api\security_config.gd
+  - scripts\http_api\security_config_enhanced.gd
+  - scripts\http_api\security_config_optimized.gd
+  - scripts\http_api\security_headers.gd
+  - scripts\http_api\security_headers_patch.gd
+  - scripts\http_api\tls_server_wrapper.gd
+  - scripts\http_api\token_manager.gd
+  - scripts\http_api\webhook_deliveries_router.gd
+  - scripts\http_api\webhook_detail_router.gd
+  - scripts\http_api\webhook_manager.gd
+  - scripts\http_api\webhook_router.gd
+  - scripts\http_api\whitelist_router.gd
+  - scripts\player\transition_system.gd
+  - scripts\player\walking_controller.gd
+  - scripts\rendering\atmosphere_system.gd
+  - scripts\security\audit_helper.gd
+  - scripts\security\audit_logger.gd
+  - scripts\security\audit_logger_instrumented.gd
+  - scripts\security\authorization_middleware.gd
+  - scripts\security\rbac.gd
+  - scripts\security\security_config_instrumented.gd
+  - scripts\security\security_metrics_exporter.gd
+  - scripts\security\security_monitoring_integration_example.gd
+  - scripts\security\security_system.gd
+  - scripts\security\security_system_integrated.gd
+  - scripts\security\token_manager_instrumented.gd
+  - scripts\ui\menu_system.gd
+  - scripts\ui\power_grid_hud.gd
+
+Poorly Documented Files (96):
+
+  scripts\vr_controller_basic.gd - 0% coverage
+    - _ready()
+    - _process()
+
+  scripts\audio\resonance_audio_feedback.gd - 0% coverage
+    - _ready()
+    - linear_to_db()
+    - _process()
+
+  scripts\celestial\coordinate_system.gd - 0% coverage
+    - _init()
+    - duplicate()
+    - to_dictionary()
+
+  scripts\core\engine.gd - 0% coverage
+    - _ready()
+    - _process()
+    - shutdown()
+    - set_spacecraft_for_comfort_system()
+    - register_subsystem()
+    - unregister_subsystem()
+    - log_debug()
+    - log_info()
+    - log_warning()
+    - log_error()
+    - set_log_level()
+    - enable_file_logging()
+    - disable_file_logging()
+    - set_floating_origin_player()
+    - register_with_floating_origin()
+    - unregister_from_floating_origin()
+    - is_initialized()
+    - is_shutting_down()
+    - get_current_fps()
+    - get_engine_version()
+    - get_subsystem_status()
+    - get_settings_manager()
+    - get_haptic_manager()
+    - trigger_haptic_feedback()
+    - set_fractal_zoom_player()
+    - initiate_fractal_zoom()
+    - get_current_scale_level()
+    - initialize_capture_event_system()
+    - cancel_capture_event()
+    - is_capture_in_progress()
+    - set_capture_events_enabled()
+    - initialize_save_system()
+    - save_game()
+    - load_game()
+    - get_save_metadata()
+    - get_all_save_metadata()
+    - delete_save()
+    - has_save()
+    - set_auto_save_enabled()
+    - set_auto_save_slot()
+
+  scripts\debug\automated_movement_test.gd - 0% coverage
+    - _ready()
+    - find_player_node()
+    - find_node_recursive()
+    - start_test()
+    - _process()
+
+  scripts\debug\scene_inspector_simple.gd - 0% coverage
+    - get_scene_report()
+
+  scripts\debug\vr_input_diagnostic.gd - 0% coverage
+    - _ready()
+    - find_controllers()
+    - find_node_recursive()
+    - _process()
+    - log_controller_state()
+
+  scripts\debug\vr_input_simulator.gd - 20% coverage
+    - _ready()
+    - start_movement_test()
+    - stop_simulation()
+    - _process()
+
+  scripts\gameplay\behavior_tree.gd - 0% coverage
+    - _init()
+    - execute()
+    - execute_sequence()
+    - execute_selector()
+    - add_child()
+    - _init()
+    - execute()
+
+  scripts\gameplay\creature_ai.gd - 0% coverage
+    - _ready()
+    - create_behavior_tree()
+    - create_attack_behavior()
+    - create_chase_behavior()
+    - create_chase_behavior_simple()
+    - create_flee_behavior()
+    - detect_player()
+    - move_towards_target()
+    - flee_from_target()
+    - wander()
+    - randomize_wander_direction()
+    - perform_attack()
+    - can_attack()
+    - take_damage()
+    - heal()
+    - die()
+    - get_state_name()
+    - get_stats()
+    - update_telemetry()
+
+  scripts\gameplay\creature_data.gd - 0% coverage
+    - can_spawn_in_biome()
+    - get_stats_dict()
+
+  scripts\gameplay\mission_data.gd - 0% coverage
+    - _init()
+    - add_objective()
+    - remove_objective()
+    - get_objective()
+    - get_completed_objectives()
+    - get_incomplete_objectives()
+    - get_required_objectives()
+    - is_complete()
+    - is_failed()
+    - is_in_progress()
+    - get_progress()
+    - get_elapsed_time()
+    - get_remaining_time()
+    - has_time_limit()
+    - is_time_expired()
+    - are_prerequisites_met()
+    - serialize()
+    - deserialize()
+
+  scripts\gameplay\mission_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_mission()
+    - complete_mission()
+    - fail_mission()
+    - add_available_mission()
+    - set_active_objective()
+    - complete_objective()
+    - toggle_navigation_marker()
+    - setup_hud_display()
+    - get_objective_display_text()
+    - get_mission_progress()
+    - get_current_mission()
+    - get_active_objective()
+    - has_active_mission()
+    - get_distance_to_objective()
+    - serialize()
+    - deserialize()
+
+  scripts\gameplay\objective_data.gd - 0% coverage
+    - _init()
+    - update_progress()
+    - add_progress()
+    - add_item()
+    - complete()
+    - reset()
+    - get_progress_percentage()
+    - get_remaining_quantity()
+    - get_remaining_time()
+    - get_elapsed_time()
+    - has_target_position()
+    - get_type_name()
+    - get_status_text()
+    - get_marker_label()
+    - serialize()
+    - deserialize()
+
+  scripts\gameplay\tutorial.gd - 0% coverage
+    - _init()
+    - _ready()
+    - _process()
+    - start_tutorial()
+    - start_step()
+    - complete_step()
+    - complete_tutorial()
+    - skip_tutorial()
+    - skip_current_step()
+    - get_current_instruction_text()
+    - get_progress_text()
+    - get_progress_percentage()
+    - reset_tutorial_progress()
+    - is_tutorial_active()
+    - is_tutorial_completed()
+    - get_current_step()
+    - get_current_section()
+    - enable_tutorial()
+    - disable_tutorial()
+    - serialize()
+    - deserialize()
+
+  scripts\http_api\admin_router_rbac.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\batch_operations_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\example_rate_limited_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\http_api_server.gd - 0% coverage
+    - _ready()
+
+  scripts\http_api\job_detail_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\job_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\performance_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\scenes_list_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\scene_history_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\scene_reload_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\scene_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\scene_router_rbac.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\scene_router_with_audit.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\secure_response_wrapper.gd - 11% coverage
+    - set()
+    - cookie()
+    - send_raw()
+    - send()
+    - json()
+    - get_client()
+    - set_access_control_origin()
+    - set_server_identifier()
+
+  scripts\http_api\secure_router_base.gd - 0% coverage
+    - send_json_response()
+    - send_text_response()
+    - send_html_response()
+    - send_error_response()
+
+  scripts\http_api\webhook_deliveries_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\webhook_detail_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\webhook_router.gd - 0% coverage
+    - _init()
+
+  scripts\http_api\whitelist_router.gd - 0% coverage
+    - _init()
+
+  scripts\planetary_survival\vr_tutorial.gd - 0% coverage
+    - _ready()
+    - start_tutorial()
+    - skip_tutorial()
+    - _process()
+
+  scripts\planetary_survival\core\airlock_module.gd - 0% coverage
+    - _ready()
+    - _process()
+    - request_entry_from_outside()
+    - request_entry_from_inside()
+    - request_exit_to_outside()
+    - request_exit_to_inside()
+    - close_doors()
+    - enter_chamber()
+    - exit_chamber()
+    - get_state_name()
+    - get_cycle_progress_percentage()
+    - is_safe_to_enter()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\alien_artifact.gd - 0% coverage
+    - _ready()
+    - discover()
+    - start_analysis()
+    - add_research_points()
+    - get_technology()
+    - can_combine_with()
+    - get_status_info()
+    - get_rarity_color()
+
+  scripts\planetary_survival\core\base_module.gd - 0% coverage
+    - _ready()
+    - set_preview_mode()
+    - set_placement_valid()
+    - take_damage()
+    - repair()
+    - is_destroyed()
+    - destroy()
+    - connect_to_module()
+    - disconnect_from_module()
+    - is_connected_to()
+    - get_connection_count()
+    - set_powered()
+    - set_pressurized()
+    - get_bounds()
+    - get_module_type_name()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\battery.gd - 0% coverage
+    - _ready()
+    - charge()
+    - discharge()
+    - get_charge_percentage()
+    - is_full()
+    - is_empty()
+    - get_available_capacity()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\cave_network.gd - 0% coverage
+    - _init()
+    - add_entrance()
+    - add_chamber()
+    - add_tunnel()
+    - add_resource_node()
+    - add_creature_spawn()
+    - add_landmark()
+    - add_hazard_zone()
+    - calculate_depth_stats()
+    - calculate_difficulty()
+    - get_entrance_count()
+    - get_chamber_count()
+    - get_resource_count()
+    - get_landmark_count()
+    - is_discovered()
+    - mark_landmark_discovered()
+
+  scripts\planetary_survival\core\crafting_recipe.gd - 0% coverage
+    - _init()
+    - get_required_resource_count()
+    - has_required_resources()
+    - to_dict()
+
+  scripts\planetary_survival\core\creature.gd - 0% coverage
+    - _ready()
+    - take_damage()
+    - die()
+    - knock_out()
+    - wake_up()
+    - feed()
+    - complete_taming()
+    - set_command()
+    - add_to_inventory()
+    - get_inventory_weight()
+    - is_inventory_full()
+    - can_breed()
+    - start_breeding_cooldown()
+    - update_breeding_cooldown()
+    - get_save_data()
+    - load_from_data()
+
+  scripts\planetary_survival\core\creature_ai.gd - 0% coverage
+    - _init()
+    - update()
+    - update_idle()
+    - update_wander()
+    - update_flee()
+    - update_attack()
+    - update_gather()
+    - update_follow()
+    - pick_wander_target()
+    - find_nearest_threat()
+    - find_gathering_target()
+    - find_owner()
+    - perform_attack()
+    - perform_gather()
+    - detect_nearby_base()
+    - update_attack_structure()
+    - perform_structure_attack()
+    - update_defend()
+    - detect_nearby_threat()
+    - detect_all_nearby_threats()
+    - select_priority_threat()
+    - count_defenders_targeting()
+    - setup_navigation_agent()
+    - get_ai_state_info()
+
+  scripts\planetary_survival\core\creature_ai_optimized.gd - 0% coverage
+    - _init()
+    - update()
+    - detect_nearby_base_cached()
+    - find_nearest_threat_cached()
+    - find_gathering_target_cached()
+    - get_cached_path_to()
+    - update_flee_optimized()
+    - update_attack_optimized()
+    - update_gather_optimized()
+    - update_attack_structure_optimized()
+    - update_defend_optimized()
+    - get_optimization_stats()
+
+  scripts\planetary_survival\core\creature_egg.gd - 0% coverage
+    - _ready()
+    - _process()
+    - update_incubation_speed()
+    - set_temperature()
+    - hatch()
+    - get_save_data()
+    - load_from_data()
+
+  scripts\planetary_survival\core\creature_species.gd - 0% coverage
+    - create_instance()
+    - create_variant()
+    - apply_planet_adaptations()
+    - get_breeding_info()
+
+  scripts\planetary_survival\core\elevator.gd - 0% coverage
+    - _ready()
+    - _process()
+    - add_floor()
+    - call_elevator_to_floor()
+    - get_current_floor()
+    - get_current_depth()
+    - get_floor_count()
+    - get_floor_info()
+    - get_available_floors()
+    - is_moving()
+    - emergency_stop()
+    - resume_from_emergency()
+    - set_powered()
+    - add_passenger()
+    - remove_passenger()
+    - get_passenger_count()
+    - is_at_floor()
+    - get_time_to_floor()
+    - connect_to_power_grid()
+    - get_power_consumption()
+    - shutdown()
+
+  scripts\planetary_survival\core\fabricator.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_crafting()
+    - cancel_crafting()
+    - get_available_recipes()
+    - can_interact()
+    - get_crafting_progress()
+    - set_powered()
+
+  scripts\planetary_survival\core\fabricator_module.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_crafting()
+    - cancel_crafting()
+    - add_input_item()
+    - remove_output_item()
+    - get_crafting_progress_percentage()
+    - get_input_items()
+    - get_output_items()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\generator_module.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_generator()
+    - stop_generator()
+    - add_fuel()
+    - get_fuel_percentage()
+    - is_fuel_accepted()
+    - get_accepted_fuel_types()
+    - repair_generator()
+    - get_failure_state_name()
+    - get_generator_type_name()
+    - deplete_thermal_vent()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\habitat_module.gd - 0% coverage
+    - _ready()
+    - enter_habitat()
+    - exit_habitat()
+    - consume_oxygen()
+    - replenish_oxygen()
+    - get_oxygen_percentage()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\hazard.gd - 0% coverage
+    - _init()
+    - get_type_name()
+    - get_damage()
+    - has_speed_effect()
+    - has_thirst_effect()
+    - has_radiation_effect()
+    - to_dict()
+
+  scripts\planetary_survival\core\oxygen_module.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_generation()
+    - stop_generation()
+    - add_input_resource()
+    - extract_oxygen()
+    - get_oxygen_percentage()
+    - get_resource_level()
+    - is_storage_full()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\particle_accelerator.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_synthesis()
+    - cancel_synthesis()
+    - add_input_resource()
+    - remove_output_material()
+    - get_available_recipes()
+    - connect_to_power_grid()
+    - disconnect_from_power_grid()
+    - get_status_info()
+
+  scripts\planetary_survival\core\power_consumer.gd - 0% coverage
+    - _init()
+    - set_power_state()
+    - get_priority_value()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\power_grid.gd - 0% coverage
+    - add_generator()
+    - remove_generator()
+    - add_consumer()
+    - remove_consumer()
+    - add_battery()
+    - remove_battery()
+    - calculate_totals()
+    - get_power_balance()
+    - is_overloaded()
+    - get_load_percentage()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\protective_equipment.gd - 0% coverage
+    - _init()
+    - protects_against()
+    - get_effective_protection()
+    - degrade()
+    - repair()
+    - is_functional()
+    - get_type_name()
+    - to_dict()
+
+  scripts\planetary_survival\core\storage_module.gd - 0% coverage
+    - _ready()
+    - add_item()
+    - remove_item()
+    - get_item_count()
+    - has_item()
+    - get_total_items()
+    - get_available_space()
+    - get_fill_percentage()
+    - is_full()
+    - is_empty()
+    - clear_storage()
+    - get_all_items()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\core\technology.gd - 0% coverage
+    - _init()
+    - can_unlock()
+    - to_dict()
+
+  scripts\planetary_survival\core\tech_tree.gd - 0% coverage
+    - _init()
+    - register_technology()
+    - get_technology()
+    - is_unlocked()
+    - can_unlock()
+    - unlock_technology()
+    - get_available_technologies()
+    - get_unlocked_technologies()
+    - get_technologies_by_tier()
+    - to_dict()
+    - load_from_dict()
+
+  scripts\planetary_survival\core\teleporter.gd - 0% coverage
+    - _ready()
+    - link_teleporter()
+    - unlink_teleporter()
+    - get_linked_destinations()
+    - calculate_power_cost()
+    - can_teleport_to()
+    - teleport_player()
+    - set_powered()
+    - connect_to_power_grid()
+    - disconnect_from_power_grid()
+    - get_status_info()
+
+  scripts\planetary_survival\core\turret.gd - 0% coverage
+    - _ready()
+    - initialize_weapon_stats()
+    - setup_preview_visuals()
+    - _process()
+    - acquire_target()
+    - is_in_detection_cone()
+    - calculate_target_priority()
+    - lose_target()
+    - aim_at_target()
+    - fire_at_target()
+    - fire_ballistic()
+    - fire_energy_beam()
+    - fire_missile()
+    - fire_flame()
+    - spawn_muzzle_flash()
+    - spawn_energy_beam()
+    - spawn_missile()
+    - spawn_flame_particles()
+    - play_fire_sound()
+    - take_damage()
+    - destroy()
+    - set_powered()
+    - get_power_consumption()
+    - set_target_priority()
+    - reload()
+    - get_status()
+    - save_state()
+    - load_state()
+    - start_vr_placement()
+    - update_vr_placement()
+    - confirm_vr_placement()
+    - cancel_vr_placement()
+    - validate_placement_position()
+    - get_placement_info()
+    - connect_to_power_grid()
+
+  scripts\planetary_survival\core\weather_pattern.gd - 0% coverage
+    - _init()
+    - is_valid_for_biome()
+    - get_random_duration()
+    - applies_damage()
+    - affects_equipment()
+    - reduces_visibility()
+
+  scripts\planetary_survival\systems\alien_artifact_system.gd - 0% coverage
+    - _ready()
+    - initialize()
+    - discover_artifact()
+    - start_artifact_analysis()
+    - add_research_to_artifact()
+    - combine_artifacts()
+    - get_artifact()
+    - get_all_discovered_artifacts()
+    - get_all_analyzed_artifacts()
+    - get_unlocked_technologies()
+    - get_available_synergies()
+    - get_system_statistics()
+    - shutdown()
+
+  scripts\planetary_survival\systems\base_building_system.gd - 0% coverage
+    - _ready()
+    - start_placement()
+    - update_placement_preview()
+    - confirm_placement()
+    - cancel_placement()
+    - validate_placement()
+    - place_module()
+    - remove_module()
+    - connect_adjacent_modules()
+    - disconnect_module()
+    - _process()
+    - calculate_structural_integrity()
+    - get_module_integrity()
+    - get_stress_visualization_data()
+    - enable_stress_visualization()
+    - place_structure()
+    - remove_structure()
+    - get_nearby_structures()
+    - get_placed_modules()
+    - get_placed_structures()
+    - get_module_by_id()
+    - get_modules_in_radius()
+    - get_network_for_module()
+    - get_all_networks()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\systems\cave_generation_system.gd - 0% coverage
+    - _ready()
+    - set_seed()
+    - generate_caves_for_chunk()
+    - get_caves_at_position()
+    - is_position_in_cave()
+    - get_cave_difficulty_at_position()
+    - discover_landmark()
+    - register_voxel_terrain()
+    - register_resource_system()
+    - register_creature_system()
+    - shutdown()
+
+  scripts\planetary_survival\systems\crafting_system.gd - 0% coverage
+    - _ready()
+    - register_recipe()
+    - get_recipe()
+    - craft_item()
+    - can_craft()
+    - get_crafting_time()
+    - unlock_recipe()
+    - get_unlocked_recipes()
+    - get_all_recipes()
+    - add_research_points()
+    - unlock_technology()
+    - get_available_technologies()
+    - is_technology_unlocked()
+    - can_unlock_technology()
+    - save_state()
+    - load_state()
+    - shutdown()
+
+  scripts\planetary_survival\systems\creature_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - register_default_species()
+    - register_species()
+    - spawn_creature()
+    - generate_variant_id()
+    - update_time_of_day()
+    - update_spawning()
+    - spawn_creatures_in_biome()
+    - add_spawn_point()
+    - knock_out_creature()
+    - feed_creature()
+    - complete_taming()
+    - issue_command()
+    - command_follow()
+    - command_stay()
+    - command_attack()
+    - command_gather()
+    - command_defend()
+    - find_gathering_target()
+    - execute_gather_action()
+    - initiate_breeding()
+    - produce_egg()
+    - start_gestation()
+    - update_gestation()
+    - give_birth()
+    - produce_offspring()
+    - calculate_inherited_stats()
+    - start_imprinting()
+    - update_imprint_progress()
+    - imprint_creature()
+    - scan_creature()
+    - extract_creature_traits()
+    - get_catalog_entry()
+    - get_all_cataloged_variants()
+    - get_cataloged_variants_by_species()
+    - is_variant_cataloged()
+    - get_tamed_creatures()
+    - remove_creature()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\systems\day_night_cycle_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - get_current_time()
+    - get_time_of_day()
+    - get_time_of_day_string()
+    - is_night()
+    - is_day()
+    - get_nocturnal_spawn_multiplier()
+    - get_diurnal_spawn_multiplier()
+    - set_time()
+    - set_time_scale()
+    - get_cycle_count()
+    - get_time_until_next_period()
+    - affects_creature_spawning()
+    - affects_crop_growth()
+    - get_light_level()
+    - register_creature_system()
+    - register_farming_system()
+    - shutdown()
+
+  scripts\planetary_survival\systems\FAULT_TOLERANCE_GUIDE.gd - 0% coverage
+    - _process()
+
+  scripts\planetary_survival\systems\particle_accelerator_system.gd - 0% coverage
+    - _ready()
+    - initialize()
+    - register_accelerator()
+    - unregister_accelerator()
+    - get_accelerator()
+    - get_all_accelerators()
+    - get_operating_accelerators()
+    - get_total_power_consumption()
+    - get_exotic_material_count()
+    - get_all_exotic_materials()
+    - find_nearest_accelerator()
+    - get_system_statistics()
+    - shutdown()
+
+  scripts\planetary_survival\systems\power_grid_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - create_power_grid()
+    - destroy_power_grid()
+    - register_generator()
+    - unregister_generator()
+    - register_consumer()
+    - unregister_consumer()
+    - register_battery()
+    - unregister_battery()
+    - connect_modules()
+    - update_all_grids()
+    - update_grid()
+    - calculate_total_production()
+    - calculate_total_consumption()
+    - distribute_power()
+    - charge_batteries()
+    - discharge_batteries()
+    - prioritize_consumers()
+    - get_grid_for_module()
+    - get_grid_status()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\systems\teleportation_system.gd - 0% coverage
+    - _ready()
+    - initialize()
+    - register_teleporter()
+    - unregister_teleporter()
+    - link_teleporters()
+    - unlink_teleporters()
+    - get_teleporter()
+    - get_all_teleporters()
+    - get_powered_teleporters()
+    - get_teleporter_network()
+    - find_nearest_teleporter()
+    - update_power_states()
+    - get_network_statistics()
+    - shutdown()
+
+  scripts\planetary_survival\systems\turret_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - register_turret_definitions()
+    - place_turret()
+    - remove_turret()
+    - update_turret_power()
+    - check_turret_power()
+    - find_nearest_power_grid()
+    - get_turrets_in_range()
+    - get_turret_count()
+    - get_total_power_consumption()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\systems\vertical_shaft_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - create_vertical_shaft()
+    - add_support_structure()
+    - install_elevator()
+    - remove_elevator()
+    - get_shaft()
+    - get_shaft_at_position()
+    - get_shaft_stability()
+    - get_required_supports()
+    - get_current_supports()
+    - is_shaft_stable()
+    - get_elevator()
+    - get_all_shafts()
+    - get_shaft_count()
+    - register_voxel_terrain()
+    - register_base_building_system()
+    - register_power_grid_system()
+    - shutdown()
+
+  scripts\planetary_survival\systems\voxel_terrain_optimized.gd - 0% coverage
+    - _ready()
+    - _process()
+    - update_camera_position()
+    - get_optimization_stats()
+
+  scripts\planetary_survival\systems\weather_system.gd - 0% coverage
+    - _ready()
+    - _process()
+    - register_structure()
+    - unregister_structure()
+    - register_player()
+    - unregister_player()
+    - get_current_weather()
+    - get_visibility_reduction()
+    - get_wind_force()
+    - get_equipment_effectiveness()
+    - get_movement_speed_modifier()
+    - set_biome()
+    - force_weather()
+    - shutdown()
+
+  scripts\planetary_survival\tools\boost_augment.gd - 0% coverage
+    - _init()
+
+  scripts\planetary_survival\tools\narrow_augment.gd - 0% coverage
+    - _init()
+
+  scripts\planetary_survival\tools\wide_augment.gd - 0% coverage
+    - _init()
+
+  scripts\planetary_survival\ui\inventory_manager.gd - 0% coverage
+    - _ready()
+    - _process()
+    - open_inventory()
+    - close_inventory()
+    - toggle_inventory()
+    - add_item()
+    - remove_item()
+    - get_item_count()
+    - has_item()
+    - get_all_items()
+    - clear_inventory()
+    - quick_sort_by_type()
+    - quick_sort_by_quantity()
+    - set_vr_controllers()
+    - save_state()
+    - load_state()
+
+  scripts\planetary_survival\ui\power_grid_hud.gd - 0% coverage
+    - _ready()
+    - _process()
+    - set_power_grid_system()
+
+  scripts\planetary_survival\ui\power_grid_hud_enhanced.gd - 0% coverage
+    - _ready()
+    - _process()
+    - set_power_grid_system()
+    - set_visualization_node()
+    - set_minimap_node()
+    - get_selected_grid_id()
+
+  scripts\planetary_survival\ui\vr_crafting_ui.gd - 0% coverage
+    - _ready()
+    - activate()
+    - deactivate()
+    - _process()
+    - start_crafting()
+    - complete_crafting()
+    - cancel_crafting()
+    - set_recipe()
+    - clear_recipe()
+
+  scripts\planetary_survival\ui\vr_inventory_ui.gd - 0% coverage
+    - _ready()
+    - open_inventory()
+    - close_inventory()
+    - toggle_inventory()
+    - _process()
+    - add_item()
+    - remove_item()
+    - get_item_at_cell()
+    - set_attach_hand()
+
+  scripts\planetary_survival\ui\vr_menu_system.gd - 0% coverage
+    - _ready()
+    - show_menu()
+    - hide_menu()
+    - _process()
+    - set_text_scale()
+
+  scripts\planetary_survival\ui\vr_save_load_menu.gd - 0% coverage
+    - _ready()
+    - show_menu()
+    - hide_menu()
+    - _process()
+    - set_controllers()
+    - get_slot_metadata()
+    - show_save_menu()
+    - show_load_menu()
+
+  scripts\player\resonance_input_controller.gd - 0% coverage
+    - _ready()
+    - _process()
+    - set_resonance_system()
+    - set_dominant_hand()
+    - get_current_mode()
+    - get_recent_frequencies()
+    - get_current_target()
+    - is_hud_overlay_visible()
+    - set_hud_overlay_visible()
+    - clear_recent_frequencies()
+    - get_input_state()
+
+  scripts\player\transition_system.gd - 22% coverage
+    - _ready()
+    - initialize()
+    - _process()
+    - update_transition_state()
+    - find_nearest_planet()
+    - calculate_altitude()
+    - start_approach()
+    - update_approach_lod()
+    - enter_atmosphere()
+    - update_atmospheric_effects()
+    - approach_surface()
+    - update_surface_mode()
+    - enable_surface_navigation()
+    - exit_atmosphere()
+    - leave_surface()
+    - disable_surface_navigation()
+    - return_to_space()
+    - get_transition_state()
+    - get_current_altitude()
+    - get_target_planet()
+    - is_in_transition()
+
+  scripts\rendering\atmosphere_system.gd - 0% coverage
+    - _ready()
+    - setup_visual_effects()
+    - setup_audio_effects()
+    - activate()
+    - deactivate()
+    - _process()
+    - update_effects()
+    - apply_drag_force()
+    - apply_heat_effects()
+    - update_visual_effects()
+    - update_audio_effects()
+    - get_atmosphere_color()
+    - stop_visual_effects()
+    - stop_audio_effects()
+    - get_drag_force()
+    - calculate_overall_intensity()
+    - is_active()
+    - get_current_planet()
+    - get_heat_intensity()
+    - get_audio_intensity()
+
+  scripts\security\security_metrics_exporter.gd - 0% coverage
+    - _init()
+    - record_auth_attempt()
+    - record_token_validation()
+    - record_token_generation()
+    - record_token_rotation()
+    - record_token_revocation()
+    - set_active_tokens()
+    - record_authorization_check()
+    - record_privilege_escalation_attempt()
+    - record_rate_limit_violation()
+    - record_rate_limit_ban()
+    - record_ban_expiry()
+    - set_active_bans()
+    - record_validation_failure()
+    - record_suspicious_pattern()
+    - record_security_event()
+    - record_anomaly()
+    - record_attack_pattern()
+    - record_blocked_ip()
+    - set_threat_score()
+    - record_request_by_country()
+    - record_security_check_duration()
+    - export_metrics()
+    - get_metrics_summary()
+
+  scripts\security\security_monitoring_integration_example.gd - 0% coverage
+    - _ready()
+    - handle_http_request()
+    - example_record_security_events()
+    - example_audit_logging()
+    - example_token_management()
+    - example_metrics_summary()
+
+  scripts\tools\vr_performance_profiler.gd - 0% coverage
+    - _ready()
+    - _process()
+    - start_profiling()
+    - stop_profiling()
+    - reset_stats()
+    - get_performance_summary()
+    - get_bottleneck_analysis()
+    - print_performance_report()
+    - export_report_json()
+
+  scripts\ui\inventory_3d_ui.gd - 0% coverage
+    - _ready()
+    - initialize()
+    - open_inventory()
+    - close_inventory()
+    - toggle_inventory()
+    - _process()
+    - sort_inventory()
+    - quick_stack()
+    - get_inventory_state()
+    - start_tracking()
+    - stop_tracking()
+    - track_controller()
+
+  scripts\ui\menu_system.gd - 26% coverage
+    - _ready()
+    - initialize_ui()
+    - create_main_menu()
+    - create_settings_menu()
+    - create_save_load_menu()
+    - create_pause_menu()
+    - create_performance_display()
+    - _process()
+    - update_performance_metrics()
+    - show_menu()
+    - hide_all_menus()
+    - pause_game()
+    - resume_game()
+    - toggle_performance_display()
+    - apply_graphics_preset()
+    - refresh_save_metadata()
+    - refresh_save_slots()
+
+  scripts\ui\power_grid_hud.gd - 0% coverage
+    - _ready()
+    - _process()
+    - update_display()
+    - update_stats()
+    - update_progress_bars()
+    - update_warnings()
+    - show_power_shortage_warning()
+    - show_critical_storage_warning()
+    - show_low_storage_warning()
+    - hide_warnings()
+    - update_3d_visualization()
+    - visualize_grid_connections()
+    - set_grid_data()
+    - get_grid_data()
+    - simulate_power_surge()
+    - simulate_storage_drain()
+    - reset_to_defaults()

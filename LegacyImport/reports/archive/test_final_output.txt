@@ -1,0 +1,308 @@
+================================================================================
+GDUNIT4 CI TEST RUNNER
+Project: C:\Ignotus
+Test Path: tests/unit/test_spacecraft_controls.gd
+Report Format: junit_xml
+Timeout: 1800s
+================================================================================
+
+[INFO] Found Godot at: C:\Ignotus\Godot_v4.5.1-stable_win64.exe\Godot_v4.5.1-stable_win64.exe
+[INFO] Validating test environment...
+[INFO] Godot version: 4.5.1.stable.official.f62fdbde1
+[INFO] Environment validation passed
+[INFO] Running GdUnit4 tests from: tests/unit/test_spacecraft_controls.gd
+[DEBUG] Command: C:\Ignotus\Godot_v4.5.1-stable_win64.exe\Godot_v4.5.1-stable_win64.exe --headless --path C:\Ignotus -s addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests/unit/test_spacecraft_controls.gd --ignoreHeadlessMode
+[DEBUG] Godot output:
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+[2025-12-05T14:32:12] [INFO] ResonanceEngine initializing...
+[2025-12-05T14:32:12] [INFO] Launch arguments: ["-s", "addons/gdUnit4/bin/GdUnitCmdTool.gd", "-a", "res://tests/unit/test_spacecraft_controls.gd", "--ignoreHeadlessMode"]
+[2025-12-05T14:32:12] [INFO] Target FPS set to 90
+[2025-12-05T14:32:12] [INFO] Subsystem registered: TimeManager
+[2025-12-05T14:32:12] [INFO] TimeManager initialized
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: TimeManager
+[2025-12-05T14:32:12] [INFO] Subsystem registered: Relativity
+[2025-12-05T14:32:12] [INFO] RelativityManager initialized
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: RelativityManager
+[2025-12-05T14:32:12] [INFO] Subsystem registered: FloatingOrigin
+[2025-12-05T14:32:12] [INFO] FloatingOriginSystem created - awaiting player node assignment
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: FloatingOrigin
+[2025-12-05T14:32:12] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-05T14:32:12] [INFO] PhysicsEngine initialized
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-05T14:32:12] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-05T14:32:12] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-05T14:32:12] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+[2025-12-05T14:32:12] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-05T14:32:12] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-05T14:32:12] [INFO] Subsystem registered: VRManager
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Vignette attached to scene root CanvasLayer - stays fixed to camera viewport
+VRComfortSystem: Initialized successfully
+[2025-12-05T14:32:12] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-05T14:32:12] [INFO] VRComfortSystem initialized
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-05T14:32:12] [INFO] [HapticManager] Initializing Haptic Manager...
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: HapticManager
+[2025-12-05T14:32:12] [INFO] Subsystem registered: Renderer
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-05T14:32:12] [INFO] PerformanceOptimizer initialized
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: PerformanceOptimizer
+[2025-12-05T14:32:12] [INFO] Subsystem registered: FractalZoom
+[2025-12-05T14:32:12] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: FractalZoom
+[2025-12-05T14:32:12] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-05T14:32:12] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: CaptureEventSystem
+[2025-12-05T14:32:12] [INFO] Subsystem registered: SettingsManager
+[2025-12-05T14:32:12] [INFO] SettingsManager (Autoload) registered as subsystem
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: SettingsManager
+[2025-12-05T14:32:12] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-05T14:32:12] [INFO] Subsystem registered: SaveSystem
+[2025-12-05T14:32:12] [INFO] SaveSystem initialized
+[2025-12-05T14:32:12] [INFO] Subsystem initialized: SaveSystem
+[2025-12-05T14:32:12] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[SettingsManager] Validating settings. Defaults type: 27
+[SettingsManager] Defaults keys: ["graphics", "audio", "controls", "vr", "http_server"]
+[SettingsManager] Checking section: graphics Type: 27
+[SettingsManager] Checking section: audio Type: 27
+[SettingsManager] Checking section: controls Type: 27
+[SettingsManager] Checking section: vr Type: 27
+[SettingsManager] Checking section: http_server Type: 27
+VoxelPerformanceMonitor: Initialized (90 FPS target, 11.11 ms budget)
+[VR UI Initializer] Waiting for VRMain scene...
+[2J[H[38;2;233;150;122m
+--------------------------------------------------------------------------------------------------
+GdUnit4 Comandline Tool
+--------------------------------------------------------------------------------------------------[0m
+[38;2;218;165;32m
+Headless mode is ignored by option '--ignoreHeadlessMode'"
+
+Please note that tests that use UI interaction do not work correctly in headless mode.
+Godot 'InputEvents' are not transported by the Godot engine in headless mode and therefore
+have no effect in the test!
+[0m
+[RuntimeVerifier] Starting self-tests...
+[RuntimeVerifier] Completed. Passed: 0, Failed: 0
+[38;2;100;149;237mInstalling GdUnit4 session system hooks.[0m
+[38;2;100;149;237mSession hook 'GdUnitHtmlTestReporter' installed.[0m
+[38;2;100;149;237mSession hook 'GdUnitXMLTestReporter' installed.[0m
+[38;2;0;206;209mRun Test Suite: [0m[38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_initial_state[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_initial_state[0m[38;2;34;139;34m PASSED[0m[38;2;100;149;237m 46ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m1:[0m [38;2;239;248;131mWARNING:[0m[0m
+    [38;2;0;206;209m Detected <1> orphan nodes during test setup! [1mCheck before_test() and after_test()![0m[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_apply_thrust[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_apply_thrust[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 44ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m1:[0m [38;2;239;248;131mWARNING:[0m[0m
+    [38;2;0;206;209m Detected <1> orphan nodes during test setup! [1mCheck before_test() and after_test()![0m[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m30:[0m [38;2;205;92;92mExpecting to be greater than:[0m[0m
+    [38;2;0;206;209m '[38;2;30;144;255m0.000000[0m' but was '[38;2;205;92;92m0.000000[0m'[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m32:[0m [38;2;205;92;92mExpecting to be less than:[0m[0m
+    [38;2;0;206;209m '[38;2;30;144;255m0.000000[0m' but was '[38;2;205;92;92m0.000000[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_apply_rotation[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_apply_rotation[0m[38;2;178;34;34m[1m FAILED[0m[38;2;100;149;237m 46ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m1:[0m [38;2;239;248;131mWARNING:[0m[0m
+    [38;2;0;206;209m Detected <1> orphan nodes during test setup! [1mCheck before_test() and after_test()![0m[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m42:[0m [38;2;205;92;92mExpecting to be greater than:[0m[0m
+    [38;2;0;206;209m '[38;2;30;144;255m0.000000[0m' but was '[38;2;205;92;92m0.000000[0m'[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m44:[0m [38;2;205;92;92mExpecting to be greater than:[0m[0m
+    [38;2;0;206;209m '[38;2;30;144;255m0.000000[0m' but was '[38;2;205;92;92m0.000000[0m'[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_stop[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_stop[0m[38;2;34;139;34m PASSED[0m[38;2;100;149;237m 44ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m1:[0m [38;2;239;248;131mWARNING:[0m[0m
+    [38;2;0;206;209m Detected <1> orphan nodes during test setup! [1mCheck before_test() and after_test()![0m[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_upgrades[0m[38;2;34;139;34m STARTED[0m[38;2;250;235;215m[0m
+  [38;2;250;235;215mres://tests/unit/test_spacecraft_controls.gd[0m[38;2;250;235;215m > [0m[38;2;250;235;215mtest_upgrades[0m[38;2;34;139;34m PASSED[0m[38;2;100;149;237m 45ms[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m1:[0m [38;2;239;248;131mWARNING:[0m[0m
+    [38;2;0;206;209m Detected <1> orphan nodes during test setup! [1mCheck before_test() and after_test()![0m[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+[38;2;233;150;122m[1mtest_spacecraft_controls:finalze[0m
+  [38;2;0;206;209m[1m[4mReport:[0m
+    [38;2;0;206;209m[38;2;0;255;0mline [0m[38;2;0;255;255m1:[0m [38;2;239;248;131mWARNING:[0m[0m
+    [38;2;0;206;209m Detected <5> orphan nodes during test suite setup stage! [1mCheck before() and after()![0m[0m
+[38;2;250;235;215m[0m
+[38;2;30;144;255mStatistics:[0m[38;2;250;235;215m 5 test cases | 0 errors | 4 failures | 0 flaky | 0 skipped | 10 orphans |[0m[38;2;34;139;34m PASSED[0m[38;2;100;149;237m 281ms[0m
+[38;2;250;235;215m[0m
+[38;2;250;235;215m[0m
+[38;2;30;144;255mOverall Summary:[0m[38;2;255;255;255m 5 test cases | 0 errors | 4 failures | 0 flaky | 0 skipped | 10 orphans |[0m
+[38;2;233;150;122mExecuted test suites: (1/1)[0m
+[38;2;233;150;122mExecuted test cases : (5/5)[0m
+[38;2;233;150;122mTotal execution time: 281ms[0m
+[38;2;255;255;255m [0m[38;2;100;149;237mOpen XML Report at: file://C:/Ignotus/reports/report_97/results.xml[0m
+[38;2;100;149;237mOpen HTML Report at: file://C:/Ignotus/reports/report_97/index.html[0m
+[38;2;178;34;34mExit code: 100[0m
+[2025-12-05T14:32:14] [INFO] [HapticManager] HapticManager exiting tree, cleaning up...
+[2025-12-05T14:32:14] [INFO] [HapticManager] HapticManager cleanup complete
+[2025-12-05T14:32:14] [INFO] [VRManager] VRManager exiting tree, cleaning up resources...
+[2025-12-05T14:32:14] [INFO] [VRManager] VRManager resource cleanup complete
+Finallize .. done
+VoxelPerformanceMonitor: Debug UI disabled
+VoxelPerformanceMonitor: Shutdown complete
+[2025-12-05T14:32:14] [INFO] ResonanceEngine shutting down...
+SaveSystem: SaveSystem shutdown
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: SaveSystem
+CaptureEventSystem shutdown
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: CaptureEventSystem
+FractalZoomSystem shutdown
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: FractalZoom
+RenderingSystem: Shutting down
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: Renderer
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: VRComfortSystem
+[INFO] [VRManager] VRManager shutting down...
+[INFO] [VRManager] VRManager shutdown complete
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: VRManager
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: PhysicsEngine
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: FloatingOrigin
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: RelativityManager
+[2025-12-05T14:32:14] [INFO] Subsystem shutdown: TimeManager
+[2025-12-05T14:32:14] [INFO] ResonanceEngine shutdown complete
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : LoaderInstance::CreateInstance chained CreateInstance call failed
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : xrCreateInstance failed
+ERROR: Failed to create XR instance [Error code -2].
+   at: create_instance (modules/openxr/openxr_api.cpp:641)
+WARNING: OpenXR was requested but failed to start.
+Please check if your HMD is connected.
+When using Windows Mixed Reality, note that WMR only has DirectX support. Make sure SteamVR is your default OpenXR runtime.
+Godot will start in normal mode.
+
+   at: initialize_openxr_module (modules/openxr/register_types.cpp:203)
+WARNING: [2025-12-05T14:32:12] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:854)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:155)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:108)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:271)
+       [6] _init_subsystem (res://scripts/core/engine.gd:149)
+       [7] _initialize_engine (res://scripts/core/engine.gd:111)
+       [8] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed, enabling desktop fallback
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:854)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:119)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:271)
+       [5] _init_subsystem (res://scripts/core/engine.gd:149)
+       [6] _initialize_engine (res://scripts/core/engine.gd:111)
+       [7] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:536)
+       [3] initialize (res://scripts/core/haptic_manager.gd:90)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:326)
+       [5] _init_subsystem (res://scripts/core/engine.gd:149)
+       [6] _initialize_engine (res://scripts/core/engine.gd:113)
+       [7] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:332)
+       [3] _init_subsystem (res://scripts/core/engine.gd:149)
+       [4] _initialize_engine (res://scripts/core/engine.gd:113)
+       [5] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] Unknown subsystem name: HapticManager
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] register_subsystem (res://scripts/core/engine.gd:690)
+       [3] _init_haptic_manager (res://scripts/core/engine.gd:335)
+       [4] _init_subsystem (res://scripts/core/engine.gd:149)
+       [5] _initialize_engine (res://scripts/core/engine.gd:113)
+       [6] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] Scene not ready for RenderingSystem - will initialize later
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _init_renderer (res://scripts/core/engine.gd:361)
+       [3] _init_subsystem (res://scripts/core/engine.gd:149)
+       [4] _initialize_engine (res://scripts/core/engine.gd:114)
+       [5] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] Unknown subsystem name: PerformanceOptimizer
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] register_subsystem (res://scripts/core/engine.gd:690)
+       [3] _init_performance_optimizer (res://scripts/core/engine.gd:387)
+       [4] _init_subsystem (res://scripts/core/engine.gd:149)
+       [5] _initialize_engine (res://scripts/core/engine.gd:117)
+       [6] _ready (res://scripts/core/engine.gd:74)
+WARNING: [2025-12-05T14:32:12] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:796)
+       [1] log_warning (res://scripts/core/engine.gd:774)
+       [2] _init_subsystem (res://scripts/core/engine.gd:153)
+       [3] _initialize_engine (res://scripts/core/engine.gd:120)
+       [4] _ready (res://scripts/core/engine.gd:74)
+WARNING: VoxelPerformanceMonitor: Physics frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:402)
+       [1] _check_physics_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:359)
+       [2] _physics_process (res://scripts/core/voxel_performance_monitor.gd:147)
+WARNING: VoxelPerformanceMonitor: Render frame time 98.52 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:402)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:349)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:127)
+WARNING: [VR UI Initializer] VRMain not found - UI not loaded
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/ui/vr_ui_initializer.gd:14)
+WARNING: VoxelPerformanceMonitor: Render frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:402)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:349)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:127)
+WARNING: VoxelPerformanceMonitor: Render frame time 11.11 ms exceeds budget 11.11 ms (90 FPS at risk)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _trigger_warning (res://scripts/core/voxel_performance_monitor.gd:402)
+       [1] _check_render_frame_threshold (res://scripts/core/voxel_performance_monitor.gd:349)
+       [2] _process (res://scripts/core/voxel_performance_monitor.gd:127)
+ERROR: 5 RID allocations of type 'P11GodotBody3D' were leaked at exit.
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2514)
+ERROR: 1 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:795)
+
+[INFO] Tests failed (duration: 8.2s)
+[FAILURE] Tests failed

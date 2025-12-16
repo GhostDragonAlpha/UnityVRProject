@@ -1,0 +1,96 @@
+WARNING: Language server port 6005 appears to be unavailable, trying next port...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:82)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Language server port 6007 appears to be unavailable, trying next port...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:82)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Language server port 6008 appears to be unavailable, trying next port...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:82)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+ERROR: Failed to connect to language server: All ports (6005, 6006, 6007, 6008) are unavailable
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:85)
+       [1] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [2] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Connection attempt 1 failed. Retrying in 1.0s...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _handle_connection_failure (res://addons/godot_debug_connection/lsp_adapter.gd:189)
+       [1] connect_to_language_server (res://addons/godot_debug_connection/lsp_adapter.gd:86)
+       [2] connect_services (res://addons/godot_debug_connection/connection_manager.gd:72)
+       [3] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:44)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Language server not connected (state: 3)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:61)
+WARNING: Code intelligence features will be limited
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] initialize_debug_mandatory (res://addons/godot_debug_connection/plugin.gd:62)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: DAP initialization failed multiple times. Reconnecting...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _poll_initializing (res://addons/godot_debug_connection/dap_adapter.gd:191)
+       [1] poll (res://addons/godot_debug_connection/dap_adapter.gd:132)
+       [2] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: DAP initialization failed multiple times. Reconnecting...
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _poll_initializing (res://addons/godot_debug_connection/dap_adapter.gd:191)
+       [1] poll (res://addons/godot_debug_connection/dap_adapter.gd:132)
+       [2] _process (res://addons/godot_debug_connection/connection_manager.gd:179)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)
+WARNING: Debug system health check: System not ready, some features may be unavailable
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _perform_health_check (res://addons/godot_debug_connection/connection_manager.gd:210)
+       [1] _process (res://addons/godot_debug_connection/connection_manager.gd:186)

@@ -1,0 +1,125 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+Vulkan 1.4.325 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4090
+
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[GravityManager] Initialized
+[GravityManager] Gravitational constant: 10.00
+[VertexScalingSystem] Initialized
+[VertexScalingSystem] Influence formula: radius / (distance * distance)
+[VertexScalingSystem] Min distance: 0.10 m
+[VertexScalingSystem] Max influence: 1000000.0
+[VertexScalingSystem] Gravity scale: 10.00
+[2025-12-14T16:56:15] [INFO] ResonanceEngine initializing...
+[2025-12-14T16:56:15] [INFO] Launch arguments: ["res://vr_main.tscn"]
+[2025-12-14T16:56:15] [INFO] Target FPS set to 90
+[2025-12-14T16:56:15] [INFO] Subsystem registered: TimeManager
+[2025-12-14T16:56:15] [INFO] TimeManager initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: TimeManager
+[2025-12-14T16:56:15] [INFO] Subsystem registered: Relativity
+[2025-12-14T16:56:15] [INFO] RelativityManager initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: RelativityManager
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[2025-12-14T16:56:15] [INFO] Subsystem registered: AstronomicalCoords
+[2025-12-14T16:56:15] [INFO] AstronomicalCoordinateSystem initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: AstronomicalCoords
+[2025-12-14T16:56:15] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-14T16:56:15] [INFO] PhysicsEngine initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-14T16:56:15] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-14T16:56:15] [INFO] [VRManager] Initializing VR Manager...
+[2025-12-14T16:56:15] [INFO] [VRManager] Viewport XR mode enabled - triggering internal graphics requirements setup
+[2025-12-14T16:56:15] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-14T16:56:15] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-14T16:56:15] [INFO] Subsystem registered: VRManager
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Initialized successfully
+[2025-12-14T16:56:15] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-14T16:56:15] [INFO] VRComfortSystem initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-14T16:56:15] [INFO] [HapticManager] Initializing Haptic Manager...
+[2025-12-14T16:56:15] [INFO] Subsystem registered: HapticManager
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: HapticManager
+RenderingSystem: Environment configured with PBR settings
+RenderingSystem: Sun light configured with shadow settings
+RenderingSystem: Global illumination disabled (VR-optimized)
+RenderingSystem: Initialized successfully
+[2025-12-14T16:56:15] [INFO] Subsystem registered: Renderer
+[2025-12-14T16:56:15] [INFO] RenderingSystem initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-14T16:56:15] [INFO] Subsystem registered: PerformanceOptimizer
+[2025-12-14T16:56:15] [INFO] PerformanceOptimizer initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: PerformanceOptimizer
+[2025-12-14T16:56:15] [INFO] Subsystem registered: FractalZoom
+[2025-12-14T16:56:15] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: FractalZoom
+[2025-12-14T16:56:15] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-14T16:56:15] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: CaptureEventSystem
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-14T16:56:15] [INFO] Subsystem registered: SettingsManager
+[2025-12-14T16:56:15] [INFO] SettingsManager initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: SettingsManager
+[2025-12-14T16:56:15] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-14T16:56:15] [INFO] Subsystem registered: SaveSystem
+[2025-12-14T16:56:15] [INFO] SaveSystem initialized
+[2025-12-14T16:56:15] [INFO] Subsystem initialized: SaveSystem
+[2025-12-14T16:56:15] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[RLObservationManager] Initialized
+[RLTrainingController] Initialized
+[PowerSystem] Initialized
+[2025-12-14T16:56:15] [INFO] Subsystem registered: PowerSystem
+[BuildingManager] System initialized
+[CelestialBodyLOD] Initialized
+[2025-12-14T16:56:15] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[VR Controller] LeftController initialized
+[VR Controller] RightController initialized
+[VRMain] Scene loaded successfully
+[VRMain] VR disabled via GODOT_DISABLE_VR environment variable
+[VRMain] Running in training/headless mode
+SolarSystemInitializer: Loaded ephemeris data with 10 bodies
+[VertexScalingSystem] Registered body 1: Sun (radius: 0.01 m, mass: 1988999999999999900000000000000.0 kg)
+[CelestialBody] Registered Sun with VertexScalingSystem (ID: 1)
+[CelestialBody] Initialized: Sun (type: STAR)
+[VertexScalingSystem] Registered body 2: Mercury (radius: 0.00 m, mass: 330110000000000010000000.0 kg)
+[CelestialBody] Registered Mercury with VertexScalingSystem (ID: 2)
+[CelestialBody] Initialized: Mercury (type: PLANET)
+[VertexScalingSystem] Registered body 3: Venus (radius: 0.00 m, mass: 4867500000000000300000000.0 kg)
+[CelestialBody] Registered Venus with VertexScalingSystem (ID: 3)
+[CelestialBody] Initialized: Venus (type: PLANET)
+[VertexScalingSystem] Registered body 4: Earth (radius: 0.00 m, mass: 5972000000000000300000000.0 kg)
+[CelestialBody] Registered Earth with VertexScalingSystem (ID: 4)
+[CelestialBody] Initialized: Earth (type: PLANET)
+[VertexScalingSystem] Registered body 5: Moon (radius: 0.00 m, mass: 73419999999999997000000.0 kg)
+[CelestialBody] Registered Moon with VertexScalingSystem (ID: 5)
+[CelestialBody] Initialized: Moon (type: MOON)
+[VertexScalingSystem] Registered body 6: Mars (radius: 0.00 m, mass: 641710000000000030000000.0 kg)
+[CelestialBody] Registered Mars with VertexScalingSystem (ID: 6)
+[CelestialBody] Initialized: Mars (type: PLANET)
+[VertexScalingSystem] Registered body 7: Jupiter (radius: 0.00 m, mass: 1898199999999999900000000000.0 kg)
+[CelestialBody] Registered Jupiter with VertexScalingSystem (ID: 7)
+[CelestialBody] Initialized: Jupiter (type: PLANET)
+[VertexScalingSystem] Registered body 8: Saturn (radius: 0.00 m, mass: 568340000000000030000000000.0 kg)
+[CelestialBody] Registered Saturn with VertexScalingSystem (ID: 8)
+[CelestialBody] Initialized: Saturn (type: PLANET)
+[VertexScalingSystem] Registered body 9: Uranus (radius: 0.00 m, mass: 86810000000000007000000000.0 kg)
+[CelestialBody] Registered Uranus with VertexScalingSystem (ID: 9)
+[CelestialBody] Initialized: Uranus (type: PLANET)
+[VertexScalingSystem] Registered body 10: Neptune (radius: 0.00 m, mass: 102413000000000010000000000.0 kg)
+[CelestialBody] Registered Neptune with VertexScalingSystem (ID: 10)
+[CelestialBody] Initialized: Neptune (type: PLANET)
+SolarSystemInitializer: Initialized with 10 bodies
+[VRMain] Physics movement disabled - VR tracking only mode
+[VRMain] Initializing RL Training System...
+[VRMain] Auto-screenshot scheduled - will capture after 60 frames
+[VRMain] Capturing verification screenshot...
+[VRMain] Screenshot saved: C:/Ignotus/visual_verification_screenshot.png
+[VRMain] Image size: 800x600

@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://cupm8a6fny3oi"]
+
+[ext_resource type="Script" uid="uid://pem8c8xtxnwj" path="res://scripts/celestial/solar_system_initializer.gd" id="1_solar_init"]
+[ext_resource type="PackedScene" path="res://scenes/spacecraft/spacecraft_exterior.tscn" id="2_spacecraft"]
+[ext_resource type="Script" uid="uid://dgvsqmji1jemm" path="res://scripts/vr_controller_basic.gd" id="3_vr_controller"]
+[ext_resource type="Script" uid="uid://b754bwr7na8b5" path="res://scripts/celestial/solar_system_landing_controller.gd" id="4_controller"]
+[ext_resource type="Script" uid="uid://xxgq0tix8lif" path="res://scripts/planetary_survival/systems/life_support_system.gd" id="5_life_support"]
+[ext_resource type="Script" uid="uid://bwksdime6qjwa" path="res://scripts/player/inventory.gd" id="6_inventory"]
+[ext_resource type="Script" uid="uid://bpg5gci0jrgle" path="res://scripts/planetary_survival/systems/power_grid_system.gd" id="7_power"]
+[ext_resource type="Script" uid="uid://qbj5psx4rpjm" path="res://scripts/planetary_survival/systems/resource_system.gd" id="8_resource"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.3
+height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_hand"]
+size = Vector3(0.1, 0.1, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hand"]
+albedo_color = Color(0.8, 0.8, 0.9, 1)
+metallic = 0.3
+roughness = 0.7
+
+[sub_resource type="Environment" id="Environment_space"]
+background_mode = 1
+background_color = Color(0.01, 0.01, 0.02, 1)
+ambient_light_source = 1
+ambient_light_color = Color(0.05, 0.05, 0.08, 1)
+ambient_light_energy = 0.3
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.3
+glow_strength = 0.8
+glow_bloom = 0.2
+
+[node name="SolarSystemLanding" type="Node3D"]
+script = ExtResource("4_controller")
+
+[node name="SolarSystemInitializer" type="Node3D" parent="."]
+script = ExtResource("1_solar_init")
+auto_initialize = true
+radius_display_scale = 100.0
+orbital_path_color = Color(0.3, 0.5, 1, 0.3)
+
+[node name="PlayerSpacecraft" parent="." instance=ExtResource("2_spacecraft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="PlayerCollision" type="CharacterBody3D" parent="XROrigin3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/PlayerCollision"]
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+near = 0.1
+far = 1000000.0
+
+[node name="FallbackCamera" type="Camera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+current = true
+near = 0.1
+far = 1000000.0
+
+[node name="LeftController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+pose = &"aim"
+script = ExtResource("3_vr_controller")
+
+[node name="LeftHand" type="MeshInstance3D" parent="XROrigin3D/LeftController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("StandardMaterial3D_hand")
+
+[node name="RightController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+pose = &"aim"
+script = ExtResource("3_vr_controller")
+
+[node name="RightHand" type="MeshInstance3D" parent="XROrigin3D/RightController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("StandardMaterial3D_hand")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_space")
+
+[node name="SunLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 0, 0)
+light_color = Color(1, 0.98, 0.95, 1)
+light_energy = 1.5
+light_angular_distance = 0.5
+shadow_enabled = true
+shadow_bias = 0.03
+shadow_normal_bias = 1.0
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 1000000.0
+
+[node name="LifeSupportSystem" type="Node" parent="."]
+script = ExtResource("5_life_support")
+
+[node name="ResourceSystem" type="Node" parent="."]
+script = ExtResource("8_resource")
+
+[node name="InventorySystem" type="Node" parent="."]
+script = ExtResource("6_inventory")
+
+[node name="PowerGridSystem" type="Node" parent="."]
+script = ExtResource("7_power")

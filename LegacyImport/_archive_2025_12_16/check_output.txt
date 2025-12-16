@@ -1,0 +1,209 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+OpenXR: Running on OpenXR runtime:  SteamVR/OpenXR   2.14.4
+
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+SCRIPT ERROR: Parse Error: Could not preload resource script "res://scripts/procedural/planet_tile_streamer.gd".
+   at: GDScript::reload (res://vr_main.gd:66)
+SCRIPT ERROR: Parse Error: Could not resolve script "res://scripts/procedural/planet_tile_streamer.gd".
+   at: GDScript::reload (res://vr_main.gd:66)
+ERROR: Failed to load script "res://vr_main.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:3041)
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[GravityManager] Initialized
+[GravityManager] Gravitational constant: 10.00
+[VertexScalingSystem] Initialized
+[VertexScalingSystem] Influence formula: radius / (distance * distance)
+[VertexScalingSystem] Min distance: 0.10 m
+[VertexScalingSystem] Max influence: 1000000.0
+[VertexScalingSystem] Gravity scale: 10.00
+[2025-12-16T08:09:28] [INFO] ResonanceEngine initializing...
+[2025-12-16T08:09:28] [INFO] Launch arguments: ["--check-only"]
+[2025-12-16T08:09:28] [INFO] Target FPS set to 90
+[2025-12-16T08:09:28] [INFO] Subsystem registered: TimeManager
+[2025-12-16T08:09:28] [INFO] TimeManager initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: TimeManager
+[2025-12-16T08:09:28] [INFO] Subsystem registered: Relativity
+[2025-12-16T08:09:28] [INFO] RelativityManager initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: RelativityManager
+[AstronomicalCoordinateSystem] Initialized
+[AstronomicalCoordinateSystem] Layer 1 threshold: 5.0 km
+[AstronomicalCoordinateSystem] Layer 2 threshold: 1000.0 AU
+[2025-12-16T08:09:28] [INFO] Subsystem registered: AstronomicalCoords
+[2025-12-16T08:09:28] [INFO] AstronomicalCoordinateSystem initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: AstronomicalCoords
+[2025-12-16T08:09:28] [INFO] Subsystem registered: PhysicsEngine
+[2025-12-16T08:09:28] [INFO] PhysicsEngine initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: PhysicsEngine
+[2025-12-16T08:09:28] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[2025-12-16T08:09:28] [INFO] [VRManager] Initializing VR Manager...
+OpenXR: Failed to create session [ XR_ERROR_GRAPHICS_REQUIREMENTS_CALL_MISSING ]
+WARNING: [2025-12-16T08:09:28] [WARN] [VRManager] Failed to initialize OpenXR interface
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:841)
+       [1] log_warning (res://scripts/core/engine.gd:819)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:880)
+       [3] _init_openxr (res://scripts/core/vr_manager.gd:157)
+       [4] initialize_vr (res://scripts/core/vr_manager.gd:125)
+       [5] _init_vr_manager (res://scripts/core/engine.gd:274)
+       [6] _init_subsystem (res://scripts/core/engine.gd:151)
+       [7] _initialize_engine (res://scripts/core/engine.gd:109)
+       [8] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-16T08:09:28] [WARN] [VRManager] VR hardware not available or OpenXR initialization failed
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:841)
+       [1] log_warning (res://scripts/core/engine.gd:819)
+       [2] _log_warning (res://scripts/core/vr_manager.gd:880)
+       [3] initialize_vr (res://scripts/core/vr_manager.gd:137)
+       [4] _init_vr_manager (res://scripts/core/engine.gd:274)
+       [5] _init_subsystem (res://scripts/core/engine.gd:151)
+       [6] _initialize_engine (res://scripts/core/engine.gd:109)
+       [7] _ready (res://scripts/core/engine.gd:73)
+[2025-12-16T08:09:28] [INFO] [VRManager] Falling back to desktop mode for Early Access compatibility
+[2025-12-16T08:09:28] [INFO] [VRManager] Created desktop fallback camera
+[2025-12-16T08:09:28] [INFO] [VRManager] Desktop fallback mode enabled
+[2025-12-16T08:09:28] [INFO] Subsystem registered: VRManager
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: VRManager
+VRComfortSystem: Loaded settings - comfort_mode=true, vignetting=true, snap_turn=false, stationary=false
+VRComfortSystem: Vignetting effect set up successfully
+VRComfortSystem: Initialized successfully
+[2025-12-16T08:09:28] [INFO] Subsystem registered: VRComfortSystem
+[2025-12-16T08:09:28] [INFO] VRComfortSystem initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: VRComfortSystem
+[2025-12-16T08:09:28] [INFO] [HapticManager] Initializing Haptic Manager...
+WARNING: [2025-12-16T08:09:28] [WARN] [HapticManager] No VR controllers found - haptic feedback will be disabled
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:841)
+       [1] log_warning (res://scripts/core/engine.gd:819)
+       [2] _log_warning (res://scripts/core/haptic_manager.gd:536)
+       [3] initialize (res://scripts/core/haptic_manager.gd:90)
+       [4] _init_haptic_manager (res://scripts/core/engine.gd:329)
+       [5] _init_subsystem (res://scripts/core/engine.gd:151)
+       [6] _initialize_engine (res://scripts/core/engine.gd:111)
+       [7] _ready (res://scripts/core/engine.gd:73)
+WARNING: [2025-12-16T08:09:28] [WARN] HapticManager initialization returned false - may not have VR controllers
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:841)
+       [1] log_warning (res://scripts/core/engine.gd:819)
+       [2] _init_haptic_manager (res://scripts/core/engine.gd:335)
+       [3] _init_subsystem (res://scripts/core/engine.gd:151)
+       [4] _initialize_engine (res://scripts/core/engine.gd:111)
+       [5] _ready (res://scripts/core/engine.gd:73)
+[2025-12-16T08:09:28] [INFO] Subsystem registered: HapticManager
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: HapticManager
+RenderingSystem: Environment configured with PBR settings
+RenderingSystem: Sun light configured with shadow settings
+RenderingSystem: Global illumination disabled (VR-optimized)
+RenderingSystem: Initialized successfully
+[2025-12-16T08:09:28] [INFO] Subsystem registered: Renderer
+[2025-12-16T08:09:28] [INFO] RenderingSystem initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: Renderer
+PerformanceOptimizer: Found 0 occluders
+PerformanceOptimizer: Initialized at quality level HIGH
+[2025-12-16T08:09:28] [INFO] Subsystem registered: PerformanceOptimizer
+[2025-12-16T08:09:28] [INFO] PerformanceOptimizer initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: PerformanceOptimizer
+WARNING: [2025-12-16T08:09:28] [WARN] Subsystem not available: AudioManager (will be initialized when implemented)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:841)
+       [1] log_warning (res://scripts/core/engine.gd:819)
+       [2] _init_subsystem (res://scripts/core/engine.gd:155)
+       [3] _initialize_engine (res://scripts/core/engine.gd:118)
+       [4] _ready (res://scripts/core/engine.gd:73)
+[2025-12-16T08:09:28] [INFO] Subsystem registered: FractalZoom
+[2025-12-16T08:09:28] [INFO] FractalZoomSystem created - awaiting player node assignment
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: FractalZoom
+[2025-12-16T08:09:28] [INFO] Subsystem registered: CaptureEventSystem
+[2025-12-16T08:09:28] [INFO] CaptureEventSystem created - awaiting spacecraft assignment
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: CaptureEventSystem
+[MiningManager] Initialized. Waiting for workers.
+[2025-12-16T08:09:28] [INFO] Subsystem registered: MiningManager
+[2025-12-16T08:09:28] [INFO] MiningManager initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: MiningManager
+[INFO] [SettingsManager] Settings loaded successfully.
+[2025-12-16T08:09:28] [INFO] Subsystem registered: SettingsManager
+[2025-12-16T08:09:28] [INFO] SettingsManager initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: SettingsManager
+[2025-12-16T08:09:28] [INFO] SaveSystem: SaveSystem initialized
+[2025-12-16T08:09:28] [INFO] Subsystem registered: SaveSystem
+[2025-12-16T08:09:28] [INFO] SaveSystem initialized
+[2025-12-16T08:09:28] [INFO] Subsystem initialized: SaveSystem
+[2025-12-16T08:09:28] [INFO] ResonanceEngine initialization complete
+[INFO] [SettingsManager] Settings loaded successfully.
+[RLObservationManager] Initialized
+[RLTrainingController] Initialized
+[PowerSystem] Initialized
+[2025-12-16T08:09:28] [INFO] Subsystem registered: PowerSystem
+[BuildingManager] System initialized
+[CelestialBodyLOD] Initialized
+[2025-12-16T08:09:28] [INFO] [VRManager] Dead zone settings loaded: trigger=0.10, grip=0.10, thumbstick=0.15, debounce=50ms
+[VR Controller] LeftController initialized
+[VR Controller] RightController initialized
+[SunLightDirector] Controlling light: SunLight
+[VerificationCameras] Initialized - press F12 to capture all views
+LatticeRenderer: Initialized with grid density 10.0, size 50
+WARNING: CockpitUI: Failed to load cockpit model, using default
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] initialize (res://scripts/ui/cockpit_ui.gd:194)
+CockpitUI: Created default cockpit
+CockpitUI: Created 5 interactive controls
+CockpitUI: Created 4 telemetry displays
+CockpitUI: Found left VR controller
+CockpitUI: Found right VR controller
+CockpitUI: Found camera
+CockpitUI: Initialized successfully
+SolarSystemInitializer: Loaded ephemeris data with 10 bodies
+[VertexScalingSystem] Registered body 1: Sun (radius: 6960.00 m, mass: 1988999999999999900000000000000.0 kg)
+[CelestialBody] Registered Sun with VertexScalingSystem (ID: 1)
+[CelestialBody] Initialized: Sun (type: STAR)
+[CelestialBody] Surface initialized for Mercury
+[VertexScalingSystem] Registered body 2: Mercury (radius: 24.40 m, mass: 330110000000000010000000.0 kg)
+[CelestialBody] Registered Mercury with VertexScalingSystem (ID: 2)
+[CelestialBody] Initialized: Mercury (type: PLANET)
+[CelestialBody] Surface initialized for Venus
+[VertexScalingSystem] Registered body 3: Venus (radius: 60.52 m, mass: 4867500000000000300000000.0 kg)
+[CelestialBody] Registered Venus with VertexScalingSystem (ID: 3)
+[CelestialBody] Initialized: Venus (type: PLANET)
+[CelestialBody] Surface initialized for Earth
+[VertexScalingSystem] Registered body 4: Earth (radius: 63.71 m, mass: 5972000000000000300000000.0 kg)
+[CelestialBody] Registered Earth with VertexScalingSystem (ID: 4)
+[CelestialBody] Initialized: Earth (type: PLANET)
+[CelestialBody] Surface initialized for Moon
+[VertexScalingSystem] Registered body 5: Moon (radius: 17.37 m, mass: 73419999999999997000000.0 kg)
+[CelestialBody] Registered Moon with VertexScalingSystem (ID: 5)
+[CelestialBody] Initialized: Moon (type: MOON)
+[CelestialBody] Surface initialized for Mars
+[VertexScalingSystem] Registered body 6: Mars (radius: 33.89 m, mass: 641710000000000030000000.0 kg)
+[CelestialBody] Registered Mars with VertexScalingSystem (ID: 6)
+[CelestialBody] Initialized: Mars (type: PLANET)
+[CelestialBody] Surface initialized for Jupiter
+[VertexScalingSystem] Registered body 7: Jupiter (radius: 699.11 m, mass: 1898199999999999900000000000.0 kg)
+[CelestialBody] Registered Jupiter with VertexScalingSystem (ID: 7)
+[CelestialBody] Initialized: Jupiter (type: PLANET)
+[CelestialBody] Surface initialized for Saturn
+[VertexScalingSystem] Registered body 8: Saturn (radius: 582.32 m, mass: 568340000000000030000000000.0 kg)
+[CelestialBody] Registered Saturn with VertexScalingSystem (ID: 8)
+[CelestialBody] Initialized: Saturn (type: PLANET)
+[CelestialBody] Surface initialized for Uranus
+[VertexScalingSystem] Registered body 9: Uranus (radius: 253.62 m, mass: 86810000000000007000000000.0 kg)
+[CelestialBody] Registered Uranus with VertexScalingSystem (ID: 9)
+[CelestialBody] Initialized: Uranus (type: PLANET)
+[CelestialBody] Surface initialized for Neptune
+[VertexScalingSystem] Registered body 10: Neptune (radius: 246.22 m, mass: 102413000000000010000000000.0 kg)
+[CelestialBody] Registered Neptune with VertexScalingSystem (ID: 10)
+[CelestialBody] Initialized: Neptune (type: PLANET)
+SolarSystemInitializer: Initialized with 10 bodies
+WARNING: [2025-12-16T08:11:09] [WARN] FPS below target: 72.6 (target: 90)
+   at: push_warning (core/variant/variant_utility.cpp:1034)
+   GDScript backtrace (most recent call first):
+       [0] _log (res://scripts/core/engine.gd:841)
+       [1] log_warning (res://scripts/core/engine.gd:819)
+       [2] _update_fps_counter (res://scripts/core/engine.gd:562)
+       [3] _process (res://scripts/core/engine.gd:527)

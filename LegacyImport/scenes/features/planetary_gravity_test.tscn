@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://phase1_planetary_gravity_test"]
+
+[ext_resource type="Script" path="res://scenes/features/planetary_gravity_test.gd" id="1"]
+
+[sub_resource type="SphereMesh" id="planet_mesh"]
+radius = 100.0
+height = 200.0
+radial_segments = 64
+rings = 32
+
+[sub_resource type="SphereShape3D" id="planet_collision"]
+radius = 100.0
+
+[sub_resource type="BoxMesh" id="player_mesh"]
+size = Vector3(0.5, 1.8, 0.5)
+
+[sub_resource type="CapsuleShape3D" id="player_collision"]
+radius = 0.25
+height = 1.8
+
+[node name="PlanetaryGravityTest" type="Node3D"]
+script = ExtResource("1")
+
+[node name="Planet" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Planet"]
+mesh = SubResource("planet_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Planet"]
+shape = SubResource("planet_collision")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 102, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("player_mesh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("player_collision")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 150, 0)
+shadow_enabled = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="StatusLabel" type="Label" parent="UI"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 16
+text = "Planetary Gravity Test
+Distance to surface: 0 m
+Gravity strength: 0 m/s²
+In gravity well: No
+On surface: No"

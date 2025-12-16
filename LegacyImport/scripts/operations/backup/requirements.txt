@@ -1,0 +1,21 @@
+# Backup and DR System Requirements
+
+# Cloud storage clients
+boto3>=1.26.0
+azure-storage-blob>=12.14.0
+google-cloud-storage>=2.7.0
+
+# Monitoring
+prometheus-client>=0.16.0
+
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2022.7
+
+# Testing
+pytest>=7.2.0
+pytest-timeout>=2.1.0
+
+# Optional: for advanced features
+psycopg2-binary>=2.9.5  # PostgreSQL/CockroachDB
+redis>=4.5.0  # Redis client

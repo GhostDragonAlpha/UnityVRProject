@@ -1,0 +1,37 @@
+GDUNIT4 API FIXES APPLIED TO test_addon_installation.gd
+========================================================
+
+All 13 deprecated GdUnit4 API errors have been fixed.
+
+FIXES APPLIED:
+--------------
+
+1. assert_file_exists() → assert_file().exists()
+   - 8 occurrences fixed at lines: 34, 46, 71, 86, 99, 139, 158, 199
+   - Pattern: assert_file_exists(path, "message")
+   - Replaced with: assert_file(path).override_failure_message("message").exists()
+   - Lines without custom message: assert_file(path).exists()
+
+2. is_equal(OK, "message") → override_failure_message("message").is_equal(OK)
+   - 2 occurrences fixed at lines: 51, 146
+   - Pattern: assert_int(err).is_equal(OK, "message")
+   - Replaced with: assert_int(err).override_failure_message("message").is_equal(OK)
+
+3. is_not_empty("message") → override_failure_message("message").is_not_empty()
+   - 1 occurrence fixed at line: 152
+   - Pattern: assert_str(value).is_not_empty("message")
+   - Replaced with: assert_str(value).override_failure_message("message").is_not_empty()
+
+VERIFICATION:
+-------------
+- 0 deprecated API calls remaining
+- 8 assert_file() calls using new API
+- 11 override_failure_message() calls total
+- File syntax is valid GDScript
+
+All GdUnit4 API calls now use the current v4.x API pattern:
+- Fluent method chaining with .override_failure_message() before assertion
+- Separate .exists() call for file assertions
+- No custom messages passed as assertion method arguments
+
+STATUS: ✓ COMPLETE - All 13 errors fixed

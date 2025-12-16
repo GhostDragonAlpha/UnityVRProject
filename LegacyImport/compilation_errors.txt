@@ -1,0 +1,100 @@
+SCRIPT ERROR: Parse Error: Expression is of type "Dictionary" so it can't be of type "DiscoveredSystem".
+SCRIPT ERROR: Parse Error: Cannot return value of type "Dictionary" because the function return type is "DiscoveredSystem".
+ERROR: Failed to load script "res://scripts/core/save_system.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expected end of statement after expression, found ":" instead.
+ERROR: Failed to load script "res://vr_setup.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Identifier "trigger_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "trigger_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "grip_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "grip_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "trigger_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "trigger_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "grip_pressed" not declared in the current scope.
+ERROR: Failed to load script "res://scripts/vr_controller_basic.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Assignment is not allowed inside an expression.
+ERROR: Failed to load script "res://examples/deadzone_debounce_usage.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot infer the type of "total_consumption" variable because the value doesn't have a set type.
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)
+ERROR: Failed to load script "res://examples/power_grid_usage_example.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Unrecognized annotation: "@ontml".
+ERROR: Failed to load script "res://scenes/ui/test_power_grid_controller.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_SHORT" in base "HapticManager".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_INSTANT" in base "HapticManager".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_MEDIUM" in base "HapticManager".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_SHORT" in base "HapticManager".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_SHORT" in base "HapticManager".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_LONG" in base "HapticManager".
+SCRIPT ERROR: Parse Error: Cannot find member "DURATION_LONG" in base "HapticManager".
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+ERROR: Failed to load script "res://scripts/audio/resonance_audio_feedback.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Unexpected identifier "t" in class body.
+ERROR: Failed to load script "res://scripts/core/save_system_ORIGINAL_BACKUP.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Unexpected "if" in class body.
+ERROR: Failed to load script "res://scripts/core/vr_comfort_system_STATIONARY_MODE_PATCH.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "_log_info()" not found in base self.
+SCRIPT ERROR: Parse Error: Identifier "_left_controller_state" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "_right_controller_state" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "_left_controller_state" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Identifier "_right_controller_state" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Function "_log_debug()" not found in base self.
+SCRIPT ERROR: Parse Error: Identifier "controller_button_pressed" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Function "_log_debug()" not found in base self.
+SCRIPT ERROR: Parse Error: Identifier "controller_button_released" not declared in the current scope.
+ERROR: Failed to load script "res://scripts/core/vr_manager_remapping_integration.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Unindent doesn't match the previous indentation level.
+ERROR: Failed to load script "res://scripts/gameplay/behavior_tree.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Could not parse global class "BehaviorTree" from "res://scripts/gameplay/behavior_tree.gd".
+SCRIPT ERROR: Parse Error: Could not parse global class "BehaviorTree" from "res://scripts/gameplay/behavior_tree.gd".
+SCRIPT ERROR: Parse Error: Could not parse global class "BehaviorTree" from "res://scripts/gameplay/behavior_tree.gd".
+SCRIPT ERROR: Parse Error: Could not parse global class "BehaviorTree" from "res://scripts/gameplay/behavior_tree.gd".
+SCRIPT ERROR: Parse Error: Could not parse global class "BehaviorTree" from "res://scripts/gameplay/behavior_tree.gd".
+SCRIPT ERROR: Parse Error: Could not parse global class "BehaviorTree" from "res://scripts/gameplay/behavior_tree.gd".
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+SCRIPT ERROR: Parse Error: Could not resolve class "BehaviorTree", because of a parser error.
+ERROR: Failed to load script "res://scripts/gameplay/creature_ai.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "get_node_or_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "get_node_or_null()" not found in base self.
+ERROR: Failed to load script "res://scripts/http_api/batch_operations_router.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "validate_auth()" not found in base self.
+SCRIPT ERROR: Parse Error: Identifier "use_jwt" not declared in the current scope.
+SCRIPT ERROR: Parse Error: Function "verify_jwt_token()" not found in base self.
+ERROR: Failed to load script "res://scripts/http_api/endpoint_auth_security_fix.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid argument for "create_rate_limit_error_response()" function: argument 1 should be "float" but is "Dictionary".
+ERROR: Failed to load script "res://scripts/http_api/example_rate_limited_router.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Cannot find member "MEMORY_DYNAMIC" in base "Performance".
+SCRIPT ERROR: Parse Error: Static function "get_resource_list()" not found in base "GDScriptNativeClass".
+SCRIPT ERROR: Parse Error: Cannot find member "MEMORY_DYNAMIC" in base "Performance".
+ERROR: Failed to load script "res://scripts/http_api/health_check.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Invalid escape in string.
+ERROR: Failed to load script "res://scripts/http_api/input_validator.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "get_node_or_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "get_node_or_null()" not found in base self.
+ERROR: Failed to load script "res://scripts/http_api/job_detail_router.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Function "get_node_or_null()" not found in base self.
+SCRIPT ERROR: Parse Error: Function "get_node_or_null()" not found in base self.
+ERROR: Failed to load script "res://scripts/http_api/job_router.gd" with error "Parse error".
+SCRIPT ERROR: Parse Error: Expected statement, found "else" instead.

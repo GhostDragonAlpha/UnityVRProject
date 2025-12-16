@@ -1,0 +1,270 @@
+
+
+## ============================================================================
+## VULN-004 FIX: Enhanced Scene Whitelist Validation
+## ============================================================================
+
+# Scene whitelist configuration (enhanced)
+static var _scene_whitelist_directories: Array[String] = []
+static var _scene_whitelist_wildcards: Array[String] = []
+static var _scene_blacklist_patterns: Array[String] = []
+static var _scene_blacklist_exact: Array[String] = []
+static var _whitelist_config_loaded: bool = false
+static var _current_environment: String = "development"  # production, development, test
+
+
+## Load whitelist configuration from JSON file (VULN-004 FIX)
+static func load_whitelist_config(environment: String = "") -> bool:
+	if environment.is_empty():
+		environment = _current_environment
+
+	var config_path = "res://config/scene_whitelist.json"
+
+	# Check if config file exists
+	if not FileAccess.file_exists(config_path):
+		push_warning("[Security] Whitelist config not found: ", config_path, " - using existing whitelist")
+		_whitelist_config_loaded = true
+		return false
+
+	# Load and parse JSON
+	var file = FileAccess.open(config_path, FileAccess.READ)
+	if not file:
+		push_error("[Security] Failed to open whitelist config: ", config_path)
+		_whitelist_config_loaded = true
+		return false
+
+	var json_text = file.get_as_text()
+	file.close()
+
+	var json = JSON.new()
+	var parse_result = json.parse(json_text)
+	if parse_result != OK:
+		push_error("[Security] Failed to parse whitelist config JSON: ", json.get_error_message())
+		_whitelist_config_loaded = true
+		return false
+
+	var config = json.get_data()
+
+	# Load environment-specific configuration
+	if config.has("environments") and config.environments.has(environment):
+		var env_config = config.environments[environment]
+
+		# Load exact scene paths
+		if env_config.has("scenes"):
+			_scene_whitelist = []
+			for scene in env_config.scenes:
+				_scene_whitelist.append(scene)
+
+		# Load directory paths
+		if env_config.has("directories"):
+			_scene_whitelist_directories = []
+			for dir in env_config.directories:
+				_scene_whitelist_directories.append(dir)
+
+		# Load wildcard patterns
+		if env_config.has("wildcards"):
+			_scene_whitelist_wildcards = []
+			for pattern in env_config.wildcards:
+				_scene_whitelist_wildcards.append(pattern)
+
+		print("[Security] Loaded whitelist config for environment: ", environment)
+		print("[Security]   Exact scenes: ", _scene_whitelist.size())
+		print("[Security]   Directories: ", _scene_whitelist_directories.size())
+		print("[Security]   Wildcards: ", _scene_whitelist_wildcards.size())
+	else:
+		push_warning("[Security] Environment '", environment, "' not found in config")
+
+	# Load blacklist
+	if config.has("blacklist"):
+		var blacklist = config.blacklist
+		if blacklist.has("patterns"):
+			_scene_blacklist_patterns = []
+			for pattern in blacklist.patterns:
+				_scene_blacklist_patterns.append(pattern)
+		if blacklist.has("exact"):
+			_scene_blacklist_exact = []
+			for path in blacklist.exact:
+				_scene_blacklist_exact.append(path)
+		print("[Security]   Blacklist patterns: ", _scene_blacklist_patterns.size())
+		print("[Security]   Blacklist exact: ", _scene_blacklist_exact.size())
+
+	_whitelist_config_loaded = true
+	return true
+
+
+## Set environment (production, development, test) (VULN-004 FIX)
+static func set_environment(environment: String) -> void:
+	_current_environment = environment
+	print("[Security] Environment set to: ", environment)
+	# Reload whitelist for new environment
+	load_whitelist_config(environment)
+
+
+## Get current environment (VULN-004 FIX)
+static func get_environment() -> String:
+	return _current_environment
+
+
+## Check if path matches wildcard pattern (VULN-004 FIX)
+## Supports ** for recursive directory matching and * for single segment
+static func _matches_wildcard(path: String, pattern: String) -> bool:
+	# Convert wildcard pattern to regex
+	var regex_pattern = pattern
+
+	# Escape special regex characters except * and /
+	regex_pattern = regex_pattern.replace(".", "\\.")
+	regex_pattern = regex_pattern.replace("+", "\\+")
+	regex_pattern = regex_pattern.replace("?", "\\?")
+	regex_pattern = regex_pattern.replace("(", "\\(")
+	regex_pattern = regex_pattern.replace(")", "\\)")
+	regex_pattern = regex_pattern.replace("[", "\\[")
+	regex_pattern = regex_pattern.replace("]", "\\]")
+	regex_pattern = regex_pattern.replace("{", "\\{")
+	regex_pattern = regex_pattern.replace("}", "\\}")
+	regex_pattern = regex_pattern.replace("^", "\\^")
+	regex_pattern = regex_pattern.replace("$", "\\$")
+
+	# Replace ** with regex for zero or more path segments
+	regex_pattern = regex_pattern.replace("**/", "(?:.*/)?")
+	regex_pattern = regex_pattern.replace("/**", "(?:/.*)?")
+
+	# Replace * with regex for single segment (no /)
+	regex_pattern = regex_pattern.replace("*", "[^/]*")
+
+	# Anchor to start and end
+	regex_pattern = "^" + regex_pattern + "$"
+
+	var regex = RegEx.new()
+	regex.compile(regex_pattern)
+
+	return regex.search(path) != null
+
+
+## Canonicalize path (resolve .., remove duplicate slashes) (VULN-004 FIX)
+static func _canonicalize_path(path: String) -> String:
+	# Split into segments
+	var segments = path.split("/")
+	var canonical = []
+
+	for segment in segments:
+		if segment == "" or segment == ".":
+			continue
+		elif segment == "..":
+			# Remove last segment (go up)
+			if canonical.size() > 0:
+				canonical.pop_back()
+		else:
+			canonical.append(segment)
+
+	# Reconstruct path
+	var result = "/".join(canonical)
+
+	# Preserve res:// prefix
+	if path.begins_with("res://"):
+		result = "res://" + result
+
+	return result
+
+
+## Check if path is in blacklist (VULN-004 FIX)
+static func _is_blacklisted(scene_path: String) -> bool:
+	# Check exact matches
+	if scene_path in _scene_blacklist_exact:
+		return true
+
+	# Check pattern matches
+	for pattern in _scene_blacklist_patterns:
+		if _matches_wildcard(scene_path, pattern):
+			return true
+
+	return false
+
+
+## Enhanced validate_scene_path - replaces old version (VULN-004 FIX)
+static func validate_scene_path_enhanced(scene_path: String) -> Dictionary:
+	var result = {"valid": true, "error": ""}
+
+	# Ensure whitelist config is loaded
+	if not _whitelist_config_loaded:
+		load_whitelist_config()
+
+	# Basic format validation
+	if scene_path.length() > MAX_SCENE_PATH_LENGTH:
+		result.valid = false
+		result.error = "Scene path exceeds maximum length (" + str(MAX_SCENE_PATH_LENGTH) + " chars)"
+		return result
+
+	if not scene_path.begins_with("res://"):
+		result.valid = false
+		result.error = "Scene path must start with res://"
+		return result
+
+	if not scene_path.ends_with(".tscn"):
+		result.valid = false
+		result.error = "Scene path must end with .tscn"
+		return result
+
+	# Path traversal prevention (check for .. before canonicalization)
+	if scene_path.contains(".."):
+		result.valid = false
+		result.error = "Path traversal (..) not allowed"
+		return result
+
+	# Canonicalize path to handle . and // sequences
+	var canonical_path = _canonicalize_path(scene_path)
+
+	# Check blacklist first (security-critical)
+	if _is_blacklisted(canonical_path):
+		result.valid = false
+		result.error = "Scene is in blacklist (addon/system scene)"
+		return result
+
+	# Whitelist validation
+	if whitelist_enabled:
+		var is_whitelisted = false
+
+		# Check exact matches
+		for allowed_path in _scene_whitelist:
+			if canonical_path == allowed_path:
+				is_whitelisted = true
+				break
+
+		# Check directory matches
+		if not is_whitelisted:
+			for dir_path in _scene_whitelist_directories:
+				if canonical_path.begins_with(dir_path):
+					is_whitelisted = true
+					break
+
+		# Check wildcard patterns
+		if not is_whitelisted:
+			for pattern in _scene_whitelist_wildcards:
+				if _matches_wildcard(canonical_path, pattern):
+					is_whitelisted = true
+					break
+
+		if not is_whitelisted:
+			result.valid = false
+			result.error = "Scene not in whitelist for environment: " + _current_environment
+			return result
+
+	return result
+
+
+## Add wildcard pattern to whitelist (VULN-004 FIX)
+static func add_wildcard_to_whitelist(pattern: String) -> void:
+	if not _scene_whitelist_wildcards.has(pattern):
+		_scene_whitelist_wildcards.append(pattern)
+		print("[Security] Added wildcard to whitelist: ", pattern)
+
+
+## Get enhanced whitelist for configuration/debugging (VULN-004 FIX)
+static func get_whitelist_enhanced() -> Dictionary:
+	return {
+		"environment": _current_environment,
+		"exact_scenes": _scene_whitelist.duplicate(),
+		"directories": _scene_whitelist_directories.duplicate(),
+		"wildcards": _scene_whitelist_wildcards.duplicate(),
+		"blacklist_patterns": _scene_blacklist_patterns.duplicate(),
+		"blacklist_exact": _scene_blacklist_exact.duplicate()
+	}

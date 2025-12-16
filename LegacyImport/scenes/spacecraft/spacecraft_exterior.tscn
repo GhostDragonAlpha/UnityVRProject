@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8vyay203w4a5"]
+
+[ext_resource type="Script" path="res://scripts/player/spacecraft_exterior.gd" id="1_spacecraft_exterior"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_spacecraft_body"]
+size = Vector3(3.0, 2.0, 5.0)
+
+[node name="SpacecraftExterior" type="Node3D"]
+script = ExtResource("1_spacecraft_exterior")
+lod_distances = Array[float]([10.0, 50.0, 200.0, 1000.0])
+enable_high_quality_materials = true
+enable_glass_refraction = true
+
+[node name="LOD0_Detailed" type="Node3D" parent="."]
+
+[node name="LOD1_Medium" type="Node3D" parent="."]
+visible = false
+
+[node name="LOD2_Low" type="Node3D" parent="."]
+visible = false
+
+[node name="LOD3_Minimal" type="Node3D" parent="."]
+visible = false
+
+[node name="CollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_spacecraft_body")
+
+[node name="LeftEngineLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 4.5)
+light_color = Color(0.2, 0.5, 1, 1)
+light_energy = 2.0
+omni_range = 5.0
+
+[node name="RightEngineLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.5)
+light_color = Color(0.2, 0.5, 1, 1)
+light_energy = 2.0
+omni_range = 5.0

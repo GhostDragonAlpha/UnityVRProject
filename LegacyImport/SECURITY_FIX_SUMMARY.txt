@@ -1,0 +1,49 @@
+==========================================
+SECURITY FIX: Client IP Extraction
+==========================================
+
+SEVERITY: CRITICAL
+STATUS: FIXED
+FILE: C:/godot/scripts/http_api/scene_router.gd
+
+VULNERABILITY:
+- IP spoofing via X-Forwarded-For header
+- No validation of proxy trust
+- No IP format validation
+- Rate limiting bypass possible
+- Audit logs unreliable
+
+FIX APPLIED:
+- Added trusted proxy whitelist (127.0.0.1, ::1)
+- Added IPv4 format validation (strict octet checking)
+- Added IPv6 format validation (RFC 4291 compliant)
+- Added security logging for invalid attempts
+- Layered defense-in-depth approach
+
+NEW FUNCTIONS:
+1. _get_direct_connection_ip() - Get actual connection IP
+2. _is_trusted_proxy() - Check if proxy is trusted
+3. _extract_forwarded_for_ip() - Safe header parsing
+4. _is_valid_ip_format() - Route to IPv4/IPv6 validator
+5. _is_valid_ipv4() - Strict IPv4 validation
+6. _is_valid_ipv6() - Strict IPv6 validation
+
+TESTING:
+- Valid IPs from localhost proxy: ACCEPTED
+- Invalid IPs (malformed): REJECTED
+- IPs from non-localhost: X-Forwarded-For IGNORED
+- Security warnings logged on failures
+
+DEPLOYMENT:
+- No breaking changes
+- Backward compatible
+- Conservative defaults (only localhost trusted)
+- <1ms performance impact
+
+DOCUMENTATION:
+- SECURITY_FIX_IP_EXTRACTION.md (comprehensive)
+- scene_router.gd.backup (original version)
+
+IMPACT:
+BEFORE: Rate limiting bypassable, audit logs unreliable
+AFTER: Rate limiting enforced, audit logs trustworthy

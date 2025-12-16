@@ -1,0 +1,251 @@
+HTTP API ENDPOINT MAP
+======================
+Server: GodotTPD (godottpd library)
+Port: 8080
+Bind: 127.0.0.1 (localhost only)
+Authentication: JWT Bearer tokens (required for most endpoints)
+
+LEGEND:
+  ✅ - Endpoint exists and responds
+  ❌ - Endpoint not found (404)
+  🔒 - Authentication required (401 without token)
+  🌐 - Public endpoint (no auth required)
+  ⏱️ - Response time measured
+  📝 - Documented in CLAUDE.md
+  💾 - Router exists in codebase
+  🚫 - Router exists but NOT registered
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        REGISTERED ENDPOINTS                              │
+│                     (Actively serving requests)                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+📂 SCENE MANAGEMENT (All require 🔒 Authentication)
+
+  GET    /scene              ✅ 🔒 ⏱️ 2.7-7.4ms    Get current scene info
+  POST   /scene              ✅ 🔒              Load a scene by path
+  PUT    /scene              ✅ 🔒              Validate a scene
+
+  GET    /scenes             ✅ 🔒 ⏱️ 4.8-10.4ms  List available scenes
+
+  POST   /scene/reload       ✅ 🔒              Hot-reload current scene
+
+  GET    /scene/history      ✅ 🔒 ⏱️ 9.4-12.2ms  Get scene load history
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      DOCUMENTED BUT NOT FOUND                            │
+│                  (Referenced in CLAUDE.md but 404)                       │
+└─────────────────────────────────────────────────────────────────────────┘
+
+📂 STATUS/HEALTH (Expected 🌐 Public)
+
+  GET    /status             ❌ 📝 ⏱️ 6.4ms      System status
+  GET    /health             ❌ 📝 ⏱️ 9.4ms      Health check
+
+📂 STATE (Expected 🔒 Auth Required)
+
+  GET    /state/scene        ❌ 📝 ⏱️ 26.3ms     Current scene state
+  GET    /state/player       ❌ 📝 ⏱️ 5.9ms      Player state
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                   ROUTERS IN CODEBASE - NOT REGISTERED                   │
+│         (Code exists in scripts/http_api/ but not in server)            │
+└─────────────────────────────────────────────────────────────────────────┘
+
+📂 AUTHENTICATION (🚫 auth_router.gd)
+
+  POST   /auth/login         💾 🚫              Authenticate and get token
+  POST   /auth/refresh       💾 🚫              Refresh JWT token
+  GET    /auth/status        💾 🚫 🔒          Token status and validity
+  GET    /auth/metrics       💾 🚫 🔒          Token usage metrics
+  GET    /auth/audit         💾 🚫 🔒          Authentication audit log
+
+📂 ADMIN (🚫 admin_router.gd)
+
+  GET    /admin              💾 🚫 🔒          Admin dashboard
+  GET    /admin/metrics      💾 🚫 🔒          System metrics
+  GET    /admin/config       💾 🚫 🔒          Configuration management
+  POST   /admin/restart      💾 🚫 🔒          Restart system
+  GET    /admin/audit        💾 🚫 🔒          Audit log
+
+📂 PERFORMANCE (🚫 performance_router.gd)
+
+  GET    /performance        💾 🚫 🔒          Overall performance metrics
+  GET    /performance/fps    💾 🚫 🔒          FPS and frame timing
+  GET    /performance/memory 💾 🚫 🔒          Memory usage
+  GET    /performance/profile💾 🚫 🔒          Profiling data
+
+📂 WEBHOOKS (🚫 webhook_router.gd + webhook_detail_router.gd + webhook_deliveries_router.gd)
+
+  GET    /webhooks           💾 🚫 🔒          List webhooks
+  POST   /webhooks           💾 🚫 🔒          Create webhook
+  GET    /webhooks/:id       💾 🚫 🔒          Get webhook details
+  PUT    /webhooks/:id       💾 🚫 🔒          Update webhook
+  DELETE /webhooks/:id       💾 🚫 🔒          Delete webhook
+  GET    /webhooks/:id/deliveries 💾 🚫 🔒    Webhook delivery history
+
+📂 JOBS (🚫 job_router.gd + job_detail_router.gd)
+
+  GET    /jobs               💾 🚫 🔒          List background jobs
+  POST   /jobs               💾 🚫 🔒          Create background job
+  GET    /jobs/:id           💾 🚫 🔒          Get job status
+  DELETE /jobs/:id           💾 🚫 🔒          Cancel job
+
+📂 BATCH OPERATIONS (🚫 batch_operations_router.gd)
+
+  POST   /batch              💾 🚫 🔒          Execute batch operations
+
+📂 WHITELIST (🚫 whitelist_router.gd)
+
+  GET    /whitelist          💾 🚫 🔒          Get scene whitelist
+  POST   /whitelist          💾 🚫 🔒          Add to whitelist
+  DELETE /whitelist          💾 🚫 🔒          Remove from whitelist
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    VOXEL-SPECIFIC ENDPOINTS                              │
+│                       (NOT IMPLEMENTED)                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+📂 VOXEL PERFORMANCE (No router exists)
+
+  GET    /performance/voxel  ❌ MISSING         Voxel terrain metrics
+  GET    /voxel/chunks       ❌ MISSING         Active chunk count
+  GET    /voxel/lod          ❌ MISSING         LOD system status
+  GET    /voxel/memory       ❌ MISSING         Voxel memory usage
+  GET    /voxel/generation   ❌ MISSING         Chunk generation queue
+
+📂 AUTOLOAD ACCESS (No router exists)
+
+  GET    /autoload/VoxelPerformanceMonitor  ❌ MISSING  Direct autoload data
+  GET    /autoload/ResonanceEngine          ❌ MISSING  Engine status
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         AUTHENTICATION                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Method: JWT (JSON Web Tokens)
+Header: Authorization: Bearer <token>
+Token Location: Printed to Godot console at startup
+Token Expiration: 1 hour (3600 seconds)
+Fallback: Legacy 64-char hex tokens
+
+Example:
+  curl -H 'Authorization: Bearer eyJhbGc...' http://127.0.0.1:8080/scene
+
+Public Endpoints (no auth required):
+  - OPTIONS *  (CORS preflight)
+  - GET /health (defined but NOT FOUND)
+  - GET /status (defined but NOT FOUND)
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        RESPONSE CODES                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+
+200 OK              - Successful request
+401 Unauthorized    - Missing/invalid authentication token
+404 Not Found       - Endpoint not registered
+429 Too Many Requests - Rate limit exceeded
+503 Service Unavailable - Godot API not ready
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        RATE LIMITING                                     │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Algorithm: Token bucket
+Default: 100 requests/minute per IP
+Window: 60 seconds
+
+Per-endpoint limits:
+  /scene         30 req/min   (expensive operation)
+  /scene/reload  20 req/min   (very expensive)
+  /scenes        60 req/min   (less expensive)
+  /scene/history 100 req/min  (cheap read)
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      REGISTRATION STATUS                                 │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Registered Routers (4):
+  1. SceneHistoryRouter     (/scene/history)
+  2. SceneReloadRouter      (/scene/reload)
+  3. SceneRouter            (/scene)
+  4. ScenesListRouter       (/scenes)
+
+Available but NOT Registered (10+):
+  - AuthRouter
+  - AdminRouter
+  - PerformanceRouter
+  - WebhookRouter (+ detail, deliveries)
+  - JobRouter (+ detail)
+  - BatchOperationsRouter
+  - WhitelistRouter
+  - Health/Status router (doesn't exist in codebase)
+
+Missing (needs creation):
+  - VoxelPerformanceRouter
+  - AutoloadAccessRouter
+  - HealthRouter
+  - StatusRouter
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      PERFORMANCE SUMMARY                                 │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Response Times (ms):
+  Fastest: GET /scene           2.7ms
+  Slowest: GET /state/scene    26.3ms  (404 - not found)
+  Average: 8.2ms
+
+All tested endpoints respond in <30ms - EXCELLENT performance
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                           ISSUES                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+CRITICAL:
+  ❌ No voxel-specific endpoints exist
+  ❌ Core monitoring endpoints (status/health) not registered
+  ❌ Cannot access authentication token (needs Agent 1)
+
+HIGH:
+  ⚠️ Multiple Godot processes running (4 detected)
+  ⚠️ Documentation doesn't match implementation
+  ⚠️ 10+ routers exist but not registered
+
+MEDIUM:
+  ⚠️ No endpoint to retrieve current JWT token
+  ⚠️ No API documentation endpoint
+
+LOW:
+  ℹ️ Admin router exists but not exposed
+  ℹ️ Performance router exists but not exposed
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        RECOMMENDATIONS                                   │
+└─────────────────────────────────────────────────────────────────────────┘
+
+IMMEDIATE (Agent 1):
+  1. Provide JWT token from Godot console
+  2. Kill redundant Godot processes
+  3. Restart Godot with console logging to file
+
+SHORT-TERM:
+  4. Register PerformanceRouter in http_api_server.gd
+  5. Create VoxelPerformanceRouter.gd
+  6. Register Health/Status routers (or create if missing)
+
+LONG-TERM:
+  7. Add GET /api/docs for endpoint discovery
+  8. Add GET /auth/token for token retrieval
+  9. Fix CLAUDE.md documentation to match reality
+  10. Register all available routers or document why they're disabled

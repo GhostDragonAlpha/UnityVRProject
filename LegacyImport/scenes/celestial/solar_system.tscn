@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://solar_system_scene"]
+
+[ext_resource type="Script" path="res://scripts/celestial/solar_system_initializer.gd" id="1_solar_init"]
+[ext_resource type="Script" path="res://scripts/celestial/planet_terrain_manager.gd" id="2_terrain_mgr"]
+
+[node name="SolarSystem" type="Node3D"]
+script = ExtResource("1_solar_init")
+ephemeris_path = "res://data/ephemeris/solar_system.json"
+auto_initialize = true
+radius_display_scale = 1.0
+create_visual_models = true
+register_with_physics = true
+show_orbital_paths = true
+orbital_path_color = Color(0.3, 0.5, 1.0, 0.5)
+
+[node name="PlanetTerrainManager" type="Node" parent="."]
+script = ExtResource("2_terrain_mgr")
+generation_distance = 500.0
+debug_mode = true

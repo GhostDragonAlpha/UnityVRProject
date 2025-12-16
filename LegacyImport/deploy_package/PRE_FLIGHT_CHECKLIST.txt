@@ -1,0 +1,468 @@
+================================================================================
+SpaceTime VR v1.0.0-rc1 - Pre-Flight Deployment Checklist
+================================================================================
+Date: 2025-12-04
+Deployment Target: [Production / Staging / Local]
+Deployment Lead: ____________________
+Sign-off Required: YES
+
+================================================================================
+CRITICAL ITEMS (GO/NO-GO BLOCKERS)
+================================================================================
+
+[ ] 1. GODOT_ENABLE_HTTP_API=true
+    Status: ____
+    Verified By: ____
+    Command: echo $GODOT_ENABLE_HTTP_API
+    Expected: "true"
+    Impact: HTTP API will NOT start without this
+    Severity: CRITICAL
+
+[ ] 2. GODOT_ENV set to production
+    Status: ____
+    Verified By: ____
+    Command: echo $GODOT_ENV
+    Expected: "production"
+    Impact: Wrong scene whitelist will load
+    Severity: CRITICAL
+
+[ ] 3. Build exported and tested
+    Status: ____
+    Verified By: ____
+    Build Location: C:/godot/deploy_package/build/SpaceTime.exe
+    Build Size: ~93 MB
+    Test Command: GODOT_ENABLE_HTTP_API=true ./SpaceTime.exe
+    Impact: Untested build may fail in production
+    Severity: CRITICAL
+
+[ ] 4. Secrets generated (NOT placeholders)
+    Status: ____
+    Verified By: ____
+    Items to check:
+      [ ] API_TOKEN (32+ characters, base64)
+      [ ] GRAFANA_ADMIN_PASSWORD (24+ characters)
+      [ ] REDIS_PASSWORD (24+ characters)
+    Generation: openssl rand -base64 32
+    Location: .env.production, kubernetes/secret.yaml
+    Impact: Security vulnerability, authentication failure
+    Severity: CRITICAL
+
+[ ] 5. TLS certificates created
+    Status: ____
+    Verified By: ____
+    Certificate Files:
+      [ ] tls.crt (certificate)
+      [ ] tls.key (private key)
+    Location: deploy_package/certs/
+    Validity: Check expiration date
+    Impact: HTTPS connections will fail
+    Severity: CRITICAL (Production), LOW (Staging/Local)
+
+GO/NO-GO DECISION:
+  If ALL 5 critical items are checked: [  ] GO FOR DEPLOYMENT
+  If ANY item unchecked:                [  ] NO-GO - FIX BLOCKERS
+
+================================================================================
+HIGH PRIORITY ITEMS (STRONGLY RECOMMENDED)
+================================================================================
+
+[ ] 6. Scene whitelist configured
+    Status: ____
+    Verified By: ____
+    File: config/scene_whitelist.json
+    Production scenes:
+      [ ] res://vr_main.tscn
+      [ ] [Add any additional production scenes]
+    Impact: May load wrong scenes or block valid scenes
+    Severity: HIGH
+
+[ ] 7. Port availability verified
+    Status: ____
+    Verified By: ____
+    Required Ports:
+      [ ] 8080 (HTTP API)
+      [ ] 8081 (Telemetry)
+      [ ] 8087 (Discovery)
+    Test Command: nc -z 127.0.0.1 8080
+    Impact: Service will fail to start
+    Severity: HIGH
+
+[ ] 8. Firewall rules configured
+    Status: ____
+    Verified By: ____
+    Rules Created:
+      [ ] Allow TCP 8080
+      [ ] Allow TCP 8081
+      [ ] Allow UDP 8087
+    Impact: External connections will fail
+    Severity: HIGH (Production), MEDIUM (Staging)
+
+[ ] 9. Monitoring configured
+    Status: ____
+    Verified By: ____
+    Components:
+      [ ] Prometheus installed
+      [ ] Grafana installed
+      [ ] Alert rules configured
+      [ ] Health check endpoint monitored
+    Impact: No visibility into system health
+    Severity: HIGH (Production), LOW (Staging/Local)
+
+[ ] 10. Rollback plan tested
+    Status: ____
+    Verified By: ____
+    Rollback Script: deploy_package/scripts/rollback.sh
+    Backup Location: ____________________
+    Test Performed: [ ] YES [ ] NO
+    Impact: Cannot recover from failed deployment
+    Severity: HIGH
+
+================================================================================
+MEDIUM PRIORITY ITEMS (RECOMMENDED)
+================================================================================
+
+[ ] 11. Log files cleaned up
+    Status: ____
+    Verified By: ____
+    Action: Review and delete .log files in root
+    Command: ls *.log
+    Impact: Log files may contain sensitive data
+    Severity: MEDIUM
+
+[ ] 12. Documentation reviewed
+    Status: ____
+    Verified By: ____
+    Documents Read:
+      [ ] DEPLOYMENT_GUIDE.md
+      [ ] RELEASE_NOTES.md
+      [ ] This checklist (PRE_FLIGHT_CHECKLIST.txt)
+    Impact: May miss critical steps
+    Severity: MEDIUM
+
+[ ] 13. Team notified
+    Status: ____
+    Verified By: ____
+    Notifications Sent:
+      [ ] Stakeholders (email)
+      [ ] Operations team (Slack/email)
+      [ ] Support team (email)
+      [ ] On-call engineer (phone/text)
+    Impact: Team unaware of deployment window
+    Severity: MEDIUM
+
+[ ] 14. Deployment window scheduled
+    Status: ____
+    Verified By: ____
+    Date: ____________________
+    Time: ____________________ (include timezone)
+    Duration: ____ hours
+    Maintenance Window: [ ] YES [ ] NO
+    Impact: May disrupt production during business hours
+    Severity: MEDIUM (Production)
+
+[ ] 15. Health check automation configured
+    Status: ____
+    Verified By: ____
+    Monitor Tool: ____________________
+    Check Interval: ____ minutes (recommended: 1-5)
+    Alert Threshold: ____ failures (recommended: 2)
+    Impact: Manual monitoring required
+    Severity: MEDIUM
+
+================================================================================
+INFRASTRUCTURE CHECKLIST (Kubernetes Deployment Only)
+================================================================================
+
+[ ] 16. Kubernetes cluster ready
+    Status: ____
+    Verified By: ____
+    Cluster Version: ____________________ (required: 1.25+)
+    Nodes: ____ (recommended: 3+)
+    Node Resources: ____ CPU / ____ GB RAM per node (min: 8 CPU / 32 GB)
+    Storage: ____ GB (min: 500 GB)
+
+[ ] 17. Namespace created
+    Status: ____
+    Verified By: ____
+    Namespace: spacetime
+    Command: kubectl create namespace spacetime
+    Verification: kubectl get namespace spacetime
+
+[ ] 18. Secrets created in Kubernetes
+    Status: ____
+    Verified By: ____
+    Secret Name: spacetime-secrets
+    Command: kubectl get secret spacetime-secrets -n spacetime
+    Contains:
+      [ ] API_TOKEN
+      [ ] GRAFANA_ADMIN_PASSWORD
+      [ ] REDIS_PASSWORD
+
+[ ] 19. TLS secret created in Kubernetes
+    Status: ____
+    Verified By: ____
+    Secret Name: spacetime-tls
+    Command: kubectl get secret spacetime-tls -n spacetime
+    Contains:
+      [ ] tls.crt
+      [ ] tls.key
+
+[ ] 20. ConfigMap created
+    Status: ____
+    Verified By: ____
+    ConfigMap Name: spacetime-config
+    Command: kubectl get configmap spacetime-config -n spacetime
+
+[ ] 21. Persistent Volume Claims created
+    Status: ____
+    Verified By: ____
+    PVCs:
+      [ ] spacetime-data (500 GB)
+      [ ] prometheus-data (100 GB)
+    Command: kubectl get pvc -n spacetime
+
+[ ] 22. Ingress controller ready
+    Status: ____
+    Verified By: ____
+    Controller Type: ____________________ (nginx, traefik, etc.)
+    External IP: ____________________
+    Command: kubectl get ingress -n spacetime
+
+================================================================================
+TESTING AND VALIDATION
+================================================================================
+
+[ ] 23. Unit tests passed
+    Status: ____
+    Verified By: ____
+    Command: godot -s addons/gdUnit4/bin/GdUnitCmdTool.gd --test-suite tests/
+    Results: ____ passed, ____ failed
+    Impact: Code quality issues may exist
+    Severity: MEDIUM
+
+[ ] 24. Integration tests passed
+    Status: ____
+    Verified By: ____
+    Command: python tests/test_runner.py
+    Results: ____ passed, ____ failed
+    Impact: System integration issues may exist
+    Severity: HIGH
+
+[ ] 25. Health check script passed
+    Status: ____
+    Verified By: ____
+    Command: python tests/health_monitor.py
+    Results: ____ checks passed, ____ failed
+    Impact: System not in healthy state
+    Severity: HIGH
+
+[ ] 26. Build verification passed
+    Status: ____
+    Verified By: ____
+    Script: deploy_package/scripts/verify_deployment.sh
+    Results: ____ checks passed, ____ failed
+    Impact: Build may not be production-ready
+    Severity: CRITICAL
+
+[ ] 27. Performance baseline established
+    Status: ____
+    Verified By: ____
+    Target FPS: 90 (VR)
+    Measured FPS: ____
+    Memory Usage: ____ MB (target: 2-4 GB)
+    Impact: Performance issues in production
+    Severity: MEDIUM
+
+================================================================================
+SECURITY VALIDATION
+================================================================================
+
+[ ] 28. Authentication enabled and tested
+    Status: ____
+    Verified By: ____
+    Test: curl without token returns 401
+    Test: curl with token returns 200
+    Impact: Security vulnerability
+    Severity: CRITICAL
+
+[ ] 29. Rate limiting enabled and tested
+    Status: ____
+    Verified By: ____
+    Global limit: 300 req/min
+    Test: Exceed limit returns 429
+    Impact: DDoS vulnerability
+    Severity: HIGH
+
+[ ] 30. Scene whitelist enforced
+    Status: ____
+    Verified By: ____
+    Test: Load test scene returns 403 in production
+    Impact: Security vulnerability, unauthorized scene access
+    Severity: HIGH
+
+[ ] 31. RBAC configured
+    Status: ____
+    Verified By: ____
+    Roles Configured:
+      [ ] admin
+      [ ] developer
+      [ ] readonly
+      [ ] guest
+    Default Role: readonly
+    Impact: Unauthorized access to admin functions
+    Severity: HIGH
+
+[ ] 32. TLS/SSL enabled (Production only)
+    Status: ____
+    Verified By: ____
+    HTTPS URL: ____________________
+    Certificate Valid: [ ] YES [ ] NO
+    Expiration Date: ____________________
+    Impact: Data transmitted in clear text
+    Severity: CRITICAL (Production)
+
+================================================================================
+BACKUP AND RECOVERY
+================================================================================
+
+[ ] 33. Current version backed up
+    Status: ____
+    Verified By: ____
+    Backup Location: ____________________
+    Backup Size: ____
+    Backup Date: ____________________
+    Verified: [ ] YES [ ] NO
+
+[ ] 34. Configuration backed up
+    Status: ____
+    Verified By: ____
+    Files Backed Up:
+      [ ] project.godot
+      [ ] export_presets.cfg
+      [ ] config/scene_whitelist.json
+      [ ] .env.production
+
+[ ] 35. Database backed up (if applicable)
+    Status: ____
+    Verified By: ____
+    Backup Location: ____________________
+    Backup Date: ____________________
+    Verified: [ ] YES [ ] NO
+
+[ ] 36. Rollback tested
+    Status: ____
+    Verified By: ____
+    Rollback Script: scripts/rollback.sh
+    Test Result: [ ] SUCCESS [ ] FAILED [ ] NOT TESTED
+    Rollback Time: ____ minutes (target: < 5 minutes)
+
+================================================================================
+DOCUMENTATION AND COMMUNICATION
+================================================================================
+
+[ ] 37. Deployment runbook prepared
+    Status: ____
+    Verified By: ____
+    Document: DEPLOYMENT_GUIDE.md
+    Pages: 1,450 lines
+    Reviewed: [ ] YES [ ] NO
+
+[ ] 38. Troubleshooting guide available
+    Status: ____
+    Verified By: ____
+    Document: TROUBLESHOOTING.md
+    Common Issues Documented: ____
+
+[ ] 39. On-call contacts confirmed
+    Status: ____
+    Verified By: ____
+    Primary: ____________________ (Phone: ________________)
+    Secondary: ____________________ (Phone: ________________)
+    Tech Lead: ____________________ (Phone: ________________)
+
+[ ] 40. Communication plan established
+    Status: ____
+    Verified By: ____
+    Status Updates:
+      [ ] Email distribution list created
+      [ ] Slack channel configured (#spacetime-deployment)
+      [ ] Status page configured (if applicable)
+    Update Frequency: Every ____ minutes during deployment
+
+================================================================================
+FINAL VALIDATION
+================================================================================
+
+Summary:
+  Critical Items (1-5):      ____ / 5 checked   [GO / NO-GO]
+  High Priority (6-10):      ____ / 5 checked
+  Medium Priority (11-15):   ____ / 5 checked
+  Infrastructure (16-22):    ____ / 7 checked   (K8s only)
+  Testing (23-27):           ____ / 5 checked
+  Security (28-32):          ____ / 5 checked
+  Backup/Recovery (33-36):   ____ / 4 checked
+  Documentation (37-40):     ____ / 4 checked
+
+Total Completion: _____%
+
+GO/NO-GO CRITERIA:
+  - ALL 5 critical items must be checked for GO
+  - At least 80% of high priority items recommended
+  - At least 60% of all items recommended for production
+
+FINAL GO/NO-GO DECISION:
+
+  [  ] GO FOR DEPLOYMENT
+       Reason: ________________________________________________
+       Approved By: __________________ Date: _________ Time: _____
+
+  [  ] NO-GO - POSTPONE DEPLOYMENT
+       Reason: ________________________________________________
+       Action Required: __________________________________________
+       Re-evaluation Date: ____________________
+
+================================================================================
+SIGN-OFF
+================================================================================
+
+Deployment Lead: ____________________  Signature: ______ Date: _______
+
+Tech Lead:       ____________________  Signature: ______ Date: _______
+
+Operations:      ____________________  Signature: ______ Date: _______
+
+Security:        ____________________  Signature: ______ Date: _______
+
+Management:      ____________________  Signature: ______ Date: _______
+
+================================================================================
+POST-DEPLOYMENT NOTES
+================================================================================
+
+Deployment Start Time: ____________________
+Deployment End Time:   ____________________
+Total Duration:        ____ hours ____ minutes
+
+Issues Encountered:
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+Resolutions:
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+Lessons Learned:
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+Recommendations for Next Deployment:
+1. _________________________________________________________________
+2. _________________________________________________________________
+3. _________________________________________________________________
+
+================================================================================
+END OF PRE-FLIGHT CHECKLIST
+================================================================================

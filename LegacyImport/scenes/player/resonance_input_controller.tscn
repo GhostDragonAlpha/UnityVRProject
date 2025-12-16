@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5a7b8d9e2f1a3b4c5d6e7f8a9b0c1d2"]
+
+[ext_resource type="Script" path="res://scripts/player/resonance_input_controller.gd" id="1_resonance_input"]
+
+[node name="ResonanceInputController" type="Node3D"]
+script = ExtResource("1_resonance_input")
+
+[node name="AimRaycast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -10)
+collision_mask = 2147483647
+
+[node name="InputTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true

@@ -1,0 +1,185 @@
+========================================
+GODOT STARTUP ERROR SUMMARY
+========================================
+Date: 2025-12-02
+Total Errors: 62
+
+========================================
+CATEGORY BREAKDOWN
+========================================
+
+CATEGORY 1: Parse Errors - Class Name Placement (3 errors)
+- network_sync_system.gd:18 - class_name after extends (WRONG ORDER)
+- planetary_survival_coordinator.gd:19 - cascading NetworkSyncSystem error
+- planetary_survival_coordinator.gd:214 - cascading NetworkSyncSystem error
+
+CATEGORY 2: Missing Identifiers - TelemetryServer (14 errors)
+- vr_setup.gd:22 - TelemetryServer not declared
+- vr_setup.gd:46 - TelemetryServer not declared
+- vr_setup.gd:66 - TelemetryServer not declared
+- vr_setup.gd:67 - TelemetryServer not declared
+- vr_setup.gd:68 - TelemetryServer not declared
+- vr_setup.gd:69 - TelemetryServer not declared
+- vr_setup.gd:70 - TelemetryServer not declared
+- vr_setup.gd:71 - TelemetryServer not declared
+- vr_setup.gd:72 - TelemetryServer not declared
+- vr_setup.gd:85 - TelemetryServer not declared
+- vr_setup.gd:89 - TelemetryServer not declared
+- vr_setup.gd:133 - TelemetryServer not declared
+- vr_setup.gd:141 - TelemetryServer not declared
+- vr_setup.gd:172 - TelemetryServer not declared
+
+CATEGORY 3: Missing Function Implementations (3 errors)
+- vr_comfort_system.gd:72 - _on_setting_changed not declared
+- vr_comfort_system.gd:75 - _setup_vignetting() not found
+- engine.gd:225 - Invalid .new() call (cascading from VRComfortSystem)
+
+CATEGORY 4: Class Resolution Failures - BehaviorTree (29 errors)
+- creature_ai.gd:30 - Could not parse BehaviorTree class
+- creature_ai.gd:107-199 - Could not resolve BehaviorTree (24 references)
+
+CATEGORY 5: Cascading Compilation Failures (3 errors)
+- godot_bridge.gd:0 - Failed to compile (depends on creature_ai)
+- planetary_survival_coordinator.gd - Failed to load (depends on NetworkSyncSystem)
+- vr_setup.gd - Failed to load (depends on TelemetryServer)
+
+CATEGORY 6: Autoload Instantiation Failures (1 error)
+- PlanetarySurvivalCoordinator - Failed to instantiate autoload
+
+CATEGORY 7: Runtime Errors - API Usage (4 errors)
+- security_config.gd:283 - HttpRequest.has() invalid (4 occurrences)
+
+CATEGORY 8: Engine/Rendering Errors (3 errors)
+- Mesh surface errors (2 errors)
+- Transform3D tree check (1 error)
+
+========================================
+FILES GROUPED BY ERROR COUNT
+========================================
+
+CRITICAL (20+ errors):
+- creature_ai.gd: 29 errors
+
+HIGH (10-19 errors):
+- vr_setup.gd: 14 errors
+
+MEDIUM (3-9 errors):
+- network_sync_system.gd: 3 errors (1 direct + 2 cascading)
+- vr_comfort_system.gd: 3 errors
+- security_config.gd: 4 errors
+
+LOW (1-2 errors):
+- planetary_survival_coordinator.gd: 2 errors
+- godot_bridge.gd: 1 error
+- engine.gd: 1 error
+- rendering system: 3 errors
+
+========================================
+FIXABLE vs NON-FIXABLE
+========================================
+
+FIXABLE: 55 errors (89%)
+  - Quick fixes: 22 errors in ~30 min
+  - Investigation: 29 errors in ~60 min
+  - Polish: 4 errors in ~15 min
+
+NON-FIXABLE: 7 errors (11%)
+  - Runtime warnings: 3 mesh/rendering errors
+  - May self-resolve: 4 errors when dependencies fixed
+
+========================================
+PRIORITY: TOP 10 FIXES
+========================================
+
+1. network_sync_system.gd - Swap class_name/extends
+   Impact: -3 errors, Time: 2 min
+
+2. vr_comfort_system.gd - Add _setup_vignetting()
+   Impact: -1 error, Time: 10 min
+
+3. vr_comfort_system.gd - Add _on_setting_changed()
+   Impact: -1 error, Time: 5 min
+
+4. engine.gd:225 - Fix VRComfortSystem.new() call
+   Impact: -1 error, Time: 2 min
+
+5. vr_setup.gd - Add TelemetryServer null checks
+   Impact: -14 errors, Time: 10 min
+
+6. Investigate BehaviorTree loading issue
+   Impact: -29 errors, Time: 30-60 min
+
+7. security_config.gd:283 - Fix HttpRequest.has()
+   Impact: -4 errors, Time: 5 min
+
+8. Review autoload order in project.godot
+   Impact: May fix TelemetryServer timing, Time: 10 min
+
+9. Investigate mesh loading warnings
+   Impact: -2 errors, Time: 15 min
+
+10. Review Transform3D tree state checks
+    Impact: -1 error, Time: 5 min
+
+========================================
+ESTIMATED TIMELINE
+========================================
+
+Phase 1 (30 min): VR System Recovery
+  Fix: 22 errors
+  Remaining: 40 errors
+  Status: VR functional
+
+Phase 2 (60 min): Core AI System
+  Fix: 29 errors
+  Remaining: 11 errors
+  Status: All major systems functional
+
+Phase 3 (15 min): Polish
+  Fix: 4 errors
+  Remaining: 7 errors (warnings only)
+  Status: Production-ready
+
+Total: ~2 hours to near-zero critical errors
+
+========================================
+NOTES
+========================================
+
+1. class_name MUST come before extends in GDScript 4.x
+2. BehaviorTree file exists and looks correct - likely initialization order
+3. TelemetryServer autoload may load after scripts reference it
+4. Fixing parse errors will auto-fix cascading errors
+5. HttpRequest has no .has() method - use has_method() or alternative
+6. Most errors are parse-time, not runtime crashes
+
+========================================
+CRITICAL FINDING: BehaviorTree Issue
+========================================
+
+DISCOVERED: BehaviorTree has the SAME syntax error as NetworkSyncSystem!
+
+File: scripts/gameplay/behavior_tree.gd
+Line 1: class_name BehaviorTree extends Node
+
+PROBLEM: class_name and extends on SAME LINE
+This is INVALID in GDScript 4.x
+
+SHOULD BE:
+  class_name BehaviorTree
+  extends Node
+
+This single 2-character fix (add newline) will resolve ALL 29 BehaviorTree errors!
+
+UPDATED QUICK FIX COUNT: 51 errors in ~5 minutes!
+  - BehaviorTree: line break (29 errors, 30 seconds)
+  - NetworkSyncSystem: line break (3 errors, 30 seconds)
+  - VRComfortSystem: add 2 functions (3 errors, 15 min)
+  - TelemetryServer: null checks (14 errors, 10 min)
+  - HttpRequest: fix .has() (4 errors, 5 min)
+
+REVISED TIMELINE:
+  Phase 1: 35 min → 51 errors fixed → 11 errors remaining
+  (All 11 remaining are minor runtime warnings)
+
+========================================
